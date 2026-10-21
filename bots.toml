@@ -239,6 +239,7 @@ runs = "melsh_bot"
 runs = "Demolito level 4"
 command = "demolito"
 replay = "agreement"
+play = "go wtime 480000 btime 480000"
 options = { Level = 4 }
 go = [
     "go wtime 120000 btime 120000",
@@ -257,6 +258,7 @@ runs = "SlowMate"
 runs = "Demolito level 3"
 command = "demolito"
 replay = "agreement"
+play = "go wtime 240000 btime 240000"
 options = { Level = 3 }
 go = [
     "go wtime 120000 btime 120000",
@@ -272,6 +274,7 @@ runs = "Patricia"
 runs = "Demolito level 5"
 command = "demolito"
 replay = "agreement"
+play = "go wtime 480000 btime 480000"
 options = { Level = 5 }
 go = [
     "go wtime 120000 btime 120000",
