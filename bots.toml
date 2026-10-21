@@ -25,6 +25,7 @@ engines = [
     "plumbot",
     "usunfish",
     "tofiks",
+    "moinsen",
 ]
 
 
@@ -92,6 +93,10 @@ usunfish-l1 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level
 [engines.tofiks]
 [engines.tofiks.commands]
 tofiks = { run = "tofiks/tofiks", expect = "id name Tofiks v1.6.0" }
+
+[engines.moinsen]
+[engines.moinsen.commands]
+moinsen = { run = "moinsen/moinsen", go = "go depth 3" }  # no pruning: depth 10 would never end
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -234,6 +239,10 @@ runs = "Dala"
 
 [bots.davidsguterbot]
 runs = "Moinsen"
+command = "moinsen"
+replay = "agreement"
+play = "go depth 4"
+go = ["go depth 2", "go depth 3", "go depth 4"]
 
 [bots.halcyonbot]
 runs = "Halcyon"
