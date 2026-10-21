@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/Oh63B6rF"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "AllieTheChessBot"]
+[Black "wolfmart65"]
+[Result "0-1"]
+[GameId "Oh63B6rF"]
+[UTCDate "2026.10.19"]
+[UTCTime "20:01:35"]
+[WhiteElo "1404"]
+[BlackElo "1965"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... c6 { [%clk 0:05:00] } 2. f4 { [%clk 0:05:01] } 2... d5 { [%clk 0:05:00] } 3. e5 { [%clk 0:05:01] } 3... Nh6 { [%clk 0:04:56] } 4. d4 { [%clk 0:04:59] } 4... Bf5 { [%clk 0:04:55] } 5. Nf3 { [%clk 0:04:52] } 5... e6 { [%clk 0:04:56] } 6. Bd3 { [%clk 0:04:50] } 6... c5 { [%clk 0:04:55] } 7. O-O { [%clk 0:04:42] } 7... Nc6 { [%clk 0:04:54] } 8. Nh4 { [%clk 0:04:10] } 8... Qxh4 { [%clk 0:04:50] } 9. Bb5 { [%clk 0:04:06] } 9... Qd8 { [%clk 0:04:24] } 10. h3 { [%clk 0:03:58] } 10... cxd4 { [%clk 0:04:19] } 11. Qxd4 { [%clk 0:03:52] } 11... Bxc2 { [%clk 0:04:08] } 12. Na3 { [%clk 0:03:39] } 12... Be4 { [%clk 0:04:02] } 0-1

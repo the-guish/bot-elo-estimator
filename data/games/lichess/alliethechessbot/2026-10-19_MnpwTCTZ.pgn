@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/MnpwTCTZ"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "AllieTheChessBot"]
+[Black "Inflatedelo101"]
+[Result "1-0"]
+[GameId "MnpwTCTZ"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:27:53"]
+[WhiteElo "1394"]
+[BlackElo "1466"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... c6 { [%clk 0:05:00] } 2. d4 { [%clk 0:05:01] } 2... d5 { [%clk 0:05:03] } 3. e5 { [%clk 0:05:00] } 3... Bf5 { [%clk 0:05:04] } 4. h4 { [%clk 0:04:55] } 4... h5 { [%clk 0:05:06] } 5. Nf3 { [%clk 0:04:52] } 5... e6 { [%clk 0:05:07] } 6. Bd3 { [%clk 0:04:36] } 6... Bxd3 { [%clk 0:05:08] } 7. Qxd3 { [%clk 0:04:35] } 7... Nd7 { [%clk 0:05:04] } 8. Bg5 { [%clk 0:04:34] } 8... Be7 { [%clk 0:05:02] } 9. Nbd2 { [%clk 0:04:33] } 9... c5 { [%clk 0:05:01] } 10. c4 { [%clk 0:04:31] } 10... dxc4 { [%clk 0:04:58] } 11. Nxc4 { [%clk 0:04:27] } 11... Rc8 { [%clk 0:04:57] } 12. Nd6+ { [%clk 0:04:23] } 1-0

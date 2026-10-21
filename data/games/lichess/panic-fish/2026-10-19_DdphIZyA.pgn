@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/DdphIZyA"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Naka08"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "DdphIZyA"]
+[UTCDate "2026.10.19"]
+[UTCTime "10:37:20"]
+[WhiteElo "1500"]
+[BlackElo "2046"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... c5 { [%clk 0:30:00] } 2. Bc4 { [%clk 0:29:49] } 2... e6 { [%clk 0:29:59] } 3. Nf3 { [%clk 0:29:46] } 3... a6 { [%clk 0:29:57] } 4. Nc3 { [%clk 0:29:45] } 4... b5 { [%clk 0:29:56] } 5. Bd3 { [%clk 0:29:43] } 5... Bb7 { [%clk 0:29:55] } 6. e5 { [%clk 0:29:42] } 6... Nc6 { [%clk 0:29:54] } 7. Ng5 { [%clk 0:29:41] } 7... Qxg5 { [%clk 0:29:53] } 8. Qg4 { [%clk 0:29:39] } 8... Qxg4 { [%clk 0:29:51] } 9. Be2 { [%clk 0:29:39] } 9... Qxg2 { [%clk 0:29:50] } 10. Rg1 { [%clk 0:29:37] } 10... Qxg1+ { [%clk 0:29:49] } 11. Bf1 { [%clk 0:29:35] } 11... Nd4 { [%clk 0:29:48] } 12. Kd1 { [%clk 0:29:33] } 12... Qxf1# { [%clk 0:29:48] } 0-1

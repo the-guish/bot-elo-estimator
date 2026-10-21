@@ -1,0 +1,18 @@
+[Event "5th France Groupe Open BOTs Team Battle"]
+[Site "https://lichess.org/iW9TLjtZ"]
+[Date "2026.10.16"]
+[Round "-"]
+[White "PatriciaBot"]
+[Black "Piratesboy"]
+[Result "1-0"]
+[GameId "iW9TLjtZ"]
+[UTCDate "2026.10.16"]
+[UTCTime "14:03:54"]
+[WhiteElo "2710"]
+[BlackElo "1586"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Nf3 { [%clk 0:05:00] } 2... Nf6 { [%clk 0:04:59] } 3. d4 { [%clk 0:05:00] } 3... Nxe4 { [%clk 0:04:58] } 4. Bd3 { [%clk 0:04:33] } 1-0

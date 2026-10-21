@@ -1,0 +1,18 @@
+[Event "2nd GP Bots and Humans Team Battle"]
+[Site "https://lichess.org/pX8eWlZN"]
+[Date "2026.10.17"]
+[Round "-"]
+[White "littlePatricia"]
+[Black "Piratesboy"]
+[Result "1-0"]
+[GameId "pX8eWlZN"]
+[UTCDate "2026.10.17"]
+[UTCTime "17:00:03"]
+[WhiteElo "1764"]
+[BlackElo "1589"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:03:02] } 2... Nf6 { [%clk 0:03:01] } 3. Nxe5 { [%clk 0:03:04] } 3... d6 { [%clk 0:03:03] } 4. Nf3 { [%clk 0:03:06] } 4... Nxe4 { [%clk 0:03:04] } 5. d4 { [%clk 0:03:08] } 5... d5 { [%clk 0:03:05] } 6. Bd3 { [%clk 0:03:10] } 6... Nc6 { [%clk 0:03:05] } 7. O-O { [%clk 0:03:12] } 7... Be7 { [%clk 0:03:06] } 8. c4 { [%clk 0:03:14] } 8... Nb4 { [%clk 0:03:07] } 9. cxd5 { [%clk 0:03:10] } 9... Nxd3 { [%clk 0:03:07] } 10. Qxd3 { [%clk 0:03:07] } 10... Qxd5 { [%clk 0:03:08] } 11. Ne5 { [%clk 0:03:04] } 11... Bf5 { [%clk 0:03:08] } 12. Qf3 { [%clk 0:03:01] } 12... Bg6 { [%clk 0:03:06] } 13. Bf4 { [%clk 0:02:57] } 13... O-O { [%clk 0:03:02] } 14. Re1 { [%clk 0:02:54] } 1-0

@@ -9,19 +9,15 @@ TUROCHAMP and Bernstein. Replaying them checks that our engines play the same mo
 | `turochamp-1ply`, `turochamp-2ply` | TUROCHAMP | 1, 2 | 10 millipawns | None |
 | `bernstein-2ply`, `bernstein-4ply` | Bernstein | 2, 4 | None | `e2e4` as White |
 
-## The selection
+## The games
 
-Each bot has 100 games, in `games/<bot>/<UTC date>_<game id>.pgn`. The selection is the Maia
-games' selection. `engines/maia/README.md` describes it.
-
-- **The window** ends at `2026-10-20T00:00:00Z`. The games cover 2026-10-15 to 2026-10-19.
-- **The opponents** are humans and bots. The check compares moves, so any opponent serves.
+Each bot has 100 games, in `data/games/lichess/<bot>`. They cover 2026-10-15 to 2026-10-19.
+`tools/lichess_games/README.md` describes the selection, and the token the download needs. The
+opponents are humans and bots. The check compares moves, so any opponent serves.
 
 ```sh
 engines/morlock/download_games.sh
 ```
-
-The wrapper runs the Maia downloader with the morlock bots, so it reads the same token.
 
 ## Replay
 

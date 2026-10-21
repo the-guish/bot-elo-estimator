@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/kYef5cOW"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "brilliantchess15256"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "kYef5cOW"]
+[UTCDate "2026.10.19"]
+[UTCTime "16:40:05"]
+[WhiteElo "1225"]
+[BlackElo "2105"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:15:00] } 1... Nf6 { [%clk 0:15:00] } 2. Nc3 { [%clk 0:15:05] } 2... d5 { [%clk 0:15:09] } 3. Nf3 { [%clk 0:15:12] } 3... a6 { [%clk 0:15:17] } 4. e4 { [%clk 0:15:20] } 4... dxe4 { [%clk 0:15:26] } 5. Nxe4 { [%clk 0:15:30] } 5... Nxe4 { [%clk 0:15:35] } 0-1

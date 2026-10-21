@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/RtTFMhGr"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "BAdaaaisakreemKON"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "RtTFMhGr"]
+[UTCDate "2026.10.19"]
+[UTCTime "11:01:41"]
+[WhiteElo "1844"]
+[BlackElo "2152"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. Bc4 { [%clk 0:02:58] } 2... Nf6 { [%clk 0:02:59] } 3. Nc3 { [%clk 0:02:56] } 3... Bc5 { [%clk 0:02:58] } 4. Nf3 { [%clk 0:02:51] } 4... d6 { [%clk 0:02:56] } 5. Bxf7+ { [%clk 0:02:48] } 5... Kxf7 { [%clk 0:02:56] } 6. Ng5+ { [%clk 0:02:45] } 6... Kf8 { [%clk 0:02:55] } 7. Nd5 { [%clk 0:02:12] } 7... h6 { [%clk 0:02:55] } 8. Nxf6 { [%clk 0:02:07] } 8... Qxf6 { [%clk 0:02:55] } 9. Nf3 { [%clk 0:01:54] } 9... Ke8 { [%clk 0:02:54] } 10. d4 { [%clk 0:01:48] } 10... exd4 { [%clk 0:02:54] } 11. O-O { [%clk 0:01:44] } 11... Bg4 { [%clk 0:02:53] } 12. e5 { [%clk 0:01:38] } 12... dxe5 { [%clk 0:02:53] } 13. Re1 { [%clk 0:01:28] } 13... Bxf3 { [%clk 0:02:53] } 14. Qxf3 { [%clk 0:01:23] } 14... Qxf3 { [%clk 0:02:52] } 15. Rxe5+ { [%clk 0:01:22] } 15... Be7 { [%clk 0:02:52] } 16. gxf3 { [%clk 0:01:18] } 16... c5 { [%clk 0:02:52] } 17. Bf4 { [%clk 0:01:12] } 17... Nc6 { [%clk 0:02:52] } 18. Re2 { [%clk 0:01:10] } 18... b6 { [%clk 0:02:51] } 19. Rae1 { [%clk 0:01:08] } 19... Kd7 { [%clk 0:02:51] } 20. Re6 { [%clk 0:00:58] } 20... Rae8 { [%clk 0:02:51] } 0-1

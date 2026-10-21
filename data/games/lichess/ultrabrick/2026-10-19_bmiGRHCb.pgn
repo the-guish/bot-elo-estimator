@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/bmiGRHCb"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Kaleko"]
+[Black "UltraBrick"]
+[Result "1/2-1/2"]
+[GameId "bmiGRHCb"]
+[UTCDate "2026.10.19"]
+[UTCTime "10:14:14"]
+[WhiteElo "1631"]
+[BlackElo "1444"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:05:00] } 2. c4 { [%clk 0:05:01] } 2... e6 { [%clk 0:05:03] } 3. Nf3 { [%clk 0:05:02] } 3... Bb4+ { [%clk 0:05:06] } 4. Bd2 { [%clk 0:05:03] } 4... Qe7 { [%clk 0:05:09] } 5. Qb3 { [%clk 0:04:58] } 5... Bxd2+ { [%clk 0:04:58] } 6. Nfxd2 { [%clk 0:04:53] } 6... O-O { [%clk 0:04:43] } 7. Nc3 { [%clk 0:04:53] } 7... c5 { [%clk 0:04:31] } 8. d5 { [%clk 0:04:41] } 8... Rd8 { [%clk 0:04:22] } 9. e4 { [%clk 0:04:37] } 9... exd5 { [%clk 0:04:13] } 10. cxd5 { [%clk 0:04:33] } 10... h6 { [%clk 0:03:58] } 11. Bc4 { [%clk 0:04:16] } 11... Nh5 { [%clk 0:03:50] } 12. O-O { [%clk 0:04:10] } 12... Nf4 { [%clk 0:03:42] } 13. Nf3 { [%clk 0:03:55] } 13... Qf6 { [%clk 0:03:35] } 14. Rfe1 { [%clk 0:03:44] } 14... Qg6 { [%clk 0:03:27] } 15. Bf1 { [%clk 0:03:38] } 15... Nh3+ { [%clk 0:03:20] } 16. Kh1 { [%clk 0:03:35] } 16... Nxf2+ { [%clk 0:03:14] } 17. Kg1 { [%clk 0:03:37] } 17... Nh3+ { [%clk 0:03:07] } 18. Kh1 { [%clk 0:03:38] } 18... Nf2+ { [%clk 0:02:58] } 19. Kg1 { [%clk 0:03:38] } 19... Nh3+ { [%clk 0:02:53] } 20. Kh1 { [%clk 0:03:36] } 20... Qg4 { [%clk 0:02:48] } 21. Nb5 { [%clk 0:03:08] } 21... Nf2+ { [%clk 0:02:44] } 22. Kg1 { [%clk 0:03:06] } 22... Nh3+ { [%clk 0:02:39] } 23. Kh1 { [%clk 0:03:06] } 23... Nf2+ { [%clk 0:02:35] } 24. Kg1 { [%clk 0:03:04] } 24... Nh3+ { [%clk 0:02:31] } 25. Kh1 { [%clk 0:03:03] } 1/2-1/2

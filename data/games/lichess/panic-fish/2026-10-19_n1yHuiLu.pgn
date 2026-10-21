@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/n1yHuiLu"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "silverant899"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "n1yHuiLu"]
+[UTCDate "2026.10.19"]
+[UTCTime "14:08:03"]
+[WhiteElo "1500"]
+[BlackElo "2054"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... e5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:29:59] } 2... Nc6 { [%clk 0:29:59] } 3. Bc4 { [%clk 0:29:55] } 3... Nf6 { [%clk 0:29:58] } 4. Ng5 { [%clk 0:29:53] } 4... d5 { [%clk 0:29:56] } 5. exd5 { [%clk 0:29:46] } 5... Na5 { [%clk 0:29:55] } 6. Bb5+ { [%clk 0:29:40] } 6... c6 { [%clk 0:29:55] } 7. dxc6 { [%clk 0:29:35] } 7... bxc6 { [%clk 0:29:54] } 8. Bxc6+ { [%clk 0:29:31] } 8... Nxc6 { [%clk 0:29:54] } 9. O-O { [%clk 0:29:24] } 9... Be7 { [%clk 0:29:53] } 10. c3 { [%clk 0:29:15] } 10... h6 { [%clk 0:29:53] } 11. Nh3 { [%clk 0:29:07] } 11... Bg4 { [%clk 0:29:53] } 12. f3 { [%clk 0:28:51] } 12... Bxh3 { [%clk 0:29:52] } 13. gxh3 { [%clk 0:28:49] } 13... Qd3 { [%clk 0:29:52] } 14. Qe2 { [%clk 0:28:36] } 14... Qxe2 { [%clk 0:29:52] } 15. Rf2 { [%clk 0:28:29] } 15... Qd1+ { [%clk 0:29:51] } 16. Rf1 { [%clk 0:28:27] } 16... Qc2 { [%clk 0:29:51] } 17. Na3 { [%clk 0:28:24] } 17... Bxa3 { [%clk 0:29:51] } 18. bxa3 { [%clk 0:28:22] } 18... Nd5 { [%clk 0:29:51] } 19. c4 { [%clk 0:28:18] } 19... Nf4 { [%clk 0:29:51] } 20. Rd1 { [%clk 0:28:13] } 20... Qxd1+ { [%clk 0:29:50] } 21. Kf2 { [%clk 0:28:11] } 21... f6 { [%clk 0:29:50] } 22. d3 { [%clk 0:28:09] } 22... Qc2+ { [%clk 0:29:50] } 23. Bd2 { [%clk 0:28:06] } 23... Qxd2+ { [%clk 0:29:50] } 24. Kf1 { [%clk 0:28:04] } 24... Qe2+ { [%clk 0:29:50] } 25. Kg1 { [%clk 0:28:03] } 25... Nxh3+ { [%clk 0:29:49] } 26. Kh1 { [%clk 0:28:01] } 26... Qxf3# { [%clk 0:29:49] } 0-1

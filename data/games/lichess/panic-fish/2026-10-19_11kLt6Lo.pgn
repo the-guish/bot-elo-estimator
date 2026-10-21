@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/11kLt6Lo"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "areobe"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "11kLt6Lo"]
+[UTCDate "2026.10.19"]
+[UTCTime "19:50:37"]
+[WhiteElo "1446"]
+[BlackElo "2152"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Time forfeit"]
+
+1. d4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. Bf4 { [%clk 0:03:01] } 2... e6 { [%clk 0:03:01] } 3. e3 { [%clk 0:02:49] } 3... Nf6 { [%clk 0:03:02] } 4. Bb5+ { [%clk 0:02:50] } 4... Bd7 { [%clk 0:03:03] } 5. Bxd7+ { [%clk 0:02:52] } 5... Nfxd7 { [%clk 0:03:05] } 0-1

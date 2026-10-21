@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/1BDEEdGV"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "RavenEngine"]
+[Black "clauchess88"]
+[Result "1-0"]
+[GameId "1BDEEdGV"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:46:36"]
+[WhiteElo "2302"]
+[BlackElo "1099"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:00] } 2... Nc6 { [%clk 0:14:58] } 3. Bb5 { [%clk 0:15:00] } 3... a6 { [%clk 0:14:57] } 4. Ba4 { [%clk 0:15:00] } 4... Nf6 { [%clk 0:14:52] } 5. O-O { [%clk 0:15:00] } 5... b5 { [%clk 0:14:41] } 6. Bb3 { [%clk 0:15:00] } 6... Bc5 { [%clk 0:14:37] } 7. c3 { [%clk 0:14:24] } 7... O-O { [%clk 0:14:35] } 8. d4 { [%clk 0:13:49] } 8... exd4 { [%clk 0:13:34] } 9. e5 { [%clk 0:13:16] } 9... Ne4 { [%clk 0:13:08] } 10. cxd4 { [%clk 0:12:44] } 10... Bb6 { [%clk 0:13:03] } 11. Bd5 { [%clk 0:12:14] } 1-0

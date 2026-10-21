@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/wghwsrI3"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "kemik635"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "wghwsrI3"]
+[UTCDate "2026.10.19"]
+[UTCTime "07:03:39"]
+[WhiteElo "1711"]
+[BlackElo "2102"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. d4 { [%clk 0:09:59] } 2... exd4 { [%clk 0:09:59] } 3. Bc4 { [%clk 0:09:57] } 3... Nf6 { [%clk 0:09:58] } 4. Nf3 { [%clk 0:09:54] } 4... Nxe4 { [%clk 0:09:56] } 5. Bxf7+ { [%clk 0:09:51] } 5... Kxf7 { [%clk 0:09:56] } 6. Ne5+ { [%clk 0:09:50] } 6... Kg8 { [%clk 0:09:55] } 7. Qxd4 { [%clk 0:09:47] } 7... d5 { [%clk 0:09:55] } 0-1

@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/djC53Bzi"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "silverant899"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "djC53Bzi"]
+[UTCDate "2026.10.19"]
+[UTCTime "14:10:40"]
+[WhiteElo "1500"]
+[BlackElo "2054"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+20"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:30:00] } 1... c5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:30:19] } 2... d6 { [%clk 0:30:19] } 3. Bb5+ { [%clk 0:30:36] } 3... Bd7 { [%clk 0:30:38] } 4. Bc4 { [%clk 0:30:50] } 4... Nf6 { [%clk 0:30:58] } 5. Ng5 { [%clk 0:31:07] } 5... e6 { [%clk 0:31:17] } 6. O-O { [%clk 0:31:18] } 6... h6 { [%clk 0:31:37] } 7. Nf3 { [%clk 0:31:34] } 7... Nxe4 { [%clk 0:31:56] } 8. Bd3 { [%clk 0:31:49] } 8... Ng5 { [%clk 0:32:16] } 9. h4 { [%clk 0:31:57] } 9... Nxf3+ { [%clk 0:32:35] } 10. gxf3 { [%clk 0:32:16] } 10... Nc6 { [%clk 0:32:55] } 11. b4 { [%clk 0:32:27] } 11... cxb4 { [%clk 0:33:15] } 12. c3 { [%clk 0:32:45] } 12... Qxh4 { [%clk 0:33:34] } 13. cxb4 { [%clk 0:33:01] } 13... Nxb4 { [%clk 0:33:54] } 14. Qa4 { [%clk 0:33:16] } 14... Bxa4 { [%clk 0:34:14] } 15. Bb5+ { [%clk 0:33:31] } 15... Bxb5 { [%clk 0:34:33] } 16. Nc3 { [%clk 0:32:27] } 16... Qg5+ { [%clk 0:34:53] } 17. Kh2 { [%clk 0:32:42] } 17... Qh5+ { [%clk 0:35:13] } 18. Kg3 { [%clk 0:33:01] } 18... Qg5+ { [%clk 0:35:33] } 19. Kh3 { [%clk 0:33:19] } 19... Qh5+ { [%clk 0:35:53] } 20. Kg3 { [%clk 0:33:38] } 20... Qg5+ { [%clk 0:36:12] } 21. Kh3 { [%clk 0:33:57] } 21... Bxf1+ { [%clk 0:36:32] } 22. Kh2 { [%clk 0:34:16] } 22... Qg6 { [%clk 0:36:52] } 0-1

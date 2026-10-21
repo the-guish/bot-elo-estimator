@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/dTscJL3K"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "transtoothbrush2"]
+[Black "uSunfish-l0"]
+[Result "0-1"]
+[GameId "dTscJL3K"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:33:11"]
+[WhiteElo "1181"]
+[BlackElo "938"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:05:00] } 2. c4 { [%clk 0:04:55] } 2... e6 { [%clk 0:05:03] } 3. Nc3 { [%clk 0:04:56] } 3... Bb4 { [%clk 0:05:06] } 4. Bd2 { [%clk 0:04:57] } 4... O-O { [%clk 0:05:09] } 5. e3 { [%clk 0:05:00] } 5... Nc6 { [%clk 0:05:12] } 6. Nf3 { [%clk 0:05:02] } 6... Bd6 { [%clk 0:05:15] } 7. Bd3 { [%clk 0:05:03] } 7... Re8 { [%clk 0:05:18] } 8. O-O { [%clk 0:05:05] } 8... Rb8 { [%clk 0:05:21] } 9. Qc2 { [%clk 0:05:07] } 9... a6 { [%clk 0:05:24] } 10. b3 { [%clk 0:05:09] } 10... Nb4 { [%clk 0:05:27] } 11. Qb2 { [%clk 0:05:09] } 11... Nxd3 { [%clk 0:05:30] } 0-1

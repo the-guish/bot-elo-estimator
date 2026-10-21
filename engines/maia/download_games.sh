@@ -1,14 +1,6 @@
 #!/bin/sh
-# Download the Maia bots' games. Extra arguments go to download_games.py.
-# The token comes from LICHESS_API_TOKEN, or else from engines/maia/.env or the repo root .env.
+# Download the Maia bots' games into data/games/lichess, 300 per bot. Extra arguments go to
+# tools/lichess_games/download_games.py.
 set -eu
 here=$(cd "$(dirname "$0")" && pwd)
-if [ -z "${LICHESS_API_TOKEN:-}" ]; then
-    for env_file in "$here/.env" "$here/../../.env"; do
-        if [ -f "$env_file" ]; then
-            set -a; . "$env_file"; set +a
-            break
-        fi
-    done
-fi
-exec python3 "$here/download_games.py" "$@"
+exec "$here/../../tools/lichess_games/download_games.sh" --bots maia1 maia5 maia9 --count 300 "$@"

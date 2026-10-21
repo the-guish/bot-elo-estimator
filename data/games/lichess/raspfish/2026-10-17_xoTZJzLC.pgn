@@ -1,0 +1,18 @@
+[Event "2nd GP Bots and Humans Team Battle"]
+[Site "https://lichess.org/xoTZJzLC"]
+[Date "2026.10.17"]
+[Round "-"]
+[White "RaspFish"]
+[Black "MathiasL2014"]
+[Result "1-0"]
+[GameId "xoTZJzLC"]
+[UTCDate "2026.10.17"]
+[UTCTime "18:03:26"]
+[WhiteElo "3004"]
+[BlackElo "1359"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. Bf4 { [%clk 0:03:02] } 2... Nf6 { [%clk 0:03:01] } 3. Nf3 { [%clk 0:03:04] } 3... Nc6 { [%clk 0:03:02] } 4. c4 { [%clk 0:03:06] } 4... dxc4 { [%clk 0:03:02] } 5. e3 { [%clk 0:03:08] } 5... Bf5 { [%clk 0:03:03] } 6. Bxc4 { [%clk 0:02:58] } 6... Nb4 { [%clk 0:03:03] } 7. Qa4+ { [%clk 0:02:55] } 7... c6 { [%clk 0:02:57] } 8. Qxb4 { [%clk 0:02:50] } 8... e5 { [%clk 0:02:58] } 9. Qxb7 { [%clk 0:02:45] } 9... exf4 { [%clk 0:02:57] } 10. Qxf7# { [%clk 0:02:44] } 1-0

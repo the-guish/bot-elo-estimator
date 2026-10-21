@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/GUgOAZoa"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "ramosalves"]
+[Black "AllieTheChessBot"]
+[Result "0-1"]
+[GameId "GUgOAZoa"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:53:26"]
+[WhiteElo "1500"]
+[BlackElo "1468"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1200+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:20:00] } 1... e6 { [%clk 0:20:00] } 2. e5 { [%clk 0:19:56] } 2... d6 { [%clk 0:19:58] } 3. Bb5+ { [%clk 0:19:50] } 3... Bd7 { [%clk 0:19:51] } 4. Bxd7+ { [%clk 0:19:42] } 4... Nxd7 { [%clk 0:19:50] } 5. exd6 { [%clk 0:19:40] } 5... Bxd6 { [%clk 0:19:46] } 6. Qg4 { [%clk 0:19:33] } 6... Qf6 { [%clk 0:19:35] } 7. Qb4 { [%clk 0:19:22] } 7... Bxb4 { [%clk 0:19:30] } 8. Ne2 { [%clk 0:19:10] } 8... Bd6 { [%clk 0:19:25] } 9. d3 { [%clk 0:19:06] } 9... Ne7 { [%clk 0:19:11] } 10. f4 { [%clk 0:18:55] } 10... O-O { [%clk 0:18:49] } 11. Be3 { [%clk 0:18:47] } 11... Qxb2 { [%clk 0:18:41] } 12. Nbc3 { [%clk 0:18:25] } 12... Qxa1+ { [%clk 0:18:32] } 13. Nd1 { [%clk 0:18:21] } 13... Qxa2 { [%clk 0:18:14] } 14. g4 { [%clk 0:18:10] } 14... Qxc2 { [%clk 0:18:03] } 15. Nd4 { [%clk 0:17:58] } 15... Qxd3 { [%clk 0:17:36] } 16. Nb5 { [%clk 0:17:42] } 16... Qxb5 { [%clk 0:17:23] } 17. g5 { [%clk 0:17:39] } 17... Bb4+ { [%clk 0:16:58] } 18. Kf2 { [%clk 0:17:35] } 18... Qd5 { [%clk 0:16:53] } 19. h4 { [%clk 0:17:31] } 19... Qxh1 { [%clk 0:16:50] } 20. h5 { [%clk 0:17:27] } 20... Qxh5 { [%clk 0:16:46] } 21. Kg3 { [%clk 0:17:22] } 21... Qxd1 { [%clk 0:16:37] } 22. Bxa7 { [%clk 0:17:19] } 22... b6 { [%clk 0:16:36] } 23. Bxb6 { [%clk 0:17:15] } 23... Nxb6 { [%clk 0:16:32] } 24. g6 { [%clk 0:17:11] } 24... Ra3+ { [%clk 0:16:27] } 25. Kh4 { [%clk 0:17:07] } 25... Nxg6+ { [%clk 0:16:22] } 26. Kg5 { [%clk 0:17:05] } 26... Qg1+ { [%clk 0:16:12] } 27. Kh5 { [%clk 0:17:02] } 27... Nxf4+ { [%clk 0:16:06] } 28. Kh4 { [%clk 0:16:49] } 28... Be7# { [%clk 0:16:04] } 0-1

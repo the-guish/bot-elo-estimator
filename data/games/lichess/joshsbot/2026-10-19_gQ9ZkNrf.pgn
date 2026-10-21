@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/gQ9ZkNrf"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "joshsbot"]
+[Black "TheChadOpening"]
+[Result "1-0"]
+[GameId "gQ9ZkNrf"]
+[UTCDate "2026.10.19"]
+[UTCTime "02:14:43"]
+[WhiteElo "1540"]
+[BlackElo "1381"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. c3 { [%clk 0:10:00] } 1... d6 { [%clk 0:10:00] } 2. Qb3 { [%clk 0:09:59] } 2... Nf6 { [%clk 0:09:57] } 3. Nf3 { [%clk 0:09:55] } 3... g6 { [%clk 0:09:52] } 4. d3 { [%clk 0:09:50] } 4... Bg7 { [%clk 0:09:51] } 5. Nd4 { [%clk 0:09:40] } 5... O-O { [%clk 0:09:45] } 6. f3 { [%clk 0:09:30] } 6... e5 { [%clk 0:09:38] } 7. Nc2 { [%clk 0:09:19] } 7... Be6 { [%clk 0:09:32] } 8. Qxb7 { [%clk 0:09:07] } 8... Nbd7 { [%clk 0:09:26] } 9. Qb4 { [%clk 0:08:37] } 9... Rb8 { [%clk 0:09:21] } 10. Qa3 { [%clk 0:07:51] } 10... Rb7 { [%clk 0:09:08] } 11. f4 { [%clk 0:07:38] } 11... Nd5 { [%clk 0:08:44] } 12. fxe5 { [%clk 0:07:24] } 12... Nxe5 { [%clk 0:08:39] } 13. e4 { [%clk 0:07:09] } 13... Nf4 { [%clk 0:07:13] } 1-0

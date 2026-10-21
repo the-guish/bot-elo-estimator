@@ -1,0 +1,18 @@
+[Event "5th France Groupe Open BOTs Team Battle"]
+[Site "https://lichess.org/wobyoFiQ"]
+[Date "2026.10.16"]
+[Round "-"]
+[White "Erwinbwcv"]
+[Black "PatriciaBot"]
+[Result "0-1"]
+[GameId "wobyoFiQ"]
+[UTCDate "2026.10.16"]
+[UTCTime "13:33:14"]
+[WhiteElo "1831"]
+[BlackElo "2710"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:05:00] } 1... Nf6 { [%clk 0:05:00] } 2. Nc3 { [%clk 0:04:59] } 2... d5 { [%clk 0:05:00] } 3. Bf4 { [%clk 0:04:57] } 3... e6 { [%clk 0:05:00] } 4. e3 { [%clk 0:04:56] } 4... Bb4 { [%clk 0:05:00] } 5. Bd3 { [%clk 0:04:53] } 5... c5 { [%clk 0:04:48] } 6. a3 { [%clk 0:04:50] } 6... Bxc3+ { [%clk 0:04:39] } 7. bxc3 { [%clk 0:04:49] } 7... Qa5 { [%clk 0:04:21] } 8. Kf1 { [%clk 0:04:34] } 8... Nc6 { [%clk 0:04:04] } 9. Nf3 { [%clk 0:04:28] } 9... c4 { [%clk 0:03:56] } 10. Be2 { [%clk 0:04:24] } 10... Ne4 { [%clk 0:03:44] } 0-1

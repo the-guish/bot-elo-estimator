@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/mE1PT4UX"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "SalenaGomez"]
+[Black "AllieTheChessBot"]
+[Result "0-1"]
+[GameId "mE1PT4UX"]
+[UTCDate "2026.10.19"]
+[UTCTime "18:55:55"]
+[WhiteElo "1347"]
+[BlackElo "1447"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. Bf4 { [%clk 0:10:04] } 2... Bf5 { [%clk 0:09:53] } 3. Nf3 { [%clk 0:10:07] } 3... e6 { [%clk 0:09:14] } 4. e3 { [%clk 0:10:03] } 4... h6 { [%clk 0:09:00] } 5. Nbd2 { [%clk 0:10:02] } 5... Bb4 { [%clk 0:08:52] } 6. c3 { [%clk 0:10:05] } 6... Ba5 { [%clk 0:08:42] } 7. Nh4 { [%clk 0:09:49] } 7... Be4 { [%clk 0:08:32] } 8. Nxe4 { [%clk 0:09:47] } 8... dxe4 { [%clk 0:08:36] } 9. Qc2 { [%clk 0:09:29] } 9... a6 { [%clk 0:08:25] } 10. Qxe4 { [%clk 0:09:25] } 10... g5 { [%clk 0:07:41] } 11. Qxb7 { [%clk 0:08:54] } 11... gxf4 { [%clk 0:07:34] } 12. Qxa8 { [%clk 0:08:54] } 12... Qxh4 { [%clk 0:07:28] } 13. Qxb8+ { [%clk 0:08:48] } 13... Kd7 { [%clk 0:07:32] } 14. Bxa6 { [%clk 0:08:27] } 14... fxe3 { [%clk 0:07:31] } 15. Qb5+ { [%clk 0:08:12] } 15... c6 { [%clk 0:07:21] } 16. Qb7+ { [%clk 0:08:12] } 16... Kd6 { [%clk 0:07:16] } 17. O-O-O { [%clk 0:07:59] } 17... exf2 { [%clk 0:06:32] } 18. g3 { [%clk 0:07:37] } 18... Qg5+ { [%clk 0:06:13] } 19. Kb1 { [%clk 0:07:29] } 19... Nf6 { [%clk 0:04:51] } 20. Qb6 { [%clk 0:07:09] } 0-1

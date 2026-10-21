@@ -1,0 +1,18 @@
+[Event "4th France Groupe Open BOTs Team Battle"]
+[Site "https://lichess.org/pNsWVgev"]
+[Date "2026.10.09"]
+[Round "-"]
+[White "PatriciaBot"]
+[Black "OE_2015"]
+[Result "1-0"]
+[GameId "pNsWVgev"]
+[UTCDate "2026.10.09"]
+[UTCTime "18:31:43"]
+[WhiteElo "2705"]
+[BlackElo "1930"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... c5 { [%clk 0:05:00] } 2. Nf3 { [%clk 0:04:40] } 2... a6 { [%clk 0:04:59] } 3. d4 { [%clk 0:04:26] } 3... cxd4 { [%clk 0:04:49] } 4. Bd3 { [%clk 0:04:01] } 4... Nc6 { [%clk 0:04:34] } 5. c3 { [%clk 0:03:50] } 5... dxc3 { [%clk 0:03:53] } 1-0

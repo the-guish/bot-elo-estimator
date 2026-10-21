@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/9dHGffHQ"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Panic-Fish"]
+[Black "kemik635"]
+[Result "1-0"]
+[GameId "9dHGffHQ"]
+[UTCDate "2026.10.19"]
+[UTCTime "08:11:26"]
+[WhiteElo "2102"]
+[BlackElo "1711"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:59] } 2... Bc5 { [%clk 0:09:58] } 3. Nxe5 { [%clk 0:09:58] } 3... Bxf2+ { [%clk 0:09:57] } 4. Kxf2 { [%clk 0:09:57] } 4... Qf6+ { [%clk 0:09:56] } 5. Nf3 { [%clk 0:09:57] } 5... Qb6+ { [%clk 0:09:55] } 6. d4 { [%clk 0:09:57] } 6... Nf6 { [%clk 0:09:52] } 7. Kg1 { [%clk 0:09:56] } 7... Nxe4 { [%clk 0:09:49] } 8. a4 { [%clk 0:09:56] } 8... d5 { [%clk 0:09:40] } 9. Nc3 { [%clk 0:09:56] } 9... Bg4 { [%clk 0:09:31] } 10. Nxd5 { [%clk 0:09:56] } 10... Qd6 { [%clk 0:09:05] } 11. Nc3 { [%clk 0:09:55] } 11... Nxc3 { [%clk 0:09:01] } 12. Qe1+ { [%clk 0:09:55] } 12... Be6 { [%clk 0:08:54] } 13. bxc3 { [%clk 0:09:55] } 13... c5 { [%clk 0:08:47] } 14. a5 { [%clk 0:09:55] } 14... O-O { [%clk 0:08:43] } 15. Qe5 { [%clk 0:09:54] } 15... Qxe5 { [%clk 0:08:33] } 16. Nxe5 { [%clk 0:09:54] } 16... c4 { [%clk 0:07:47] } 17. Kf2 { [%clk 0:09:54] } 17... Nc6 { [%clk 0:07:42] } 18. Be2 { [%clk 0:09:53] } 18... Nxe5 { [%clk 0:07:40] } 19. dxe5 { [%clk 0:09:53] } 19... f6 { [%clk 0:07:39] } 20. a6 { [%clk 0:09:53] } 20... fxe5+ { [%clk 0:07:38] } 21. Ke1 { [%clk 0:09:53] } 21... b5 { [%clk 0:07:33] } 22. Be3 { [%clk 0:09:53] } 22... Rf7 { [%clk 0:07:28] } 23. Rd1 { [%clk 0:09:52] } 23... Raf8 { [%clk 0:07:27] } 24. h3 { [%clk 0:09:52] } 1-0

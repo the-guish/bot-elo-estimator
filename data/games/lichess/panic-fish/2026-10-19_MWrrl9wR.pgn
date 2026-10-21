@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/MWrrl9wR"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "I_like_Mother_3"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "MWrrl9wR"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:03:15"]
+[WhiteElo "1500"]
+[BlackElo "2099"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:59] } 2... Nc6 { [%clk 0:09:59] } 3. d4 { [%clk 0:09:56] } 3... exd4 { [%clk 0:09:58] } 4. Bc4 { [%clk 0:09:54] } 4... Nf6 { [%clk 0:09:56] } 5. O-O { [%clk 0:09:53] } 5... Nxe4 { [%clk 0:09:55] } 6. Nc3 { [%clk 0:09:51] } 6... dxc3 { [%clk 0:09:54] } 7. Bxf7+ { [%clk 0:09:37] } 7... Kxf7 { [%clk 0:09:53] } 8. Qd5+ { [%clk 0:09:31] } 8... Ke8 { [%clk 0:09:53] } 9. Qh5+ { [%clk 0:09:21] } 9... g6 { [%clk 0:09:53] } 10. Qd5 { [%clk 0:09:15] } 10... Nf6 { [%clk 0:09:52] } 11. Re1+ { [%clk 0:09:11] } 11... Be7 { [%clk 0:09:52] } 12. Rxe7+ { [%clk 0:08:52] } 12... Qxe7 { [%clk 0:09:52] } 13. Ne5 { [%clk 0:08:46] } 13... Nxd5 { [%clk 0:09:52] } 14. Nxc6 { [%clk 0:08:38] } 14... Qe1# { [%clk 0:09:52] } 0-1

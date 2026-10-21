@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/ZVZuQq1I"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Panic-Fish"]
+[Black "brilliantchess15256"]
+[Result "1-0"]
+[GameId "ZVZuQq1I"]
+[UTCDate "2026.10.19"]
+[UTCTime "16:32:38"]
+[WhiteElo "2105"]
+[BlackElo "1225"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:09] } 1-0

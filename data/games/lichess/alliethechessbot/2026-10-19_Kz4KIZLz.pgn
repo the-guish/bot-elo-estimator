@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/Kz4KIZLz"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Lscomp"]
+[Black "AllieTheChessBot"]
+[Result "0-1"]
+[GameId "Kz4KIZLz"]
+[UTCDate "2026.10.19"]
+[UTCTime "20:38:49"]
+[WhiteElo "1708"]
+[BlackElo "1447"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+
+1. Nf3 { [%clk 0:10:00] } 1... h5 { [%clk 0:10:00] } 2. g3 { [%clk 0:10:03] } 2... d6 { [%clk 0:10:02] } 3. Bg2 { [%clk 0:10:06] } 3... e5 { [%clk 0:10:03] } 4. d3 { [%clk 0:10:09] } 4... Be7 { [%clk 0:10:04] } 5. O-O { [%clk 0:10:12] } 5... h4 { [%clk 0:10:06] } 6. gxh4 { [%clk 0:09:54] } 6... Bxh4 { [%clk 0:10:06] } 7. Nxh4 { [%clk 0:09:51] } 7... Qxh4 { [%clk 0:09:56] } 8. h3 { [%clk 0:09:53] } 8... Bxh3 { [%clk 0:09:42] } 0-1

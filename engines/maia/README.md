@@ -4,35 +4,14 @@ These games come from the Lichess bots that run Maia 1. `maia1` runs `maia-1100`
 `maia-1500` and `maia9` runs `maia-1900`. Replaying them checks that our Maias play the same
 moves as the bots.
 
-## The selection
+## The games
 
-Each bot has 300 games, in `games/<bot>/<UTC date>_<game id>.pgn`. The date is the day the game
-started. Each file holds one game.
-
-- **The window** ends at `2026-10-20T00:00:00Z`. Each bot's folder holds its 300 most recent
-  games that ended before then.
-- **The speeds** are blitz, rapid and classical.
-- **The games** are standard chess from the normal starting position. The download drops other
-  variants and games with a `SetUp` or `FEN` tag.
-- **Rated and casual games** both count, against any opponent.
-- **Each PGN** keeps the moves and the `%clk` comment after each move. It has no evals and no
-  opening tag.
-
-The script's defaults hold this selection. `--count`, `--until` and `--bots` change it.
-
-## Download
-
-The Lichess API needs a token. The wrapper reads it from `LICHESS_API_TOKEN`. When that variable
-is unset, the wrapper loads `engines/maia/.env`, or else the repository's `.env`. Git ignores both
-files.
+Each bot has 300 games, in `data/games/lichess/maia1`, `maia5` and `maia9`.
+`tools/lichess_games/README.md` describes the selection, and the token the download needs.
 
 ```sh
-echo 'LICHESS_API_TOKEN=lip_...' > engines/maia/.env
 engines/maia/download_games.sh
 ```
-
-The download takes about a minute. A re-run overwrites each selected game's file. It leaves other
-files in place, so delete `games/` first when the selection changes.
 
 ## Replay
 
@@ -66,8 +45,8 @@ ignores the records.
 
 ## Tests
 
-The tests cover the pure functions: filtering, selection and file names, reading a game's bot
-moves, reading lc0's policy lines and the verdict.
+The tests cover the pure functions: reading a game's bot moves, reading lc0's policy lines and
+the verdict.
 
 ```sh
 uv run --with pytest --with chess==1.11.2 pytest engines/maia -q

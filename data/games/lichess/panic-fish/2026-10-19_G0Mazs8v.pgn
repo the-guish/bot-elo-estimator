@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/G0Mazs8v"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Panic-Fish"]
+[Black "Naka08"]
+[Result "1-0"]
+[GameId "G0Mazs8v"]
+[UTCDate "2026.10.19"]
+[UTCTime "10:36:55"]
+[WhiteElo "2046"]
+[BlackElo "1500"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... e5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:29:59] } 2... Nc6 { [%clk 0:29:59] } 3. d4 { [%clk 0:29:58] } 3... exd4 { [%clk 0:29:57] } 4. Nxd4 { [%clk 0:29:56] } 4... Nf6 { [%clk 0:29:56] } 5. Nxc6 { [%clk 0:29:55] } 5... bxc6 { [%clk 0:29:55] } 6. Bd3 { [%clk 0:29:54] } 6... Ba6 { [%clk 0:29:54] } 7. Bxa6 { [%clk 0:29:53] } 7... Qc8 { [%clk 0:29:54] } 8. Bxc8 { [%clk 0:29:52] } 8... Rb8 { [%clk 0:29:54] } 9. e5 { [%clk 0:29:50] } 9... Rb7 { [%clk 0:29:54] } 10. exf6 { [%clk 0:29:49] } 10... g6 { [%clk 0:29:53] } 11. Qxd7# { [%clk 0:29:49] } 1-0

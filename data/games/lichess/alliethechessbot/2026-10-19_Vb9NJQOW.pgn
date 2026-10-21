@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/Vb9NJQOW"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "ChessNubx"]
+[Black "AllieTheChessBot"]
+[Result "0-1"]
+[GameId "Vb9NJQOW"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:41:36"]
+[WhiteElo "907"]
+[BlackElo "1449"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+10"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. f3 { [%clk 0:10:03] } 2... e6 { [%clk 0:10:05] } 0-1

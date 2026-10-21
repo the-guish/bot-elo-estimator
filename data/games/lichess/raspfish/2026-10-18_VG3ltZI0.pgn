@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/VG3ltZI0"]
+[Date "2026.10.18"]
+[Round "-"]
+[White "TimaTurchaninov"]
+[Black "RaspFish"]
+[Result "0-1"]
+[GameId "VG3ltZI0"]
+[UTCDate "2026.10.18"]
+[UTCTime "09:00:07"]
+[WhiteElo "1196"]
+[BlackElo "3027"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:10:00] } 1... Nf6 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:10:02] } 2... d5 { [%clk 0:10:05] } 3. Nc3 { [%clk 0:10:04] } 3... c6 { [%clk 0:10:10] } 4. e3 { [%clk 0:10:08] } 0-1

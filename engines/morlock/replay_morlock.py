@@ -23,7 +23,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "maia"))
 from replay_games import bot_moves  # noqa: E402  (reads a game's bot moves, as for Maia)
 
-GAMES_DIR = HERE / "games"
+GAMES_DIR = HERE.parents[1] / "data" / "games" / "lichess"
 OUT_DIR = HERE / "replay"
 # Each Lichess bot and the depth it searches. The engine is the name's first part.
 BOTS = {

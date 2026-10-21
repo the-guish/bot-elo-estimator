@@ -20,7 +20,7 @@ import chess
 import chess.pgn
 
 HERE = Path(__file__).resolve().parent
-GAMES_DIR = HERE / "games"
+GAMES_DIR = HERE.parents[1] / "data" / "games" / "lichess"
 OUT_DIR = HERE / "replay"
 NETS = {"maia1": 1100, "maia5": 1500, "maia9": 1900}
 ENGINE = "docker run --rm -i bot-elo-estimator-base maia-{rating}"

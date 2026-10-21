@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/8SSAU1mS"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "AllieTheChessBot"]
+[Black "titipipi"]
+[Result "1-0"]
+[GameId "8SSAU1mS"]
+[UTCDate "2026.10.19"]
+[UTCTime "18:44:46"]
+[WhiteElo "1405"]
+[BlackElo "1559"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. g3 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. e3 { [%clk 0:04:59] } 2... d5 { [%clk 0:04:59] } 3. Bg2 { [%clk 0:04:58] } 3... Nf6 { [%clk 0:04:54] } 4. h3 { [%clk 0:04:58] } 4... e4 { [%clk 0:04:34] } 5. d3 { [%clk 0:04:56] } 5... Bf5 { [%clk 0:03:42] } 6. Nd2 { [%clk 0:04:48] } 6... Qd7 { [%clk 0:03:37] } 7. dxe4 { [%clk 0:04:40] } 7... Nxe4 { [%clk 0:03:34] } 8. Nxe4 { [%clk 0:04:36] } 8... Bxe4 { [%clk 0:03:32] } 9. Bxe4 { [%clk 0:04:34] } 9... dxe4 { [%clk 0:03:30] } 10. Qxd7+ { [%clk 0:04:34] } 10... Nxd7 { [%clk 0:03:29] } 11. Ne2 { [%clk 0:04:33] } 11... O-O-O { [%clk 0:03:25] } 12. b3 { [%clk 0:04:31] } 12... f5 { [%clk 0:03:23] } 13. Bb2 { [%clk 0:04:29] } 13... Rg8 { [%clk 0:03:18] } 14. O-O-O { [%clk 0:04:28] } 14... g6 { [%clk 0:03:04] } 15. g4 { [%clk 0:04:22] } 15... Bd6 { [%clk 0:02:59] } 16. Rdg1 { [%clk 0:04:18] } 16... Ne5 { [%clk 0:02:55] } 17. gxf5 { [%clk 0:04:11] } 17... gxf5 { [%clk 0:02:51] } 18. Nd4 { [%clk 0:04:01] } 18... c5 { [%clk 0:02:37] } 19. Nxf5 { [%clk 0:03:58] } 19... Nf3 { [%clk 0:02:29] } 20. Rd1 { [%clk 0:03:56] } 20... Kc7 { [%clk 0:02:14] } 21. a4 { [%clk 0:03:34] } 21... Rg6 { [%clk 0:01:40] } 22. h4 { [%clk 0:03:30] } 22... h5 { [%clk 0:01:38] } 23. Rh3 { [%clk 0:03:25] } 23... Ne5 { [%clk 0:01:33] } 24. Nxd6 { [%clk 0:03:18] } 24... Rdxd6 { [%clk 0:01:30] } 25. Bxe5 { [%clk 0:03:16] } 1-0

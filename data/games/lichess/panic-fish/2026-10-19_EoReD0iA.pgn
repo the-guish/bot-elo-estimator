@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/EoReD0iA"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Naka08"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "EoReD0iA"]
+[UTCDate "2026.10.19"]
+[UTCTime "10:35:51"]
+[WhiteElo "1500"]
+[BlackElo "2046"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... c5 { [%clk 0:30:00] } 2. Nc3 { [%clk 0:29:55] } 2... e6 { [%clk 0:29:59] } 3. Nf3 { [%clk 0:29:54] } 3... a6 { [%clk 0:29:58] } 4. Bd3 { [%clk 0:29:53] } 4... b5 { [%clk 0:29:56] } 5. O-O { [%clk 0:29:52] } 5... Bb7 { [%clk 0:29:55] } 6. Ng5 { [%clk 0:29:47] } 6... Qxg5 { [%clk 0:29:54] } 7. Qf3 { [%clk 0:29:45] } 7... Nc6 { [%clk 0:29:53] } 8. b4 { [%clk 0:29:43] } 8... Ne5 { [%clk 0:29:52] } 9. Qg3 { [%clk 0:29:40] } 9... Qxg3 { [%clk 0:29:50] } 10. fxg3 { [%clk 0:29:40] } 10... cxb4 { [%clk 0:29:49] } 11. Nd5 { [%clk 0:29:38] } 11... exd5 { [%clk 0:29:48] } 12. exd5 { [%clk 0:29:37] } 12... Nxd3 { [%clk 0:29:47] } 13. cxd3 { [%clk 0:29:36] } 13... Bc5+ { [%clk 0:29:46] } 14. Kh1 { [%clk 0:29:35] } 14... Ne7 { [%clk 0:29:44] } 15. Rf2 { [%clk 0:29:34] } 15... Bxf2 { [%clk 0:29:43] } 16. Ba3 { [%clk 0:29:32] } 16... bxa3 { [%clk 0:29:42] } 17. Re1 { [%clk 0:29:32] } 17... Bxe1 { [%clk 0:29:41] } 18. h3 { [%clk 0:29:31] } 18... Bxg3 { [%clk 0:29:40] } 19. Kg1 { [%clk 0:29:30] } 19... Nf5 { [%clk 0:29:38] } 20. d4 { [%clk 0:29:28] } 20... Rc8 { [%clk 0:29:38] } 21. d3 { [%clk 0:29:27] } 21... Rc1# { [%clk 0:29:38] } 0-1

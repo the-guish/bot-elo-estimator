@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/ICsAVMJL"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "S4-G4Z"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "ICsAVMJL"]
+[UTCDate "2026.10.19"]
+[UTCTime "13:38:57"]
+[WhiteElo "1081"]
+[BlackElo "2105"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:58] } 2... Nc6 { [%clk 0:09:59] } 3. Nc3 { [%clk 0:09:55] } 3... Bc5 { [%clk 0:09:58] } 4. Bb5 { [%clk 0:09:50] } 4... Nd4 { [%clk 0:09:57] } 5. Nxd4 { [%clk 0:09:46] } 5... Bxd4 { [%clk 0:09:56] } 6. O-O { [%clk 0:09:28] } 6... c6 { [%clk 0:09:54] } 7. Ba4 { [%clk 0:09:14] } 7... Qh4 { [%clk 0:09:53] } 8. g3 { [%clk 0:09:08] } 8... Qh3 { [%clk 0:09:52] } 9. Re1 { [%clk 0:09:02] } 9... Nf6 { [%clk 0:09:51] } 10. b3 { [%clk 0:08:11] } 10... Ng4 { [%clk 0:09:50] } 11. Ne2 { [%clk 0:07:54] } 11... Qxh2+ { [%clk 0:09:49] } 12. Kf1 { [%clk 0:07:50] } 12... Qxf2# { [%clk 0:09:49] } 0-1

@@ -1,0 +1,18 @@
+[Event "rated rapid game"]
+[Site "https://lichess.org/ze2gNFTq"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Artem_Leskov"]
+[Black "UltraBrick"]
+[Result "0-1"]
+[GameId "ze2gNFTq"]
+[UTCDate "2026.10.19"]
+[UTCTime "07:13:54"]
+[WhiteElo "971"]
+[BlackElo "1641"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Bc4 { [%clk 0:15:09] } 2... Nf6 { [%clk 0:15:10] } 3. Nf3 { [%clk 0:15:17] } 0-1

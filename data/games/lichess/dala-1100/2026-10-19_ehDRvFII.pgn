@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/ehDRvFII"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "daks_100"]
+[Black "dala-1100"]
+[Result "0-1"]
+[GameId "ehDRvFII"]
+[UTCDate "2026.10.19"]
+[UTCTime "12:36:23"]
+[WhiteElo "907"]
+[BlackElo "1198"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e6 { [%clk 0:15:00] } 2. d4 { [%clk 0:15:09] } 2... d6 { [%clk 0:15:10] } 3. d5 { [%clk 0:15:16] } 3... e5 { [%clk 0:15:19] } 4. Nf3 { [%clk 0:15:18] } 4... Nf6 { [%clk 0:15:29] } 5. Nxe5 { [%clk 0:15:27] } 5... Nxe4 { [%clk 0:15:39] } 6. Qd3 { [%clk 0:15:31] } 6... Qf6 { [%clk 0:15:49] } 7. Qxe4 { [%clk 0:15:37] } 7... dxe5 { [%clk 0:15:58] } 8. Nc3 { [%clk 0:15:39] } 8... Bf5 { [%clk 0:16:08] } 9. Qa4+ { [%clk 0:15:25] } 9... Bd7 { [%clk 0:16:18] } 10. Qc4 { [%clk 0:15:26] } 10... c6 { [%clk 0:16:27] } 11. Be3 { [%clk 0:15:29] } 11... Be7 { [%clk 0:16:37] } 12. O-O-O { [%clk 0:15:35] } 12... O-O { [%clk 0:16:47] } 13. d6 { [%clk 0:15:41] } 13... b5 { [%clk 0:16:56] } 14. Qd4 { [%clk 0:15:14] } 14... exd4 { [%clk 0:17:06] } 0-1

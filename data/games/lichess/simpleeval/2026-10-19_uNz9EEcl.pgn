@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/uNz9EEcl"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "simpleEval"]
+[Black "ggnotnowimbusy"]
+[Result "1-0"]
+[GameId "uNz9EEcl"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:04:32"]
+[WhiteElo "2026"]
+[BlackElo "2202"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Bc4 { [%clk 0:05:00] } 2... Nf6 { [%clk 0:04:57] } 3. d3 { [%clk 0:05:00] } 3... Nc6 { [%clk 0:04:56] } 4. Nf3 { [%clk 0:05:00] } 4... Bc5 { [%clk 0:04:54] } 5. c3 { [%clk 0:05:00] } 5... d5 { [%clk 0:04:50] } 6. exd5 { [%clk 0:04:53] } 6... Nxd5 { [%clk 0:04:50] } 7. Qb3 { [%clk 0:04:51] } 7... Be6 { [%clk 0:04:32] } 8. Qxb7 { [%clk 0:04:42] } 8... Nce7 { [%clk 0:03:57] } 9. Qb5+ { [%clk 0:04:38] } 9... c6 { [%clk 0:03:54] } 10. Qxc5 { [%clk 0:04:36] } 10... O-O { [%clk 0:03:52] } 1-0

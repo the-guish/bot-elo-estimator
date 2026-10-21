@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/IMB8X3HI"]
+[Date "2026.10.17"]
+[Round "-"]
+[White "Nikson129"]
+[Black "RaspFish"]
+[Result "0-1"]
+[GameId "IMB8X3HI"]
+[UTCDate "2026.10.17"]
+[UTCTime "14:44:14"]
+[WhiteElo "1183"]
+[BlackElo "2848"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... e5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:29:59] } 2... Nc6 { [%clk 0:30:00] } 3. Bc4 { [%clk 0:29:57] } 0-1

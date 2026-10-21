@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/btNgIcEE"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "brilliantchess15256"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "btNgIcEE"]
+[UTCDate "2026.10.19"]
+[UTCTime "16:32:00"]
+[WhiteElo "1225"]
+[BlackElo "2105"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:09] } 2... Nc6 { [%clk 0:15:09] } 3. d4 { [%clk 0:15:18] } 3... exd4 { [%clk 0:15:17] } 4. Nxd4 { [%clk 0:15:27] } 4... Nf6 { [%clk 0:15:26] } 5. Nxc6 { [%clk 0:15:36] } 5... bxc6 { [%clk 0:15:35] } 6. Nc3 { [%clk 0:15:43] } 6... Bb4 { [%clk 0:15:44] } 7. Bc4 { [%clk 0:15:46] } 7... Nxe4 { [%clk 0:15:53] } 0-1
