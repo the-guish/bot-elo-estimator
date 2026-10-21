@@ -33,6 +33,9 @@ GAMES = 10
 OPENING_PLIES = 8
 # A game this long is a draw.
 MAX_PLIES = 400
+# Seconds a search may take before the engine is told to stop. Fixed depths can blow up in some
+# endgames; a stop makes the engine play its best move so far.
+MOVE_LIMIT = 10.0
 
 
 # --- Pure functions --------------------------------------------------------
@@ -83,7 +86,7 @@ def play_game(white: Uci, black: Uci, white_go: str, black_go: str, opening: lis
     black.new_game()
     while (ended := outcome(board, len(moves))) is None:
         side, go = (white, white_go) if board.turn == chess.WHITE else (black, black_go)
-        text = side.best(moves, go)
+        text = side.best(moves, go, MOVE_LIMIT)
         try:
             # parse_uci also reads castling written as the king taking its rook, e1h1.
             move = board.parse_uci(text)

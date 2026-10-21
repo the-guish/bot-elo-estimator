@@ -1,6 +1,7 @@
-"""A UCI engine for the tests: it plays the first legal move in UCI order, or the last.
+"""A UCI engine for the tests: it plays the first legal move in UCI order, or the last. With
+`stubborn`, it plays the first, but only once told to stop.
 
-    python3 fake_uci.py first|last
+    python3 fake_uci.py first|last|stubborn
 """
 
 import sys
@@ -23,9 +24,11 @@ def main() -> None:
             board = chess.Board()
             for move in words[3:]:
                 board.push_uci(move)
-        elif words[0] == "go":
+        elif words[0] == "go" and sys.argv[1] != "stubborn":
             move = pick(m.uci() for m in board.legal_moves)
             print(f"info depth 1 pv {move}\nbestmove {move}", flush=True)
+        elif words[0] == "stop" and sys.argv[1] == "stubborn":
+            print(f"bestmove {min(m.uci() for m in board.legal_moves)}", flush=True)
         elif words[0] == "quit":
             return
 

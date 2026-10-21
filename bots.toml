@@ -296,6 +296,7 @@ go = ["go nodes 1"]
 runs = "Raven"
 command = "raven"
 replay = "agreement"
+play = "go depth 12"
 go = ["go depth 8", "go depth 10", "go depth 12"]
 
 [bots.dala-1300]

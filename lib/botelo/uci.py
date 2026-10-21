@@ -2,6 +2,7 @@
 
 import shlex
 import subprocess
+import threading
 
 
 class Process:
@@ -67,15 +68,24 @@ class Uci(Process):
         self.send("ucinewgame")
         self.ready()
 
-    def go(self, history: list[str], go: str) -> list[str]:
+    def go(self, history: list[str], go: str, limit: float | None = None) -> list[str]:
         """Searches the position after `history` from the start, and returns the engine's lines up
-        to its bestmove. The whole history goes in, for engines that look at earlier positions."""
+        to its bestmove. The whole history goes in, for engines that look at earlier positions.
+        After `limit` seconds, the engine is told to stop: a fixed depth can take minutes."""
         self.send("position startpos" + (" moves " + " ".join(history) if history else ""))
         self.send(go)
-        return self.read_until("bestmove")
+        timer = None
+        if limit is not None:
+            timer = threading.Timer(limit, self.send, ["stop"])
+            timer.start()
+        try:
+            return self.read_until("bestmove")
+        finally:
+            if timer is not None:
+                timer.cancel()
 
-    def best(self, history: list[str], go: str) -> str:
-        return bestmove(self.go(history, go))
+    def best(self, history: list[str], go: str, limit: float | None = None) -> str:
+        return bestmove(self.go(history, go, limit))
 
 
 def bestmove(lines: list[str]) -> str:
