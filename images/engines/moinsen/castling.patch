@@ -1,0 +1,19 @@
+diff --git a/src/libchess/move.hpp b/src/libchess/move.hpp
+index 7865abf..1d71bc3 100644
+--- a/src/libchess/move.hpp
++++ b/src/libchess/move.hpp
+@@ -140,7 +140,13 @@ class Move {
+     [[nodiscard]] operator std::string() const noexcept {
+         std::string str;
+         str += static_cast<std::string>(from());
+-        str += static_cast<std::string>(to());
++        if (type() == MoveType::ksc || type() == MoveType::qsc) {
++            // UCI names castling by the king's own move, e1g1, not by the rook's square.
++            str += type() == MoveType::ksc ? 'g' : 'c';
++            str += static_cast<char>('1' + from().rank());
++        } else {
++            str += static_cast<std::string>(to());
++        }
+         if (promotion() != Piece::None) {
+             const char asd[] = {'n', 'b', 'r', 'q'};
+             str += asd[promotion() - 1];
