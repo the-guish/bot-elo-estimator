@@ -138,6 +138,8 @@ bot with a `play` search in `bots.toml` anchors the Elo estimates in `estimate/`
 | `radianceengine` | `radiance` | 1M nodes | 73.3% | 55.2% | pass, 50 games | 1M nodes |
 | `goldfish-engine` | `goldfish` | 300k nodes | 63.6% | 47.1% | pass | 300k nodes |
 | `weiawaga` | `weiawaga` | depth 12 | 73.1% | 58.7% | pass | depth 12 |
+| `alexandrya` | `alexandria` | 300k nodes | 69.1% | 55.6% | pass | 300k nodes |
+| `little-0` | `reckless` | 300k nodes | 78.3% | 58.1% | pass | 300k nodes |
 | `melsh_bot` | `melsh` | depth 5 | 77.8% | 41.1% | pass, 50 games | depth 5 |
 | `patriciabot` | `patricia` | depth 16 | 66.4% | 52.7% | pass | depth 16 |
 | `plumbot` | `plumbot` | depth 4 | 49.7% | 29.9% | fail; see below | depth 4 |
@@ -164,6 +166,10 @@ the bot picks moves at random and no fixed command can agree with it more often:
 
 Each engine's README, in `images/engines/<engine>/`, gives its pinned version, its settings and the
 details of its validation.
+
+`alexandrya` and `little-0` were added later, as strong anchors near 3000: they were online on
+2026-10-21 but outside the 27 candidates, which this list drew from bots with public sources and
+more human games.
 
 ### Pending to build and verify
 
