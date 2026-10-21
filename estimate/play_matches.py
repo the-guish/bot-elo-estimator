@@ -85,14 +85,13 @@ def play_game(white: Uci, black: Uci, white_go: str, black_go: str, opening: lis
         side, go = (white, white_go) if board.turn == chess.WHITE else (black, black_go)
         text = side.best(moves, go)
         try:
-            move = chess.Move.from_uci(text)
+            # parse_uci also reads castling written as the king taking its rook, e1h1.
+            move = board.parse_uci(text)
         except ValueError:
-            move = None
-        if move is None or move not in board.legal_moves:
             ended = ("0-1" if board.turn == chess.WHITE else "1-0", f"illegal move {text}")
             break
         board.push(move)
-        moves.append(text)
+        moves.append(move.uci())
     return {"moves": moves, "result": ended[0], "reason": ended[1]}
 
 
