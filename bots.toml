@@ -18,6 +18,7 @@ engines = ["stockfish", "lc0"]
 parent = "base"
 engines = [
     "morlock",
+    "simpleeval",
 ]
 
 
@@ -59,6 +60,10 @@ turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
 turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
 bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
 bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+[engines.simpleeval]
+[engines.simpleeval.commands]
+simpleeval = { run = "simpleeval/stockfish" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -145,6 +150,9 @@ depth = 4
 
 [bots.simpleeval]
 runs = "Stockfish, material-only branch"
+command = "simpleeval"
+replay = "agreement"
+go = ["go depth 12", "go depth 16", "go depth 18"]
 
 [bots.usunfish-l0]
 runs = "uSunfish"
