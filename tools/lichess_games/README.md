@@ -30,7 +30,8 @@ per game. Each file is named `<UTC date>_<game id>.pgn`. The date is the day the
 
 ## The token
 
-The Lichess API needs a token. The wrapper reads it from `LICHESS_API_TOKEN`. When that variable
+A token is optional: the games export is public, and a token only makes Lichess stream games
+faster. The wrapper reads it from `LICHESS_API_TOKEN`. When that variable
 is unset, the wrapper loads the repository's `.env`. Git ignores that file.
 
 ```sh

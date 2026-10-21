@@ -23,9 +23,22 @@ uv run estimate/play_matches.py --games 10
   after being told to stop, the game has no result. Its record keeps the moves and the engine's
   name under `crashed`, and both engines restart for the next game. A rerun does not replay it.
 
-The games go to `estimate/results/<candidate>/<bot>.ndjson` and `.pgn`. A run resumes: it plays
+Each record names White and Black. The games go to `estimate/results/<candidate>/<bot>.ndjson`
+and `.pgn`. A run resumes: it plays
 only the games a pairing does not have yet, so a larger `--games` adds games. `--candidates`,
 `--bots` and `--jobs` (pairings at once) narrow and spread a run.
+
+## The round robin
+
+```sh
+uv run estimate/play_matches.py --round-robin --bots alexandrya little-0 --games 20
+```
+
+With `--round-robin`, the candidates and the bots named all play each other, every pair the same
+number of games, into `estimate/results/round-robin/<first>--<second>.ndjson`. A pair with a bot
+opens from that bot's games; two candidates open from the named bots' games together. Games among
+candidates tie their ratings together, so a candidate too strong for the anchors still gets a
+rating relative to the others.
 
 ## The estimate
 
@@ -35,10 +48,15 @@ python3 estimate/estimate_elo.py --speed rapid
 ```
 
 The anchors are the bots' Lichess ratings from `tools/published_bots/bots.csv`, taken on
-2026-10-21. The estimate maximises the likelihood of the scores under the Elo model, a draw
-counting half a win, and gives a 95% interval from the likelihood ratio. A candidate that wins
-every game has only a lower bound; the summary says "above". Per bot, the summary also gives the
-candidate's performance rating.
+2026-10-21. Every game counts: against the anchors, and between candidates. The candidates'
+ratings are fitted together, each in turn the most likely given the others, until none moves; a
+draw counts half a win. Each gets a 95% interval from the likelihood ratio, with the other
+candidates held at their estimates, so the interval is somewhat narrower than the joint one. A
+candidate that wins every game has only a lower bound; the summary says "above".
+
+The summary also gives a cross table, every player's score against every other, and, when two
+anchors played each other, the score their ratings predicted against the one played: a check on the
+anchors themselves.
 
 Games voided by a crash are left out of every estimate and counted: per candidate, per bot, and
 by engine at the end of the summary. Few crashes spread across engines barely move an estimate.

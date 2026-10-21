@@ -32,6 +32,8 @@ engines = [
     "raven",
     "radiance",
     "schnecken",
+    "reckless",
+    "alexandria",
 ]
 
 
@@ -131,6 +133,14 @@ radiance = { run = "radiance/radiance" }
 [engines.schnecken]
 [engines.schnecken.commands]
 schnecken = { run = "schnecken/schnecken_engine", go = "go depth 4" }  # depth 10 is far beyond it
+
+[engines.reckless]
+[engines.reckless.commands]
+reckless = { run = "reckless/reckless" }
+
+[engines.alexandria]
+[engines.alexandria.commands]
+alexandria = { run = "alexandria/alexandria", expect = "id name Alexandria-9.1.0" }
 
 # Pending to build and verify: their builds and validations were stopped before they finished.
 # They are in no image, CI does not build them, and their bots play no matches.
@@ -509,19 +519,48 @@ go = [
 # Dropped: its skill level has changed over time. See tools/published_bots/candidates.md.
 runs = "Patricia, skill level 11"
 
+[bots.alexandrya]
+runs = "Alexandria, no opening book"
+command = "alexandria"
+replay = "agreement"
+play = "go nodes 300000"
+go = [
+    "go nodes 30000",
+    "go nodes 100000",
+    "go nodes 300000",
+]
+
+[bots.little-0]
+runs = "Reckless, on a Google Cloud e2-micro VM"
+command = "reckless"
+replay = "agreement"
+play = "go nodes 300000"
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+]
 
 # --- Candidates ----------------------------------------------------------------------------------
 # The engine settings whose Lichess rating estimate/ estimates, by playing them against every bot
-# with a `play` search. `go` is the candidate's search; `options` are UCI options.
+# with a `play` search, and against each other in a round robin. `go` is the candidate's search;
+# `options` are UCI options. A movetime depends on the machine; a fixed depth does not.
 
 [candidates.stockfish-19]
 command = "stockfish-19"
 go = "go movetime 100"
 
-[candidates.stockfish-15]
-command = "stockfish-15"
-go = "go movetime 100"
-
 [candidates.stockfish-19-1mb]
 command = "stockfish-19-1mb"
 go = "go movetime 100"
+
+[candidates.stockfish-19-1mb-depth-4]
+command = "stockfish-19-1mb"
+go = "go depth 4"
+
+[candidates.stockfish-15-classical]
+command = "stockfish-15"
+go = "go movetime 100"
+
+[candidates.stockfish-15-classical-depth-4]
+command = "stockfish-15"
+go = "go depth 4"
