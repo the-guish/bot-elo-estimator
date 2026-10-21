@@ -6,6 +6,8 @@ Anchors: each bot's Lichess blitz rating from tools/published_bots/bots.csv.
 |---|---|---|---|---|---|
 | stockfish-15 | 60 | 59.5 | 2354 | 2017 to 3195 | 0 of 60 |
 | stockfish-15-depth-1 | 60 | 40 | 1628 | 1534 to 1728 | 0 of 60 |
+| stockfish-15-depth-12 | 60 | 59.5 | 2354 | 2017 to 3195 | 0 of 60 |
+| stockfish-15-depth-16 | 60 | 60 | above 2119 | 2119 to +inf | 0 of 60 |
 | stockfish-15-depth-2 | 60 | 38.5 | 1608 | 1514 to 1705 | 0 of 60 |
 | stockfish-15-depth-3 | 60 | 36 | 1574 | 1482 to 1669 | 0 of 60 |
 | stockfish-15-depth-4 | 60 | 48 | 1756 | 1649 to 1876 | 0 of 60 |
@@ -14,12 +16,16 @@ Anchors: each bot's Lichess blitz rating from tools/published_bots/bots.csv.
 | stockfish-19 | 60 | 60 | above 2119 | 2119 to +inf | 0 of 60 |
 | stockfish-19-1mb | 60 | 60 | above 2119 | 2119 to +inf | 0 of 60 |
 | stockfish-19-1mb-depth-1 | 60 | 40 | 1628 | 1534 to 1728 | 0 of 60 |
+| stockfish-19-1mb-depth-12 | 60 | 58 | 2108 | 1904 to 2423 | 0 of 60 |
+| stockfish-19-1mb-depth-16 | 60 | 60 | above 2119 | 2119 to +inf | 0 of 60 |
 | stockfish-19-1mb-depth-2 | 60 | 48 | 1756 | 1649 to 1876 | 0 of 60 |
 | stockfish-19-1mb-depth-3 | 60 | 48.5 | 1765 | 1657 to 1888 | 0 of 60 |
 | stockfish-19-1mb-depth-4 | 60 | 52 | 1843 | 1722 to 1988 | 0 of 60 |
 | stockfish-19-1mb-depth-6 | 60 | 51 | 1819 | 1702 to 1955 | 0 of 60 |
 | stockfish-19-1mb-depth-8 | 60 | 59 | 2232 | 1968 to 2731 | 0 of 60 |
 | stockfish-19-depth-1 | 60 | 40 | 1628 | 1534 to 1728 | 0 of 60 |
+| stockfish-19-depth-12 | 60 | 59.5 | 2354 | 2017 to 3195 | 0 of 60 |
+| stockfish-19-depth-16 | 60 | 60 | above 2119 | 2119 to +inf | 0 of 60 |
 | stockfish-19-depth-2 | 60 | 48.5 | 1765 | 1657 to 1888 | 0 of 60 |
 | stockfish-19-depth-3 | 60 | 54 | 1902 | 1767 to 2069 | 0 of 60 |
 | stockfish-19-depth-4 | 60 | 55.5 | 1957 | 1808 to 2153 | 0 of 60 |
@@ -41,6 +47,22 @@ Anchors: each bot's Lichess blitz rating from tools/published_bots/bots.csv.
 | maia1 | 1361 | 20 | 13.5 | 1488 | 0 |
 | maia5 | 1520 | 20 | 12.5 | 1609 | 0 |
 | maia9 | 1610 | 20 | 14 | 1757 | 0 |
+
+## stockfish-15-depth-12
+
+| Bot | Anchor | Games | Score | Performance | Left out: crashed |
+|---|---|---|---|---|---|
+| maia1 | 1361 | 20 | 19.5 | 1997 | 0 |
+| maia5 | 1520 | 20 | 20 | +inf | 0 |
+| maia9 | 1610 | 20 | 20 | +inf | 0 |
+
+## stockfish-15-depth-16
+
+| Bot | Anchor | Games | Score | Performance | Left out: crashed |
+|---|---|---|---|---|---|
+| maia1 | 1361 | 20 | 20 | +inf | 0 |
+| maia5 | 1520 | 20 | 20 | +inf | 0 |
+| maia9 | 1610 | 20 | 20 | +inf | 0 |
 
 ## stockfish-15-depth-2
 
@@ -106,6 +128,22 @@ Anchors: each bot's Lichess blitz rating from tools/published_bots/bots.csv.
 | maia5 | 1520 | 20 | 12 | 1590 | 0 |
 | maia9 | 1610 | 20 | 11.5 | 1663 | 0 |
 
+## stockfish-19-1mb-depth-12
+
+| Bot | Anchor | Games | Score | Performance | Left out: crashed |
+|---|---|---|---|---|---|
+| maia1 | 1361 | 20 | 20 | +inf | 0 |
+| maia5 | 1520 | 20 | 19.5 | 2156 | 0 |
+| maia9 | 1610 | 20 | 18.5 | 2046 | 0 |
+
+## stockfish-19-1mb-depth-16
+
+| Bot | Anchor | Games | Score | Performance | Left out: crashed |
+|---|---|---|---|---|---|
+| maia1 | 1361 | 20 | 20 | +inf | 0 |
+| maia5 | 1520 | 20 | 20 | +inf | 0 |
+| maia9 | 1610 | 20 | 20 | +inf | 0 |
+
 ## stockfish-19-1mb-depth-2
 
 | Bot | Anchor | Games | Score | Performance | Left out: crashed |
@@ -154,6 +192,22 @@ Anchors: each bot's Lichess blitz rating from tools/published_bots/bots.csv.
 | maia5 | 1520 | 20 | 15 | 1711 | 0 |
 | maia9 | 1610 | 20 | 13 | 1718 | 0 |
 
+## stockfish-19-depth-12
+
+| Bot | Anchor | Games | Score | Performance | Left out: crashed |
+|---|---|---|---|---|---|
+| maia1 | 1361 | 20 | 20 | +inf | 0 |
+| maia5 | 1520 | 20 | 19.5 | 2156 | 0 |
+| maia9 | 1610 | 20 | 20 | +inf | 0 |
+
+## stockfish-19-depth-16
+
+| Bot | Anchor | Games | Score | Performance | Left out: crashed |
+|---|---|---|---|---|---|
+| maia1 | 1361 | 20 | 20 | +inf | 0 |
+| maia5 | 1520 | 20 | 20 | +inf | 0 |
+| maia9 | 1610 | 20 | 20 | +inf | 0 |
+
 ## stockfish-19-depth-2
 
 | Bot | Anchor | Games | Score | Performance | Left out: crashed |
@@ -196,4 +250,4 @@ Anchors: each bot's Lichess blitz rating from tools/published_bots/bots.csv.
 
 ## Games left out
 
-No engine crashed or hung in the 1260 games.
+No engine crashed or hung in the 1620 games.

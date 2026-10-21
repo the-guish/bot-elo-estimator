@@ -207,3 +207,14 @@
 
 1. e4 c5 2. Nc3 d6 3. f4 Nf6 4. Nf3 g6 5. e5 dxe5 6. fxe5 Nd5 7. Bc4 Nxc3 8. bxc3 Bg7 9. O-O O-O 10. d4 cxd4 11. Ng5 e6 12. cxd4 Nc6 13. c3 Na5 14. Bd3 b6 15. Nxf7 Rxf7 16. Rxf7 Kxf7 17. Qf3+ Kg8 18. Qxa8 Bb7 19. Qxd8+ Bf8 20. Bh6 Nc6 21. Qxf8# 1-0
 
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-15-depth-16"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 d6 3. f4 Nf6 4. Nf3 g6 5. Bc4 Nc6 6. O-O Bg7 7. d3 O-O 8. Be3 e6 9. d4 Ng4 10. Qe2 Nxe3 11. Qxe3 cxd4 12. Nxd4 Bxd4 13. Qxd4 Nxd4 14. Rad1 Nxc2 15. e5 d5 16. Bb3 Qb6+ 17. Kh1 Ne3 18. Na4 Qb4 19. Rd3 Nxf1 20. a3 Qxf4 21. Rf3 Qxh2# 0-1
+
