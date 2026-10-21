@@ -19,6 +19,7 @@ parent = "base"
 engines = [
     "morlock",
     "demolito",
+    "goldfish",
 ]
 
 
@@ -64,6 +65,10 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+
+[engines.goldfish]
+[engines.goldfish.commands]
+goldfish = { run = "goldfish/goldfish" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -228,6 +233,15 @@ runs = "own C engine"
 
 [bots.goldfish-engine]
 runs = "Goldfish"
+command = "goldfish"
+replay = "agreement"
+play = "go nodes 300000"
+options = { Hash = 1024 }
+skip = 25  # lichess-bot plays its first 25 plies from Goldfish's book, gm2001.bin
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+]
 
 [bots.weiawaga]
 runs = "Weiawaga"
