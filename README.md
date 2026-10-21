@@ -35,8 +35,8 @@ Each bot has a validation tier, from its `replay`:
 
 | pending | | The engine's files are in, but it is pending to build and verify: in no image, out of CI. |
 
-Of the 43 bots, 11 are exact and 20 statistical, 4 are pending and 8 have no engine: dropped as
-too slow, too heavy or too unpredictable. 27 bots have a `play` search and anchor the Elo
+Of the 45 bots, 11 are exact and 22 statistical, 4 are pending and 8 have no engine: dropped as
+too slow, too heavy or too unpredictable. 29 bots have a `play` search and anchor the Elo
 estimates. `tools/published_bots/candidates.md` gives each bot's validation and why the others
 were dropped or are pending.
 
@@ -48,7 +48,8 @@ Two Docker images hold the engines. Each command is on the image's PATH.
   classical evaluation, Stockfish 19 with a 1 MB net, and lc0 with the nine Maia 1 nets.
 - **`bot-elo-estimator-extra`** starts from the base and adds the less-known engines: morlock's
   SARGON, TUROCHAMP and Bernstein, Demolito, Patricia, Stockfish simpleEval, Halcyon, Tofiks,
-  Moinsen, plumbot, μSunfish, Weiawaga, Goldfish, melsh_bot, schnecken_bot, Raven and Radiance.
+  Moinsen, plumbot, μSunfish, Weiawaga, Goldfish, melsh_bot, schnecken_bot, Raven, Radiance,
+  Reckless and Alexandria.
 
 lc0 in the base also holds the Dala nets. Each engine's README, in `images/engines/<engine>/`,
 gives its commands, pinned source, settings and validation. Odonata, Eubos, Lynx and GarboChess-JS
