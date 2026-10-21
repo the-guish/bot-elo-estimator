@@ -32,6 +32,7 @@ engines = [
     "raven",
     "radiance",
     "schnecken",
+    "reckless",
 ]
 
 
@@ -155,6 +156,10 @@ lynx = { run = "lynx/lynx" }
 pending = true
 [engines.garbochess.commands]
 garbochess = { run = "garbochess/node /opt/engines/garbochess/uci.js" }  # a UCI front end in Node.js
+
+[engines.reckless]
+[engines.reckless.commands]
+reckless = { run = "reckless/reckless" }
 
 # --- Bots ----------------------------------------------------------------------------------------
 # One table per Lichess bot id.
@@ -514,6 +519,13 @@ runs = "Alexandria, no opening book"
 
 [bots.little-0]
 runs = "Reckless, on a Google Cloud e2-micro VM"
+command = "reckless"
+replay = "agreement"
+play = "go nodes 300000"
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+]
 
 # --- Candidates ----------------------------------------------------------------------------------
 # The engine settings whose Lichess rating estimate/ estimates, by playing them against every bot
