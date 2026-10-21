@@ -17,7 +17,11 @@ uv run estimate/play_matches.py --games 10
 - **The games** end by the rules: mate, stalemate, insufficient material, threefold repetition or
   the 50-move rule, claimed at once. A game of 400 plies is a draw. An illegal move loses.
 - **The searches** are the candidate's `go` and the bot's `play`. Each engine starts once per
-  pairing, with a `ucinewgame` before each game.
+  pairing, with a `ucinewgame` before each game. A search still running after 10 seconds is told
+  to stop and plays its best move so far.
+- **A crashed engine voids the game.** When an engine exits, or still gives no move 30 seconds
+  after being told to stop, the game has no result. Its record keeps the moves and the engine's
+  name under `crashed`, and both engines restart for the next game. A rerun does not replay it.
 
 The games go to `estimate/results/<candidate>/<bot>.ndjson` and `.pgn`. A run resumes: it plays
 only the games a pairing does not have yet, so a larger `--games` adds games. `--candidates`,
@@ -35,6 +39,11 @@ The anchors are the bots' Lichess ratings from `tools/published_bots/bots.csv`, 
 counting half a win, and gives a 95% interval from the likelihood ratio. A candidate that wins
 every game has only a lower bound; the summary says "above". Per bot, the summary also gives the
 candidate's performance rating.
+
+Games voided by a crash are left out of every estimate and counted: per candidate, per bot, and
+by engine at the end of the summary. Few crashes spread across engines barely move an estimate.
+Many, or crashes that come with how a game goes (an engine that fails only when losing, say), bias
+it, and the counts show where.
 
 `estimate/results/summary-<speed>.md` holds the result.
 

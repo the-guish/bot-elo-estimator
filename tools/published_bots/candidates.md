@@ -172,6 +172,9 @@ stopped before they were verified. Their Dockerfiles and READMEs are in `images/
 `bots.toml` lists them with `pending = true`. They are in no image, CI does not build them, and
 their bots play no matches. Each README says what is left.
 
+The morlock bots' full replay is pending too: the `sargon-4ply` and `turochamp-2ply` engines exit
+partway through it, and `engines/morlock/README.md` says where. Their rows will come with the fix.
+
 ### Dropped
 
 | Bot | Why |
