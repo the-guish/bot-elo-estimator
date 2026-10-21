@@ -23,6 +23,7 @@ engines = [
     "simpleeval",
     "halcyon",
     "plumbot",
+    "usunfish",
 ]
 
 
@@ -81,6 +82,11 @@ halcyon = { run = "halcyon/halcyon" }
 [engines.plumbot]
 [engines.plumbot.commands]
 plumbot = { run = "plumbot/plumbot", go = "go" }  # 5 plies, or `go depth N`
+
+[engines.usunfish]
+[engines.usunfish.commands]
+usunfish-l0 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=0" }
+usunfish-l1 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=1" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -186,6 +192,11 @@ go = ["go depth 12", "go depth 16", "go depth 18"]
 
 [bots.usunfish-l0]
 runs = "uSunfish"
+command = "usunfish-l0"
+replay = "agreement"
+play = "go wtime 600000 btime 600000"
+go = ["go wtime 600000 btime 600000"]
+skip = 12
 
 [bots.alliethechessbot]
 runs = "Allie 2.0"
@@ -207,6 +218,11 @@ runs = "UltraBrick"
 
 [bots.usunfish-l1]
 runs = "uSunfish"
+command = "usunfish-l1"
+replay = "agreement"
+play = "go wtime 600000 btime 600000"
+go = ["go wtime 600000 btime 600000"]
+skip = 12
 
 [bots.dala-900]
 runs = "Dala"
