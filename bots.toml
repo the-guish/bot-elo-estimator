@@ -138,6 +138,10 @@ schnecken = { run = "schnecken/schnecken_engine", go = "go depth 4" }  # depth 1
 [engines.reckless.commands]
 reckless = { run = "reckless/reckless" }
 
+[engines.alexandria]
+[engines.alexandria.commands]
+alexandria = { run = "alexandria/alexandria", expect = "id name Alexandria-9.1.0" }
+
 # Pending to build and verify: their builds and validations were stopped before they finished.
 # They are in no image, CI does not build them, and their bots play no matches.
 # `./build_docker.sh engine <engine>` builds one alone; see its README.
@@ -161,10 +165,6 @@ lynx = { run = "lynx/lynx" }
 pending = true
 [engines.garbochess.commands]
 garbochess = { run = "garbochess/node /opt/engines/garbochess/uci.js" }  # a UCI front end in Node.js
-
-[engines.alexandria]
-[engines.alexandria.commands]
-alexandria = { run = "alexandria/alexandria", expect = "id name Alexandria-9.1.0" }
 
 # --- Bots ----------------------------------------------------------------------------------------
 # One table per Lichess bot id.
