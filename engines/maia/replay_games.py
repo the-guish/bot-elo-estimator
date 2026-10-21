@@ -58,8 +58,16 @@ class BotMove:
     spent: float | None  # seconds off the bot's clock; None when its clock had not run yet
 
 
-def bot_moves(pgn: str, bot: str) -> list[BotMove]:
-    game = chess.pgn.read_game(io.StringIO(pgn))
+def read_games(pgn: str) -> list[chess.pgn.Game]:
+    """Every game in a PGN file."""
+    stream = io.StringIO(pgn)
+    games = []
+    while (game := chess.pgn.read_game(stream)) is not None:
+        games.append(game)
+    return games
+
+
+def bot_moves(game: chess.pgn.Game, bot: str) -> list[BotMove]:
     headers = game.headers
     side = chess.WHITE if headers["White"].lower() == bot else chess.BLACK
     increment = int(headers["TimeControl"].split("+")[1])
@@ -231,17 +239,17 @@ class Engine:
             self.process.kill()
 
 
-def replay(bot: str, files: list[Path], command: str) -> list[dict]:
+def replay(bot: str, games: list[chess.pgn.Game], command: str) -> list[dict]:
     engine = Engine(command)
     records = []
     try:
-        for count, path in enumerate(files, start=1):
+        for count, game in enumerate(games, start=1):
             engine.new_game()
-            for move in bot_moves(path.read_text(encoding="utf-8"), bot):
+            for move in bot_moves(game, bot):
                 best, policy = engine.play(move.history)
                 records.append(compare(move, best, policy))
             if count % 50 == 0:
-                print(f"{bot}: {count} of {len(files)} games", file=sys.stderr)
+                print(f"{bot}: {count} of {len(games)} games", file=sys.stderr)
     finally:
         engine.close()
     return records
@@ -250,7 +258,7 @@ def replay(bot: str, files: list[Path], command: str) -> list[dict]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--bots", nargs="+", default=list(NETS), choices=list(NETS))
-    parser.add_argument("--games", type=Path, default=GAMES_DIR)
+    parser.add_argument("--games", type=Path, default=GAMES_DIR, help="folder holding <bot>.pgn")
     parser.add_argument("--out", type=Path, default=OUT_DIR)
     parser.add_argument("--engine", default=ENGINE, help="engine command; {rating} becomes 1100, 1500 or 1900")
     parser.add_argument("--skip", type=int, default=SKIP, help="plies the verdict leaves out")
@@ -260,8 +268,8 @@ def main() -> int:
     args.out.mkdir(parents=True, exist_ok=True)
     summaries = {}
     for bot in args.bots:
-        files = sorted((args.games / bot).glob("*.pgn"))[: args.limit]
-        records = replay(bot, files, args.engine.format(rating=NETS[bot]))
+        games = read_games((args.games / f"{bot}.pgn").read_text(encoding="utf-8"))[: args.limit]
+        records = replay(bot, games, args.engine.format(rating=NETS[bot]))
         with open(args.out / f"{bot}.ndjson", "w", encoding="utf-8") as out:
             for record in records:
                 out.write(json.dumps(record) + "\n")

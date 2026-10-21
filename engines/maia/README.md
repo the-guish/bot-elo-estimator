@@ -6,8 +6,7 @@ moves as the bots.
 
 ## The selection
 
-Each bot has 300 games, in `games/<bot>/<UTC date>_<game id>.pgn`. The date is the day the game
-started. Each file holds one game.
+Each bot has 300 games, in `games/<bot>.pgn`, oldest first.
 
 - **The window** ends at `2026-10-20T00:00:00Z`. Each bot's folder holds its 300 most recent
   games that ended before then.
@@ -15,7 +14,7 @@ started. Each file holds one game.
 - **The games** are standard chess from the normal starting position. The download drops other
   variants and games with a `SetUp` or `FEN` tag.
 - **Rated and casual games** both count, against any opponent.
-- **Each PGN** keeps the moves and the `%clk` comment after each move. It has no evals and no
+- **Each game** keeps the moves and the `%clk` comment after each move. It has no evals and no
   opening tag.
 
 The script's defaults hold this selection. `--count`, `--until` and `--bots` change it.
@@ -31,8 +30,7 @@ echo 'LICHESS_API_TOKEN=lip_...' > engines/maia/.env
 engines/maia/download_games.sh
 ```
 
-The download takes about a minute. A re-run overwrites each selected game's file. It leaves other
-files in place, so delete `games/` first when the selection changes.
+The download takes about a minute. A re-run overwrites each bot's file.
 
 ## Replay
 

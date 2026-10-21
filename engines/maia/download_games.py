@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download games of the Lichess Maia bots, one PGN file per game."""
+"""Download games of the Lichess Maia bots, one PGN file per bot."""
 
 import argparse
 import json
@@ -8,7 +8,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 API = "https://lichess.org/api/games/user/{user}"
@@ -52,13 +52,14 @@ def select_games(ndjson: str, bot: str, until_ms: int, count: int) -> list[dict]
     return [g for g in games if is_wanted(g, bot, until_ms)][:count]
 
 
-def file_name(game: dict) -> str:
-    day = datetime.fromtimestamp(game["createdAt"] / 1000, timezone.utc).strftime("%Y-%m-%d")
-    return f"{day}_{game['id']}.pgn"
-
-
 def pgn_text(game: dict) -> str:
     return game["pgn"].strip() + "\n"
+
+
+def pgn_file(games: list[dict]) -> str:
+    """One PGN file: the games oldest first, a blank line between them."""
+    ordered = sorted(games, key=lambda g: (g["createdAt"], g["id"]))
+    return "\n".join(pgn_text(g) for g in ordered)
 
 
 # --- Network ---------------------------------------------------------------
@@ -95,10 +96,8 @@ def download(bot: str, count: int, until_ms: int, token: str, out_dir: Path) -> 
         if len(games) == count or max_games >= MAX_FETCH:
             break
         max_games = min(max_games * 2, MAX_FETCH)
-    folder = out_dir / bot
-    folder.mkdir(parents=True, exist_ok=True)
-    for game in games:
-        (folder / file_name(game)).write_text(pgn_text(game), encoding="utf-8")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / f"{bot}.pgn").write_text(pgn_file(games), encoding="utf-8")
     return len(games)
 
 

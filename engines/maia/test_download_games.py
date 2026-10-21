@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from download_games import file_name, is_wanted, iso_to_ms, pgn_text, select_games
+from download_games import is_wanted, iso_to_ms, pgn_file, pgn_text, select_games
 
 UNTIL = iso_to_ms("2026-10-20T00:00:00Z")
 PGN = '[Event "rated blitz game"]\n\n1. e4 { [%clk 0:05:00] } 1-0\n\n\n'
@@ -60,15 +60,22 @@ def test_select_games(games, count, expected_ids):
 
 
 @pytest.mark.parametrize(
-    "created_at, id, expected",
+    "games, expected",
     [
-        (iso_to_ms("2026-10-18T12:00:00Z"), "qxpIzZXI", "2026-10-18_qxpIzZXI.pgn"),
-        (iso_to_ms("2026-10-18T23:59:59Z"), "AAAAAAAA", "2026-10-18_AAAAAAAA.pgn"),
-        (iso_to_ms("2026-10-19T00:00:00Z"), "BBBBBBBB", "2026-10-19_BBBBBBBB.pgn"),
+        # Oldest first, one blank line between games, one newline at the end.
+        (
+            [
+                game("new", createdAt=UNTIL - 3_600_000, pgn='[Event "b"]\n\n1. e4 1-0'),
+                game("old", createdAt=UNTIL - 7_200_000, pgn='[Event "a"]\n\n1. d4 1-0\n\n\n'),
+            ],
+            '[Event "a"]\n\n1. d4 1-0\n\n[Event "b"]\n\n1. e4 1-0\n',
+        ),
+        ([game("a")], PGN.rstrip("\n") + "\n"),
+        ([], ""),
     ],
 )
-def test_file_name(created_at, id, expected):
-    assert file_name({"createdAt": created_at, "id": id}) == expected
+def test_pgn_file(games, expected):
+    assert pgn_file(games) == expected
 
 
 @pytest.mark.parametrize(

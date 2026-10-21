@@ -1,6 +1,6 @@
 import pytest
 
-from replay_games import bot_moves, compare, parse_policy, summarise
+from replay_games import bot_moves, compare, parse_policy, read_games, summarise
 
 HEADERS = '[White "{white}"]\n[Black "{black}"]\n[GameId "g1"]\n[TimeControl "60+2"]\n\n'
 MOVES = (
@@ -36,7 +36,7 @@ MOVES = (
     ],
 )
 def test_bot_moves(white, black, bot, expected):
-    moves = bot_moves(HEADERS.format(white=white, black=black) + MOVES, bot)
+    moves = bot_moves(read_games(HEADERS.format(white=white, black=black) + MOVES)[0], bot)
     assert [(m.ply, m.history, m.played, m.pieces, m.spent) for m in moves] == expected
     assert {m.game for m in moves} == {"g1"}
 
@@ -44,7 +44,14 @@ def test_bot_moves(white, black, bot, expected):
 def test_bot_moves_promotion():
     pgn = '[White "maia1"]\n[Black "human"]\n[GameId "g2"]\n[TimeControl "60+0"]\n[SetUp "1"]\n'
     pgn += '[FEN "8/P6k/8/8/8/8/8/K7 w - - 0 1"]\n\n1. a8=Q 1-0'
-    assert [m.played for m in bot_moves(pgn, "maia1")] == ["a7a8q"]
+    assert [m.played for m in bot_moves(read_games(pgn)[0], "maia1")] == ["a7a8q"]
+
+
+def test_read_games():
+    one = HEADERS.format(white="maia1", black="human") + MOVES
+    two = one.replace('[GameId "g1"]', '[GameId "g2"]')
+    assert [g.headers["GameId"] for g in read_games(one + "\n\n" + two + "\n")] == ["g1", "g2"]
+    assert read_games("") == []
 
 
 LINE = "info string {move:<5} ({index:>4}) N: {n:>7} (+ 0) (P: {p}%) (WL:  -.-----) (D: -.---) (M:  -.-) (Q: -1.00000) (V:  -.----) "
@@ -81,7 +88,7 @@ def test_parse_policy(lines, expected):
     ],
 )
 def test_compare(best, policy, match, gap):
-    moves = bot_moves(HEADERS.format(white="maia1", black="human") + MOVES, "maia1")
+    moves = bot_moves(read_games(HEADERS.format(white="maia1", black="human") + MOVES)[0], "maia1")
     record = compare(moves[0], best, policy)
     assert (record["match"], record["gap"], record["played"], record["engine"]) == (match, gap, "e2e4", best)
     assert "history" not in record
