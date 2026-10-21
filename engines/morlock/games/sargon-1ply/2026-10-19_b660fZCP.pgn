@@ -1,0 +1,18 @@
+[Event "rated classical game"]
+[Site "https://lichess.org/b660fZCP"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "onlyrapidmoves"]
+[Black "sargon-1ply"]
+[Result "1-0"]
+[GameId "b660fZCP"]
+[UTCDate "2026.10.19"]
+[UTCTime "19:22:18"]
+[WhiteElo "1786"]
+[BlackElo "1461"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+20"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... e5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:30:18] } 2... Nc6 { [%clk 0:30:20] } 3. Bc4 { [%clk 0:30:37] } 3... Nf6 { [%clk 0:30:40] } 4. Ng5 { [%clk 0:30:56] } 4... Bb4 { [%clk 0:30:59] } 5. Nxf7 { [%clk 0:31:15] } 5... Qe7 { [%clk 0:31:19] } 6. Nxh8 { [%clk 0:31:33] } 6... Nxe4 { [%clk 0:31:39] } 7. c3 { [%clk 0:31:51] } 7... Bc5 { [%clk 0:31:59] } 8. O-O { [%clk 0:32:09] } 8... Nxf2 { [%clk 0:32:19] } 9. Rxf2 { [%clk 0:32:27] } 9... Qf8 { [%clk 0:32:39] } 10. d4 { [%clk 0:32:45] } 10... Bxd4 { [%clk 0:32:58] } 11. cxd4 { [%clk 0:33:04] } 11... Qxh8 { [%clk 0:33:18] } 12. Qf3 { [%clk 0:33:22] } 12... exd4 { [%clk 0:33:38] } 13. Qf7+ { [%clk 0:33:41] } 13... Kd8 { [%clk 0:33:58] } 14. Bg5+ { [%clk 0:33:59] } 14... Ne7 { [%clk 0:34:18] } 15. Qxe7# { [%clk 0:33:57] } 1-0

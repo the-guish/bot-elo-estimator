@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/CFNwolT2"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "NordiHH"]
+[Black "bernstein-2ply"]
+[Result "0-1"]
+[GameId "CFNwolT2"]
+[UTCDate "2026.10.19"]
+[UTCTime "19:42:03"]
+[WhiteElo "1500"]
+[BlackElo "1225"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1200+0"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:20:00] } 1... e6 { [%clk 0:20:00] } 2. e3 { [%clk 0:19:59] } 2... Bb4+ { [%clk 0:20:00] } 0-1

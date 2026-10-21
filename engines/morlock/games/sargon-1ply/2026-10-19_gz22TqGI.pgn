@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/gz22TqGI"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "lisco"]
+[Black "sargon-1ply"]
+[Result "0-1"]
+[GameId "gz22TqGI"]
+[UTCDate "2026.10.19"]
+[UTCTime "14:31:18"]
+[WhiteElo "1109"]
+[BlackElo "1235"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+10"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. Bf4 { [%clk 0:10:08] } 2... Nc6 { [%clk 0:10:10] } 3. e3 { [%clk 0:10:13] } 3... Bf5 { [%clk 0:10:19] } 4. Bd3 { [%clk 0:10:13] } 4... Nh6 { [%clk 0:10:28] } 5. Nd2 { [%clk 0:09:45] } 5... e6 { [%clk 0:10:38] } 6. Ngf3 { [%clk 0:09:40] } 6... Bb4 { [%clk 0:10:48] } 7. O-O { [%clk 0:09:28] } 7... e5 { [%clk 0:10:58] } 8. Nxe5 { [%clk 0:09:09] } 8... Be4 { [%clk 0:11:07] } 9. Nxe4 { [%clk 0:08:23] } 9... dxe4 { [%clk 0:11:17] } 10. Bxe4 { [%clk 0:08:23] } 10... Qd6 { [%clk 0:11:27] } 11. a3 { [%clk 0:06:59] } 11... Ba5 { [%clk 0:11:37] } 12. b4 { [%clk 0:06:18] } 12... Bb6 { [%clk 0:11:47] } 13. Nxf7 { [%clk 0:04:57] } 13... Qf8 { [%clk 0:11:57] } 14. Nxh8 { [%clk 0:05:01] } 14... Qxh8 { [%clk 0:12:06] } 15. Qd3 { [%clk 0:04:03] } 15... g5 { [%clk 0:12:16] } 16. Bxg5 { [%clk 0:03:53] } 16... Qg7 { [%clk 0:12:26] } 17. Bxh6 { [%clk 0:03:30] } 17... Qxh6 { [%clk 0:12:36] } 18. b5 { [%clk 0:03:25] } 18... Na5 { [%clk 0:12:46] } 19. c4 { [%clk 0:03:15] } 19... O-O-O { [%clk 0:12:55] } 20. c5 { [%clk 0:03:22] } 20... Bxc5 { [%clk 0:13:05] } 21. Qc3 { [%clk 0:02:59] } 21... Bb6 { [%clk 0:13:15] } 22. Rac1 { [%clk 0:02:47] } 22... c5 { [%clk 0:13:25] } 23. dxc5 { [%clk 0:02:46] } 23... Bc7 { [%clk 0:13:35] } 24. b6 { [%clk 0:02:38] } 24... Qxh2# { [%clk 0:13:35] } 0-1

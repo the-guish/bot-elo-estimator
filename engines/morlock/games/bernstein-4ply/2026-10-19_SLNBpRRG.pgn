@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/SLNBpRRG"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "bernstein-4ply"]
+[Black "snooprion"]
+[Result "0-1"]
+[GameId "SLNBpRRG"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:49:21"]
+[WhiteElo "1347"]
+[BlackElo "1272"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1200+3"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:20:00] } 1... c5 { [%clk 0:20:00] } 2. Bb5 { [%clk 0:20:03] } 2... a6 { [%clk 0:20:01] } 3. Bc4 { [%clk 0:20:05] } 3... Nc6 { [%clk 0:20:03] } 4. d3 { [%clk 0:20:08] } 4... e6 { [%clk 0:19:58] } 5. Nc3 { [%clk 0:20:10] } 5... Nf6 { [%clk 0:19:58] } 6. Bg5 { [%clk 0:20:13] } 6... h6 { [%clk 0:19:59] } 7. Bf4 { [%clk 0:20:16] } 7... d5 { [%clk 0:19:55] } 8. exd5 { [%clk 0:20:19] } 8... Bd6 { [%clk 0:19:52] } 9. Bxd6 { [%clk 0:20:21] } 9... Qxd6 { [%clk 0:19:54] } 10. dxc6 { [%clk 0:20:24] } 10... Qxc6 { [%clk 0:19:54] } 11. Nf3 { [%clk 0:20:27] } 11... O-O { [%clk 0:19:55] } 12. O-O { [%clk 0:20:30] } 12... b5 { [%clk 0:19:52] } 13. Bb3 { [%clk 0:20:32] } 13... Bb7 { [%clk 0:19:50] } 14. a4 { [%clk 0:20:35] } 14... b4 { [%clk 0:19:51] } 15. Ne2 { [%clk 0:20:37] } 15... Rad8 { [%clk 0:18:04] } 16. Bc4 { [%clk 0:20:40] } 16... Nd7 { [%clk 0:17:35] } 17. c3 { [%clk 0:20:43] } 17... Ne5 { [%clk 0:17:36] } 18. b3 { [%clk 0:20:45] } 18... Nxf3+ { [%clk 0:17:36] } 19. gxf3 { [%clk 0:20:48] } 19... Qxf3 { [%clk 0:17:35] } 20. cxb4 { [%clk 0:20:51] } 20... Qg2# { [%clk 0:17:32] } 0-1

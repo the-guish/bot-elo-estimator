@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/JMuQreHs"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Kmoney1511"]
+[Black "turochamp-1ply"]
+[Result "0-1"]
+[GameId "JMuQreHs"]
+[UTCDate "2026.10.19"]
+[UTCTime "00:28:05"]
+[WhiteElo "1500"]
+[BlackElo "1450"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "9000+4"]
+[Termination "Normal"]
+
+1. d4 { [%clk 2:30:00] } 1... e6 { [%clk 2:30:00] } 2. e4 { [%clk 2:30:01] } 2... Bb4+ { [%clk 2:30:04] } 3. c3 { [%clk 2:30:01] } 3... Bd6 { [%clk 2:30:08] } 4. Nf3 { [%clk 2:30:01] } 4... Nc6 { [%clk 2:30:11] } 5. e5 { [%clk 2:29:58] } 5... Bf8 { [%clk 2:30:15] } 6. Bf4 { [%clk 2:29:58] } 6... d5 { [%clk 2:30:19] } 7. Bd3 { [%clk 2:29:55] } 7... h5 { [%clk 2:30:23] } 8. Nbd2 { [%clk 2:29:30] } 8... Bd7 { [%clk 2:30:27] } 9. O-O { [%clk 2:29:25] } 9... a5 { [%clk 2:30:30] } 10. b4 { [%clk 2:29:27] } 10... axb4 { [%clk 2:30:34] } 11. cxb4 { [%clk 2:29:30] } 11... Bxb4 { [%clk 2:30:38] } 12. a3 { [%clk 2:29:31] } 12... Rxa3 { [%clk 2:30:42] } 13. Rxa3 { [%clk 2:29:34] } 13... Bxa3 { [%clk 2:30:46] } 14. Qb3 { [%clk 2:29:35] } 14... Bb4 { [%clk 2:30:49] } 15. h3 { [%clk 2:29:26] } 15... Nh6 { [%clk 2:30:53] } 16. Ra1 { [%clk 2:29:28] } 16... Nf5 { [%clk 2:30:57] } 17. Bg5 { [%clk 2:29:09] } 17... Nfxd4 { [%clk 2:31:01] } 18. Nxd4 { [%clk 2:29:07] } 18... Qxg5 { [%clk 2:31:05] } 19. Nxc6 { [%clk 2:29:00] } 19... Bxd2 { [%clk 2:31:08] } 20. Nd4 { [%clk 2:28:57] } 20... Qxe5 { [%clk 2:31:12] } 21. Qb2 { [%clk 2:28:50] } 21... g5 { [%clk 2:31:16] } 22. Ra8+ { [%clk 2:28:46] } 22... Ke7 { [%clk 2:31:20] } 23. Ra7 { [%clk 2:28:20] } 23... Qe1+ { [%clk 2:31:23] } 24. Kh2 { [%clk 2:28:22] } 24... Qxf2 { [%clk 2:31:27] } 25. Rxb7 { [%clk 2:28:24] } 25... Bf4+ { [%clk 2:31:31] } 26. Kh1 { [%clk 2:28:26] } 26... Qxb2 { [%clk 2:31:35] } 0-1

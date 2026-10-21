@@ -1,3 +1,4 @@
 .env
 __pycache__/
 engines/maia/replay/*.ndjson
+engines/morlock/replay/*.ndjson

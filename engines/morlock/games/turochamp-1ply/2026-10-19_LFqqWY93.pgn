@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/LFqqWY93"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Bokislav"]
+[Black "turochamp-1ply"]
+[Result "1-0"]
+[GameId "LFqqWY93"]
+[UTCDate "2026.10.19"]
+[UTCTime "10:21:37"]
+[WhiteElo "1457"]
+[BlackElo "1335"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e6 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:09] } 2... Nc6 { [%clk 0:15:10] } 3. Nc3 { [%clk 0:15:16] } 3... d5 { [%clk 0:15:20] } 4. exd5 { [%clk 0:15:25] } 4... exd5 { [%clk 0:15:29] } 5. d4 { [%clk 0:15:33] } 5... Qe7+ { [%clk 0:15:39] } 6. Be2 { [%clk 0:15:39] } 6... Nf6 { [%clk 0:15:49] } 7. h3 { [%clk 0:15:39] } 7... Qe6 { [%clk 0:15:59] } 8. O-O { [%clk 0:15:40] } 8... Bd6 { [%clk 0:16:09] } 9. Re1 { [%clk 0:15:30] } 9... a5 { [%clk 0:16:19] } 10. Bb5 { [%clk 0:15:14] } 10... Ne4 { [%clk 0:16:28] } 11. Bd3 { [%clk 0:14:43] } 11... h5 { [%clk 0:16:38] } 12. Nxe4 { [%clk 0:14:42] } 12... dxe4 { [%clk 0:16:48] } 13. Rxe4 { [%clk 0:14:45] } 13... Ne5 { [%clk 0:16:57] } 14. dxe5 { [%clk 0:14:51] } 14... Be7 { [%clk 0:17:07] } 15. Bg5 { [%clk 0:13:28] } 15... Qc6 { [%clk 0:17:17] } 16. Bxe7 { [%clk 0:13:29] } 16... Kxe7 { [%clk 0:17:27] } 17. Qe2 { [%clk 0:13:19] } 17... Be6 { [%clk 0:17:36] } 18. Bc4 { [%clk 0:13:10] } 18... f6 { [%clk 0:17:46] } 19. Bxe6 { [%clk 0:13:14] } 19... Qxe6 { [%clk 0:17:56] } 20. exf6+ { [%clk 0:12:49] } 20... gxf6 { [%clk 0:18:06] } 21. Rxe6+ { [%clk 0:12:57] } 21... Kf7 { [%clk 0:18:15] } 22. Rd1 { [%clk 0:12:50] } 22... Rhg8 { [%clk 0:18:25] } 23. Rd7+ { [%clk 0:12:55] } 23... Kg6 { [%clk 0:18:35] } 24. Qe4+ { [%clk 0:12:56] } 24... Kh6 { [%clk 0:18:45] } 25. Rxf6+ { [%clk 0:13:03] } 25... Rg6 { [%clk 0:18:55] } 26. Qxg6# { [%clk 0:12:58] } 1-0

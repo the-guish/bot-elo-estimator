@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/dxXDenid"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "sargon-2ply"]
+[Black "djmadturk"]
+[Result "0-1"]
+[GameId "dxXDenid"]
+[UTCDate "2026.10.19"]
+[UTCTime "19:35:42"]
+[WhiteElo "1397"]
+[BlackElo "1500"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Qf3 { [%clk 0:10:02] } 2... Nf6 { [%clk 0:09:47] } 3. Nc3 { [%clk 0:10:03] } 3... Nc6 { [%clk 0:09:41] } 4. Bc4 { [%clk 0:10:05] } 4... d6 { [%clk 0:09:26] } 5. Nge2 { [%clk 0:10:07] } 5... Bg4 { [%clk 0:09:26] } 6. Qe3 { [%clk 0:10:09] } 6... Bxe2 { [%clk 0:09:19] } 7. Bxe2 { [%clk 0:10:10] } 7... Nd4 { [%clk 0:09:06] } 8. Qd3 { [%clk 0:10:12] } 8... Qd7 { [%clk 0:08:44] } 9. O-O { [%clk 0:10:14] } 9... Ng4 { [%clk 0:08:07] } 10. h3 { [%clk 0:10:16] } 10... Nf6 { [%clk 0:07:57] } 11. Bg4 { [%clk 0:10:17] } 11... Nxg4 { [%clk 0:07:48] } 12. hxg4 { [%clk 0:10:19] } 12... Qxg4 { [%clk 0:07:47] } 13. Qc4 { [%clk 0:10:21] } 13... O-O-O { [%clk 0:07:07] } 14. Qxf7 { [%clk 0:10:23] } 14... Rd7 { [%clk 0:06:59] } 15. Qc4 { [%clk 0:10:24] } 15... h5 { [%clk 0:06:55] } 16. f3 { [%clk 0:10:26] } 16... Qg3 { [%clk 0:06:51] } 17. Ne2 { [%clk 0:10:28] } 17... Nxe2+ { [%clk 0:06:48] } 18. Qxe2 { [%clk 0:10:30] } 18... h4 { [%clk 0:06:44] } 19. Qc4 { [%clk 0:10:31] } 19... h3 { [%clk 0:06:41] } 20. Rf2 { [%clk 0:10:33] } 20... h2+ { [%clk 0:06:37] } 21. Kh1 { [%clk 0:10:35] } 21... Qxf2 { [%clk 0:06:14] } 22. Qxc7+ { [%clk 0:10:37] } 22... Kxc7 { [%clk 0:06:13] } 23. Rb1 { [%clk 0:10:38] } 23... Qg1# { [%clk 0:06:04] } 0-1
