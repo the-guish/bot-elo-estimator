@@ -27,6 +27,7 @@ engines = [
     "tofiks",
     "moinsen",
     "goldfish",
+    "weiawaga",
 ]
 
 
@@ -105,6 +106,10 @@ moinsen = { run = "moinsen/moinsen", go = "go depth 3" }  # no pruning: depth 10
 [engines.goldfish]
 [engines.goldfish.commands]
 goldfish = { run = "goldfish/goldfish" }
+
+[engines.weiawaga]
+[engines.weiawaga.commands]
+weiawaga = { run = "weiawaga/weiawaga" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -334,6 +339,14 @@ go = [
 
 [bots.weiawaga]
 runs = "Weiawaga"
+command = "weiawaga"
+replay = "agreement"
+play = "go depth 12"
+go = [
+    "go depth 8",
+    "go depth 10",
+    "go depth 12",
+]
 
 [bots.melsh_bot]
 runs = "melsh_bot"
