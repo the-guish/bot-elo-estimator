@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/CfpfokUO"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia5"]
+[Black "BobSaintClarr"]
+[Result "1-0"]
+[GameId "CfpfokUO"]
+[UTCDate "2026.10.19"]
+[UTCTime "19:14:04"]
+[WhiteElo "1488"]
+[BlackElo "1651"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e3 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. b3 { [%clk 0:03:02] } 2... Nf6 { [%clk 0:03:01] } 3. Bb2 { [%clk 0:03:02] } 3... Bc5 { [%clk 0:03:03] } 4. Bxe5 { [%clk 0:03:02] } 4... d6 { [%clk 0:03:05] } 5. Bb2 { [%clk 0:03:02] } 5... Nc6 { [%clk 0:03:05] } 6. Bb5 { [%clk 0:03:03] } 6... Bd7 { [%clk 0:03:07] } 7. Bxc6 { [%clk 0:03:05] } 7... Bxc6 { [%clk 0:03:08] } 8. Nf3 { [%clk 0:03:06] } 8... O-O { [%clk 0:03:09] } 9. O-O { [%clk 0:03:06] } 9... h6 { [%clk 0:03:11] } 10. d4 { [%clk 0:03:08] } 10... Bb6 { [%clk 0:03:12] } 11. c4 { [%clk 0:03:09] } 11... d5 { [%clk 0:03:10] } 12. c5 { [%clk 0:03:10] } 12... Ba5 { [%clk 0:03:11] } 13. a3 { [%clk 0:03:10] } 13... b5 { [%clk 0:02:58] } 14. b4 { [%clk 0:03:07] } 1-0

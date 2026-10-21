@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/qTSJXWNz"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Daniil1705"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "qTSJXWNz"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:31:35"]
+[WhiteElo "874"]
+[BlackElo "1628"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1200+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:20:00] } 1... e5 { [%clk 0:20:00] } 2. Bc4 { [%clk 0:19:37] } 2... d6 { [%clk 0:19:58] } 3. g3 { [%clk 0:19:36] } 3... Nf6 { [%clk 0:19:56] } 4. Kf1 { [%clk 0:18:56] } 4... Nxe4 { [%clk 0:19:54] } 5. g4 { [%clk 0:18:47] } 5... Qf6 { [%clk 0:19:52] } 6. Ke1 { [%clk 0:18:21] } 6... Qxf2# { [%clk 0:19:45] } 0-1

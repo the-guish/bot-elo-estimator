@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/XUzFDTah"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Phanus"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "XUzFDTah"]
+[UTCDate "2026.10.19"]
+[UTCTime "20:59:07"]
+[WhiteElo "1500"]
+[BlackElo "1617"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... c5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:58] } 2... d6 { [%clk 0:09:58] } 3. d4 { [%clk 0:09:58] } 3... cxd4 { [%clk 0:09:56] } 4. Nxd4 { [%clk 0:09:54] } 4... Nf6 { [%clk 0:09:54] } 5. Nc3 { [%clk 0:09:51] } 5... a6 { [%clk 0:09:52] } 6. Bg5 { [%clk 0:09:49] } 6... e6 { [%clk 0:09:50] } 7. Bxf6 { [%clk 0:09:48] } 7... Qxf6 { [%clk 0:09:43] } 8. Qf3 { [%clk 0:09:47] } 8... Qxd4 { [%clk 0:09:39] } 0-1

@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/HPuWoGuv"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Chessternal"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "HPuWoGuv"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:29:37"]
+[WhiteElo "1974"]
+[BlackElo "1616"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:10:00] } 1... f5 { [%clk 0:10:00] } 2. Nc3 { [%clk 0:10:02] } 2... Nf6 { [%clk 0:10:04] } 3. Bg5 { [%clk 0:10:05] } 3... e6 { [%clk 0:10:07] } 4. e4 { [%clk 0:10:08] } 4... fxe4 { [%clk 0:10:12] } 5. Nxe4 { [%clk 0:10:10] } 5... Be7 { [%clk 0:10:15] } 6. Bd3 { [%clk 0:09:38] } 6... O-O { [%clk 0:10:15] } 7. Qd2 { [%clk 0:09:16] } 7... d5 { [%clk 0:10:17] } 8. Nxf6+ { [%clk 0:09:09] } 8... Bxf6 { [%clk 0:10:16] } 9. Nf3 { [%clk 0:09:06] } 9... Bxg5 { [%clk 0:10:13] } 10. Nxg5 { [%clk 0:09:09] } 10... h6 { [%clk 0:10:10] } 11. Nf3 { [%clk 0:09:02] } 11... Nc6 { [%clk 0:10:11] } 12. O-O-O { [%clk 0:08:53] } 12... Qf6 { [%clk 0:10:11] } 13. c3 { [%clk 0:08:43] } 13... Bd7 { [%clk 0:10:12] } 14. Rdf1 { [%clk 0:08:06] } 14... a5 { [%clk 0:10:12] } 15. h4 { [%clk 0:07:33] } 15... a4 { [%clk 0:10:09] } 16. a3 { [%clk 0:07:33] } 16... Na5 { [%clk 0:10:08] } 17. Kb1 { [%clk 0:07:23] } 17... Nb3 { [%clk 0:10:07] } 18. Qe3 { [%clk 0:07:11] } 18... b5 { [%clk 0:10:09] } 19. Ne5 { [%clk 0:07:12] } 19... Be8 { [%clk 0:10:08] } 20. Ng4 { [%clk 0:07:05] } 20... Qf4 { [%clk 0:10:04] } 21. Qxe6+ { [%clk 0:06:32] } 21... Bf7 { [%clk 0:09:59] } 22. Qf5 { [%clk 0:06:02] } 22... Qxf5 { [%clk 0:09:58] } 23. Bxf5 { [%clk 0:06:07] } 23... Nd2+ { [%clk 0:09:56] } 0-1

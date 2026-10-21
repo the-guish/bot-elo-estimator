@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/XqtnKYdc"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia1"]
+[Black "lucasportela"]
+[Result "1-0"]
+[GameId "XqtnKYdc"]
+[UTCDate "2026.10.19"]
+[UTCTime "20:31:04"]
+[WhiteElo "1602"]
+[BlackElo "1442"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... c6 { [%clk 0:15:00] } 2. d4 { [%clk 0:15:08] } 2... d5 { [%clk 0:15:09] } 3. Nc3 { [%clk 0:15:16] } 3... dxe4 { [%clk 0:14:41] } 4. Nxe4 { [%clk 0:15:24] } 4... Bf5 { [%clk 0:14:30] } 5. Bd3 { [%clk 0:15:32] } 5... e6 { [%clk 0:14:15] } 6. Nf3 { [%clk 0:15:38] } 6... Nf6 { [%clk 0:14:10] } 7. Nxf6+ { [%clk 0:15:45] } 7... Qxf6 { [%clk 0:14:15] } 8. Bxf5 { [%clk 0:15:52] } 8... exf5 { [%clk 0:14:18] } 9. O-O { [%clk 0:16:01] } 9... Be7 { [%clk 0:14:21] } 10. Bg5 { [%clk 0:16:03] } 10... Qd6 { [%clk 0:13:10] } 11. Bxe7 { [%clk 0:16:07] } 11... Kxe7 { [%clk 0:13:20] } 12. Re1+ { [%clk 0:16:09] } 12... Kd7 { [%clk 0:13:21] } 13. Ne5+ { [%clk 0:16:12] } 1-0

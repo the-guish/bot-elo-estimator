@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/RwAXTbBl"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "BomberBaton"]
+[Black "maia1"]
+[Result "0-1"]
+[GameId "RwAXTbBl"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:03:04"]
+[WhiteElo "1500"]
+[BlackElo "1665"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... e5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:29:56] } 2... Nc6 { [%clk 0:29:58] } 3. Bc4 { [%clk 0:29:40] } 3... h6 { [%clk 0:29:56] } 4. O-O { [%clk 0:29:34] } 4... Nf6 { [%clk 0:29:54] } 5. d3 { [%clk 0:29:28] } 5... Bc5 { [%clk 0:29:52] } 6. Nc3 { [%clk 0:29:13] } 6... O-O { [%clk 0:29:39] } 7. b3 { [%clk 0:28:24] } 7... d6 { [%clk 0:29:28] } 8. a3 { [%clk 0:27:56] } 8... Bg4 { [%clk 0:29:16] } 9. b4 { [%clk 0:27:42] } 9... Bd4 { [%clk 0:29:06] } 10. b5 { [%clk 0:27:20] } 10... Bxc3 { [%clk 0:28:52] } 11. Ra2 { [%clk 0:26:54] } 11... Nd4 { [%clk 0:28:41] } 12. h3 { [%clk 0:26:21] } 12... Bxf3 { [%clk 0:28:29] } 13. gxf3 { [%clk 0:26:13] } 13... Nh5 { [%clk 0:28:18] } 14. Bb2 { [%clk 0:25:37] } 14... Qg5+ { [%clk 0:28:05] } 15. Kh1 { [%clk 0:25:25] } 15... Nf4 { [%clk 0:27:51] } 16. Bxc3 { [%clk 0:25:07] } 16... Qg2# { [%clk 0:27:39] } 0-1

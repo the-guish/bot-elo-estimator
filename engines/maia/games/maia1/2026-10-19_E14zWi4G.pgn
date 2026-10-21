@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/E14zWi4G"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "quinnvoker"]
+[Black "maia1"]
+[Result "0-1"]
+[GameId "E14zWi4G"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:51:56"]
+[WhiteElo "1127"]
+[BlackElo "1646"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nc3 { [%clk 0:09:56] } 2... Nc6 { [%clk 0:09:58] } 3. Bc4 { [%clk 0:09:51] } 3... Nf6 { [%clk 0:09:56] } 4. f4 { [%clk 0:09:46] } 4... exf4 { [%clk 0:09:54] } 5. e5 { [%clk 0:09:42] } 5... Nxe5 { [%clk 0:09:52] } 6. d4 { [%clk 0:09:30] } 6... Nxc4 { [%clk 0:09:48] } 0-1

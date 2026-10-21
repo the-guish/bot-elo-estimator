@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/T4FFGFv2"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia5"]
+[Black "akuo21"]
+[Result "1/2-1/2"]
+[GameId "T4FFGFv2"]
+[UTCDate "2026.10.19"]
+[UTCTime "18:36:36"]
+[WhiteElo "1491"]
+[BlackElo "1500"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... e6 { [%clk 0:03:00] } 2. d4 { [%clk 0:03:02] } 2... d5 { [%clk 0:03:02] } 3. Nc3 { [%clk 0:03:02] } 3... dxe4 { [%clk 0:03:03] } 4. Nxe4 { [%clk 0:03:03] } 4... Nf6 { [%clk 0:02:57] } 5. Nxf6+ { [%clk 0:03:05] } 5... Qxf6 { [%clk 0:02:58] } 6. Nf3 { [%clk 0:03:07] } 6... Qd8 { [%clk 0:02:58] } 7. Bd3 { [%clk 0:03:06] } 7... Be7 { [%clk 0:02:59] } 8. O-O { [%clk 0:03:07] } 8... O-O { [%clk 0:03:01] } 9. c3 { [%clk 0:03:08] } 9... h6 { [%clk 0:03:02] } 10. Qc2 { [%clk 0:03:04] } 10... b6 { [%clk 0:02:55] } 11. Be4 { [%clk 0:03:06] } 11... c6 { [%clk 0:02:53] } 12. Ne5 { [%clk 0:03:06] } 12... Bb7 { [%clk 0:02:53] } 13. Bh7+ { [%clk 0:03:05] } 13... Kh8 { [%clk 0:02:52] } 14. Be4 { [%clk 0:03:04] } 14... Qc7 { [%clk 0:02:47] } 15. Bf4 { [%clk 0:03:02] } 15... Bd6 { [%clk 0:02:42] } 16. Qd2 { [%clk 0:03:00] } 16... c5 { [%clk 0:02:36] } 17. Bxb7 { [%clk 0:02:58] } 17... Qxb7 { [%clk 0:02:34] } 18. Bxh6 { [%clk 0:02:52] } 18... Bxe5 { [%clk 0:02:24] } 19. dxe5 { [%clk 0:02:47] } 19... gxh6 { [%clk 0:02:17] } 20. Qxh6+ { [%clk 0:02:43] } 20... Kg8 { [%clk 0:02:17] } 21. Qg5+ { [%clk 0:02:43] } 21... Kh8 { [%clk 0:02:18] } 22. Qf6+ { [%clk 0:02:44] } 22... Kg8 { [%clk 0:02:19] } 23. Qg5+ { [%clk 0:02:43] } 23... Kh8 { [%clk 0:02:20] } 24. Qf6+ { [%clk 0:02:42] } 24... Kg8 { [%clk 0:02:21] } 25. Qg5+ { [%clk 0:02:42] } 1/2-1/2

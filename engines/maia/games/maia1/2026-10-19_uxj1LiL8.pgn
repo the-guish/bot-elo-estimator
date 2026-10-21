@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/uxj1LiL8"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia1"]
+[Black "AberoniWithCheese"]
+[Result "1-0"]
+[GameId "uxj1LiL8"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:15:31"]
+[WhiteElo "1611"]
+[BlackElo "1531"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:10:00] } 1... c6 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:58] } 2... d5 { [%clk 0:09:56] } 3. exd5 { [%clk 0:09:56] } 3... cxd5 { [%clk 0:09:55] } 4. Nc3 { [%clk 0:09:54] } 4... Nf6 { [%clk 0:09:53] } 5. d4 { [%clk 0:09:52] } 5... Bg4 { [%clk 0:09:51] } 6. Be2 { [%clk 0:09:52] } 6... e6 { [%clk 0:09:45] } 7. O-O { [%clk 0:09:49] } 7... Bd6 { [%clk 0:09:42] } 8. h3 { [%clk 0:09:44] } 8... Bh5 { [%clk 0:09:38] } 9. Bg5 { [%clk 0:09:38] } 9... O-O { [%clk 0:09:29] } 10. Bxf6 { [%clk 0:09:34] } 10... Qxf6 { [%clk 0:09:25] } 11. Ne5 { [%clk 0:09:32] } 11... Bxe2 { [%clk 0:09:18] } 12. Qxe2 { [%clk 0:09:31] } 12... Nc6 { [%clk 0:08:48] } 13. Nd7 { [%clk 0:09:23] } 13... Qe7 { [%clk 0:08:39] } 14. Nxf8 { [%clk 0:09:17] } 14... Qxf8 { [%clk 0:08:34] } 15. Nb5 { [%clk 0:09:13] } 1-0

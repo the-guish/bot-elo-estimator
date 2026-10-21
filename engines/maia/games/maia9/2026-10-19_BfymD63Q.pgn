@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/BfymD63Q"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "santichess16"]
+[Black "maia9"]
+[Result "0-1"]
+[GameId "BfymD63Q"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:41:36"]
+[WhiteElo "1579"]
+[BlackElo "1675"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:03:00] } 1... e5 { [%clk 0:03:00] } 2. dxe5 { [%clk 0:03:01] } 2... Nc6 { [%clk 0:03:02] } 3. Bf4 { [%clk 0:03:01] } 3... Qe7 { [%clk 0:03:04] } 4. Nf3 { [%clk 0:03:02] } 4... Qb4+ { [%clk 0:03:04] } 5. Nc3 { [%clk 0:02:49] } 5... Qxf4 { [%clk 0:03:06] } 0-1

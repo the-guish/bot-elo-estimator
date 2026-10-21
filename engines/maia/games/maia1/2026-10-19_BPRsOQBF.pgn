@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/BPRsOQBF"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Daniil1705"]
+[Black "maia1"]
+[Result "0-1"]
+[GameId "BPRsOQBF"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:27:06"]
+[WhiteElo "874"]
+[BlackElo "1528"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. f4 { [%clk 0:10:00] } 1... e6 { [%clk 0:10:00] } 2. d4 { [%clk 0:09:47] } 2... Qh4+ { [%clk 0:09:59] } 3. Kd2 { [%clk 0:09:30] } 3... Qxf4+ { [%clk 0:09:58] } 4. Ke1 { [%clk 0:09:27] } 4... Qh4+ { [%clk 0:09:58] } 5. Kd2 { [%clk 0:09:25] } 5... Qxd4+ { [%clk 0:09:56] } 6. Ke1 { [%clk 0:09:24] } 6... Qxd1+ { [%clk 0:09:56] } 7. Kf2 { [%clk 0:09:16] } 7... Qxc1 { [%clk 0:09:49] } 8. Nc3 { [%clk 0:09:08] } 8... Qxa1 { [%clk 0:09:49] } 9. h4 { [%clk 0:08:53] } 9... Qxb2 { [%clk 0:09:42] } 10. Rh2 { [%clk 0:08:53] } 10... Qxc3 { [%clk 0:09:39] } 11. h5 { [%clk 0:08:48] } 11... Bc5+ { [%clk 0:09:35] } 12. e3 { [%clk 0:08:32] } 12... Qxe3# { [%clk 0:09:30] } 0-1

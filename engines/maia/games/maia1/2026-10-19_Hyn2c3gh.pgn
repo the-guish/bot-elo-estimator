@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/Hyn2c3gh"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia1"]
+[Black "azaiLobo"]
+[Result "1-0"]
+[GameId "Hyn2c3gh"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:50:33"]
+[WhiteElo "1666"]
+[BlackElo "1351"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+15"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:13] } 2... Nc6 { [%clk 0:15:09] } 3. Bc4 { [%clk 0:15:28] } 3... Nf6 { [%clk 0:15:21] } 4. Ng5 { [%clk 0:15:43] } 4... d5 { [%clk 0:15:19] } 5. exd5 { [%clk 0:15:58] } 5... Nxd5 { [%clk 0:15:29] } 6. Nxf7 { [%clk 0:16:11] } 6... Qe7 { [%clk 0:15:39] } 7. Nxh8 { [%clk 0:16:26] } 7... Be6 { [%clk 0:15:50] } 8. O-O { [%clk 0:16:41] } 8... Nf4 { [%clk 0:16:00] } 9. Bxe6 { [%clk 0:16:56] } 9... Qxe6 { [%clk 0:16:13] } 10. d3 { [%clk 0:17:11] } 10... Qd6 { [%clk 0:16:25] } 11. Bxf4 { [%clk 0:17:26] } 11... exf4 { [%clk 0:16:39] } 12. Re1+ { [%clk 0:17:41] } 12... Kd8 { [%clk 0:16:53] } 13. Nf7+ { [%clk 0:17:56] } 13... Kc8 { [%clk 0:17:05] } 14. Nxd6+ { [%clk 0:18:11] } 14... cxd6 { [%clk 0:17:18] } 15. Re8+ { [%clk 0:18:26] } 15... Nd8 { [%clk 0:17:31] } 16. Rxf8 { [%clk 0:18:41] } 16... Rb8 { [%clk 0:17:44] } 17. Qg4+ { [%clk 0:18:56] } 17... Kc7 { [%clk 0:17:57] } 18. Qxg7+ { [%clk 0:19:11] } 18... Nf7 { [%clk 0:18:11] } 19. Qxf7+ { [%clk 0:19:26] } 19... Kc6 { [%clk 0:18:24] } 20. Rxb8 { [%clk 0:19:41] } 20... Kb6 { [%clk 0:18:39] } 21. Qxb7+ { [%clk 0:19:56] } 21... Kc5 { [%clk 0:18:53] } 22. Qxa7+ { [%clk 0:20:11] } 22... Kd5 { [%clk 0:19:07] } 23. Rb5+ { [%clk 0:20:26] } 23... Kc6 { [%clk 0:19:19] } 24. Qb6+ { [%clk 0:20:41] } 24... Kd7 { [%clk 0:19:33] } 25. Qb7+ { [%clk 0:20:55] } 25... Kd8 { [%clk 0:19:48] } 26. Ra5 { [%clk 0:21:10] } 26... Ke8 { [%clk 0:20:02] } 27. Ra8# { [%clk 0:21:10] } 1-0

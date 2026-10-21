@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/seUPL4st"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "M48181951"]
+[Black "maia1"]
+[Result "0-1"]
+[GameId "seUPL4st"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:58:03"]
+[WhiteElo "1269"]
+[BlackElo "1541"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "480+2"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:08:00] } 1... e5 { [%clk 0:08:00] } 2. Nf3 { [%clk 0:08:00] } 2... Nc6 { [%clk 0:08:02] } 3. Nc3 { [%clk 0:08:01] } 3... d6 { [%clk 0:08:02] } 4. Bb5 { [%clk 0:07:54] } 4... Bd7 { [%clk 0:08:02] } 5. Bxc6 { [%clk 0:07:55] } 5... Bxc6 { [%clk 0:08:03] } 6. a4 { [%clk 0:07:51] } 6... Nf6 { [%clk 0:08:02] } 7. g4 { [%clk 0:07:47] } 7... Nxg4 { [%clk 0:08:01] } 8. h3 { [%clk 0:07:41] } 8... Nf6 { [%clk 0:08:01] } 9. O-O { [%clk 0:07:37] } 9... Nxe4 { [%clk 0:08:03] } 10. Nxe4 { [%clk 0:07:36] } 10... Bxe4 { [%clk 0:08:05] } 11. d3 { [%clk 0:07:35] } 11... Bc6 { [%clk 0:08:03] } 12. Qe2 { [%clk 0:07:32] } 12... Qf6 { [%clk 0:07:58] } 13. Ng5 { [%clk 0:07:22] } 13... Qg6 { [%clk 0:07:55] } 0-1

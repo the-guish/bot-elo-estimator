@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/ZUuIg59B"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Slowpokey"]
+[Black "maia9"]
+[Result "0-1"]
+[GameId "ZUuIg59B"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:42:37"]
+[WhiteElo "1558"]
+[BlackElo "1787"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:30:00] } 1... Nc6 { [%clk 0:30:00] } 2. c4 { [%clk 0:29:56] } 2... d5 { [%clk 0:29:58] } 3. Nc3 { [%clk 0:29:54] } 3... dxc4 { [%clk 0:29:56] } 4. e4 { [%clk 0:29:42] } 4... Qxd4 { [%clk 0:29:54] } 5. Qxd4 { [%clk 0:29:37] } 5... Nxd4 { [%clk 0:29:52] } 6. Bxc4 { [%clk 0:29:35] } 6... Nc2+ { [%clk 0:29:40] } 0-1

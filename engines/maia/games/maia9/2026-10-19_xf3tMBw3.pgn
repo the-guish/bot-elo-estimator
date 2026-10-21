@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/xf3tMBw3"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia9"]
+[Black "FefeHU"]
+[Result "1-0"]
+[GameId "xf3tMBw3"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:50:52"]
+[WhiteElo "1672"]
+[BlackElo "1783"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. exd5 { [%clk 0:03:02] } 2... Nf6 { [%clk 0:03:01] } 3. d4 { [%clk 0:03:04] } 3... Bg4 { [%clk 0:03:01] } 4. Bb5+ { [%clk 0:03:06] } 4... c6 { [%clk 0:02:54] } 5. dxc6 { [%clk 0:03:08] } 5... bxc6 { [%clk 0:02:45] } 6. Be2 { [%clk 0:03:10] } 6... Bxe2 { [%clk 0:02:36] } 7. Nxe2 { [%clk 0:03:11] } 7... e5 { [%clk 0:02:31] } 8. dxe5 { [%clk 0:03:13] } 8... Qxd1+ { [%clk 0:02:30] } 9. Kxd1 { [%clk 0:03:10] } 9... Ne4 { [%clk 0:02:29] } 10. Be3 { [%clk 0:03:11] } 10... Nd7 { [%clk 0:02:21] } 11. f4 { [%clk 0:03:09] } 11... O-O-O { [%clk 0:02:18] } 12. Nd2 { [%clk 0:03:05] } 1-0
