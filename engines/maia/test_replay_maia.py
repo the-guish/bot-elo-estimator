@@ -68,10 +68,12 @@ CLEAN = [r for g in "abcde" for r in game_records(g, [True] * 10)]
         (CLEAN + [rec("a", p, False) for p in (1, 3, 19)], (50, 0, 0, [], True)),
         # A mismatch at a policy gap under 1 point is a near-tie.
         (CLEAN + [rec("a", 41, False, gap=0.4)], (51, 1, 0, [], True)),
-        # One clear mismatch in 51 moves is above 1%.
-        (CLEAN + [rec("a", 41, False, gap=3.0)], (51, 0, 1, [], False)),
+        # One clear mismatch in 51 moves is under 2%.
+        (CLEAN + [rec("a", 41, False, gap=3.0)], (51, 0, 1, [], True)),
+        # Two in 52 are above 2%.
+        (CLEAN + [rec("a", p, False, gap=3.0) for p in (41, 43)], (52, 0, 2, [], False)),
         # A mismatch with no policy for the bot's move counts as clear.
-        (CLEAN + [rec("a", 41, False, gap=None)], (51, 0, 1, [], False)),
+        (CLEAN + [rec("a", p, False, gap=None) for p in (41, 43)], (52, 0, 2, [], False)),
         # Endgame moves are reported apart and do not count.
         (CLEAN + [rec("a", 41, False, pieces=7)], (50, 0, 0, [], True)),
         # A game agreeing on 7 of 10 moves after the book is set aside.

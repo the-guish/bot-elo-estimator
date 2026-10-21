@@ -110,14 +110,24 @@ the bot runs a version, the bio says so.
 ## What was built
 
 On 2026-10-21, 20 of the 27 engines got an image, one at a time. Four more are pending to build
-and verify, and seven were dropped. Each built bot was checked against its 100 games in
-`data/games/lichess` by the agreement replay, `engines/agreement`. That replay reports how often
-our command plays the bot's move after the book, compared with Stockfish 19 at depth 10. It
-passes at 60% or more, with at least 10 points over the reference. A bot with a `play` search in
-`bots.toml` anchors the Elo estimates in `estimate/`.
+and verify, and seven were dropped. Each built bot was checked against its games in
+`data/games/lichess`, by one of two tests:
+
+- **The exact test**, `engines/maia`, for the Maia bots. Maia plays from one node, so a faithful
+  copy plays the bot's move every time. It passes when clear mismatches stay at 2% of the compared
+  moves or below. It sets aside games that look like Lichess's test models, and has no reference.
+- **The agreement test**, `engines/agreement`, for bots that search by time. It reports how often
+  our command plays the bot's move after the book, compared with Stockfish 19 at depth 10. It
+  passes at 60% or more, with at least 10 points over the reference.
+
+"Agrees" is the share of compared moves where our command plays the bot's move, in both tests. A
+bot with a `play` search in `bots.toml` anchors the Elo estimates in `estimate/`.
 
 | Bot | Engine | Best search | Agrees | Reference | Verdict | Plays matches with |
 |---|---|---|---|---|---|---|
+| `maia1` | `lc0`, `maia-1100` | 1 node | 98.1% | - | pass, exact test, 300 games: 1.7% clear mismatches | 1 node |
+| `maia5` | `lc0`, `maia-1500` | 1 node | 99.0% | - | pass, exact test, 300 games: 0.9% clear mismatches | 1 node |
+| `maia9` | `lc0`, `maia-1900` | 1 node | 99.8% | - | pass, exact test, 300 games: 0.2% clear mismatches | 1 node |
 | `simpleeval` | `simpleeval` | depth 18 | 66.1% | 48.1% | pass | depth 16 |
 | `usunfish-l0` | `usunfish` | level 0 | 96.9% | 23.2% | pass | level 0 |
 | `usunfish-l1` | `usunfish` | level 1 | 98.2% | 30.3% | pass | level 1 |

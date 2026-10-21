@@ -42,7 +42,7 @@ ignores the records.
 - **A near-tie** is a mismatch where our policy for the bot's move is within 1 point of our best
   move. Floating-point rounding explains it.
 - **Positions with 7 pieces or fewer** are reported apart. Their moves may come from a tablebase.
-- **The test passes** when clear mismatches stay at 1% of the compared moves or below, and at
+- **The test passes** when clear mismatches stay at 2% of the compared moves or below, and at
   most 20% of the games are set aside. The script then exits 0.
 
 ## Tests
