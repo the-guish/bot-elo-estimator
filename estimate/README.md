@@ -40,6 +40,14 @@ opens from that bot's games; two candidates open from the named bots' games toge
 candidates tie their ratings together, so a candidate too strong for the anchors still gets a
 rating relative to the others.
 
+`--with` plays only the pairs that hold one of the players it names, to add players to a round
+robin already played. A pair that already has its games is not played again:
+
+```sh
+uv run estimate/play_matches.py --round-robin --bots alexandrya little-0 simpleeval maia1 maia5 maia9 \
+    --with manguruyu-club-10 simpleeval --games 20
+```
+
 ## The estimate
 
 ```sh

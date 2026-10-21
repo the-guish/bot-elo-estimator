@@ -115,6 +115,7 @@ def test_outcome():
 def test_round_robin_pairs():
     players = [Player(n, n, "go") for n in ("c", "a", "b")]
     assert [(x.name, y.name) for x, y in round_robin_pairs(players)] == [("a", "b"), ("a", "c"), ("b", "c")]
+    assert [(x.name, y.name) for x, y in round_robin_pairs(players, {"c"})] == [("a", "c"), ("b", "c")]
 
 
 def test_play_game():

@@ -91,10 +91,12 @@ def bot_player(bot: reg.Bot) -> Player:
     return Player(bot.id, bot.command, bot.play, bot.params.get("options", {}))
 
 
-def round_robin_pairs(players: list[Player]) -> list[tuple[Player, Player]]:
-    """Every pair once, the first player in name order White first."""
+def round_robin_pairs(players: list[Player], only: set[str] | None = None) -> list[tuple[Player, Player]]:
+    """Every pair once, the first player in name order White first; with `only`, just the pairs
+    that hold one of those players."""
     ordered = sorted(players, key=lambda p: p.name)
-    return list(itertools.combinations(ordered, 2))
+    pairs = itertools.combinations(ordered, 2)
+    return [(a, b) for a, b in pairs if not only or a.name in only or b.name in only]
 
 
 # --- Games -----------------------------------------------------------------
@@ -203,6 +205,8 @@ def main() -> int:
     parser.add_argument("--jobs", type=int, default=os.cpu_count(), help="pairings played at once")
     parser.add_argument("--round-robin", action="store_true",
                         help="the candidates and the bots named all play each other")
+    parser.add_argument("--with", dest="only", nargs="+", metavar="PLAYER",
+                        help="in a round robin, play only the pairs that hold one of these players")
     args = parser.parse_args()
 
     registry = reg.load(args.registry)
@@ -227,7 +231,11 @@ def main() -> int:
         # open from the round robin's bots' games together.
         by_name = {b.id: b for b in bots}
         shared = bot_openings(bots)
-        for first, second in round_robin_pairs(players):
+        unknown = set(args.only or ()) - {p.name for p in players}
+        if unknown:
+            print(f"not in the round robin: {', '.join(sorted(unknown))}", file=sys.stderr)
+            return 2
+        for first, second in round_robin_pairs(players, set(args.only or ())):
             chosen = [by_name[p.name] for p in (first, second) if p.name in by_name]
             games = schedule(bot_openings(chosen) if chosen else shared, args.games)
             path = out / f"{first.name}--{second.name}.ndjson"

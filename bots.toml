@@ -52,6 +52,7 @@ engines = [
 stockfish-19 = { run = "stockfish-19/stockfish" }
 stockfish-15 = { run = "stockfish-15/stockfish", expect = "classical evaluation enabled" }
 stockfish-19-1mb = { run = "stockfish-19-1mb/stockfish" }
+stockfish-19-club = { run = "stockfish-19-club/stockfish" }
 
 [engines.lc0]
 runtime = ["libopenblas0", "zlib1g"]
@@ -564,3 +565,7 @@ go = "go movetime 100"
 [candidates.stockfish-15-classical-depth-4]
 command = "stockfish-15"
 go = "go depth 4"
+
+[candidates.manguruyu-club-10]
+command = "stockfish-19-club"
+go = "go depth 10"
