@@ -509,6 +509,11 @@ go = [
 # Dropped: its skill level has changed over time. See tools/published_bots/candidates.md.
 runs = "Patricia, skill level 11"
 
+[bots.alexandrya]
+runs = "Alexandria, no opening book"
+
+[bots.little-0]
+runs = "Reckless, on a Google Cloud e2-micro VM"
 
 # --- Candidates ----------------------------------------------------------------------------------
 # The engine settings whose Lichess rating estimate/ estimates, by playing them against every bot
