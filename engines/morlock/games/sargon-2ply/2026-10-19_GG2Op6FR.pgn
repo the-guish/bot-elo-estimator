@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/GG2Op6FR"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "djmadturk"]
+[Black "sargon-2ply"]
+[Result "0-1"]
+[GameId "GG2Op6FR"]
+[UTCDate "2026.10.19"]
+[UTCTime "19:29:04"]
+[WhiteElo "1500"]
+[BlackElo "1397"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:10:01] } 2... Nc6 { [%clk 0:10:02] } 3. Bc4 { [%clk 0:10:02] } 3... d5 { [%clk 0:10:03] } 4. Bxd5 { [%clk 0:09:53] } 4... Bg4 { [%clk 0:10:05] } 5. O-O { [%clk 0:09:33] } 5... Bc5 { [%clk 0:10:07] } 6. Bxc6+ { [%clk 0:09:20] } 6... bxc6 { [%clk 0:10:08] } 7. Nc3 { [%clk 0:09:17] } 7... Nf6 { [%clk 0:10:10] } 8. h3 { [%clk 0:09:12] } 8... Bxf3 { [%clk 0:10:12] } 9. Qxf3 { [%clk 0:09:12] } 9... O-O { [%clk 0:10:13] } 10. d3 { [%clk 0:09:03] } 10... Rb8 { [%clk 0:10:15] } 11. Bg5 { [%clk 0:09:04] } 11... h6 { [%clk 0:10:17] } 12. Bh4 { [%clk 0:08:59] } 12... g5 { [%clk 0:10:19] } 13. Bg3 { [%clk 0:08:59] } 13... Re8 { [%clk 0:10:20] } 14. b3 { [%clk 0:08:39] } 14... Bd4 { [%clk 0:10:22] } 15. Nd5 { [%clk 0:06:28] } 15... cxd5 { [%clk 0:10:24] } 16. Rad1 { [%clk 0:06:01] } 16... Kg7 { [%clk 0:10:26] } 17. Bh4 { [%clk 0:05:37] } 17... dxe4 { [%clk 0:10:27] } 18. dxe4 { [%clk 0:05:20] } 18... gxh4 { [%clk 0:10:29] } 0-1

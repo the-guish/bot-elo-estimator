@@ -9,7 +9,7 @@ source, and each command is on the image's PATH.
 
 - **`bot-elo-estimator-base`**, in `images/base`, holds the well-known engines below.
 - **`bot-elo-estimator-extra`**, in `images/extra`, starts from the base and adds less-known
-  engines. It holds none yet.
+  engines.
 
 The base holds these engines:
 
@@ -29,6 +29,19 @@ The base holds these engines:
 - **Maia plays with `go nodes 1`**, as the Maia bots on Lichess do. Lichess runs `maia-1100` as
   `maia1`, `maia-1500` as `maia5` and `maia-1900` as `maia9`. The Lichess bots also play from
   opening books. Offline, Maia plays the same move in the same position every time.
+
+The extra image adds the historical engines of `herohde/morlock`, tag `v0.91.3`:
+
+| Command | Engine |
+|---|---|
+| `sargon-1ply` to `sargon-4ply` | SARGON (1978) |
+| `turochamp-1ply`, `turochamp-2ply` | TUROCHAMP (1948) |
+| `bernstein-2ply`, `bernstein-4ply` | Bernstein's IBM 704 program (1957) |
+
+Each command bears the name of the Lichess bot it reproduces, and searches to that bot's depth.
+The other settings are morlock's defaults. SARGON and TUROCHAMP add noise of 10 millipawns to their
+evaluations, which breaks ties at random. SARGON and Bernstein play their first move from their own
+books.
 
 ## Build
 

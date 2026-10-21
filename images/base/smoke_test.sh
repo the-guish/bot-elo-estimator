@@ -49,6 +49,11 @@ check() {
     printf '%-18s %s\n' "${engine}" "${best}"
 }
 
+# Sourced, the script only defines check, for an image that adds engines.
+if [[ ${BASH_SOURCE[0]} != "$0" ]]; then
+    return 0
+fi
+
 check stockfish-19 "go depth 10"
 check stockfish-15 "go depth 10" "classical evaluation enabled"
 check stockfish-19-1mb "go depth 10"

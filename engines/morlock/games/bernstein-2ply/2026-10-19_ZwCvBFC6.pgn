@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/ZwCvBFC6"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Andos5"]
+[Black "bernstein-2ply"]
+[Result "0-1"]
+[GameId "ZwCvBFC6"]
+[UTCDate "2026.10.19"]
+[UTCTime "08:05:08"]
+[WhiteElo "1121"]
+[BlackElo "1389"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+5"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:30:00] } 1... e5 { [%clk 0:30:00] } 2. Nf3 { [%clk 0:30:04] } 2... Nc6 { [%clk 0:30:05] } 3. Bc4 { [%clk 0:30:09] } 3... Bc5 { [%clk 0:30:10] } 4. d3 { [%clk 0:30:10] } 4... d6 { [%clk 0:30:14] } 5. Ng5 { [%clk 0:30:13] } 5... Nh6 { [%clk 0:30:19] } 6. Qf3 { [%clk 0:29:55] } 6... O-O { [%clk 0:30:24] } 0-1
