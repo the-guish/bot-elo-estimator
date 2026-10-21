@@ -21,7 +21,8 @@ DEFAULT_GAMES = 100
 # The replay that measures agreement instead of matching every move.
 STATISTICAL = "agreement"
 
-BOT_KEYS = {"runs", "command", "games", "replay"}
+BOT_KEYS = {"runs", "command", "games", "replay", "play"}
+CANDIDATE_KEYS = {"command", "go", "options"}
 COMMAND_KEYS = {"run", "go", "expect", "smoke"}
 
 
@@ -66,6 +67,7 @@ class Bot:
     command: str | None = None
     games: int = DEFAULT_GAMES
     replay: str | None = None
+    play: str | None = None  # the search the bot plays matches with
     params: dict = field(default_factory=dict)
 
     @property
@@ -76,10 +78,20 @@ class Bot:
 
 
 @dataclass
+class Candidate:
+    """An engine setting whose Elo the matches estimate."""
+    name: str
+    command: str
+    go: str
+    options: dict = field(default_factory=dict)
+
+
+@dataclass
 class Registry:
     images: dict[str, Image]
     engines: dict[str, Engine]
     bots: dict[str, Bot]
+    candidates: dict[str, Candidate] = field(default_factory=dict)
 
     @property
     def commands(self) -> dict[str, Command]:
@@ -124,7 +136,11 @@ def parse(data: dict) -> Registry:
         known = {k: v for k, v in table.items() if k in BOT_KEYS}
         params = {k: v for k, v in table.items() if k not in BOT_KEYS}
         bots[bot_id] = Bot(bot_id, **known, params=params)
-    return Registry(images, engines, bots)
+    candidates = {}
+    for name, table in data.get("candidates", {}).items():
+        unknown(table, CANDIDATE_KEYS, f"candidate {name}")
+        candidates[name] = Candidate(name, **table)
+    return Registry(images, engines, bots, candidates)
 
 
 def unknown(table: dict, keys: set[str], what: str) -> None:
@@ -192,6 +208,11 @@ def problems(registry: Registry, engines_dir: Path = ENGINES_DIR, replays_dir: P
             script = replays_dir / bot.replay / f"replay_{bot.replay}.py"
             if not script.is_file():
                 found.append(f"bot {bot.id}: no engines/{bot.replay}/replay_{bot.replay}.py")
+        if bot.play is not None and bot.command is None:
+            found.append(f"bot {bot.id}: play needs a command")
+    for candidate in registry.candidates.values():
+        if candidate.command not in commands:
+            found.append(f"candidate {candidate.name}: no command {candidate.command}")
     return found
 
 
@@ -237,7 +258,8 @@ def main() -> int:
             print(problem, file=sys.stderr)
         if not found:
             print(f"{len(registry.images)} images, {len(registry.engines)} engines, "
-                  f"{len(registry.commands)} commands, {len(registry.bots)} bots: no problems")
+                  f"{len(registry.commands)} commands, {len(registry.bots)} bots, "
+                  f"{len(registry.candidates)} candidates: no problems")
         return 1 if found else 0
     print(bots_table(registry, published()), end="")
     return 0

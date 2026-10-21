@@ -6,10 +6,11 @@ Offline Lichess Elo estimator for bots.
 
 | Path | What it holds |
 |---|---|
-| `bots.toml` | The registry: the images, the engines in them, their commands, and the Lichess bots. |
+| `bots.toml` | The registry: the images, the engines in them, their commands, the Lichess bots, and the candidates to rate. |
 | `images/engines/<engine>/` | One Dockerfile per engine, built from a pinned source. |
 | `images/common/` | What every engine build and image shares: `fetch_commit` and the smoke test. |
 | `engines/<replay>/` | A replay: it checks our commands against the bots' games. |
+| `estimate/` | The matches against the reference bots, and the Elo estimate from them. |
 | `lib/botelo/` | The shared code: the registry, the image generator, games, UCI and the replays' frame. |
 | `data/games/lichess/<bot>/` | The bots' games, one PGN file each. |
 | `tools/` | The game download, the list of published bots, and the candidates to reproduce. |
@@ -89,7 +90,8 @@ docker run --rm bot-elo-estimator-extra smoke_test sargon-1ply stockfish-15
 1. Add its table to `bots.toml`. Without a `command`, the bot is listed and its games can be
    downloaded.
 2. Download its games: `tools/lichess_games/download_games.sh --bots <bot>`.
-3. Give it a `command` and a `replay` once an engine plays as it.
+3. Give it a `command` and a `replay` once an engine plays as it, and a `play` search once the
+   replay shows which search reproduces it: the bot then anchors the Elo estimates.
 
 ## Adding an engine
 
@@ -117,6 +119,11 @@ rest: it picks the bots from the registry, runs the games in parallel, and write
 | `--skip` | Plies the verdict leaves out. A bot's `skip` key sets its own. |
 | `--limit` | Only this many games per bot. |
 | `--jobs` | Games replayed at once, one per CPU by default. |
+
+## Estimating Elo
+
+`estimate/` plays each candidate in `bots.toml`, an engine at one setting, against every bot with a
+`play` search, and fits the candidate's Lichess rating to the scores. Its README says how.
 
 ## Tests
 

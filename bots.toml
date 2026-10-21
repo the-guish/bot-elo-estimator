@@ -67,6 +67,7 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 #   runs     The engine the bot runs, as its profile tells.
 #   command  The command that plays as the bot, once an image has one.
 #   games    The games data/games/lichess/<bot> holds. 100 by default.
+#   play     The search the bot plays matches with: the one that reproduces it best.
 #   replay   How engines/<replay> checks the command against the bot's games:
 #              "maia", "morlock"  exact: each move must match.
 #              "agreement"        statistical: how often our command plays the bot's move, against
@@ -82,66 +83,77 @@ runs = "Maia 1, net 1100"
 command = "maia-1100"
 games = 300
 replay = "maia"
+play = "go nodes 1"
 
 [bots.maia5]
 runs = "Maia 1, net 1500"
 command = "maia-1500"
 games = 300
 replay = "maia"
+play = "go nodes 1"
 
 [bots.maia9]
 runs = "Maia 1, net 1900"
 command = "maia-1900"
 games = 300
 replay = "maia"
+play = "go nodes 1"
 
 [bots.sargon-1ply]
 runs = "Morlock"
 command = "sargon-1ply"
 replay = "morlock"
 depth = 1
+play = "go"
 
 [bots.sargon-2ply]
 runs = "Morlock"
 command = "sargon-2ply"
 replay = "morlock"
 depth = 2
+play = "go"
 
 [bots.sargon-3ply]
 runs = "Morlock"
 command = "sargon-3ply"
 replay = "morlock"
 depth = 3
+play = "go"
 
 [bots.sargon-4ply]
 runs = "Morlock"
 command = "sargon-4ply"
 replay = "morlock"
 depth = 4
+play = "go"
 
 [bots.turochamp-1ply]
 runs = "Morlock"
 command = "turochamp-1ply"
 replay = "morlock"
 depth = 1
+play = "go"
 
 [bots.turochamp-2ply]
 runs = "Morlock"
 command = "turochamp-2ply"
 replay = "morlock"
 depth = 2
+play = "go"
 
 [bots.bernstein-2ply]
 runs = "Morlock"
 command = "bernstein-2ply"
 replay = "morlock"
 depth = 2
+play = "go"
 
 [bots.bernstein-4ply]
 runs = "Morlock"
 command = "bernstein-4ply"
 replay = "morlock"
 depth = 4
+play = "go"
 
 [bots.simpleeval]
 runs = "Stockfish, material-only branch"
@@ -238,3 +250,20 @@ runs = "Demolito level 5"
 
 [bots.littlepatricia]
 runs = "Patricia, skill level 11"
+
+
+# --- Candidates ----------------------------------------------------------------------------------
+# The engine settings whose Lichess rating estimate/ estimates, by playing them against every bot
+# with a `play` search. `go` is the candidate's search; `options` are UCI options.
+
+[candidates.stockfish-19]
+command = "stockfish-19"
+go = "go movetime 100"
+
+[candidates.stockfish-15]
+command = "stockfish-15"
+go = "go movetime 100"
+
+[candidates.stockfish-19-1mb]
+command = "stockfish-19-1mb"
+go = "go movetime 100"

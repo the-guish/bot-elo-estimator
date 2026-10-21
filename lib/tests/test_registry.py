@@ -33,6 +33,10 @@ replay = "agreement"
 games = 300
 
 [bots.someone]
+
+[candidates.fast]
+command = "weak"
+go = "go movetime 10"
 """
 
 
@@ -47,8 +51,9 @@ def test_parse():
     assert r.engines["sf"].runtime == ["zlib1g"]
     assert r.commands["weak"] == Command("weak", "sf", "sf/stockfish --weak", "go nodes 1", "info", False)
     assert r.commands["sf"].go == "go depth 10"
-    assert r.bots["oldbot"] == Bot("oldbot", "Old", "old-2ply", 100, "morlock", {"depth": 2})
+    assert r.bots["oldbot"] == Bot("oldbot", "Old", "old-2ply", 100, "morlock", params={"depth": 2})
     assert r.bots["someone"] == Bot("someone")
+    assert r.candidates["fast"].go == "go movetime 10" and r.candidates["fast"].options == {}
 
 
 def test_queries():
@@ -70,6 +75,7 @@ def test_wrapper():
     ('[images.a]\nengine = ["x"]', "image a: unknown keys engine"),
     ('[engines.a]\nruntme = []', "engine a: unknown keys runtme"),
     ('[engines.a.commands]\nc = { run = "a", gp = "go" }', "command c: unknown keys gp"),
+    ('[candidates.a]\ncommand = "x"\ngo = "go"\nnodes = 1', "candidate a: unknown keys nodes"),
 ])
 def test_parse_unknown_keys(text, message):
     with pytest.raises(ValueError, match=message):
@@ -103,6 +109,8 @@ def test_problems_none(dirs):
     (('command = "sf"\n', ''), ["bot sfbot: a replay needs a command"]),
     (('games = 300', 'games = 0'), ["bot sfbot: games must be a positive whole number"]),
     (('[bots.someone]', '[bots.Someone]'), ["bot Someone: Lichess ids are lowercase"]),
+    (('[bots.someone]', '[bots.someone]\nplay = "go depth 1"'), ["bot someone: play needs a command"]),
+    (('command = "weak"', 'command = "nope"'), ["candidate fast: no command nope"]),
     (('go = "go"', 'go = "go\\tdepth"'), ["command old-2ply: go and expect must fit on one line, without tabs"]),
 ])
 def test_problems(dirs, change, expected):
