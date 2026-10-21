@@ -77,7 +77,7 @@ def wanted_bots(reg: registry.Registry, bots: list[str] | None, replay: str | No
 # --- Network ---------------------------------------------------------------
 
 
-def fetch(bot: str, until_ms: int, max_games: int, token: str) -> str:
+def fetch(bot: str, until_ms: int, max_games: int, token: str | None) -> str:
     query = (
         f"max={max_games}&until={until_ms}&perfType={','.join(SPEEDS)}"
         "&moves=true&clocks=true&evals=false&opening=false&tags=true"
@@ -85,7 +85,7 @@ def fetch(bot: str, until_ms: int, max_games: int, token: str) -> str:
     )
     request = urllib.request.Request(
         f"{API.format(user=bot)}?{query}",
-        headers={"Authorization": f"Bearer {token}", "Accept": "application/x-ndjson"},
+        headers={"Accept": "application/x-ndjson"} | ({"Authorization": f"Bearer {token}"} if token else {}),
     )
     for attempt in range(5):
         try:
@@ -100,7 +100,7 @@ def fetch(bot: str, until_ms: int, max_games: int, token: str) -> str:
     raise AssertionError("unreachable")
 
 
-def download(bot: str, count: int, until_ms: int, token: str, out_dir: Path) -> int:
+def download(bot: str, count: int, until_ms: int, token: str | None, out_dir: Path) -> int:
     # Filters drop some games after download, so ask for more and grow until enough are kept.
     max_games = count * 2
     while True:
@@ -128,8 +128,8 @@ def main() -> int:
 
     token = os.environ.get("LICHESS_API_TOKEN")
     if not token:
-        print("LICHESS_API_TOKEN is not set", file=sys.stderr)
-        return 2
+        # The games export is public; a token only makes Lichess stream games faster.
+        print("LICHESS_API_TOKEN is not set: downloading without it, more slowly", file=sys.stderr)
     until_ms = iso_to_ms(args.until)
     wanted = wanted_bots(registry.load(), args.bots, args.replay, args.count)
     if not wanted:

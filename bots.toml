@@ -52,6 +52,7 @@ engines = [
 stockfish-19 = { run = "stockfish-19/stockfish" }
 stockfish-15 = { run = "stockfish-15/stockfish", expect = "classical evaluation enabled" }
 stockfish-19-1mb = { run = "stockfish-19-1mb/stockfish" }
+stockfish-19-club = { run = "stockfish-19-club/stockfish" }
 
 [engines.lc0]
 runtime = ["libopenblas0", "zlib1g"]
@@ -542,16 +543,29 @@ go = [
 
 # --- Candidates ----------------------------------------------------------------------------------
 # The engine settings whose Lichess rating estimate/ estimates, by playing them against every bot
-# with a `play` search. `go` is the candidate's search; `options` are UCI options.
+# with a `play` search, and against each other in a round robin. `go` is the candidate's search;
+# `options` are UCI options. A movetime depends on the machine; a fixed depth does not.
 
 [candidates.stockfish-19]
 command = "stockfish-19"
 go = "go movetime 100"
 
-[candidates.stockfish-15]
-command = "stockfish-15"
-go = "go movetime 100"
-
 [candidates.stockfish-19-1mb]
 command = "stockfish-19-1mb"
 go = "go movetime 100"
+
+[candidates.stockfish-19-1mb-depth-4]
+command = "stockfish-19-1mb"
+go = "go depth 4"
+
+[candidates.stockfish-15-classical]
+command = "stockfish-15"
+go = "go movetime 100"
+
+[candidates.stockfish-15-classical-depth-4]
+command = "stockfish-15"
+go = "go depth 4"
+
+[candidates.manguruyu-club-10]
+command = "stockfish-19-club"
+go = "go depth 10"

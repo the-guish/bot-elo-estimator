@@ -5,6 +5,8 @@
 #                         the default: the build sets "Use NNUE" to false.
 #   stockfish-19-1mb      sscg13's Stockfish 19 with a 1 MB net (nn-61e7af4bb97d), the net
 #                         stockfish.js 19 embeds in its lite engines.
+#   stockfish-19-club     the-guish's Stockfish 19 with a club player's evaluation instead of the
+#                         net: eleven hand-written terms. The search is Stockfish 19's.
 #
 # Each build checks out a pinned commit and downloads the net its source names. Stockfish's
 # Makefile checks the net against the hash in its name. Stockfish compiles for STOCKFISH_ARCH, so
@@ -27,6 +29,9 @@ ARG STOCKFISH_19_COMMIT=edb0d9db6731067ec50ce619ff372b463bc4dd5d
 ARG STOCKFISH_15_COMMIT=e6e324eb28fd49c1fc44b3b65784f85a773ec61c
 # The head of sscg13/Stockfish, branch sf19-1mb: "net (bench 2793281)".
 ARG STOCKFISH_1MB_COMMIT=f5e5c633dd0c9c0efd1d1266f441ea5929b043c1
+# The head of the-guish/Stockfish, branch club-evaluation: sf_19 and one commit, "Replace the network
+# evaluation with the scaccosplicatrice club evaluation" (bench 3689473).
+ARG STOCKFISH_CLUB_COMMIT=37be9ebf48b8f2e5c7b2c2a010c434d1ad11aa87
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
@@ -52,7 +57,12 @@ RUN fetch_commit https://github.com/sscg13/Stockfish "${STOCKFISH_1MB_COMMIT}" /
     && make -C /src/stockfish-19-1mb/src -j "${BUILD_JOBS:-$(nproc)}" profile-build ARCH="${STOCKFISH_ARCH}" \
     && strip /src/stockfish-19-1mb/src/stockfish
 
-RUN for engine in stockfish-19 stockfish-15 stockfish-19-1mb; do \
+# The club evaluation replaces the net's, but the net still loads, so the build is Stockfish 19's.
+RUN fetch_commit https://github.com/the-guish/Stockfish "${STOCKFISH_CLUB_COMMIT}" /src/stockfish-19-club \
+    && make -C /src/stockfish-19-club/src -j "${BUILD_JOBS:-$(nproc)}" profile-build ARCH="${STOCKFISH_ARCH}" \
+    && strip /src/stockfish-19-club/src/stockfish
+
+RUN for engine in stockfish-19 stockfish-15 stockfish-19-1mb stockfish-19-club; do \
         mkdir -p "/out/${engine}" \
         && cp "/src/${engine}/src/stockfish" "/src/${engine}/Copying.txt" "/out/${engine}/"; \
     done
