@@ -19,6 +19,7 @@ parent = "base"
 engines = [
     "morlock",
     "demolito",
+    "radiance",
 ]
 
 
@@ -64,6 +65,10 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+
+[engines.radiance]
+[engines.radiance.commands]
+radiance = { run = "radiance/radiance" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -222,6 +227,14 @@ runs = "Tofiks"
 
 [bots.radianceengine]
 runs = "Radiance"
+command = "radiance"
+replay = "agreement"
+play = "go nodes 1000000"
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+    "go nodes 1000000",
+]
 
 [bots.joshsbot]
 runs = "own C engine"
