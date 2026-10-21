@@ -2,7 +2,9 @@ import json
 
 import pytest
 
-from download_games import file_name, is_wanted, iso_to_ms, pgn_text, read_bots, select_games
+from download_games import file_name, is_wanted, iso_to_ms, pgn_text, select_games, wanted_bots
+
+from botelo.registry import parse
 
 UNTIL = iso_to_ms("2026-10-20T00:00:00Z")
 PGN = '[Event "rated blitz game"]\n\n1. e4 { [%clk 0:05:00] } 1-0\n\n\n'
@@ -93,16 +95,26 @@ def test_iso_to_ms(iso, expected):
     assert iso_to_ms(iso) == expected
 
 
+REGISTRY = parse({
+    "bots": {
+        "maia1": {"command": "maia-1100", "games": 300, "replay": "maia"},
+        "sargon-1ply": {"command": "sargon-1ply", "replay": "morlock"},
+        "lynx_bot": {},
+    }
+})
+
+
 @pytest.mark.parametrize(
-    "text, expected",
+    "bots, replay, count, expected",
     [
-        ("maia1\nmaia5\n", ["maia1", "maia5"]),
-        ("# a comment\n\nsargon-1ply   # 119,062  Morlock\n", ["sargon-1ply"]),
-        ("  Lynx_Bot  \n", ["lynx_bot"]),
-        ("raspfish extra words\n", ["raspfish"]),
-        ("#only a comment\n", []),
-        ("", []),
+        (None, None, None, {"maia1": 300, "sargon-1ply": 100, "lynx_bot": 100}),
+        (None, "maia", None, {"maia1": 300}),
+        (None, "morlock", 20, {"sargon-1ply": 20}),
+        (None, "agreement", None, {}),
+        # A bot outside the registry gets the default count.
+        (["Lynx_Bot", "maia1", "newbot"], None, None, {"lynx_bot": 100, "maia1": 300, "newbot": 100}),
+        (["maia1"], None, 5, {"maia1": 5}),
     ],
 )
-def test_read_bots(text, expected):
-    assert read_bots(text) == expected
+def test_wanted_bots(bots, replay, count, expected):
+    assert wanted_bots(REGISTRY, bots, replay, count) == expected

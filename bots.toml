@@ -1,0 +1,527 @@
+# The registry: the images, the engines in them, the commands the engines provide, and the Lichess
+# bots the estimator targets. build_docker.sh, the smoke tests, the game downloads and the replays
+# all read this file, so a bot or an engine is added here and nowhere else. lib/botelo/registry.py
+# loads and checks it:
+#
+#     python3 lib/botelo/registry.py check      # fails on a broken reference
+#     python3 lib/botelo/registry.py bots       # each bot, its command and its validation
+
+
+# --- Images --------------------------------------------------------------------------------------
+# An image holds its engines' commands, on top of its parent's. An image without a parent starts
+# from Ubuntu. build_docker.sh tags each one bot-elo-estimator-<image>.
+
+[images.base]
+engines = ["stockfish", "lc0"]
+
+[images.extra]
+parent = "base"
+engines = [
+    "morlock",
+    "demolito",
+    "patricia",
+    "simpleeval",
+    "halcyon",
+    "plumbot",
+    "usunfish",
+    "tofiks",
+    "moinsen",
+    "goldfish",
+    "weiawaga",
+    "melsh",
+    "raven",
+    "radiance",
+    "schnecken",
+]
+
+
+# --- Engines -------------------------------------------------------------------------------------
+# images/engines/<engine>/Dockerfile builds each engine from a pinned source into /opt/engines.
+#
+#   runtime   Ubuntu packages its commands need at run time.
+#   pending   true while the engine is pending to build and verify: it stays out of the images
+#             and CI, and its bots play no matches. Its README says what is left to do.
+#   commands  One command on PATH each. `run` is what the command runs; its first word is a path
+#             under /opt/engines. The smoke test plays 1. e4, sends `go` (default "go depth 10"),
+#             and needs a bestmove and a line holding `expect`. `smoke = false` skips the command.
+
+[engines.stockfish]
+[engines.stockfish.commands]
+stockfish-19 = { run = "stockfish-19/stockfish" }
+stockfish-15 = { run = "stockfish-15/stockfish", expect = "classical evaluation enabled" }
+stockfish-19-1mb = { run = "stockfish-19-1mb/stockfish" }
+
+[engines.lc0]
+runtime = ["libopenblas0", "zlib1g"]
+[engines.lc0.commands]
+lc0 = { run = "lc0/lc0", smoke = false }  # lc0 needs a net to search
+maia-1100 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1100.pb.gz", go = "go nodes 1" }
+maia-1200 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1200.pb.gz", go = "go nodes 1" }
+maia-1300 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1300.pb.gz", go = "go nodes 1" }
+maia-1400 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1400.pb.gz", go = "go nodes 1" }
+maia-1500 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1500.pb.gz", go = "go nodes 1" }
+maia-1600 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1600.pb.gz", go = "go nodes 1" }
+maia-1700 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1700.pb.gz", go = "go nodes 1" }
+maia-1800 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1800.pb.gz", go = "go nodes 1" }
+maia-1900 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1900.pb.gz", go = "go nodes 1" }
+dala-900 = { run = "lc0/lc0 --weights=/opt/engines/dala/dala-900.pb.gz", go = "go nodes 1" }
+dala-1100 = { run = "lc0/lc0 --weights=/opt/engines/dala/dala-1100.pb.gz", go = "go nodes 1" }
+dala-1300 = { run = "lc0/lc0 --weights=/opt/engines/dala/dala-1300.pb.gz", go = "go nodes 1" }
+
+[engines.morlock]
+[engines.morlock.commands]
+sargon-1ply = { run = "morlock/sargon -ply 1", go = "go" }
+sargon-2ply = { run = "morlock/sargon -ply 2", go = "go" }
+sargon-3ply = { run = "morlock/sargon -ply 3", go = "go" }
+sargon-4ply = { run = "morlock/sargon -ply 4", go = "go" }
+turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
+turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
+bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
+bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+[engines.demolito]
+[engines.demolito.commands]
+demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+[engines.patricia]
+[engines.patricia.commands]
+patricia = { run = "patricia/patricia" }
+[engines.simpleeval]
+[engines.simpleeval.commands]
+simpleeval = { run = "simpleeval/stockfish" }
+[engines.halcyon]
+[engines.halcyon.commands]
+halcyon = { run = "halcyon/halcyon" }
+
+[engines.plumbot]
+[engines.plumbot.commands]
+plumbot = { run = "plumbot/plumbot", go = "go" }  # 5 plies, or `go depth N`
+
+[engines.usunfish]
+[engines.usunfish.commands]
+usunfish-l0 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=0" }
+usunfish-l1 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=1" }
+
+[engines.tofiks]
+[engines.tofiks.commands]
+tofiks = { run = "tofiks/tofiks", expect = "id name Tofiks v1.6.0" }
+
+[engines.moinsen]
+[engines.moinsen.commands]
+moinsen = { run = "moinsen/moinsen", go = "go depth 3" }  # no pruning: depth 10 would never end
+
+[engines.goldfish]
+[engines.goldfish.commands]
+goldfish = { run = "goldfish/goldfish" }
+
+[engines.weiawaga]
+[engines.weiawaga.commands]
+weiawaga = { run = "weiawaga/weiawaga" }
+
+[engines.melsh]
+[engines.melsh.commands]
+melsh_bot = { run = "melsh/melsh_bot", go = "go depth 4" }  # every search also stops near 5 s
+[engines.raven]
+[engines.raven.commands]
+raven = { run = "raven/raven" }
+
+[engines.radiance]
+[engines.radiance.commands]
+radiance = { run = "radiance/radiance" }
+
+[engines.schnecken]
+[engines.schnecken.commands]
+schnecken = { run = "schnecken/schnecken_engine", go = "go depth 4" }  # depth 10 is far beyond it
+
+# Pending to build and verify: their builds and validations were stopped before they finished.
+# They are in no image, CI does not build them, and their bots play no matches.
+# `./build_docker.sh engine <engine>` builds one alone; see its README.
+
+[engines.odonata]
+pending = true
+[engines.odonata.commands]
+odonata = { run = "odonata/odonata" }
+
+[engines.eubos]
+pending = true
+[engines.eubos.commands]
+eubos = { run = "eubos/eubos", expect = "id name Eubos 4.3" }  # the bot sets its UCI option Hash
+
+[engines.lynx]
+pending = true
+[engines.lynx.commands]
+lynx = { run = "lynx/lynx" }
+
+[engines.garbochess]
+pending = true
+[engines.garbochess.commands]
+garbochess = { run = "garbochess/node /opt/engines/garbochess/uci.js" }  # a UCI front end in Node.js
+
+# --- Bots ----------------------------------------------------------------------------------------
+# One table per Lichess bot id.
+#
+#   runs     The engine the bot runs, as its profile tells.
+#   command  The command that plays as the bot, once an image has one.
+#   games    The games data/games/lichess/<bot> holds. 100 by default.
+#   play     The search the bot plays matches with: the one that reproduces it best.
+#   replay   How engines/<replay> checks the command against the bot's games:
+#              "maia", "morlock"  exact: each move must match.
+#              "agreement"        statistical: how often our command plays the bot's move, against
+#                                 a reference engine. Its keys are in engines/agreement/README.md.
+#            Without a replay, nothing checks the bot.
+#
+# Other keys go to the replay, such as morlock's `depth`.
+#
+# tools/published_bots/bots.csv has each bot's games and ratings; `registry.py bots` joins them.
+
+[bots.maia1]
+runs = "Maia 1, net 1100"
+command = "maia-1100"
+games = 300
+replay = "maia"
+play = "go nodes 1"
+
+[bots.maia5]
+runs = "Maia 1, net 1500"
+command = "maia-1500"
+games = 300
+replay = "maia"
+play = "go nodes 1"
+
+[bots.maia9]
+runs = "Maia 1, net 1900"
+command = "maia-1900"
+games = 300
+replay = "maia"
+play = "go nodes 1"
+
+[bots.sargon-1ply]
+runs = "Morlock"
+command = "sargon-1ply"
+replay = "morlock"
+depth = 1
+play = "go"
+
+[bots.sargon-2ply]
+runs = "Morlock"
+command = "sargon-2ply"
+replay = "morlock"
+depth = 2
+play = "go"
+
+[bots.sargon-3ply]
+runs = "Morlock"
+command = "sargon-3ply"
+replay = "morlock"
+depth = 3
+play = "go"
+
+[bots.sargon-4ply]
+runs = "Morlock"
+command = "sargon-4ply"
+replay = "morlock"
+depth = 4
+play = "go"
+
+[bots.turochamp-1ply]
+runs = "Morlock"
+command = "turochamp-1ply"
+replay = "morlock"
+depth = 1
+play = "go"
+
+[bots.turochamp-2ply]
+runs = "Morlock"
+command = "turochamp-2ply"
+replay = "morlock"
+depth = 2
+play = "go"
+
+[bots.bernstein-2ply]
+runs = "Morlock"
+command = "bernstein-2ply"
+replay = "morlock"
+depth = 2
+play = "go"
+
+[bots.bernstein-4ply]
+runs = "Morlock"
+command = "bernstein-4ply"
+replay = "morlock"
+depth = 4
+play = "go"
+
+[bots.simpleeval]
+runs = "Stockfish, material-only branch"
+command = "simpleeval"
+replay = "agreement"
+play = "go depth 16"
+go = ["go depth 12", "go depth 16", "go depth 18"]
+
+[bots.usunfish-l0]
+runs = "uSunfish"
+command = "usunfish-l0"
+replay = "agreement"
+play = "go wtime 600000 btime 600000"
+go = ["go wtime 600000 btime 600000"]
+skip = 12
+
+[bots.alliethechessbot]
+# Dropped: 11 GB of weights; adapts to its opponent and spends time like a human. See tools/published_bots/candidates.md.
+runs = "Allie 2.0"
+
+[bots.garbobot]
+runs = "GarboChess-JS"
+command = "garbochess"
+replay = "agreement"
+go = [
+    "go depth 5",
+    "go depth 6",
+    "go depth 7",
+    "go depth 8",
+    "go depth 9",
+]
+
+[bots.raspfish]
+# Dropped: follows the latest Fairy-Stockfish, so its version drifts. See tools/published_bots/candidates.md.
+runs = "Fairy-Stockfish, latest"
+
+[bots.lynx_bot]
+runs = "Lynx"
+command = "lynx"
+replay = "agreement"
+go = [
+    "go depth 12",
+    "go depth 14",
+    "go depth 16",
+]
+
+[bots.bottios]
+# Dropped: a Python search, too slow for the matches. See tools/published_bots/candidates.md.
+runs = "Bottios"
+
+[bots.ultrabrick]
+# Dropped: a Python search, too slow for the matches. See tools/published_bots/candidates.md.
+runs = "UltraBrick"
+
+[bots.usunfish-l1]
+runs = "uSunfish"
+command = "usunfish-l1"
+replay = "agreement"
+play = "go wtime 600000 btime 600000"
+go = ["go wtime 600000 btime 600000"]
+skip = 12
+
+[bots.dala-900]
+# No play: the bot draws each move from the net's policy, and our command plays the top move,
+# so it would play stronger than the bot and skew the estimates.
+runs = "Dala"
+command = "dala-900"
+replay = "agreement"
+go = ["go nodes 1"]
+
+[bots.davidsguterbot]
+runs = "Moinsen"
+command = "moinsen"
+replay = "agreement"
+play = "go depth 4"
+go = ["go depth 2", "go depth 3", "go depth 4"]
+
+[bots.halcyonbot]
+runs = "Halcyon"
+command = "halcyon"
+replay = "agreement"
+play = "go depth 9"
+go = ["go depth 8", "go depth 9", "go depth 10"]
+
+[bots.schnecken_bot]
+# No play: in rated games, which make its rating, the bot searches by time and depth 4 agrees
+# on only 49% of its moves, far under the 92% the command agrees with itself.
+runs = "schnecken_bot"
+command = "schnecken"
+replay = "agreement"
+# One search: the engine keeps its cache from move to move, as the bot does, so a second search
+# of the same position would start from the first one's cache (images/engines/schnecken/README.md).
+go = ["go depth 4"]
+
+[bots.eubos]
+runs = "Eubos 4.3"
+command = "eubos"
+replay = "agreement"
+options = { Hash = 512 }
+go = ["go depth 8", "go depth 10", "go depth 11", "go depth 12", "go depth 13"]
+
+[bots.dala-1100]
+# No play: the bot draws each move from the net's policy, and our command plays the top move,
+# so it would play stronger than the bot and skew the estimates.
+runs = "Dala"
+command = "dala-1100"
+replay = "agreement"
+go = ["go nodes 1"]
+
+[bots.ravenengine]
+runs = "Raven"
+command = "raven"
+replay = "agreement"
+play = "go depth 12"
+go = ["go depth 8", "go depth 10", "go depth 12"]
+
+[bots.dala-1300]
+# No play: the bot draws each move from the net's policy, and our command plays the top move,
+# so it would play stronger than the bot and skew the estimates.
+runs = "Dala"
+command = "dala-1300"
+replay = "agreement"
+go = ["go nodes 1"]
+
+[bots.plumbot]
+runs = "plumbot"
+command = "plumbot"
+replay = "agreement"
+play = "go depth 4"
+go = [
+    "go depth 3",
+    "go depth 4",
+]
+
+[bots.panic-fish]
+# Dropped: weakens itself during a game, by design. See tools/published_bots/candidates.md.
+runs = "Stockfish 18, weakens on checks"
+
+[bots.likeawizard-bot]
+runs = "Tofiks"
+command = "tofiks"
+replay = "agreement"
+play = "go depth 11"
+go = [
+    "go depth 8",
+    "go depth 9",
+    "go depth 10",
+    "go depth 11",
+]
+
+[bots.radianceengine]
+runs = "Radiance"
+command = "radiance"
+replay = "agreement"
+play = "go nodes 1000000"
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+    "go nodes 1000000",
+]
+
+[bots.joshsbot]
+# Dropped: its source is self-hosted and states no license. See tools/published_bots/candidates.md.
+runs = "own C engine"
+
+[bots.goldfish-engine]
+runs = "Goldfish"
+command = "goldfish"
+replay = "agreement"
+play = "go nodes 300000"
+options = { Hash = 1024 }
+skip = 25  # lichess-bot plays its first 25 plies from Goldfish's book, gm2001.bin
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+]
+
+[bots.weiawaga]
+runs = "Weiawaga"
+command = "weiawaga"
+replay = "agreement"
+play = "go depth 12"
+go = [
+    "go depth 8",
+    "go depth 10",
+    "go depth 12",
+]
+
+[bots.melsh_bot]
+runs = "melsh_bot"
+command = "melsh_bot"
+replay = "agreement"
+play = "go depth 5"
+go = ["go depth 3", "go depth 4", "go depth 5"]
+
+[bots.demolito_l4]
+runs = "Demolito level 4"
+command = "demolito"
+replay = "agreement"
+play = "go wtime 480000 btime 480000"
+options = { Level = 4 }
+go = [
+    "go wtime 120000 btime 120000",
+    "go wtime 240000 btime 240000",
+    "go wtime 480000 btime 480000",
+    "go wtime 960000 btime 960000",
+]
+
+[bots.odonata-bot]
+runs = "Odonata"
+command = "odonata"
+replay = "agreement"
+go = [
+    "go nodes 30000",
+    "go nodes 100000",
+    "go nodes 300000",
+    "go nodes 1000000",
+]
+
+[bots.slowmate_bot]
+# Dropped: a Python search, too slow for the matches. See tools/published_bots/candidates.md.
+runs = "SlowMate"
+
+[bots.demolito_l3]
+runs = "Demolito level 3"
+command = "demolito"
+replay = "agreement"
+play = "go wtime 240000 btime 240000"
+options = { Level = 3 }
+go = [
+    "go wtime 120000 btime 120000",
+    "go wtime 240000 btime 240000",
+    "go wtime 480000 btime 480000",
+    "go wtime 960000 btime 960000",
+]
+
+[bots.patriciabot]
+runs = "Patricia"
+command = "patricia"
+replay = "agreement"
+play = "go depth 16"
+go = ["go depth 10", "go depth 12", "go depth 14", "go depth 16"]
+
+[bots.demolito_l5]
+runs = "Demolito level 5"
+command = "demolito"
+replay = "agreement"
+play = "go wtime 480000 btime 480000"
+options = { Level = 5 }
+go = [
+    "go wtime 120000 btime 120000",
+    "go wtime 240000 btime 240000",
+    "go wtime 480000 btime 480000",
+    "go wtime 960000 btime 960000",
+]
+
+[bots.littlepatricia]
+# Dropped: its skill level has changed over time. See tools/published_bots/candidates.md.
+runs = "Patricia, skill level 11"
+
+
+# --- Candidates ----------------------------------------------------------------------------------
+# The engine settings whose Lichess rating estimate/ estimates, by playing them against every bot
+# with a `play` search. `go` is the candidate's search; `options` are UCI options.
+
+[candidates.stockfish-19]
+command = "stockfish-19"
+go = "go movetime 100"
+
+[candidates.stockfish-15]
+command = "stockfish-15"
+go = "go movetime 100"
+
+[candidates.stockfish-19-1mb]
+command = "stockfish-19-1mb"
+go = "go movetime 100"

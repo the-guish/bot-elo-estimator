@@ -1,0 +1,90 @@
+# Builds the engines and images bots.toml lists, as a user would after cloning. Each engine builds
+# alone in its own job, then a test image of its commands whose build runs their smoke test, so a
+# broken engine fails only its own job. lib/botelo/images.py picks the engines a change affects:
+# those whose folder or table changed, or all of them when what every build shares changed. The
+# images build when that shared part or the images' parents change, after a merge to main that
+# changed an engine, and when run by hand. Nothing is pushed.
+name: images
+
+on:
+  pull_request:
+    paths:
+      - images/**
+      - bots.toml
+      - build_docker.sh
+      - lib/botelo/images.py
+      - lib/botelo/registry.py
+      - .github/workflows/images.yml
+  push:
+    branches: [main]
+    paths:
+      - images/**
+      - bots.toml
+      - build_docker.sh
+      - lib/botelo/images.py
+      - lib/botelo/registry.py
+      - .github/workflows/images.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      engines: ${{ steps.affected.outputs.engines }}
+      images: ${{ steps.affected.outputs.images }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - id: affected
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          case "${EVENT}" in
+              pull_request) set -- --base "${PR_BASE}" ;;
+              push) set -- --base "${PUSH_BEFORE}" --full ;;
+              *) set -- ;;
+          esac
+          result=$(python3 lib/botelo/images.py affected "$@")
+          echo "${result}"
+          echo "engines=$(jq -c .engines <<<"${result}")" >>"${GITHUB_OUTPUT}"
+          echo "images=$(jq -r .images <<<"${result}")" >>"${GITHUB_OUTPUT}"
+
+  engine:
+    needs: plan
+    if: needs.plan.outputs.engines != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: ${{ fromJSON(needs.plan.outputs.engines) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - env:
+          ENGINE: ${{ matrix.engine }}
+        run: ./build_docker.sh engine "${ENGINE}"
+
+  images:
+    needs: plan
+    if: needs.plan.outputs.images == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: ./build_docker.sh

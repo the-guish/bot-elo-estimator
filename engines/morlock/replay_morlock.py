@@ -5,38 +5,20 @@
 # ///
 """Replay the morlock bots' games through our morlock engines, and compare each bot move with ours."""
 
-import argparse
 import collections
-import concurrent.futures
-import json
-import os
 import re
-import shlex
 import statistics
-import subprocess
 import sys
 from pathlib import Path
 
 import chess
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent / "maia"))
-from replay_games import bot_moves  # noqa: E402  (reads a game's bot moves, as for Maia)
+sys.path.insert(0, str(HERE.parents[1] / "lib"))
+from botelo.games import bot_moves  # noqa: E402
+from botelo.replay import Replay, move_label, move_number, percent, run, seconds, share, table  # noqa: E402
+from botelo.uci import Process, Uci  # noqa: E402
 
-GAMES_DIR = HERE.parents[1] / "data" / "games" / "lichess"
-OUT_DIR = HERE / "replay"
-# Each Lichess bot and the depth it searches. The engine is the name's first part.
-BOTS = {
-    "sargon-1ply": 1,
-    "sargon-2ply": 2,
-    "sargon-3ply": 3,
-    "sargon-4ply": 4,
-    "turochamp-1ply": 1,
-    "turochamp-2ply": 2,
-    "bernstein-2ply": 2,
-    "bernstein-4ply": 4,
-}
-ENGINE = "docker run --rm -i bot-elo-estimator-extra {bot}"
 # morlock adds noise to these engines' leaf evaluations by default: 10 millipawns, so ±0.005 pawns.
 # Bernstein has none.
 NOISY = ("sargon", "turochamp")
@@ -46,8 +28,6 @@ TIE = 0.02
 MAX_MISMATCH = 0.01
 # The verdict leaves out plies up to SKIP. The engines' own books are known, so none by default.
 SKIP = 0
-# The report's agreement table shows each move number up to this one, then the rest together.
-TABLE_MOVES = 30
 # Judgements that mean our engine plays the bot's move.
 AGREE = ("book", "exact", "tie")
 
@@ -138,14 +118,10 @@ def judge(played: str, book: frozenset[str], best: str, scores: dict[str, str], 
     return "mismatch"
 
 
-def share(part: int, whole: int) -> float | None:
-    return None if whole == 0 else part / whole
-
-
 def summarise(records: list[dict], skip: int) -> dict:
     by_move = collections.defaultdict(lambda: [0, 0, 0])  # moves, agree, shallower
     for r in records:
-        row = by_move[min((r["ply"] + 1) // 2, TABLE_MOVES + 1)]
+        row = by_move[move_number(r["ply"])]
         row[0] += 1
         row[1] += r["judgement"] in AGREE
         row[2] += r["judgement"] == "shallower"
@@ -175,102 +151,42 @@ def summarise(records: list[dict], skip: int) -> dict:
     }
 
 
-def percent(value: float | None) -> str:
-    return "-" if value is None else f"{100 * value:.1f}%"
-
-
-def seconds(value: float | None) -> str:
-    return "-" if value is None else f"{value:.1f} s"
-
-
 def report(summaries: dict[str, dict]) -> str:
-    lines = ["# morlock replay", ""]
-    lines.append(
-        "| Bot | Games | Skipped plies | Compared moves | Agree | Book | Exact | Tie | Shallower "
-        "| Book misses | Mismatches | Time spent, agree / shallower | Verdict |"
+    lines = table(
+        ["Bot", "Games", "Skipped plies", "Compared moves", "Agree", "Book", "Exact", "Tie", "Shallower",
+         "Book misses", "Mismatches", "Time spent, agree / shallower", "Verdict"],
+        [
+            [bot, s["games"], s["skip"], s["compared"], percent(s["agree"]), s["counts"]["book"], s["counts"]["exact"],
+             s["counts"]["tie"], s["counts"]["shallower"], s["counts"]["book-miss"], s["counts"]["mismatch"],
+             f"{seconds(s['median_spent']['agree'])} / {seconds(s['median_spent']['shallower'])}",
+             "pass" if s["passed"] else "FAIL"]
+            for bot, s in summaries.items()
+        ],
     )
-    lines.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for bot, s in summaries.items():
-        c = s["counts"]
-        spent = f"{seconds(s['median_spent']['agree'])} / {seconds(s['median_spent']['shallower'])}"
-        verdict = "pass" if s["passed"] else "FAIL"
-        lines.append(
-            f"| {bot} | {s['games']} | {s['skip']} | {s['compared']} | {percent(s['agree'])} | {c['book']} "
-            f"| {c['exact']} | {c['tie']} | {c['shallower']} | {c['book-miss']} | {c['mismatch']} | {spent} | {verdict} |"
+        lines += ["", f"## {bot}: agreement by move", ""]
+        lines += table(
+            ["Move", "Bot moves", "Agree", "Shallower"],
+            [[move_label(m), row["moves"], percent(row["agree"]), percent(row["shallower"])]
+             for m, row in s["by_move"].items()],
         )
-    for bot, s in summaries.items():
-        lines += ["", f"## {bot}: agreement by move", "", "| Move | Bot moves | Agree | Shallower |", "|---|---|---|---|"]
-        for move, row in s["by_move"].items():
-            label = f"{move}+" if move > TABLE_MOVES else str(move)
-            lines.append(f"| {label} | {row['moves']} | {percent(row['agree'])} | {percent(row['shallower'])} |")
     return "\n".join(lines) + "\n"
 
 
 # --- Engine ----------------------------------------------------------------
 
 
-class Engine:
-    """A morlock engine process. Its first input line picks the protocol."""
-
-    def __init__(self, command: str, protocol: str):
-        self.command = command
-        self.process = subprocess.Popen(
-            shlex.split(command),
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.DEVNULL,
-            text=True,
-            bufsize=1,
-        )
-        self.send(protocol)
-
-    def send(self, line: str) -> None:
-        self.process.stdin.write(line + "\n")
-        self.process.stdin.flush()
-
-    def readline(self) -> str:
-        line = self.process.stdout.readline()
-        if not line:
-            raise RuntimeError(f"the engine exited: {self.command}")
-        return line.rstrip("\n")
-
-    def read_until(self, prefix: str) -> str:
-        while True:
-            line = self.readline()
-            if line.startswith(prefix):
-                return line
-
-    def close(self) -> None:
-        self.send("quit")
-        try:
-            self.process.wait(timeout=10)
-        except subprocess.TimeoutExpired:
-            self.process.kill()
-
-
-class Uci(Engine):
+def uci_engine(command: str) -> Uci:
     """The engine's own choice, without its book or noise: cheap, so it is asked first."""
-
-    def __init__(self, command: str):
-        super().__init__(command, "uci")
-        self.read_until("uciok")
-        self.send("setoption name OwnBook value false")
-        self.send("setoption name Noise value 0")
-        self.send("isready")
-        self.read_until("readyok")
-
-    def best(self, history: list[str], depth: int) -> str:
-        self.send("position startpos" + (" moves " + " ".join(history) if history else ""))
-        self.send(f"go depth {depth}")
-        return self.read_until("bestmove").split()[1]
+    return Uci(command, {"OwnBook": "false", "Noise": "0"}, quiet=True)
 
 
-class Console(Engine):
+class Console(Process):
     """The console protocol, which also scores every legal move, without noise. It costs a search
     per legal move, so it runs only when the engine's choice differs from the bot's."""
 
     def __init__(self, command: str):
-        super().__init__(command, "console")
+        super().__init__(command, "console", quiet=True)
         self.send("nonoise")
         # The console prints the starting board first.
         self.read_until("fen:")
@@ -279,13 +195,13 @@ class Console(Engine):
         """The engine's move, the depth it reached and every legal move's score."""
         self.send("reset moves " + " ".join(history) if history else "reset")
         # The engine prints the position it reached. It must be the game's.
-        fen = self.read_until("fen:").split()[1:4]
+        fen = self.read_until("fen:")[-1].split()[1:4]
         if fen != board.fen().split()[:3]:
             raise RuntimeError(f"the engine is at {fen}, the game at {board.fen()}")
         self.send(f"analyze {depth}")
-        best = self.read_until("bestmove").split(maxsplit=1)[1]
+        best = self.read_until("bestmove")[-1].split(maxsplit=1)[1]
         # A forced mate ends the search before the depth limit.
-        reached = int(self.read_until("Search, depth=").split("=")[1])
+        reached = int(self.read_until("Search, depth=")[-1].split("=")[1])
         lines = [self.readline() for _ in range(board.legal_moves.count())]
         return to_uci(best, board.turn), reached, parse_breakdown(lines, board.turn)
 
@@ -293,7 +209,7 @@ class Console(Engine):
 def explains(played: str, uci: Uci, console: Console, history: list[str], board: chess.Board,
              depth: int, noisy: bool) -> tuple[str, dict]:
     """Judges the bot's move against our engine at one depth: exact, tie or mismatch."""
-    best = uci.best(history, depth)
+    best = uci.best(history, f"go depth {depth}")
     if best == played:
         return "exact", {"engine": best}
     best, reached, scores = console.analyse(history, board, depth)
@@ -301,19 +217,17 @@ def explains(played: str, uci: Uci, console: Console, history: list[str], board:
     return judge(played, frozenset(), best, scores, noisy), details | {"reached": reached}
 
 
-def replay_files(bot: str, files: list[Path], command: str) -> list[dict]:
-    engine_name = bot.split("-")[0]
-    depth = BOTS[bot]
+def replay_games(bot, files: list[Path], engine) -> list[dict]:
+    engine_name = bot.id.split("-")[0]
+    depth = bot.params["depth"]
     noisy = engine_name in NOISY
-    uci = Uci(command)
-    console = Console(command)
+    uci = uci_engine(engine(bot.command))
+    console = Console(engine(bot.command))
     records = []
     try:
         for path in files:
-            for move in bot_moves(path.read_text(encoding="utf-8"), bot):
-                board = chess.Board()
-                for played in move.history:
-                    board.push_uci(played)
+            for move in bot_moves(path.read_text(encoding="utf-8"), bot.id):
+                board = move.board()
                 book = book_moves(engine_name, board)
                 if book:
                     judgement, details = judge(move.played, book, "", {}, noisy), {}
@@ -335,41 +249,15 @@ def replay_files(bot: str, files: list[Path], command: str) -> list[dict]:
     return records
 
 
-def replay(bot: str, files: list[Path], command: str, jobs: int) -> list[dict]:
-    """Splits the games among `jobs` workers, each with its own engines, and keeps the games' order."""
-    chunks = [files[i::jobs] for i in range(jobs) if files[i::jobs]]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=len(chunks) or 1) as pool:
-        results = list(pool.map(lambda chunk: replay_files(bot, chunk, command), chunks))
-    order = {path.stem.split("_", 1)[1]: i for i, path in enumerate(files)}
-    return sorted((r for result in results for r in result), key=lambda r: (order[r["game"]], r["ply"]))
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--bots", nargs="+", default=list(BOTS), choices=list(BOTS))
-    parser.add_argument("--games", type=Path, default=GAMES_DIR)
-    parser.add_argument("--out", type=Path, default=OUT_DIR)
-    parser.add_argument("--engine", default=ENGINE, help="engine command; {bot} becomes the bot's name")
-    parser.add_argument("--skip", type=int, default=SKIP, help="plies the verdict leaves out")
-    parser.add_argument("--limit", type=int, help="replay only this many games per bot")
-    parser.add_argument("--jobs", type=int, default=os.cpu_count(), help="games replayed at once")
-    args = parser.parse_args()
-
-    args.out.mkdir(parents=True, exist_ok=True)
-    summaries = {}
-    for bot in args.bots:
-        files = sorted((args.games / bot).glob("*.pgn"))[: args.limit]
-        records = replay(bot, files, args.engine.format(bot=bot), args.jobs)
-        print(f"{bot}: {len(files)} games replayed", file=sys.stderr)
-        with open(args.out / f"{bot}.ndjson", "w", encoding="utf-8") as out:
-            for record in records:
-                out.write(json.dumps(record) + "\n")
-        summaries[bot] = summarise(records, args.skip)
-    text = report(summaries)
-    (args.out / "summary.md").write_text(text, encoding="utf-8")
-    print(text)
-    return 0 if all(s["passed"] for s in summaries.values()) else 1
+REPLAY = Replay(
+    name="morlock",
+    title="morlock replay",
+    replay_games=replay_games,
+    summarise=lambda bot, records, skip: summarise(records, skip),
+    report=report,
+    skip=SKIP,
+)
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(run(REPLAY, __doc__, HERE / "replay"))

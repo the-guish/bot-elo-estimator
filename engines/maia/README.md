@@ -6,8 +6,9 @@ moves as the bots.
 
 ## The games
 
-Each bot has 300 games, in `data/games/lichess/maia1`, `maia5` and `maia9`.
-`tools/lichess_games/README.md` describes the selection, and the token the download needs.
+Each bot has 300 games, in `data/games/lichess/maia1`, `maia5` and `maia9`: `bots.toml` gives each
+`games = 300`. `tools/lichess_games/README.md` describes the selection, and the token the download
+needs.
 
 ```sh
 engines/maia/download_games.sh
@@ -21,11 +22,12 @@ with the bot's move.
 
 ```sh
 ./build_docker.sh base
-engines/maia/replay_games.sh
+engines/maia/replay_maia.sh
 ```
 
-The engines run in the `bot-elo-estimator-base` image. `--engine` names another command, with
-`{rating}` for 1100, 1500 or 1900. `--bots` and `--limit` shorten a run.
+The bots are those `bots.toml` gives `replay = "maia"`, and each plays its `command`. The commands
+run in the `bot-elo-estimator-base` image. The options are the ones every replay takes, listed in
+the main README: `--bots` and `--limit` shorten a run, `--jobs` replays that many games at once.
 
 The replay writes `replay/<bot>.ndjson`, one record per bot move, and `replay/summary.md`. Git
 ignores the records.
@@ -45,9 +47,9 @@ ignores the records.
 
 ## Tests
 
-The tests cover the pure functions: reading a game's bot moves, reading lc0's policy lines and
-the verdict.
+The tests cover the pure functions: reading lc0's policy lines and the verdict. `lib/tests` covers
+reading a game's bot moves.
 
 ```sh
-uv run --with pytest --with chess==1.11.2 pytest engines/maia -q
+uv run --with pytest --with chess==1.11.2 pytest engines/maia lib -q
 ```
