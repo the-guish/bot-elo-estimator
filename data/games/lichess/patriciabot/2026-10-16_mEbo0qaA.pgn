@@ -1,0 +1,18 @@
+[Event "5th France Groupe Open BOTs Team Battle"]
+[Site "https://lichess.org/mEbo0qaA"]
+[Date "2026.10.16"]
+[Round "-"]
+[White "TheMasterOfTheGame"]
+[Black "PatriciaBot"]
+[Result "0-1"]
+[GameId "mEbo0qaA"]
+[UTCDate "2026.10.16"]
+[UTCTime "15:15:28"]
+[WhiteElo "1500"]
+[BlackElo "2710"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Nc3 { [%clk 0:04:58] } 2... Nc6 { [%clk 0:05:00] } 3. Bc4 { [%clk 0:04:57] } 3... Nf6 { [%clk 0:04:48] } 4. d3 { [%clk 0:04:56] } 4... Na5 { [%clk 0:04:38] } 5. Bb3 { [%clk 0:04:53] } 5... Nxb3 { [%clk 0:04:27] } 6. axb3 { [%clk 0:04:53] } 6... d5 { [%clk 0:04:16] } 7. exd5 { [%clk 0:04:49] } 7... Nxd5 { [%clk 0:04:08] } 8. Nf3 { [%clk 0:04:46] } 8... Nxc3 { [%clk 0:03:59] } 9. bxc3 { [%clk 0:04:46] } 9... Bd6 { [%clk 0:03:52] } 10. O-O { [%clk 0:04:45] } 10... O-O { [%clk 0:03:41] } 11. Ba3 { [%clk 0:04:34] } 11... Re8 { [%clk 0:03:08] } 12. Bxd6 { [%clk 0:04:25] } 12... cxd6 { [%clk 0:02:59] } 13. Nd2 { [%clk 0:04:24] } 13... Bd7 { [%clk 0:02:50] } 14. Kh1 { [%clk 0:04:20] } 14... Re6 { [%clk 0:02:41] } 15. f4 { [%clk 0:04:17] } 15... exf4 { [%clk 0:02:35] } 16. Rxf4 { [%clk 0:04:17] } 16... Qe7 { [%clk 0:02:24] } 17. Qf1 { [%clk 0:04:11] } 17... Bc6 { [%clk 0:02:20] } 18. Nf3 { [%clk 0:04:05] } 18... Re2 { [%clk 0:02:14] } 19. Rc1 { [%clk 0:03:51] } 19... Qe3 { [%clk 0:02:09] } 20. Rg4 { [%clk 0:03:42] } 20... f5 { [%clk 0:02:02] } 21. Rg3 { [%clk 0:03:38] } 21... f4 { [%clk 0:01:58] } 22. Nd4 { [%clk 0:03:28] } 22... fxg3 { [%clk 0:01:54] } 23. Nxe2 { [%clk 0:03:19] } 23... Rf8 { [%clk 0:01:50] } 24. Qe1 { [%clk 0:02:58] } 24... Bxg2+ { [%clk 0:01:46] } 25. Kxg2 { [%clk 0:02:53] } 25... Rf2+ { [%clk 0:01:44] } 26. Kh1 { [%clk 0:02:50] } 26... Rxh2# { [%clk 0:01:44] } 0-1

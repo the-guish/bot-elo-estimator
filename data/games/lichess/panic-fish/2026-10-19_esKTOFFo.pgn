@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/esKTOFFo"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Panic-Fish"]
+[Black "canyouhandlethetruth"]
+[Result "1-0"]
+[GameId "esKTOFFo"]
+[UTCDate "2026.10.19"]
+[UTCTime "04:24:19"]
+[WhiteElo "2102"]
+[BlackElo "1500"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1200+5"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:20:00] } 1... e5 { [%clk 0:20:00] } 2. Nf3 { [%clk 0:20:04] } 2... Bc5 { [%clk 0:20:01] } 3. Nxe5 { [%clk 0:20:08] } 3... Bxf2+ { [%clk 0:20:05] } 4. Kxf2 { [%clk 0:20:12] } 4... Qf6+ { [%clk 0:20:09] } 5. Nf3 { [%clk 0:20:17] } 5... Qb6+ { [%clk 0:20:13] } 6. d4 { [%clk 0:20:21] } 6... Nf6 { [%clk 0:20:15] } 7. Kg1 { [%clk 0:20:26] } 7... Nxe4 { [%clk 0:20:05] } 8. a4 { [%clk 0:20:31] } 8... a5 { [%clk 0:20:07] } 9. Nc3 { [%clk 0:20:36] } 9... Nxc3 { [%clk 0:20:10] } 10. Qe1+ { [%clk 0:20:40] } 10... Qe6 { [%clk 0:20:12] } 11. Qxc3 { [%clk 0:20:45] } 11... O-O { [%clk 0:20:11] } 12. Qxc7 { [%clk 0:20:50] } 12... Nc6 { [%clk 0:20:08] } 13. Qf4 { [%clk 0:20:55] } 13... Re8 { [%clk 0:20:08] } 14. Bd2 { [%clk 0:21:00] } 14... Nb4 { [%clk 0:20:05] } 15. Re1 { [%clk 0:21:04] } 15... Qxe1 { [%clk 0:19:57] } 16. Nxe1 { [%clk 0:21:09] } 16... Nxc2 { [%clk 0:19:57] } 17. Nxc2 { [%clk 0:21:14] } 17... d5 { [%clk 0:19:59] } 18. h3 { [%clk 0:21:19] } 18... Bd7 { [%clk 0:20:01] } 19. Qg3 { [%clk 0:21:24] } 19... Bxa4 { [%clk 0:20:05] } 20. Ne3 { [%clk 0:21:28] } 20... b5 { [%clk 0:20:05] } 21. Nf5 { [%clk 0:21:33] } 21... Rac8 { [%clk 0:20:06] } 22. Qxg7# { [%clk 0:21:33] } 1-0

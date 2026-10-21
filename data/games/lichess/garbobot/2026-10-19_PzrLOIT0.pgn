@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/PzrLOIT0"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "GarboBot"]
+[Black "Md_Tashrif"]
+[Result "1-0"]
+[GameId "PzrLOIT0"]
+[UTCDate "2026.10.19"]
+[UTCTime "06:39:05"]
+[WhiteElo "1894"]
+[BlackElo "1717"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "240+3"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:04:00] } 1... d5 { [%clk 0:04:00] } 2. Bf4 { [%clk 0:04:03] } 2... c5 { [%clk 0:03:56] } 3. e3 { [%clk 0:04:06] } 3... e6 { [%clk 0:03:54] } 4. Nc3 { [%clk 0:04:08] } 4... Bd6 { [%clk 0:03:49] } 5. Qg4 { [%clk 0:04:10] } 5... g6 { [%clk 0:03:40] } 6. Nb5 { [%clk 0:04:12] } 6... Bxf4 { [%clk 0:03:33] } 7. Qxf4 { [%clk 0:04:14] } 7... Qa5+ { [%clk 0:03:27] } 8. c3 { [%clk 0:04:16] } 8... a6 { [%clk 0:03:14] } 9. Nc7+ { [%clk 0:04:18] } 9... Kd7 { [%clk 0:03:04] } 10. Nxa8 { [%clk 0:04:20] } 10... Ne7 { [%clk 0:03:00] } 11. Qxb8 { [%clk 0:04:21] } 1-0

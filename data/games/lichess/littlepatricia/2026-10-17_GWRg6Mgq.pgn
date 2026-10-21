@@ -1,0 +1,18 @@
+[Event "2nd GP Bots and Humans Team Battle"]
+[Site "https://lichess.org/GWRg6Mgq"]
+[Date "2026.10.17"]
+[Round "-"]
+[White "littlePatricia"]
+[Black "Alcedo"]
+[Result "1-0"]
+[GameId "GWRg6Mgq"]
+[UTCDate "2026.10.17"]
+[UTCTime "17:35:55"]
+[WhiteElo "1764"]
+[BlackElo "1695"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... h6 { [%clk 0:03:00] } 2. d4 { [%clk 0:02:57] } 2... Nf6 { [%clk 0:03:01] } 3. e5 { [%clk 0:02:53] } 3... Nh7 { [%clk 0:03:01] } 4. f4 { [%clk 0:02:51] } 4... g6 { [%clk 0:03:03] } 5. Bd3 { [%clk 0:02:47] } 5... d6 { [%clk 0:03:05] } 6. Ne2 { [%clk 0:02:44] } 6... Bg4 { [%clk 0:03:05] } 7. Be3 { [%clk 0:02:42] } 7... Bg7 { [%clk 0:03:04] } 8. Qd2 { [%clk 0:02:39] } 8... Bxe2 { [%clk 0:03:04] } 9. Qxe2 { [%clk 0:02:36] } 9... O-O { [%clk 0:03:06] } 10. e6 { [%clk 0:02:34] } 10... f5 { [%clk 0:03:04] } 11. Nd2 { [%clk 0:02:31] } 11... Nc6 { [%clk 0:03:05] } 12. a3 { [%clk 0:02:29] } 12... Nxd4 { [%clk 0:03:04] } 13. Qd1 { [%clk 0:02:26] } 13... Nc6 { [%clk 0:02:59] } 14. g4 { [%clk 0:02:23] } 14... Nd4 { [%clk 0:02:56] } 15. Bxd4 { [%clk 0:02:21] } 15... Bxd4 { [%clk 0:02:57] } 16. c3 { [%clk 0:02:18] } 16... Bg7 { [%clk 0:02:50] } 17. Nf3 { [%clk 0:02:16] } 17... Qc8 { [%clk 0:02:47] } 18. gxf5 { [%clk 0:02:14] } 18... gxf5 { [%clk 0:02:45] } 19. Qe2 { [%clk 0:02:12] } 19... Rf6 { [%clk 0:02:40] } 20. Nd4 { [%clk 0:02:10] } 20... c5 { [%clk 0:02:34] } 21. Nxf5 { [%clk 0:02:08] } 21... Qxe6 { [%clk 0:02:35] } 22. Bc4 { [%clk 0:02:06] } 22... d5 { [%clk 0:02:31] } 23. Bxd5 { [%clk 0:02:04] } 23... Qxd5 { [%clk 0:02:30] } 24. Nxe7+ { [%clk 0:02:02] } 1-0

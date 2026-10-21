@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/BPxEhBj4"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "dala-900"]
+[Black "MildlyInsaneModder"]
+[Result "1-0"]
+[GameId "BPxEhBj4"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:00:00"]
+[WhiteElo "1047"]
+[BlackElo "1500"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. dxe5 { [%clk 0:10:00] } 2... Bb4+ { [%clk 0:09:51] } 3. c3 { [%clk 0:10:00] } 3... d5 { [%clk 0:09:43] } 4. cxb4 { [%clk 0:10:00] } 1-0

@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/6slyOJNZ"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "GarboBot"]
+[Black "Md_Tashrif"]
+[Result "1-0"]
+[GameId "6slyOJNZ"]
+[UTCDate "2026.10.19"]
+[UTCTime "06:56:13"]
+[WhiteElo "1894"]
+[BlackElo "1717"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "240+3"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:04:00] } 1... e6 { [%clk 0:04:00] } 2. d3 { [%clk 0:04:03] } 2... c5 { [%clk 0:03:40] } 3. Nf3 { [%clk 0:04:06] } 3... b6 { [%clk 0:03:35] } 4. Nc3 { [%clk 0:04:07] } 4... Bb7 { [%clk 0:03:31] } 5. Bf4 { [%clk 0:04:09] } 5... d5 { [%clk 0:03:24] } 6. exd5 { [%clk 0:04:11] } 6... exd5 { [%clk 0:03:23] } 7. Nb5 { [%clk 0:04:13] } 7... Be7 { [%clk 0:02:55] } 8. Nc7+ { [%clk 0:04:15] } 8... Kf8 { [%clk 0:02:50] } 9. Qe2 { [%clk 0:04:17] } 9... Nf6 { [%clk 0:02:43] } 10. Ng5 { [%clk 0:04:19] } 10... h6 { [%clk 0:02:35] } 11. Nge6+ { [%clk 0:04:21] } 11... fxe6 { [%clk 0:02:23] } 12. Nxe6+ { [%clk 0:04:23] } 1-0

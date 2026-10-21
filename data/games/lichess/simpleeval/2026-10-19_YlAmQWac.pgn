@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/YlAmQWac"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "ggnotnowimbusy"]
+[Black "simpleEval"]
+[Result "0-1"]
+[GameId "YlAmQWac"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:06:14"]
+[WhiteElo "2202"]
+[BlackElo "2026"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... c5 { [%clk 0:05:00] } 2. c3 { [%clk 0:04:57] } 2... d6 { [%clk 0:05:00] } 3. d4 { [%clk 0:04:55] } 3... Nf6 { [%clk 0:05:00] } 4. e5 { [%clk 0:04:51] } 4... dxe5 { [%clk 0:04:54] } 5. dxe5 { [%clk 0:04:05] } 5... Qxd1+ { [%clk 0:04:49] } 6. Kxd1 { [%clk 0:04:05] } 6... Ng4 { [%clk 0:04:46] } 0-1

@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/A69tZlBE"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Panic-Fish"]
+[Black "areobe"]
+[Result "1-0"]
+[GameId "A69tZlBE"]
+[UTCDate "2026.10.19"]
+[UTCTime "07:52:31"]
+[WhiteElo "2152"]
+[BlackElo "1446"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... e6 { [%clk 0:03:00] } 2. d4 { [%clk 0:03:01] } 2... Bb4+ { [%clk 0:03:01] } 3. Nd2 { [%clk 0:03:02] } 3... Bxd2+ { [%clk 0:03:02] } 4. Bxd2 { [%clk 0:03:04] } 4... d5 { [%clk 0:02:57] } 5. e5 { [%clk 0:03:05] } 5... b6 { [%clk 0:02:51] } 6. Qg4 { [%clk 0:03:07] } 6... g6 { [%clk 0:02:48] } 7. h4 { [%clk 0:03:09] } 7... c5 { [%clk 0:02:39] } 8. h5 { [%clk 0:03:10] } 8... cxd4 { [%clk 0:02:39] } 9. hxg6 { [%clk 0:03:12] } 9... fxg6 { [%clk 0:02:39] } 10. Rxh7 { [%clk 0:03:13] } 10... Rxh7 { [%clk 0:02:34] } 11. Qxg6+ { [%clk 0:03:15] } 11... Rf7 { [%clk 0:02:34] } 12. Qxg8+ { [%clk 0:03:16] } 12... Ke7 { [%clk 0:02:35] } 13. Bg5+ { [%clk 0:03:18] } 1-0

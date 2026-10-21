@@ -1,0 +1,18 @@
+[Event "2nd GP Bots and Humans Team Battle"]
+[Site "https://lichess.org/b27GF6LR"]
+[Date "2026.10.17"]
+[Round "-"]
+[White "RaspFish"]
+[Black "realPangu"]
+[Result "1-0"]
+[GameId "b27GF6LR"]
+[UTCDate "2026.10.17"]
+[UTCTime "17:08:07"]
+[WhiteElo "3004"]
+[BlackElo "1292"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. e3 { [%clk 0:03:02] } 2... Nf6 { [%clk 0:02:57] } 3. c4 { [%clk 0:03:04] } 3... e6 { [%clk 0:02:53] } 4. Nc3 { [%clk 0:03:06] } 4... dxc4 { [%clk 0:02:49] } 5. Bxc4 { [%clk 0:02:35] } 5... Bb4 { [%clk 0:02:41] } 6. a3 { [%clk 0:02:33] } 6... Bxc3+ { [%clk 0:02:37] } 7. bxc3 { [%clk 0:02:35] } 7... Ne4 { [%clk 0:02:35] } 8. Ne2 { [%clk 0:02:29] } 8... O-O { [%clk 0:02:35] } 9. O-O { [%clk 0:02:18] } 9... c6 { [%clk 0:02:29] } 10. Bd3 { [%clk 0:02:11] } 10... Nf6 { [%clk 0:02:24] } 11. e4 { [%clk 0:02:09] } 11... e5 { [%clk 0:02:16] } 12. dxe5 { [%clk 0:01:57] } 12... Ng4 { [%clk 0:02:14] } 13. f4 { [%clk 0:01:55] } 13... Nd7 { [%clk 0:02:06] } 14. Nd4 { [%clk 0:01:24] } 14... Nc5 { [%clk 0:02:03] } 15. Bc2 { [%clk 0:01:23] } 15... f6 { [%clk 0:01:48] } 16. e6 { [%clk 0:01:21] } 16... Nh6 { [%clk 0:01:31] } 17. f5 { [%clk 0:01:19] } 17... Re8 { [%clk 0:01:27] } 18. Qh5 { [%clk 0:01:16] } 18... Nxe6 { [%clk 0:01:21] } 19. fxe6 { [%clk 0:01:14] } 19... Bxe6 { [%clk 0:01:22] } 20. Bxh6 { [%clk 0:01:06] } 20... gxh6 { [%clk 0:01:20] } 21. e5 { [%clk 0:01:03] } 21... f5 { [%clk 0:01:19] } 22. Qxh6 { [%clk 0:01:01] } 22... Re7 { [%clk 0:01:11] } 23. Nxe6 { [%clk 0:00:59] } 23... Qd2 { [%clk 0:01:02] } 24. Qxd2 { [%clk 0:00:57] } 24... Rxe6 { [%clk 0:00:53] } 25. Bb3 { [%clk 0:00:59] } 25... Re8 { [%clk 0:00:46] } 26. Qh6 { [%clk 0:01:01] } 26... Kf7 { [%clk 0:00:37] } 27. Qxh7+ { [%clk 0:01:03] } 27... Kf8 { [%clk 0:00:06] } 28. Rxf5+ { [%clk 0:01:05] } 28... Rf6 { [%clk 0:00:03] } 29. Rxf6# { [%clk 0:01:05] } 1-0

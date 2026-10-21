@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/XXhLSxPO"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "RadianceEngine"]
+[Black "qpalzm123456"]
+[Result "1-0"]
+[GameId "XXhLSxPO"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:14:15"]
+[WhiteElo "2483"]
+[BlackElo "1542"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. c4 { [%clk 0:03:02] } 2... e6 { [%clk 0:03:01] } 3. Nc3 { [%clk 0:03:04] } 3... h6 { [%clk 0:03:03] } 4. e4 { [%clk 0:03:06] } 4... dxe4 { [%clk 0:02:58] } 5. Nxe4 { [%clk 0:03:00] } 5... Nf6 { [%clk 0:02:56] } 6. Nc3 { [%clk 0:02:54] } 6... c5 { [%clk 0:02:48] } 7. Nf3 { [%clk 0:02:48] } 7... cxd4 { [%clk 0:02:32] } 8. Qxd4 { [%clk 0:02:42] } 8... Qxd4 { [%clk 0:02:20] } 9. Nxd4 { [%clk 0:02:37] } 9... a6 { [%clk 0:02:22] } 10. Be2 { [%clk 0:02:32] } 10... e5 { [%clk 0:02:23] } 11. Nb3 { [%clk 0:02:27] } 11... Bd6 { [%clk 0:01:51] } 12. Be3 { [%clk 0:02:22] } 12... O-O { [%clk 0:01:36] } 13. O-O-O { [%clk 0:02:17] } 13... Bb4 { [%clk 0:01:12] } 14. Na4 { [%clk 0:02:13] } 14... Bf5 { [%clk 0:01:01] } 15. Nb6 { [%clk 0:02:08] } 15... Ra7 { [%clk 0:00:54] } 16. Nd5 { [%clk 0:02:04] } 1-0

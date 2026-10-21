@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/QPUV0htg"]
+[Date "2026.10.18"]
+[Round "-"]
+[White "RavenEngine"]
+[Black "Someoneln"]
+[Result "1-0"]
+[GameId "QPUV0htg"]
+[UTCDate "2026.10.18"]
+[UTCTime "17:32:30"]
+[WhiteElo "2193"]
+[BlackElo "739"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "360+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:06:00] } 1... e5 { [%clk 0:06:00] } 2. Nf3 { [%clk 0:06:00] } 2... Nc6 { [%clk 0:05:55] } 3. Bb5 { [%clk 0:06:00] } 3... Nd4 { [%clk 0:05:25] } 1-0

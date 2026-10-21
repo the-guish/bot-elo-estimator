@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/GiNVRxij"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "brilliantchess15256"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "GiNVRxij"]
+[UTCDate "2026.10.19"]
+[UTCTime "16:28:59"]
+[WhiteElo "1225"]
+[BlackElo "2105"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[Termination "Time forfeit"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:08] } 2... Nc6 { [%clk 0:15:09] } 3. Bb5 { [%clk 0:15:13] } 3... a6 { [%clk 0:15:18] } 4. Ba4 { [%clk 0:15:20] } 4... Nf6 { [%clk 0:15:26] } 5. Nc3 { [%clk 0:15:28] } 5... b5 { [%clk 0:15:35] } 6. Bb3 { [%clk 0:15:36] } 6... Be7 { [%clk 0:15:44] } 7. Ng5 { [%clk 0:15:40] } 7... O-O { [%clk 0:15:53] } 8. Bxf7+ { [%clk 0:15:48] } 8... Rxf7 { [%clk 0:16:02] } 9. Nxf7 { [%clk 0:15:57] } 9... Kxf7 { [%clk 0:16:12] } 10. O-O { [%clk 0:16:05] } 10... d5 { [%clk 0:16:21] } 11. exd5 { [%clk 0:16:02] } 11... Nd4 { [%clk 0:16:31] } 12. Re1 { [%clk 0:16:03] } 12... b4 { [%clk 0:16:40] } 13. Ne2 { [%clk 0:15:52] } 13... Bg4 { [%clk 0:16:50] } 14. f3 { [%clk 0:16:00] } 14... Nxf3+ { [%clk 0:16:59] } 15. gxf3 { [%clk 0:16:08] } 15... Bxf3 { [%clk 0:17:09] } 16. c3 { [%clk 0:15:51] } 16... Qd7 { [%clk 0:17:18] } 17. d4 { [%clk 0:15:45] } 17... Qh3 { [%clk 0:17:28] } 0-1

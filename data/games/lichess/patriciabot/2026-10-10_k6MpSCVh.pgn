@@ -1,0 +1,18 @@
+[Event "1st GP Bots and Humans Team Battle"]
+[Site "https://lichess.org/k6MpSCVh"]
+[Date "2026.10.10"]
+[Round "-"]
+[White "alex_denev"]
+[Black "PatriciaBot"]
+[Result "0-1"]
+[GameId "k6MpSCVh"]
+[UTCDate "2026.10.10"]
+[UTCTime "17:18:03"]
+[WhiteElo "1746"]
+[BlackElo "2714"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:05:00] } 1... d5 { [%clk 0:05:00] } 2. e3 { [%clk 0:04:59] } 2... Bf5 { [%clk 0:04:37] } 3. c4 { [%clk 0:04:56] } 3... e6 { [%clk 0:04:26] } 4. Nf3 { [%clk 0:04:53] } 4... Nf6 { [%clk 0:04:04] } 5. Nc3 { [%clk 0:04:43] } 5... c6 { [%clk 0:03:42] } 6. cxd5 { [%clk 0:04:33] } 6... exd5 { [%clk 0:03:33] } 7. Bd3 { [%clk 0:04:31] } 7... Bxd3 { [%clk 0:03:26] } 8. Qxd3 { [%clk 0:04:30] } 8... Bd6 { [%clk 0:03:18] } 9. Bd2 { [%clk 0:04:26] } 9... O-O { [%clk 0:03:11] } 10. O-O { [%clk 0:04:23] } 10... Re8 { [%clk 0:03:05] } 11. Rfe1 { [%clk 0:04:09] } 11... Ne4 { [%clk 0:02:57] } 12. Rad1 { [%clk 0:04:05] } 12... Nd7 { [%clk 0:02:49] } 13. Qe2 { [%clk 0:04:00] } 13... Qf6 { [%clk 0:02:31] } 14. h3 { [%clk 0:03:45] } 14... Qh6 { [%clk 0:02:14] } 15. Nxe4 { [%clk 0:03:15] } 15... dxe4 { [%clk 0:02:08] } 16. Nh2 { [%clk 0:03:14] } 16... Qe6 { [%clk 0:02:03] } 17. a3 { [%clk 0:03:04] } 17... h6 { [%clk 0:01:52] } 18. Qg4 { [%clk 0:02:45] } 18... f5 { [%clk 0:01:46] } 19. Qe2 { [%clk 0:02:28] } 19... Nf6 { [%clk 0:01:42] } 20. Bc3 { [%clk 0:02:23] } 20... Nd5 { [%clk 0:01:39] } 21. Qc2 { [%clk 0:02:11] } 21... Kh7 { [%clk 0:01:31] } 22. Qd2 { [%clk 0:01:58] } 22... Rad8 { [%clk 0:01:24] } 23. Qc2 { [%clk 0:01:54] } 23... Rd7 { [%clk 0:01:20] } 24. Qd2 { [%clk 0:01:53] } 24... g5 { [%clk 0:01:17] } 25. Qe2 { [%clk 0:01:48] } 25... Rg7 { [%clk 0:01:12] } 26. Qh5 { [%clk 0:01:42] } 26... g4 { [%clk 0:01:09] } 27. hxg4 { [%clk 0:01:36] } 27... Rg5 { [%clk 0:01:05] } 28. Qh4 { [%clk 0:01:31] } 28... fxg4 { [%clk 0:01:02] } 29. f3 { [%clk 0:01:06] } 29... gxf3 { [%clk 0:00:59] } 30. Rd2 { [%clk 0:00:56] } 30... Reg8 { [%clk 0:00:57] } 31. g3 { [%clk 0:00:52] } 31... Bxg3 { [%clk 0:00:54] } 32. Qh3 { [%clk 0:00:51] } 0-1

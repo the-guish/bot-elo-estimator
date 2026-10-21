@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/YtOb1yf2"]
+[Date "2026.10.17"]
+[Round "-"]
+[White "AlexEnder31"]
+[Black "RaspFish"]
+[Result "0-1"]
+[GameId "YtOb1yf2"]
+[UTCDate "2026.10.17"]
+[UTCTime "20:32:29"]
+[WhiteElo "1500"]
+[BlackElo "2848"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "10800+180"]
+[Termination "Time forfeit"]
+
+1. d4 { [%clk 3:02:58] } 1... d5 { [%clk 3:03:00] } 2. c4 { [%clk 3:05:52] } 2... Nc6 { [%clk 3:06:00] } 3. e3 { [%clk 3:08:23] } 3... e6 { [%clk 2:39:10] } 0-1

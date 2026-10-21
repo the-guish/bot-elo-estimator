@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/TZzyOTED"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "areobe"]
+[Black "Panic-Fish"]
+[Result "0-1"]
+[GameId "TZzyOTED"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:06:57"]
+[WhiteElo "1446"]
+[BlackElo "2152"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. Bf4 { [%clk 0:02:57] } 2... Nf6 { [%clk 0:03:01] } 3. e3 { [%clk 0:02:58] } 3... c5 { [%clk 0:03:01] } 4. Bb5+ { [%clk 0:02:59] } 4... Bd7 { [%clk 0:03:03] } 5. Bxd7+ { [%clk 0:03:00] } 5... Nbxd7 { [%clk 0:03:05] } 6. Nf3 { [%clk 0:03:01] } 6... Qb6 { [%clk 0:03:06] } 7. b3 { [%clk 0:03:01] } 7... e6 { [%clk 0:03:08] } 8. Ne5 { [%clk 0:02:58] } 8... cxd4 { [%clk 0:03:09] } 9. Nxd7 { [%clk 0:02:55] } 9... Kxd7 { [%clk 0:03:11] } 10. exd4 { [%clk 0:02:54] } 10... Rc8 { [%clk 0:03:12] } 11. Qd3 { [%clk 0:02:48] } 11... Qa6 { [%clk 0:03:14] } 12. Qxa6 { [%clk 0:02:44] } 12... bxa6 { [%clk 0:03:15] } 13. Kd2 { [%clk 0:02:41] } 13... Ne4+ { [%clk 0:03:17] } 14. Ke3 { [%clk 0:02:40] } 14... g5 { [%clk 0:03:18] } 15. Be5 { [%clk 0:02:40] } 15... f6 { [%clk 0:03:20] } 16. Bg3 { [%clk 0:02:38] } 16... Rxc2 { [%clk 0:03:21] } 17. Na3 { [%clk 0:02:38] } 17... Bxa3 { [%clk 0:03:23] } 0-1
