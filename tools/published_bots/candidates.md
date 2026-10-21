@@ -5,7 +5,7 @@ with a public repository, has more than 1,000 estimated games against humans, an
 more in blitz or rapid. The Maia bots are left out because the base image holds Maia already.
 
 There are 39 bots on 27 engines. Seven of them are Morlock bots, which the extra image already
-holds. The other 32 are not built yet. `tools/lichess_games/bots.txt` names the same 39 bots, and
+holds. The other 32 are not built yet. `bots.toml` lists the same 39 bots, and
 `data/games/lichess` holds 100 games of each.
 
 ## The bots
