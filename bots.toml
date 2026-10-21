@@ -18,6 +18,7 @@ engines = ["stockfish", "lc0"]
 parent = "base"
 engines = [
     "morlock",
+    "raven",
 ]
 
 
@@ -59,6 +60,10 @@ turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
 turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
 bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
 bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+[engines.raven]
+[engines.raven.commands]
+raven = { run = "raven/raven" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -190,6 +195,9 @@ runs = "Dala"
 
 [bots.ravenengine]
 runs = "Raven"
+command = "raven"
+replay = "agreement"
+go = ["go depth 8", "go depth 10", "go depth 12"]
 
 [bots.dala-1300]
 runs = "Dala"
