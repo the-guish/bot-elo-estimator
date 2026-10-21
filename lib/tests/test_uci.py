@@ -25,3 +25,35 @@ def test_limit_stops_the_search():
         assert time.monotonic() - start < 5
     finally:
         engine.close()
+
+
+def test_crash_raises():
+    import pytest
+
+    from botelo.uci import EngineExited
+
+    engine = Uci(f"{sys.executable} {FAKE} crash")
+    try:
+        with pytest.raises(EngineExited):
+            engine.best([], "go depth 1", limit=5)
+        with pytest.raises(EngineExited):
+            engine.new_game()
+    finally:
+        engine.close()
+
+
+def test_hang_is_killed(monkeypatch):
+    import pytest
+
+    from botelo import uci
+    from botelo.uci import EngineExited
+
+    monkeypatch.setattr(uci, "STOP_GRACE", 0.2)
+    engine = Uci(f"{sys.executable} {FAKE} deaf")
+    try:
+        start = time.monotonic()
+        with pytest.raises(EngineExited):
+            engine.best([], "go infinite", limit=0.1)
+        assert time.monotonic() - start < 5
+    finally:
+        engine.close()

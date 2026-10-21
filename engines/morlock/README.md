@@ -62,6 +62,18 @@ judgement:
 The summary gives the median time each bot spent on its agreeing and its shallower moves. Slow
 shallower moves support the time explanation.
 
+## Pending: engine crashes
+
+The full replay of all 100 games stops partway: the engine exits, and the replay with it.
+`sargon-4ply` exits in the games `2026-10-19_xzbpzQsg` and `2026-10-19_yafwwyr9`, and
+`turochamp-2ply` in one game not yet found. `sargon-1ply` to `sargon-3ply` and `turochamp-1ply`
+replay all their games; `bernstein-2ply` and `bernstein-4ply` have not run since the crash stopped
+the run. The cause is not known yet: the replay hides the engine's error output, so the next step
+is to replay those games with it visible. Until then the morlock bots have no full verdict.
+
+In matches, `estimate/play_matches.py` voids and counts a game in which an engine crashes, so the
+crash does not stop the estimates.
+
 ## Cost
 
 `sargon-4ply` costs the most: about 30 seconds per game on one CPU. Its 100 games take about 50

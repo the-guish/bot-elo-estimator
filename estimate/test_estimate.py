@@ -87,3 +87,44 @@ def test_play_game():
     for move in game["moves"]:
         board.push_uci(move)
     assert outcome(board, len(game["moves"])) == (game["result"], game["reason"])
+
+
+def test_play_game_crash():
+    first = Uci(f"{sys.executable} {FAKE} first")
+    crash = Uci(f"{sys.executable} {FAKE} crash")
+    try:
+        game = play_game(first, crash, "go depth 1", "go depth 1", ["e2e4", "e7e5"])
+    finally:
+        first.close()
+        crash.close()
+    # White moves once, then Black's engine exits when asked to search.
+    assert game == {"moves": ["e2e4", "e7e5", "a2a3"], "crashed": "black"}
+
+
+def test_play_pairing_drops_crashed_games(tmp_path):
+    import json
+
+    from play_matches import play_pairing
+
+    from botelo.registry import Bot, Candidate
+
+    candidate = Candidate("sf", "first", "go depth 1")
+    bot = Bot("crashbot", command="crash", play="go depth 1")
+    engine = lambda command: f"{sys.executable} {FAKE} {command}"  # noqa: E731
+    games = [(["e2e4", "e7e5"], True), (["e2e4", "e7e5"], False)]
+    assert play_pairing(candidate, bot, games, 0, engine, tmp_path) == 2
+    records = [json.loads(line) for line in (tmp_path / "crashbot.ndjson").read_text().splitlines()]
+    assert [(r["index"], r["crashed"], "score" in r) for r in records] == [(0, "crashbot", False), (1, "crashbot", False)]
+    assert not (tmp_path / "crashbot.pgn").exists()
+
+
+def test_report_counts_crashes():
+    results = {"sf": [{"bot": "a", "score": 1.0}, {"bot": "a", "score": 0.0}, {"bot": "a", "crashed": "a"},
+                      {"bot": "b", "crashed": "sf"}]}
+    text = report(results, {"a": 1500.0, "b": 1600.0}, "blitz")
+    assert "| sf | 2 | 1 | 1500 | " in text and "| 2 of 4 |" in text
+    assert "| a | 1500 | 2 | 1 | 1500 | 1 |" in text
+    assert "| b | 1600 | 0 | 0 | - | 1 |" in text
+    assert "2 of 4 games (50.0%) were left out" in text
+    assert "| a | 1 |" in text and "| sf | 1 |" in text
+    assert "No engine crashed" in report({"sf": [{"bot": "a", "score": 1.0}]}, {"a": 1500.0}, "blitz")

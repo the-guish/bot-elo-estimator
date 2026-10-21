@@ -23,7 +23,7 @@ sys.path.insert(0, str(HERE.parent / "lib"))
 from botelo import registry as reg  # noqa: E402
 from botelo.games import game_files  # noqa: E402
 from botelo.replay import ENGINE, engine_command  # noqa: E402
-from botelo.uci import Uci  # noqa: E402
+from botelo.uci import EngineExited, Uci  # noqa: E402
 
 OUT_DIR = HERE / "results"
 # Games per candidate and bot, half with each color.
@@ -78,15 +78,23 @@ def score(result: str, candidate_white: bool) -> float:
 
 
 def play_game(white: Uci, black: Uci, white_go: str, black_go: str, opening: list[str]) -> dict:
+    """The game's moves and result; or, when an engine crashed or hung, its moves so far and which
+    side's engine it was, under "crashed"."""
     board = chess.Board()
     moves = list(opening)
     for move in opening:
         board.push_uci(move)
-    white.new_game()
-    black.new_game()
+    for color, side in (("white", white), ("black", black)):
+        try:
+            side.new_game()
+        except EngineExited:
+            return {"moves": moves, "crashed": color}
     while (ended := outcome(board, len(moves))) is None:
         side, go = (white, white_go) if board.turn == chess.WHITE else (black, black_go)
-        text = side.best(moves, go, MOVE_LIMIT)
+        try:
+            text = side.best(moves, go, MOVE_LIMIT)
+        except EngineExited:
+            return {"moves": moves, "crashed": "white" if board.turn == chess.WHITE else "black"}
         try:
             # parse_uci also reads castling written as the king taking its rook, e1h1.
             move = board.parse_uci(text)
@@ -115,11 +123,17 @@ def board_of(moves: list[str]) -> chess.Board:
 
 def play_pairing(candidate: reg.Candidate, bot: reg.Bot, games: list[tuple[list[str], bool]], done: int,
                  engine, out: Path) -> int:
-    """Plays the pairing's games from number `done` on, appending each to its file."""
+    """Plays the pairing's games from number `done` on, appending each to its file. A game in which
+    an engine crashed or hung is recorded with "crashed", the engine's name, and no score; both
+    engines then restart. The estimate leaves such games out, and counts them."""
     if done >= len(games):
         return 0
-    ours = Uci(engine(candidate.command), {str(k): str(v) for k, v in candidate.options.items()}, quiet=True)
-    theirs = Uci(engine(bot.command), {str(k): str(v) for k, v in bot.params.get("options", {}).items()}, quiet=True)
+
+    def start() -> tuple[Uci, Uci]:
+        return (Uci(engine(candidate.command), {str(k): str(v) for k, v in candidate.options.items()}, quiet=True),
+                Uci(engine(bot.command), {str(k): str(v) for k, v in bot.params.get("options", {}).items()}, quiet=True))
+
+    ours, theirs = start()
     played = 0
     try:
         for index in range(done, len(games)):
@@ -128,12 +142,21 @@ def play_pairing(candidate: reg.Candidate, bot: reg.Bot, games: list[tuple[list[
                 game = play_game(ours, theirs, candidate.go, bot.play, opening)
             else:
                 game = play_game(theirs, ours, bot.play, candidate.go, opening)
-            record = {"candidate": candidate.name, "bot": bot.id, "index": index, "candidate_white": candidate_white,
-                      "score": score(game["result"], candidate_white)} | game
+            record = {"candidate": candidate.name, "bot": bot.id, "index": index, "candidate_white": candidate_white}
+            if "crashed" in game:
+                ours_crashed = (game["crashed"] == "white") == candidate_white
+                record |= {"crashed": candidate.name if ours_crashed else bot.id, "moves": game["moves"]}
+            else:
+                record |= {"score": score(game["result"], candidate_white)} | game
             with open(out / f"{bot.id}.ndjson", "a", encoding="utf-8") as f:
                 f.write(json.dumps(record) + "\n")
-            with open(out / f"{bot.id}.pgn", "a", encoding="utf-8") as f:
-                f.write(pgn(record))
+            if "crashed" in record:
+                ours.close()
+                theirs.close()
+                ours, theirs = start()
+            else:
+                with open(out / f"{bot.id}.pgn", "a", encoding="utf-8") as f:
+                    f.write(pgn(record))
             played += 1
     finally:
         ours.close()
