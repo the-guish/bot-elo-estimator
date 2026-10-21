@@ -275,6 +275,7 @@ go = [
 runs = "Patricia"
 command = "patricia"
 replay = "agreement"
+play = "go depth 16"
 go = ["go depth 10", "go depth 12", "go depth 14", "go depth 16"]
 
 [bots.demolito_l5]
