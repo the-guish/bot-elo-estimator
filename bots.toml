@@ -609,10 +609,6 @@ go = "go depth 12"
 command = "stockfish-19"
 go = "go depth 16"
 
-[candidates.stockfish-19-depth-24]
-command = "stockfish-19"
-go = "go depth 24"
-
 [candidates.stockfish-15-depth-12]
 command = "stockfish-15"
 go = "go depth 12"
@@ -621,10 +617,6 @@ go = "go depth 12"
 command = "stockfish-15"
 go = "go depth 16"
 
-[candidates.stockfish-15-depth-24]
-command = "stockfish-15"
-go = "go depth 24"
-
 [candidates.stockfish-19-1mb-depth-12]
 command = "stockfish-19-1mb"
 go = "go depth 12"
@@ -632,7 +624,3 @@ go = "go depth 12"
 [candidates.stockfish-19-1mb-depth-16]
 command = "stockfish-19-1mb"
 go = "go depth 16"
-
-[candidates.stockfish-19-1mb-depth-24]
-command = "stockfish-19-1mb"
-go = "go depth 24"
