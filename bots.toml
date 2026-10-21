@@ -19,6 +19,7 @@ parent = "base"
 engines = [
     "morlock",
     "demolito",
+    "weiawaga",
 ]
 
 
@@ -64,6 +65,10 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+
+[engines.weiawaga]
+[engines.weiawaga.commands]
+weiawaga = { run = "weiawaga/weiawaga" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -231,6 +236,14 @@ runs = "Goldfish"
 
 [bots.weiawaga]
 runs = "Weiawaga"
+command = "weiawaga"
+replay = "agreement"
+play = "go depth 12"
+go = [
+    "go depth 8",
+    "go depth 10",
+    "go depth 12",
+]
 
 [bots.melsh_bot]
 runs = "melsh_bot"
