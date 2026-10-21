@@ -133,6 +133,10 @@ radiance = { run = "radiance/radiance" }
 [engines.schnecken.commands]
 schnecken = { run = "schnecken/schnecken_engine", go = "go depth 4" }  # depth 10 is far beyond it
 
+[engines.reckless]
+[engines.reckless.commands]
+reckless = { run = "reckless/reckless" }
+
 # Pending to build and verify: their builds and validations were stopped before they finished.
 # They are in no image, CI does not build them, and their bots play no matches.
 # `./build_docker.sh engine <engine>` builds one alone; see its README.
@@ -156,10 +160,6 @@ lynx = { run = "lynx/lynx" }
 pending = true
 [engines.garbochess.commands]
 garbochess = { run = "garbochess/node /opt/engines/garbochess/uci.js" }  # a UCI front end in Node.js
-
-[engines.reckless]
-[engines.reckless.commands]
-reckless = { run = "reckless/reckless" }
 
 # --- Bots ----------------------------------------------------------------------------------------
 # One table per Lichess bot id.
