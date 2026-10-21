@@ -20,6 +20,7 @@ engines = [
     "morlock",
     "demolito",
     "patricia",
+    "simpleeval",
 ]
 
 
@@ -68,6 +69,9 @@ demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
 [engines.patricia]
 [engines.patricia.commands]
 patricia = { run = "patricia/patricia" }
+[engines.simpleeval]
+[engines.simpleeval.commands]
+simpleeval = { run = "simpleeval/stockfish" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -166,6 +170,9 @@ play = "go"
 
 [bots.simpleeval]
 runs = "Stockfish, material-only branch"
+command = "simpleeval"
+replay = "agreement"
+go = ["go depth 12", "go depth 16", "go depth 18"]
 
 [bots.usunfish-l0]
 runs = "uSunfish"
