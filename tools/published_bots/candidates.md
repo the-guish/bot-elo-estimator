@@ -107,6 +107,72 @@ the bot runs a version, the bio says so.
   `goldfish-engine` and `weiawaga`, a cheap VPS for `ravenengine`. Search depth at a fixed time
   depends on it.
 
+## What was built
+
+On 2026-10-21, 20 of the 27 engines got an image, one at a time. Four more are pending to build
+and verify, and seven were dropped. Each built bot was checked against its 100 games in
+`data/games/lichess` by the agreement replay, `engines/agreement`. That replay reports how often
+our command plays the bot's move after the book, compared with Stockfish 19 at depth 10. It
+passes at 60% or more, with at least 10 points over the reference. A bot with a `play` search in
+`bots.toml` anchors the Elo estimates in `estimate/`.
+
+| Bot | Engine | Best search | Agrees | Reference | Verdict | Plays matches with |
+|---|---|---|---|---|---|---|
+| `simpleeval` | `simpleeval` | depth 18 | 66.1% | 48.1% | pass | depth 16 |
+| `usunfish-l0` | `usunfish` | level 0 | 96.9% | 23.2% | pass | level 0 |
+| `usunfish-l1` | `usunfish` | level 1 | 98.2% | 30.3% | pass | level 1 |
+| `davidsguterbot` | `moinsen` | depth 4 | 88.0% | 38.6% | pass | depth 4 |
+| `halcyonbot` | `halcyon` | depth 10 | 67.2% | 50.7% | pass, 50 games | depth 9 |
+| `ravenengine` | `raven` | depth 12 | 71.7% | 49.7% | pass, 99 games | depth 12 |
+| `likeawizard-bot` | `tofiks` | depth 11 | 65.0% | 49.4% | pass | depth 11 |
+| `radianceengine` | `radiance` | 1M nodes | 73.3% | 55.2% | pass, 50 games | 1M nodes |
+| `goldfish-engine` | `goldfish` | 300k nodes | 63.6% | 47.1% | pass | 300k nodes |
+| `weiawaga` | `weiawaga` | depth 12 | 73.1% | 58.7% | pass | depth 12 |
+| `melsh_bot` | `melsh` | depth 5 | 77.8% | 41.1% | pass, 50 games | depth 5 |
+| `patriciabot` | `patricia` | depth 16 | 66.4% | 52.7% | pass | depth 16 |
+| `plumbot` | `plumbot` | depth 4 | 49.7% | 29.9% | fail; see below | depth 4 |
+| `demolito_l3` | `demolito` | 4-minute clock | 46.8% | 40.4% | fail; see below | 4-minute clock |
+| `demolito_l4` | `demolito` | 4-minute clock | 52.8% | 40.8% | fail; see below | 8-minute clock |
+| `demolito_l5` | `demolito` | 16-minute clock | 56.6% | 43.5% | fail; see below | 8-minute clock |
+| `schnecken_bot` | `schnecken` | depth 4 | 53.7% | 38.8% | fail | none |
+| `dala-900` | `lc0` | 1 node | 44.7% | 29.1% | fail | none |
+| `dala-1100` | `lc0` | 1 node | 49.6% | 30.2% | fail | none |
+| `dala-1300` | `lc0` | 1 node | 48.5% | 30.5% | fail | none |
+
+The thresholds stayed as they were. Some failures still leave a faithful reproduction, because
+the bot picks moves at random and no fixed command can agree with it more often:
+
+- **plumbot** picks at random among the moves tied for best. Every one of the bot's 2,976 compared
+  moves is among our depth-4 ties. A random pick among them would agree 50.8% of the time.
+- **Demolito** adds random noise to its evaluation at each level. Our command agrees with the bot
+  about as often as it agrees with itself: 48.9%, 49.9% and 58.3% for levels 3, 4 and 5.
+- **Dala** draws each move from the net's policy. Our commands agree as often as that model
+  predicts, but they always play the most likely move, so they would play stronger than the bots.
+  The Dala bots therefore play no matches.
+- **schnecken_bot** searches by time in its rated games, and no fixed depth reproduces it there:
+  49% agreement, against 92% for our command with itself. It plays no matches.
+
+Each engine's README, in `images/engines/<engine>/`, gives its pinned version, its settings and the
+details of its validation.
+
+### Pending to build and verify
+
+Odonata (`odonata-bot`), Eubos (`eubos`), Lynx (`lynx_bot`) and GarboChess-JS (`garbobot`) were
+stopped before they were verified. Their Dockerfiles and READMEs are in `images/engines/`, and
+`bots.toml` lists them with `pending = true`. They are in no image, CI does not build them, and
+their bots play no matches. Each README says what is left.
+
+### Dropped
+
+| Bot | Why |
+|---|---|
+| `alliethechessbot` | Allie's weights are an 11 GB download, and the engine adapts to its opponent's rating and spends time like a human. |
+| `panic-fish` | It weakens itself during a game, by design. |
+| `raspfish` | It follows the latest Fairy-Stockfish, so its version drifts, and at about 3000 it adds nothing over our Stockfish. |
+| `littlepatricia` | Its skill level has changed over time. |
+| `joshsbot` | Its source is on a self-hosted server and states no license. |
+| `bottios`, `ultrabrick`, `slowmate_bot` | Python searches over python-chess: too slow for the games the estimates need. |
+
 ## How the list was made
 
 1. `bots.csv` lists the 396 bots online on 2026-10-21. 76 of them have more than 1,000 estimated

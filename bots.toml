@@ -39,6 +39,8 @@ engines = [
 # images/engines/<engine>/Dockerfile builds each engine from a pinned source into /opt/engines.
 #
 #   runtime   Ubuntu packages its commands need at run time.
+#   pending   true while the engine is pending to build and verify: it stays out of the images
+#             and CI, and its bots play no matches. Its README says what is left to do.
 #   commands  One command on PATH each. `run` is what the command runs; its first word is a path
 #             under /opt/engines. The smoke test plays 1. e4, sends `go` (default "go depth 10"),
 #             and needs a bestmove and a line holding `expect`. `smoke = false` skips the command.
@@ -130,6 +132,29 @@ radiance = { run = "radiance/radiance" }
 [engines.schnecken.commands]
 schnecken = { run = "schnecken/schnecken_engine", go = "go depth 4" }  # depth 10 is far beyond it
 
+# Pending to build and verify: their builds and validations were stopped before they finished.
+# They are in no image, CI does not build them, and their bots play no matches.
+# `./build_docker.sh engine <engine>` builds one alone; see its README.
+
+[engines.odonata]
+pending = true
+[engines.odonata.commands]
+odonata = { run = "odonata/odonata" }
+
+[engines.eubos]
+pending = true
+[engines.eubos.commands]
+eubos = { run = "eubos/eubos", expect = "id name Eubos 4.3" }  # the bot sets its UCI option Hash
+
+[engines.lynx]
+pending = true
+[engines.lynx.commands]
+lynx = { run = "lynx/lynx" }
+
+[engines.garbochess]
+pending = true
+[engines.garbochess.commands]
+garbochess = { run = "garbochess/node /opt/engines/garbochess/uci.js" }  # a UCI front end in Node.js
 
 # --- Bots ----------------------------------------------------------------------------------------
 # One table per Lichess bot id.
@@ -241,21 +266,41 @@ go = ["go wtime 600000 btime 600000"]
 skip = 12
 
 [bots.alliethechessbot]
+# Dropped: 11 GB of weights; adapts to its opponent and spends time like a human. See tools/published_bots/candidates.md.
 runs = "Allie 2.0"
 
 [bots.garbobot]
 runs = "GarboChess-JS"
+command = "garbochess"
+replay = "agreement"
+go = [
+    "go depth 5",
+    "go depth 6",
+    "go depth 7",
+    "go depth 8",
+    "go depth 9",
+]
 
 [bots.raspfish]
+# Dropped: follows the latest Fairy-Stockfish, so its version drifts. See tools/published_bots/candidates.md.
 runs = "Fairy-Stockfish, latest"
 
 [bots.lynx_bot]
 runs = "Lynx"
+command = "lynx"
+replay = "agreement"
+go = [
+    "go depth 12",
+    "go depth 14",
+    "go depth 16",
+]
 
 [bots.bottios]
+# Dropped: a Python search, too slow for the matches. See tools/published_bots/candidates.md.
 runs = "Bottios"
 
 [bots.ultrabrick]
+# Dropped: a Python search, too slow for the matches. See tools/published_bots/candidates.md.
 runs = "UltraBrick"
 
 [bots.usunfish-l1]
@@ -300,6 +345,10 @@ go = ["go depth 4"]
 
 [bots.eubos]
 runs = "Eubos 4.3"
+command = "eubos"
+replay = "agreement"
+options = { Hash = 512 }
+go = ["go depth 8", "go depth 10", "go depth 11", "go depth 12", "go depth 13"]
 
 [bots.dala-1100]
 # No play: the bot draws each move from the net's policy, and our command plays the top move,
@@ -335,6 +384,7 @@ go = [
 ]
 
 [bots.panic-fish]
+# Dropped: weakens itself during a game, by design. See tools/published_bots/candidates.md.
 runs = "Stockfish 18, weakens on checks"
 
 [bots.likeawizard-bot]
@@ -361,6 +411,7 @@ go = [
 ]
 
 [bots.joshsbot]
+# Dropped: its source is self-hosted and states no license. See tools/published_bots/candidates.md.
 runs = "own C engine"
 
 [bots.goldfish-engine]
@@ -408,8 +459,17 @@ go = [
 
 [bots.odonata-bot]
 runs = "Odonata"
+command = "odonata"
+replay = "agreement"
+go = [
+    "go nodes 30000",
+    "go nodes 100000",
+    "go nodes 300000",
+    "go nodes 1000000",
+]
 
 [bots.slowmate_bot]
+# Dropped: a Python search, too slow for the matches. See tools/published_bots/candidates.md.
 runs = "SlowMate"
 
 [bots.demolito_l3]
@@ -446,6 +506,7 @@ go = [
 ]
 
 [bots.littlepatricia]
+# Dropped: its skill level has changed over time. See tools/published_bots/candidates.md.
 runs = "Patricia, skill level 11"
 
 

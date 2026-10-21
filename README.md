@@ -33,7 +33,12 @@ Each bot has a validation tier, from its `replay`:
 | statistical | `agreement` | Our command agrees with the bot more than a reference engine does. For bots that search by time on their own hardware. |
 | none | | Nothing checks the bot yet: no engine, or no public source. |
 
-Today 11 bots are exact. The other 32 have games in `data/games/lichess` but no engine yet.
+| pending | | The engine's files are in, but it is pending to build and verify: in no image, out of CI. |
+
+Of the 43 bots, 11 are exact and 20 statistical, 4 are pending and 8 have no engine: dropped as
+too slow, too heavy or too unpredictable. 27 bots have a `play` search and anchor the Elo
+estimates. `tools/published_bots/candidates.md` gives each bot's validation and why the others
+were dropped or are pending.
 
 ## The engines
 
@@ -41,11 +46,13 @@ Two Docker images hold the engines. Each command is on the image's PATH.
 
 - **`bot-elo-estimator-base`** holds the well-known engines: Stockfish 19, Stockfish 15 with its
   classical evaluation, Stockfish 19 with a 1 MB net, and lc0 with the nine Maia 1 nets.
-- **`bot-elo-estimator-extra`** starts from the base and adds less-known engines: morlock's SARGON,
-  TUROCHAMP and Bernstein.
+- **`bot-elo-estimator-extra`** starts from the base and adds the less-known engines: morlock's
+  SARGON, TUROCHAMP and Bernstein, Demolito, Patricia, Stockfish simpleEval, Halcyon, Tofiks,
+  Moinsen, plumbot, μSunfish, Weiawaga, Goldfish, melsh_bot, schnecken_bot, Raven and Radiance.
 
-Each engine's README gives its commands and sources: [stockfish](images/engines/stockfish/README.md),
-[lc0](images/engines/lc0/README.md), [morlock](images/engines/morlock/README.md).
+lc0 in the base also holds the Dala nets. Each engine's README, in `images/engines/<engine>/`,
+gives its commands, pinned source, settings and validation. Odonata, Eubos, Lynx and GarboChess-JS
+are pending to build and verify: their files are in `images/engines/`, but no image holds them.
 
 ## Build
 

@@ -116,7 +116,8 @@ def affected(old: dict | None, new: dict, changed: list[str], full: bool = False
     An engine's own build ends with a test image of its commands, made like the images are, so a
     new or changed engine needs no image build. The images build when what they all share changes,
     or their parents do. With `full`, they also build when an engine or an image's engines change."""
-    engines = sorted(new.get("engines", {}))
+    # Pending engines are not built until someone takes them up.
+    engines = sorted(e for e, table in new.get("engines", {}).items() if not table.get("pending"))
     if old is None or any(path.startswith(SHARED) for path in changed):
         return {"engines": engines, "images": True}
     touched = sorted(

@@ -134,3 +134,23 @@ def test_bots_table(tmp_path):
 def test_the_registry():
     """bots.toml itself has no problems."""
     assert problems(load()) == []
+
+
+PENDING = TOML.replace('[engines.old.commands]', '[engines.new]\npending = true\n[engines.new.commands]\nnew = { run = "new/new" }\n\n[engines.old.commands]')
+
+
+def test_pending(dirs):
+    (dirs[0] / "new").mkdir()
+    (dirs[0] / "new" / "Dockerfile").write_text("")
+    r = registry(PENDING)
+    assert r.engines["new"].pending and not r.engines["sf"].pending
+    assert r.pending("new") and not r.pending("sf") and not r.pending(None)
+    assert problems(r, *dirs) == []
+    with_bot = PENDING + '\n[bots.newbot]\ncommand = "new"\nreplay = "agreement"\n'
+    assert r.tier(registry(with_bot).bots["newbot"]) == "pending"
+    assert problems(registry(with_bot), *dirs) == []
+    assert problems(registry(with_bot + 'play = "go depth 1"\n'), *dirs) == [
+        "bot newbot: its engine is pending, so it plays no matches"
+    ]
+    in_image = PENDING.replace('engines = ["old"]', 'engines = ["old", "new"]')
+    assert problems(registry(in_image), *dirs) == ["engine new: pending, so in no image"]

@@ -113,6 +113,9 @@ def edited(**changes):
     (OLD, OLD, ["build_docker.sh"], False, (["lc0", "old", "sf"], True)),
     # No registry before.
     (None, OLD, [], False, (["lc0", "old", "sf"], True)),
+    # A pending engine is not built.
+    (OLD, edited(engines__new={"pending": True, "commands": {"n": {"run": "n/n"}}}),
+     ["bots.toml", "images/engines/new/Dockerfile"], True, ([], False)),
 ])
 def test_affected(old, new, changed, full, expected):
     result = affected(old, new, changed, full)

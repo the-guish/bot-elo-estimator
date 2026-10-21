@@ -47,6 +47,8 @@ class Engine:
     name: str
     runtime: list[str]
     commands: dict[str, Command]
+    # Pending to build and verify: in no image, and none of its bots plays matches yet.
+    pending: bool = False
 
 
 @dataclass
@@ -97,6 +99,12 @@ class Registry:
     def commands(self) -> dict[str, Command]:
         return {name: c for e in self.engines.values() for name, c in e.commands.items()}
 
+    def pending(self, command: str | None) -> bool:
+        return command in self.commands and self.engines[self.commands[command].engine].pending
+
+    def tier(self, bot: "Bot") -> str:
+        return "pending" if self.pending(bot.command) else bot.tier
+
     def image_of_engine(self, engine: str) -> str:
         return next(i.name for i in self.images.values() if engine in i.engines)
 
@@ -125,12 +133,12 @@ def parse(data: dict) -> Registry:
         images[name] = Image(name, table.get("parent"), list(table.get("engines", [])))
     engines = {}
     for name, table in data.get("engines", {}).items():
-        unknown(table, {"runtime", "commands"}, f"engine {name}")
+        unknown(table, {"runtime", "commands", "pending"}, f"engine {name}")
         commands = {}
         for command, spec in table.get("commands", {}).items():
             unknown(spec, COMMAND_KEYS, f"command {command}")
             commands[command] = Command(command, name, **spec)
-        engines[name] = Engine(name, list(table.get("runtime", [])), commands)
+        engines[name] = Engine(name, list(table.get("runtime", [])), commands, bool(table.get("pending", False)))
     bots = {}
     for bot_id, table in data.get("bots", {}).items():
         known = {k: v for k, v in table.items() if k in BOT_KEYS}
@@ -179,7 +187,9 @@ def problems(registry: Registry, engines_dir: Path = ENGINES_DIR, replays_dir: P
     commands: dict[str, list[str]] = {}
     for engine in registry.engines.values():
         images = owners.get(engine.name, [])
-        if len(images) != 1:
+        if engine.pending and images:
+            found.append(f"engine {engine.name}: pending, so in no image")
+        elif not engine.pending and len(images) != 1:
             found.append(f"engine {engine.name}: in {len(images)} images, not 1")
         if not (engines_dir / engine.name / "Dockerfile").is_file():
             found.append(f"engine {engine.name}: no images/engines/{engine.name}/Dockerfile")
@@ -210,9 +220,13 @@ def problems(registry: Registry, engines_dir: Path = ENGINES_DIR, replays_dir: P
                 found.append(f"bot {bot.id}: no engines/{bot.replay}/replay_{bot.replay}.py")
         if bot.play is not None and bot.command is None:
             found.append(f"bot {bot.id}: play needs a command")
+        if bot.play is not None and registry.pending(bot.command):
+            found.append(f"bot {bot.id}: its engine is pending, so it plays no matches")
     for candidate in registry.candidates.values():
         if candidate.command not in commands:
             found.append(f"candidate {candidate.name}: no command {candidate.command}")
+        elif registry.pending(candidate.command):
+            found.append(f"candidate {candidate.name}: its engine is pending")
     return found
 
 
@@ -231,9 +245,13 @@ def bots_table(registry: Registry, rows: dict[str, dict], games_dir: Path = GAME
     ]
     for bot in registry.bots.values():
         row = rows.get(bot.id, {})
-        image = registry.image_of_command(bot.command) if bot.command in registry.commands else "-"
+        if registry.pending(bot.command):
+            image = "-"
+        else:
+            image = registry.image_of_command(bot.command) if bot.command in registry.commands else "-"
         held = len(list((games_dir / bot.id).glob("*.pgn")))
-        validation = f"{bot.tier} ({bot.replay})" if bot.replay else bot.tier
+        tier = registry.tier(bot)
+        validation = f"{tier} ({bot.replay})" if bot.replay else tier
         human = row.get("estimated_human_games")
         lines.append(
             f"| {bot.id} | {bot.runs or '-'} | {bot.command or '-'} | {image} | {validation} "

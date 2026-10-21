@@ -14,6 +14,10 @@ engines = ["old"]
 sf = { run = "sf/sf" }
 [engines.old.commands]
 old-1ply = { run = "old/old -ply 1" }
+[engines.new]
+pending = true
+[engines.new.commands]
+new = { run = "new/new" }
 """))
 
 
@@ -23,6 +27,7 @@ def test_engine_command():
     assert engine_command(template, REGISTRY, "sf") == "docker run --rm -i bot-elo-estimator-base sf"
     assert engine_command(template, REGISTRY, "old-1ply", True) == "docker run --rm -i bot-elo-estimator-test-old old-1ply"
     assert engine_command("{command}", REGISTRY, "anything") == "anything"
+    assert engine_command(template, REGISTRY, "new") == "docker run --rm -i bot-elo-estimator-test-new new"
 
 
 def test_move_number():

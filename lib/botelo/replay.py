@@ -55,11 +55,16 @@ def table(header: list[str], rows: list[list]) -> list[str]:
 
 def engine_command(template: str, registry: reg.Registry, command: str, test_images: bool = False) -> str:
     """The shell command that runs a command of bots.toml. Its image is the one that holds it, or
-    with `test_images` its engine's test image, which `build_docker.sh engine` builds."""
+    with `test_images`, or for a pending engine, its engine's test image, which
+    `build_docker.sh engine` builds."""
     image = ""
     if command in registry.commands:
         engine = registry.commands[command].engine
-        image = test_tag(engine) if test_images else registry.images[registry.image_of_engine(engine)].tag
+        # A pending engine is in no image yet: only its test image holds it.
+        if test_images or registry.engines[engine].pending:
+            image = test_tag(engine)
+        else:
+            image = registry.images[registry.image_of_engine(engine)].tag
     return template.format(image=image, command=command)
 
 
@@ -101,7 +106,9 @@ def run(replay: Replay, description: str, out_dir: Path, argv: list[str] | None 
     registry = reg.load(known.registry)
     bots = {b.id: b for b in registry.bots_for(replay.name)}
 
-    parser.add_argument("--bots", nargs="+", default=list(bots), choices=list(bots))
+    # A pending engine's bots run only when named.
+    ready = [b.id for b in bots.values() if not registry.pending(b.command)]
+    parser.add_argument("--bots", nargs="+", default=ready, choices=list(bots))
     parser.add_argument("--games", type=Path, default=reg.GAMES_DIR)
     parser.add_argument("--out", type=Path, default=out_dir)
     parser.add_argument("--engine", default=ENGINE,
