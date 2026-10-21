@@ -1,0 +1,15 @@
+diff --git a/src/interface.zig b/src/interface.zig
+index ee13bd2..c696151 100644
+--- a/src/interface.zig
++++ b/src/interface.zig
+@@ -187,6 +187,10 @@ pub fn loop(io: std.Io, allocator: std.mem.Allocator, stdin: *std.Io.Reader, std
+         if (std.ascii.eqlIgnoreCase("go", primary_token)) {
+             existing_command = true;
+ 
++            // Wait for the last search's thread to go back to its wait state, or this search's
++            // request can be lost when the go comes right after the last bestmove.
++            try thread_pool.finishSearchs();
++
+             cmd_go(io, allocator, stdout, &pos, states, &tokens, options) catch |err| {
+                 try stdout.print("Command go failed with error {}\n", .{err});
+                 try stdout.flush();

@@ -30,6 +30,7 @@ engines = [
     "weiawaga",
     "melsh",
     "raven",
+    "radiance",
 ]
 
 
@@ -119,6 +120,10 @@ melsh_bot = { run = "melsh/melsh_bot", go = "go depth 4" }  # every search also 
 [engines.raven]
 [engines.raven.commands]
 raven = { run = "raven/raven" }
+
+[engines.radiance]
+[engines.radiance.commands]
+radiance = { run = "radiance/radiance" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -334,6 +339,14 @@ go = [
 
 [bots.radianceengine]
 runs = "Radiance"
+command = "radiance"
+replay = "agreement"
+play = "go nodes 1000000"
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+    "go nodes 1000000",
+]
 
 [bots.joshsbot]
 runs = "own C engine"
