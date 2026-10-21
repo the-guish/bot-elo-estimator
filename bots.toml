@@ -18,6 +18,7 @@ engines = ["stockfish", "lc0"]
 parent = "base"
 engines = [
     "morlock",
+    "demolito",
 ]
 
 
@@ -59,6 +60,10 @@ turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
 turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
 bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
 bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+[engines.demolito]
+[engines.demolito.commands]
+demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -220,6 +225,15 @@ runs = "melsh_bot"
 
 [bots.demolito_l4]
 runs = "Demolito level 4"
+command = "demolito"
+replay = "agreement"
+options = { Level = 4 }
+go = [
+    "go wtime 120000 btime 120000",
+    "go wtime 240000 btime 240000",
+    "go wtime 480000 btime 480000",
+    "go wtime 960000 btime 960000",
+]
 
 [bots.odonata-bot]
 runs = "Odonata"
@@ -229,12 +243,30 @@ runs = "SlowMate"
 
 [bots.demolito_l3]
 runs = "Demolito level 3"
+command = "demolito"
+replay = "agreement"
+options = { Level = 3 }
+go = [
+    "go wtime 120000 btime 120000",
+    "go wtime 240000 btime 240000",
+    "go wtime 480000 btime 480000",
+    "go wtime 960000 btime 960000",
+]
 
 [bots.patriciabot]
 runs = "Patricia"
 
 [bots.demolito_l5]
 runs = "Demolito level 5"
+command = "demolito"
+replay = "agreement"
+options = { Level = 5 }
+go = [
+    "go wtime 120000 btime 120000",
+    "go wtime 240000 btime 240000",
+    "go wtime 480000 btime 480000",
+    "go wtime 960000 btime 960000",
+]
 
 [bots.littlepatricia]
 runs = "Patricia, skill level 11"
