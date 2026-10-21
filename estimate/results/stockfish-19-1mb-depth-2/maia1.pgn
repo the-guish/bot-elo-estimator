@@ -1,0 +1,220 @@
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. c4 e5 2. Nc3 Qh4 3. e4 Bc5 4. g3 Qf6 5. f4 exf4 6. Nd5 Qe5 7. Nf3 Qxe4+ 8. Be2 fxg3 9. hxg3 c6 10. Nc7+ Kd8 11. d3 Qg4 12. Nxa8 Qxg3+ 13. Kd2 Qf4+ 14. Kc2 Qf5 15. Ng5 h6 16. Bd2 d5 17. Rf1 Qg6 18. Nxf7+ Ke7 19. Nxh8 Qh7 20. Rf7+ Ke8 21. Nc7+ Kd8 22. Qf1 Qxh8 23. Qf4 Ne7 24. Rf8+ Qxf8 25. Ne6+ Bxe6 26. Qxf8+ Kd7 27. Qxb8 dxc4 28. Qxb7+ Kd6 29. Bf4+ Kd5 30. dxc4+ Ke4 31. Bd3+ Kxf4 32. Rf1+ Ke3 33. Re1+ Kd4 34. Re4# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. c4 e5 2. Nc3 Qh4 3. e4 Bc5 4. g3 Qf6 5. Nf3 Nc6 6. Nd5 Qd6 7. d3 Nd4 8. Nxd4 Bxd4 9. Be3 Bxe3 10. fxe3 Nf6 11. Nxf6+ Qxf6 12. d4 d6 13. d5 Qh6 14. Qa4+ Bd7 15. Qb4 Qxe3+ 16. Be2 Qxe4 17. Qxb7 Qxh1+ 18. Bf1 Qe4+ 19. Be2 O-O 20. Qxc7 Qh1+ 21. Bf1 Qxh2 22. Qxd7 Qxg3+ 23. Kd2 e4 24. Re1 Qf2+ 25. Re2 e3+ 26. Kd3 Qxf1 27. Kxe3 Rfe8+ 28. Kd2 Rxe2+ 29. Kc3 Qf6+ 30. Kb4 Rb8+ 31. Ka3 Qxb2+ 32. Ka4 Qxa2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. c4 Nc6 2. Nc3 e5 3. e4 Nf6 4. d3 Bc5 5. Nf3 d6 6. Be2 Ng4 7. O-O Nd4 8. Nxd4 Bxd4 9. Bxg4 Bxg4 10. Qxg4 O-O 11. Ne2 Bc5 12. Qh3 Qf6 13. a3 a5 14. a4 c6 15. Bd2 d5 16. cxd5 cxd5 17. exd5 Rad8 18. Nc3 Bb4 19. Ne4 Qb6 20. Be3 Qc7 21. Rac1 Qe7 22. d6 Bxd6 23. Rfd1 Bb4 24. g4 h6 25. Qg2 g5 26. h4 gxh4 27. Bxh6 Rfe8 28. g5 Kh7 29. Kh1 Rg8 30. Qf3 Rg6 31. Rg1 Rdg8 32. Nf6+ Rxf6 33. gxf6 Qe6 34. Rxg8 Kxg8 35. Qg2+ Kh7 36. Qg7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. c4 Nc6 2. Nc3 e5 3. e4 Nf6 4. d3 Bc5 5. Nf3 d6 6. Be2 Ng4 7. O-O O-O 8. h3 Nf6 9. Bg5 a5 10. Nd5 Kh8 11. a3 a4 12. b4 axb3 13. Qxb3 h6 14. Bh4 g5 15. Bg3 Nh5 16. Bh2 Nf4 17. Nxf4 gxf4 18. g3 Rg8 19. g4 Bxg4 20. hxg4 h5 21. g5 Nd4 22. Nxd4 Qxg5+ 23. Kh1 Qg2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1/2-1/2"]
+[Termination "threefold_repetition"]
+
+1. d4 c5 2. d5 Nf6 3. c4 e6 4. dxe6 fxe6 5. Nc3 d5 6. e3 dxc4 7. Qc2 Nc6 8. Bxc4 Nb4 9. Qb1 e5 10. Nf3 e4 11. Nxe4 Nxe4 12. Qxe4+ Be7 13. O-O g6 14. Bd2 Bf5 15. Qxb7 Rb8 16. Qxa7 Nc6 17. Qa4 Bd7 18. Qc2 Nb4 19. Qc3 Rf8 20. a3 Nc6 21. Rad1 Bf6 22. Qc2 Bxb2 23. Bd5 Bxa3 24. Qc4 Na5 25. Bxa5 Qxa5 26. Qe4+ Kd8 27. Qe5 Re8 28. Qxb8+ Ke7 29. Qe5+ Kd8 30. Qf6+ Re7 31. Qf8+ Re8 32. Qf6+ Re7 33. Qf8+ Re8 1/2-1/2
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. d4 c5 2. d5 Nf6 3. c4 e6 4. dxe6 fxe6 5. Nc3 Nc6 6. e4 Qc7 7. Nf3 Be7 8. Bd3 O-O 9. O-O Ng4 10. h3 Rxf3 11. Qxf3 Qh2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Bb4 4. a3 Bxc3 5. dxc3 Nf6 6. Bg5 h6 7. Bh4 g5 8. Bg3 Nxe4 9. Bxe5 Nxe5 10. Nxe5 Qe7 11. Qd4 Nf6 12. O-O-O d6 13. Nc4 Be6 14. Re1 O-O-O 15. Qxa7 Kd7 16. Qxb7 Rb8 17. Nb6+ Kd8 18. Qxb8+ Bc8 19. Qxc8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Nc3 Bb4 4. a3 Bxc3 5. dxc3 d6 6. Bb5 Bg4 7. h3 Bd7 8. O-O Nge7 9. Bg5 f6 10. Bh4 g5 11. Bg3 h5 12. h4 a6 13. Bxc6 Nxc6 14. hxg5 fxg5 15. Qd2 h4 16. Bh2 g4 17. Ng5 Qe7 18. g3 hxg3 19. Bxg3 O-O-O 20. Kg2 Rh5 21. f4 gxf3+ 22. Nxf3 Rg8 23. Kf2 Qg7 24. Rg1 Qf7 25. Raf1 Bh3 26. Re1 Rf8 27. Re3 Bg4 28. Qd3 Rh3 29. Kg2 Qh5 30. Kf2 Kb8 31. Kg2 Kc8 32. Rf1 b6 33. Qxa6+ Kb8 34. b4 Rxg3+ 35. Kxg3 Qh3+ 36. Kf2 Rxf3+ 37. Rxf3 Qxf3+ 38. Ke1 Qe3+ 39. Qe2 Qxe2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Bb5+ Bd7 7. Nc3 Bxb5 8. Nxb5 Qa5+ 9. Nc3 e5 10. Qd3 Nf6 11. Bd2 Be7 12. Nd5 Qd8 13. Nxf6+ Bxf6 14. O-O-O O-O 15. Bb4 Be7 16. Bxd6 Bxd6 17. Qxd6 Qxd6 18. Rxd6 Rad8 19. Rhd1 Rxd6 20. Rxd6 f6 21. Rd7 Rb8 22. b3 Kf8 23. a4 Ke8 24. Rxg7 h5 25. Rh7 Rd8 26. f3 Rd7 27. Rh8+ Ke7 28. Rxh5 Ke6 29. Rh8 Rg7 30. g4 f5 31. exf5+ Kf6 32. a5 a6 33. h4 b5 34. axb6 Rb7 35. Rh6+ Kg7 36. Rc6 Kf7 37. h5 Kg7 38. g5 Kh7 39. Rc7+ Rxc7 40. bxc7 Kg7 41. f6+ Kf7 42. c8=Q a5 43. Qb7+ Ke6 44. Qc6+ Kf5 45. Qe4+ Kxg5 46. Qg6+ Kf4 47. Qg4+ Ke3 48. Qe4+ Kf2 49. Qh4+ Kxf3 50. Qh1+ Kf4 51. Qh2+ Kf5 52. Qf2+ Ke6 53. Qb6+ Kf5 54. f7 e4 55. f8=Q+ Ke5 56. Qbd6# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nxd4 5. Qxd4 e6 6. Nc3 Ne7 7. Bg5 h6 8. Bxe7 Qxe7 9. O-O-O Qc5 10. Qxc5 Bxc5 11. f3 Ke7 12. Bc4 h5 13. h4 Rb8 14. g4 hxg4 15. fxg4 b6 16. g5 Bb7 17. h5 Be3+ 18. Kb1 Bxg5 19. Rhg1 Rxh5 20. Be2 Rbh8 21. Bxh5 Rxh5 22. Nb5 Bxe4 23. Nxa7 Bb7 24. Nb5 Bc6 25. Nd4 Be4 26. Rde1 f5 27. Nb5 Bf6 28. Nc3 Bc6 29. Ne2 g5 30. Ng3 Bf3 31. Nxh5 Bxh5 32. Rh1 Bf7 33. Rh7 g4 34. Reh1 f4 35. Rg1 g3 36. Rh3 e5 37. Rh7 e4 38. Re1 e3 39. Kc1 g2 40. Rg1 f3 41. Rh2 Be5 42. Rh3 Bd5 43. Rh7+ Bf7 44. Kd1 Bg3 45. Rg7 Bf4 46. Ke1 f2+ 47. Ke2 fxg1=Q 48. Kf3 Qf1+ 49. Ke4 d5+ 50. Kf5 Bc7+ 51. Kg4 g1=Q+ 52. Kh4 Qh1+ 53. Kg5 Qh5# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Qd2 Nc6 7. d5 Nb4 8. a3 Na6 9. Bxa6 bxa6 10. Bh6 Bxh6 11. Qxh6 Ng4 12. Qd2 e5 13. dxe6 Bxe6 14. O-O Rb8 15. b3 c5 16. Rad1 Rb6 17. Rfe1 a5 18. e5 d5 19. Nxd5 Bxd5 20. Qxd5 Qxd5 21. Rxd5 Rc6 22. h3 Nh6 23. g4 f5 24. g5 Nf7 25. e6 Nd6 26. Ne5 Rb6 27. Nd7 Rc6 28. e7 Re8 29. Nf6+ Kf7 30. Nxe8 Kxe8 31. c4 Ne4 32. f3 Nxg5 33. Rd8+ Kf7 34. e8=Q+ Kf6 35. Qe7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "1/2-1/2"]
+[Termination "threefold_repetition"]
+
+1. d4 Nf6 2. Bf4 g6 3. Nc3 Bg7 4. e4 d6 5. e5 Nh5 6. exd6 Nxf4 7. dxe7 Qxe7+ 8. Be2 O-O 9. Nf3 Re8 10. O-O Qd8 11. Re1 Be6 12. Bb5 c6 13. Ba4 Na6 14. d5 Nxd5 15. Nxd5 Bxd5 16. Rxe8+ Qxe8 17. c3 Qd8 18. Bb3 Nc7 19. Bxd5 Nxd5 20. c4 Nf4 21. Qxd8+ Rxd8 22. g3 Ne6 23. Re1 Bf6 24. b3 Kf8 25. a4 g5 26. b4 g4 27. Nh4 h5 28. Nf5 a6 29. b5 cxb5 30. cxb5 a5 31. b6 Rd2 32. Rc1 Rd8 33. Ne3 Bd4 34. Nc4 Ra8 35. Nd6 Bc5 36. Nxb7 Bxb6 37. Nd6 Rd8 38. Nf5 Bc5 39. Ne3 Ba7 40. Nc4 Nd4 41. Nxa5 Ne2+ 42. Kg2 Nxc1 43. Nc6 Rd6 44. Nxa7 Rd2 45. a5 Ra2 46. Nc6 f6 47. Nb4 Rxa5 48. Nc6 Ra2 49. Nd4 Ke8 50. Nf5 Kf8 51. Ne3 Ke8 52. Nf5 Kf8 53. Ne3 h4 54. gxh4 Nd3 55. Nxg4 Rb2 56. Nxf6 Rxf2+ 57. Kg3 Rxf6 58. Kg4 Rd6 59. h5 Nf2+ 60. Kg5 Ne4+ 61. Kf5 Nc3 62. Kg5 Kg8 63. h6 Kh7 64. Kh5 Rd5+ 65. Kg4 Kg8 66. h4 Rb5 67. h5 Ra5 68. Kh4 Ne4 69. Kg4 Nc3 70. Kh4 Ne4 71. Kg4 1/2-1/2
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Bb5 Bg7 5. Nf3 Nf6 6. e5 Ng4 7. h3 Nh6 8. Qe2 O-O 9. g4 a6 10. Bxc6 dxc6 11. d3 b5 12. Ne4 c4 13. dxc4 bxc4 14. Be3 Qa5+ 15. Bd2 Qb5 16. O-O-O Rb8 17. Bc3 Be6 18. Nd4 Qb6 19. Nxe6 fxe6 20. Rhf1 Nf7 21. Qxc4 Qe3+ 22. Kb1 Qxh3 23. Qe2 h5 24. gxh5 gxh5 25. Rg1 Nh6 26. Rd3 Qf5 27. Rdg3 Ng4 28. Nc5 Qxf4 29. Nxe6 Qf2 30. Qd3 Bxe5 31. Qg6+ Kh8 32. Qxh5+ Kg8 33. Rxg4+ Bg7 34. Rxg7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Bb5 Bg7 5. Bxc6 bxc6 6. Nf3 d5 7. exd5 cxd5 8. O-O Nf6 9. d4 cxd4 10. Nxd4 Qb6 11. Be3 O-O 12. Na4 Qc7 13. Nb5 Qc6 14. Nxa7 Qxa4 15. Nxc8 Raxc8 16. b3 Qa8 17. c4 e6 18. cxd5 Nxd5 19. Bd4 Nf6 20. Bxf6 Bxf6 21. Rc1 Qa7+ 22. Kh1 Rcd8 23. Qf3 Rd2 24. a4 Qd4 25. a5 Rd8 26. a6 Kg7 27. Rcd1 Rxd1 28. Rxd1 Qxd1+ 29. Qxd1 Rxd1# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 bxc6 5. Nxe5 d6 6. Nxc6 Qd7 7. Nd4 Nf6 8. Nc3 Bb7 9. d3 Be7 10. Nf5 O-O 11. O-O d5 12. Bg5 dxe4 13. dxe4 Qxd1 14. Nxe7+ Kh8 15. Raxd1 Nxe4 16. Nxe4 Bxe4 17. Rd2 f6 18. Be3 Rfe8 19. Bc5 Rad8 20. Rxd8 Rxd8 21. f3 Bxc2 22. b4 Bd3 23. Rd1 a5 24. bxa5 Ra8 25. Rxd3 Rxa5 26. Rd8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 bxc6 5. Nxe5 Qg5 6. d4 Qxg2 7. Rf1 Qxe4+ 8. Be3 f6 9. Nc3 Qf5 10. Nf3 Ne7 11. Nh4 Qe6 12. Qh5+ g6 13. Qf3 Rb8 14. O-O-O d5 15. Rfe1 Kf7 16. Bg5 Qd6 17. Bf4 Qb4 18. Bxc7 Qxb2+ 19. Kd2 Rb4 20. Rb1 Rxd4+ 21. Ke3 Qxc3+ 22. Ke2 Qc4+ 23. Ke3 Bh6+ 24. Bf4 Bxf4+ 25. Qxf4 Rxf4 26. Rb8 Qd4+ 27. Ke2 Rxf2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 d6 3. Nf3 Nc6 4. d4 cxd4 5. Nxd4 Nxd4 6. Qxd4 Nf6 7. Bg5 e5 8. Bb5+ Bd7 9. Qd3 Bxb5 10. Qxb5+ Qd7 11. Bxf6 gxf6 12. Qe2 O-O-O 13. Nd5 f5 14. f3 fxe4 15. fxe4 f5 16. O-O fxe4 17. Qxe4 Bh6 18. c4 Rhf8 19. Qh4 Rxf1+ 20. Rxf1 Bg7 21. Qxh7 Rh8 22. Qe4 Rf8 23. b3 Rxf1+ 24. Kxf1 Qf7+ 25. Kg1 Bh6 26. h3 Bc1 27. h4 Bb2 28. Kh2 Qf2 29. Kh3 Qf1 30. Qg4+ Kb8 31. Qg8+ Qf8 32. Qxf8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 d6 3. Nf3 Nc6 4. d4 cxd4 5. Nxd4 e5 6. Nxc6 bxc6 7. Bc4 Nf6 8. O-O Be7 9. Bg5 O-O 10. Bxf6 Bxf6 11. Qf3 g6 12. Rad1 Kg7 13. Rd2 h5 14. Rfd1 Bg4 15. Qe3 Bxd1 16. Rxd1 Bg5 17. Qf3 Rb8 18. b3 Rc8 19. a4 h4 20. h3 Rb8 21. Qg4 Qe7 22. Ne2 Rbd8 23. g3 Rh8 24. gxh4 Rxh4 25. Qg3 Rdh8 26. Kg2 Bf4 27. Nxf4 Rxf4 28. f3 Rfh4 29. Rh1 R4h5 30. f4 exf4 31. Qxf4 Rg5+ 32. Kf3 Rhh5 33. h4 Re5 34. Rg1 Rxh4 35. Rxg6+ fxg6 36. Qg3 Qf6+ 37. Ke3 Rhxe4+ 38. Kd3 Re3+ 39. Qxe3 Rxe3+ 40. Kxe3 Qe5+ 41. Kd3 Qg3+ 42. Kd4 Qe5+ 43. Kd3 Qf5+ 44. Kc3 Qf6+ 45. Kb4 c5+ 46. Kb5 d5 47. Bxd5 Qb6+ 48. Kc4 Qb4+ 49. Kd3 Qd4+ 50. Ke2 Qxd5 51. Ke3 Qe5+ 52. Kd3 c4+ 53. Kxc4 Qe4+ 54. Kc3 Qe5+ 55. Kb4 a5+ 56. Ka3 Qa1# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "stockfish-19-1mb-depth-2"]
+[Black "maia1"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 d6 3. f4 Nf6 4. Nf3 g6 5. e5 dxe5 6. fxe5 Nd5 7. Bc4 Nxc3 8. bxc3 Bg7 9. Ng5 O-O 10. O-O e6 11. d4 cxd4 12. cxd4 Nc6 13. c3 Na5 14. Bd3 b6 15. Qg4 Bb7 16. Qh3 h6 17. Nxe6 fxe6 18. Qxe6+ Kh8 19. Rxf8+ Qxf8 20. Qxg6 Qg8 21. Bxh6 Bxh6 22. Qxh6+ Qh7 23. Qxh7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "maia1"]
+[Black "stockfish-19-1mb-depth-2"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nc3 d6 3. f4 Nf6 4. Nf3 g6 5. Bc4 Bg7 6. O-O O-O 7. d3 Nc6 8. Be3 Ng4 9. Qe2 Nd4 10. Bxd4 cxd4 11. Nd5 e6 12. Nb4 Ne3 13. Rfe1 a5 14. c3 axb4 15. cxd4 Ng4 16. h3 Nf6 17. e5 Nh5 18. exd6 Nxf4 19. Qe4 Qxd6 20. g3 Nh5 21. g4 Nf6 22. Qe3 Qg3+ 23. Kf1 Qb8 24. Ne5 b5 25. Bb3 Ra6 26. g5 Nh5 27. h4 Bb7 28. Nd7 Qh2 29. Nxf8 Qg2# 0-1
+
