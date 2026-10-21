@@ -1,0 +1,220 @@
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. d4 d5 2. Nf3 Nf6 3. e3 e6 4. Bd3 Be7 5. Nc3 Bb4 6. a3 Bxc3+ 7. bxc3 Bd7 8. Rb1 b6 9. c4 dxc4 10. Bxc4 Nc6 11. O-O h6 12. Re1 Na5 13. Bd3 Qe7 14. e4 Nc6 15. d5 Nd8 16. Bf4 c6 17. d6 Qf8 18. Re2 Nh5 19. Qd2 g5 20. Be5 f6 21. Bb2 e5 22. Bc4 b5 23. Ba2 Nb7 24. Rd1 Nf4 25. Re3 a5 26. Rb3 Be6 27. d7+ Ke7 28. Nxe5 fxe5 29. Bxe5 Bxb3 30. Bxb3 a4 31. Ba2 Kd8 32. Qe3 Ra6 33. Bxh8 Qxh8 34. e5 Ng6 35. e6 Qf6 36. Rb1 Nd6 37. Qd3 c5 38. Re1 c4 39. Qg3 Ke7 40. h3 Nf4 41. Qf3 Qf5 42. c3 Qd5 43. Qxd5 Nxd5 44. Bb1 Nb7 45. Bf5 Nxc3 46. Re5 Rd6 47. Re1 Nd5 48. Kh1 Nc7 49. Re5 Nd8 50. h4 gxh4 51. Re4 Rd1+ 52. Kh2 Rd2 53. f4 c3 54. Kh3 c2 55. Re1 Rd1 56. Bxc2 Rxe1 57. f5 Re3+ 58. Kxh4 Nd5 59. g4 Nf4 60. g5 h5 61. g6 Kf6 62. Bb1 Rh3# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. d4 d5 2. Nf3 Nf6 3. e3 e6 4. Bd3 Be7 5. Nfd2 O-O 6. a3 Nc6 7. f4 b6 8. g4 Bd7 9. g5 Ne8 10. c4 f6 11. Bxh7+ Kxh7 12. Qh5+ Kg8 13. g6 Rf7 14. Qh7+ Kf8 15. Qh8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nc3 d6 4. d4 Nbd7 5. Be3 c5 6. d5 a6 7. Bd3 b5 8. O-O Qc7 9. a4 c4 10. Be2 b4 11. Na2 Nxe4 12. Nxb4 f5 13. Nc6 c3 14. b4 f4 15. Bc1 Nef6 16. a5 Nb8 17. b5 axb5 18. Bxb5 Kf7 19. Nxb8 Rxb8 20. Bc6 Bd7 21. Bxd7 Qxd7 22. a6 h6 23. Ra3 Qc8 24. Re1 g5 25. Ra5 Qc7 26. Ra4 Qc8 27. Ba3 Ra8 28. Qd3 e4 29. Rexe4 Nxe4 30. Qxe4 Qd7 31. Ra5 Be7 32. Bb4 Bf6 33. h3 Rae8 34. Qc4 Rhg8 35. Qc6 Qxc6 36. dxc6 Ke6 37. Ra4 Ra8 38. Ne1 Rgc8 39. Nf3 Ra7 40. Ra1 Rxc6 41. Re1+ Kd7 42. g3 fxg3 43. fxg3 Raxa6 44. h4 g4 45. Nh2 Rc4 46. Bxd6 Kxd6 47. Rd1+ Kc5 48. h5 Re4 49. Rc1 Ra2 50. Nf1 Bd4+ 51. Kh1 Re5 52. Nh2 Rxh5 53. Kg2 Be3 54. Ra1 Rxc2+ 55. Kf1 Rhxh2 56. Ra5+ Kb4 57. Ra4+ Kxa4 58. Ke1 Rh1# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nc3 d6 4. d4 Nbd7 5. dxe5 dxe5 6. a3 Bd6 7. Be3 Ng4 8. Nd2 Nxe3 9. fxe3 O-O 10. Qg4 Qf6 11. Nc4 Nb6 12. Qg3 Nxc4 13. Bxc4 c6 14. Rf1 Qe7 15. O-O-O b5 16. Bb3 a5 17. a4 b4 18. Nb1 Ba6 19. Rf5 Rad8 20. Rg5 Qf6 21. Rf5 Qg6 22. Qxg6 hxg6 23. Rg5 Kh8 24. Rd2 Bb7 25. Rf2 Rd7 26. Rf3 Kh7 27. Rh3+ Kg8 28. Rxg6 Rfd8 29. c3 c5 30. Rg4 Be7 31. Rf3 Bf8 32. Nd2 bxc3 33. bxc3 Rb8 34. Bc4 Bc6 35. Rg5 Bxa4 36. Bd5 Ra7 37. Rgf5 Be8 38. Nc4 Rc8 39. Nxe5 Rcc7 40. Rg3 Bd6 41. Ng6 Bf4 42. exf4 Rc6 43. Rh5 Rxg6 44. Rxg6 Bb5 45. Rhg5 Kf8 46. Rxg7 a4 47. c4 Ba6 48. Rg8+ Ke7 49. Rf5 Rd7 50. Rxf7+ Kd6 51. Rf6+ Ke7 52. Rxa6 Rxd5 53. cxd5 Kf7 54. Rc8 Ke7 55. Ra7+ Kd6 56. Rc6# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. c3 Nc6 2. g3 d5 3. Nf3 e5 4. Qa4 Bd6 5. Na3 Ne7 6. Nb5 Ng6 7. Nxd6+ cxd6 8. Bg2 Qb6 9. d3 Bd7 10. O-O Nd4 11. Qd1 Ne6 12. e4 dxe4 13. dxe4 Qa6 14. Be3 Bb5 15. Re1 Ke7 16. Bh3 f6 17. Qb3 Bc4 18. Qb4 Nc7 19. a4 Qc6 20. Rad1 a5 21. Qa3 Ne8 22. Nd2 Bf7 23. Bf1 Nc7 24. Bg2 h6 25. f3 Nf8 26. f4 Nd7 27. Nf3 Ne8 28. Nh4 Nb6 29. Nf5+ Kd7 30. b3 Nc8 31. c4 Kc7 32. fxe5 fxe5 33. c5 dxc5 34. Rc1 b6 35. Bxc5 Qe6 36. Be3+ Kb7 37. Rc3 Rb8 38. Rec1 Qf6 39. b4 axb4 40. Qxb4 Qd8 41. Qb5 Ncd6 42. Qxe5 Nc4 43. Rxc4 Bxc4 44. Rxc4 Rc8 45. Rxc8 Qxc8 46. Nxg7 Qd7 47. Bxh6 Rxh6 48. Nxe8 Re6 49. Qg7 Re7 50. Nd6+ Qxd6 51. e5+ Kc8 52. exd6 Rxg7 53. Bc6 Kd8 54. d7 Rg6 55. Bb5 Ke7 56. Kg2 Rg8 57. h4 Kd6 58. Kh3 Ke5 59. h5 Kf5 60. g4+ Kf4 61. Bd3 Kg5 62. Kg3 Rf8 63. Bf5 Kf6 64. h6 Kg5 65. h7 Kf6 66. Kf4 Ra8 67. g5+ Ke7 68. Kg3 Kf7 69. Kf3 Kg7 70. g6 Kf6 71. Bd3 Rd8 72. Bb1 Kg7 73. Bf5 Ra8 74. Ke2 Kf6 75. Kf3 Rb8 76. Kg4 Ra8 77. Kf4 Rd8 78. Ke4 Rh8 79. Kd5 Kxf5 80. g7 Rxh7 81. d8=Q Rxg7 82. Qxb6 Rg2 83. a5 Rg4 84. Qe6+ Kg5 85. a6 Ra4 86. Qe3+ Kg4 87. a7 Ra2 88. Kc4 Ra4+ 89. Kb3 Rxa7 90. Qxa7 Kf3 91. Qd4 Kg3 92. Kc4 Kf3 93. Qb6 Kf4 94. Kd5 Kf3 95. Qb1 Ke3 96. Qe4+ Kf2 97. Kc6 Kg3 98. Qa4 Kf3 99. Kd5 Ke3 100. Qe4+ Kf2 101. Qd3 Kg2 102. Qe2+ Kh3 103. Qf3+ Kh4 104. Qf4+ Kh3 105. Kc4 Kg2 106. Qg4+ Kf1 107. Kd3 Kf2 108. Kd2 Kf1 109. Ke3 Ke1 110. Qg1# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. c3 Nc6 2. g3 d5 3. Nf3 e5 4. Qa4 Bd6 5. Bg2 Nf6 6. d3 O-O 7. Bg5 Be6 8. Nfd2 h6 9. Bxf6 Qxf6 10. O-O Rab8 11. c4 d4 12. Bxc6 bxc6 13. Qxc6 Rxb2 14. c5 Rc2 15. Qa4 Rxc5 16. Ne4 Qe7 17. Nxc5 Bxc5 18. Rc1 f6 19. Qa6 Bf7 20. a4 Rb8 21. Nd2 Qd6 22. Qa5 Bb6 23. Qb5 a5 24. Nc4 Qb4 25. Rcb1 Qxb5 26. Rxb5 Bxc4 27. dxc4 c6 28. Rb2 Ba7 29. Rxb8+ Bxb8 30. Rb1 Bd6 31. Rb6 Bb4 32. Rxc6 e4 33. Rc8+ Kf7 34. Rc7+ Kf8 35. c5 e3 36. fxe3 dxe3 37. c6 Bd6 38. Rd7 Be5 39. c7 Bxc7 40. Rxc7 g5 41. Ra7 h5 42. Rxa5 h4 43. gxh4 Ke7 44. Rb5 Kd7 45. a5 Kc6 46. Rb1 Kd6 47. a6 f5 48. a7 gxh4 49. a8=Q Ke6 50. Qc6+ Ke5 51. Rb5+ Kf4 52. Qf6 h3 53. Qxf5# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. g3 e5 2. c4 Nf6 3. Bg2 Nc6 4. Nc3 Bb4 5. Nf3 a6 6. Nd5 Bd6 7. d3 Nxd5 8. cxd5 Ne7 9. O-O Nxd5 10. Nxe5 Bxe5 11. Bxd5 c6 12. d4 Bb8 13. Bf3 d5 14. e4 dxe4 15. Bxe4 Be6 16. Qd3 Ba7 17. Rd1 Qd7 18. Be3 Bd5 19. f3 h6 20. Bf5 Be6 21. Bxe6 Qxe6 22. Bf2 O-O-O 23. Re1 Qd6 24. Re4 f5 25. Rf4 g6 26. Re1 Rhf8 27. Rh4 g5 28. Rh5 Qf6 29. Qc3 Rd5 30. Re5 Rfd8 31. Rxd5 Rxd5 32. Qd2 Qg6 33. Rh3 Bxd4 34. Bxd4 Qd6 35. Rxh6 Qxh6 36. Qe3 Qd6 37. Qe8+ Kc7 38. Qf7+ Qd7 39. Qxd7+ Kxd7 40. Be3 g4 41. fxg4 fxg4 42. Kg2 Rd3 43. Kf2 Rd1 44. Bh6 Ke6 45. Bg7 Kf5 46. Bc3 Rc1 47. a4 Ke4 48. a5 Rc2+ 49. Kf1 Rxh2 50. Ke1 Rg2 51. Bd2 Kf3 52. Bf4 Rxg3 53. Bd6 Rg1+ 54. Kd2 g3 55. Bc7 Rh1 56. b4 g2 57. Bb6 g1=Q 58. Bxg1 Rxg1 59. Kc3 Rg4 60. Kb3 Ke2 61. Ka3 Kd2 62. Kb3 Rd4 63. Ka3 Kc2 64. Ka2 Rxb4 65. Ka3 c5 66. Ka2 Ra4# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. g3 e5 2. c4 Nf6 3. Bg2 Nc6 4. Nc3 Bb4 5. a3 Bc5 6. Ra2 d6 7. e3 O-O 8. b4 Bb6 9. Rc2 Be6 10. d3 a6 11. Qe2 d5 12. cxd5 Nxd5 13. Nb1 a5 14. b5 Na7 15. Bb2 f6 16. a4 Qd6 17. Ba3 Nb4 18. Rc3 Rfd8 19. Bxb7 Rab8 20. Be4 f5 21. Bg2 Nxd3+ 22. Kd2 Qxa3 23. Nxa3 Nf4+ 24. Ke1 Nxe2 25. Kxe2 e4 26. Nh3 Bf7 27. g4 Rd3 28. Nb1 Rxc3 29. Nxc3 g6 30. gxf5 gxf5 31. Kd2 c6 32. bxc6 Nxc6 33. Rg1 Kh8 34. Rb1 Nb4 35. Nf4 Bc4 36. Rc1 Rd8+ 37. Ke1 Nd3+ 38. Nxd3 exd3 39. Kd2 Bc5 40. Na2 Bxe3+ 41. fxe3 Bxa2 42. Rc5 Rb8 43. Kxd3 Rb2 44. Bh3 Bb1+ 45. Kd4 Rb4+ 46. Rc4 Rb2 47. Rc5 Rd2+ 48. Ke5 Rxh2 49. Kf6 Rc2 50. Rb5 Rc6+ 51. Ke5 Bd3 52. Rxa5 Rc3 53. Bxf5 Bxf5 54. Kxf5 Rxe3 55. Ra8+ Kg7 56. Ra7+ Kg8 57. Kf6 Rf3+ 58. Ke5 h5 59. Ke4 Rf8 60. Ra5 h4 61. Rg5+ Kf7 62. Rf5+ Ke7 63. Rxf8 Kxf8 64. a5 Ke7 65. a6 h3 66. Kf3 h2 67. Kg2 Kd7 68. a7 Kc6 69. a8=Q+ Kb6 70. Qd5 h1=N 71. Kxh1 Ka6 72. Kg2 Kb6 73. Qd7 Ka6 74. Kf3 Kb6 75. Ke4 Ka5 76. Qb7 Ka4 77. Kd3 Ka3 78. Kc3 Ka2 79. Qb2# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 g6 2. d4 d6 3. Nc3 c6 4. a4 Bg7 5. Nf3 Qa5 6. Bc4 c5 7. O-O Nd7 8. Be3 a6 9. Re1 Nb6 10. Bb3 Nd7 11. Nd5 e6 12. Bd2 Qd8 13. Bf4 e5 14. Bg5 f6 15. dxe5 dxe5 16. Be3 Ne7 17. Qd3 Rb8 18. Qc4 Nxd5 19. exd5 b5 20. axb5 axb5 21. Qe2 c4 22. Ba2 Nb6 23. Bxb6 Qxb6 24. b3 cxb3 25. Bxb3 h6 26. Qe4 Bf5 27. Qb4 Bf8 28. Qd2 Kf7 29. Nh4 Bc5 30. Nxf5 gxf5 31. Qe2 Kg6 32. Qf3 h5 33. Qg3+ Kh6 34. c3 f4 35. Qf3 b4 36. c4 Rhg8 37. Qe2 Rg5 38. Qf1 f3 39. g3 h4 40. Kh1 Bxf2 41. gxh4 Rg1+ 42. Qxg1 Bxg1 43. Rxg1 f2 44. Rg2 Qe3 45. Rf1 Qxb3 46. Rgxf2 Qxc4 47. Rxf6+ Kh5 48. d6 Qe4+ 49. R1f3 b3 50. Kg1 b2 51. R3f5+ Kxh4 52. Rh6+ Kg4 53. Rf1 b1=Q 54. Rh3 Kxh3 55. d7 Qg2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 g6 2. d4 d6 3. Nc3 c6 4. a4 Bg7 5. a5 f5 6. exf5 Bxf5 7. Bd3 Bxd4 8. Bxf5 Bxc3+ 9. bxc3 gxf5 10. Qh5+ Kd7 11. Qxf5+ Kc7 12. Nf3 Qc8 13. Qxc8+ Kxc8 14. O-O Nd7 15. Re1 a6 16. Ng5 Ngf6 17. Rxe7 Nd5 18. Re6 Ne5 19. Rxd6 Nc4 20. Rh6 Re8 21. Kf1 Nxc3 22. Rxh7 Nd5 23. Ne4 Ra7 24. Nd2 Nxd2+ 25. Bxd2 Kb8 26. c4 Nf6 27. Rf7 Ng8 28. Bf4+ Ka8 29. Re1 Rc8 30. Rc7 Rf8 31. Bd6 Rd8 32. Bc5 Kb8 33. Bb6 Ka8 34. Rg7 Rf8 35. Re6 Kb8 36. Reg6 Nf6 37. Rxf6 Rh8 38. Rh6 Rc8 39. Rhg6 Ra8 40. Rg8 c5 41. R6g7 Ra7 42. Bc7+ Ka8 43. Rxc8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. g3 d5 2. Bg2 Nf6 3. Nf3 c6 4. d3 Bg4 5. Bf4 Qb6 6. Qc1 Bxf3 7. Bxf3 e6 8. g4 c5 9. e4 dxe4 10. dxe4 Nc6 11. g5 Nd7 12. Nd2 Be7 13. O-O e5 14. Be3 Nd8 15. Rd1 Qg6 16. Nc4 Qe6 17. Rd5 Nb6 18. Nxb6 axb6 19. Qd1 g6 20. Bg4 f5 21. Bh3 Nc6 22. c3 O-O 23. Qb3 Bd8 24. Rad1 Bc7 25. Rd7 Qxb3 26. axb3 Rac8 27. exf5 gxf5 28. f3 Nb8 29. R7d5 Nc6 30. R5d2 Rf7 31. Bf1 Kg7 32. Bc4 Re7 33. Rd7 Rd8 34. Rxd8 Nxd8 35. b4 cxb4 36. cxb4 Kg6 37. Bd3 Nc6 38. b5 Nd4 39. Kg2 Bd6 40. f4 Bc5 41. fxe5 Rxe5 42. Bf4 Re7 43. Rf1 Bb4 44. h3 Be1 45. Kh1 Bh4 46. Rg1 Rd7 47. Rg4 Bf2 48. Kg2 Ne6 49. Bc2 Bc5 50. Kh1 Rd5 51. Bc1 Re5 52. Rc4 Re1+ 53. Kh2 Nd4 54. Bd3 Nf3+ 55. Kg2 Ne5 56. Bxf5+ Kxf5 57. Rf4+ Ke6 58. Rf6+ Kd5 59. Rf1 Rxf1 60. Kxf1 Nd3 61. Bd2 Nxb2 62. Bf4 Ke4 63. Bh2 Nc4 64. h4 Kf5 65. Bc7 Na3 66. Bd8 Kg4 67. Bf6 Nxb5 68. Ke2 Nd4+ 69. Bxd4 Bxd4 70. Kd3 Bf2 71. h5 Kxh5 72. g6 Kxg6 73. Ke4 Kg5 74. Kf3 Bc5 75. Ke4 h5 76. Kf3 h4 77. Kg2 Kg4 78. Kh1 h3 79. Kh2 b5 80. Kh1 b4 81. Kh2 b3 82. Kh1 Ba7 83. Kh2 b2 84. Kh1 b1=R+ 85. Kh2 Bb8# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. g3 d5 2. Bg2 Nf6 3. Nf3 c6 4. d3 Bg4 5. c3 e6 6. Qb3 b5 7. a4 Nbd7 8. axb5 Nc5 9. Qa2 cxb5 10. Nd4 Qb6 11. b4 Nb7 12. Qa6 Qxa6 13. Rxa6 Bd6 14. Nxb5 Bb8 15. c4 O-O 16. h3 Bf5 17. g4 Bg6 18. N1c3 Rc8 19. g5 Ne8 20. cxd5 Nc7 21. Nxc7 Rxc7 22. Bd2 exd5 23. Nxd5 Rd7 24. Nb6 Re7 25. Kd1 Bh5 26. Be3 Bf4 27. Nxa8 Bxe3 28. fxe3 Nd8 29. Kd2 Ne6 30. Ra5 Bg6 31. Rha1 Bh5 32. Rxa7 Rxa7 33. Rxa7 g6 34. h4 Nd8 35. b5 Ne6 36. b6 Nf8 37. Bd5 Bg4 38. Rxf7 Be6 39. Rxf8+ Kxf8 40. Bxe6 Ke7 41. Bb3 h6 42. b7 hxg5 43. b8=Q Kd7 44. Qe5 Kd8 45. Qd6+ Ke8 46. Nc7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "1/2-1/2"]
+[Termination "threefold_repetition"]
+
+1. a3 d5 2. Nf3 b6 3. d4 e6 4. Rg1 Bd6 5. Nc3 c6 6. e4 dxe4 7. Nxe4 Be7 8. Bg5 f5 9. Bxe7 Nxe7 10. Neg5 h6 11. Nh3 g5 12. Bc4 g4 13. Ne5 b5 14. Ba2 c5 15. Nf4 Qd6 16. Ne2 c4 17. a4 Nd7 18. axb5 Nxe5 19. dxe5 Qb4+ 20. c3 Qxb5 21. Qd6 Qxb2 22. Rd1 Kf7 23. Bxc4 Rb8 24. h3 h5 25. Rh1 Rb6 26. Qd3 gxh3 27. Rxh3 Qa3 28. Nf4 h4 29. Kf1 Qa5 30. Re1 Rc6 31. Bb5 Rb6 32. Bc4 Rc6 33. Bb5 Rb6 1/2-1/2
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. a3 d5 2. Nf3 b6 3. d4 e6 4. Rg1 Bd6 5. b3 Nf6 6. Bg5 c5 7. Rh1 cxd4 8. Qxd4 Nbd7 9. Qc3 Bb7 10. Bxf6 Nxf6 11. Ra2 O-O 12. Qb2 Qe7 13. h4 e5 14. e3 d4 15. exd4 Bxf3 16. gxf3 exd4+ 17. Kd1 Qe5 18. c4 Bc5 19. Qd2 Qh5 20. Qd3 Nd7 21. Qe4 Ne5 22. Nd2 Rae8 23. b4 Be7 24. Bd3 Bf6 25. Qf5 Qh6 26. Be4 Ng6 27. Qd7 Re7 28. Qg4 Nxh4 29. Bd5 Qg6 30. Rxh4 Bxh4 31. Qxh4 Rfe8 32. Ne4 Qg1+ 33. Kc2 Qf1 34. Rb2 d3+ 35. Kb3 Qe1 36. Qg5 Kh8 37. Nd6 Qd1+ 38. Ka2 f6 39. Qf5 Rd8 40. Be4 Qh1 41. Qd5 Red7 42. Nf7+ Kg8 43. Nxd8+ Rxd5 44. cxd5 Qd1 45. d6 d2 46. Bd5+ Kh8 47. Be6 Qe1 48. d7 d1=R 49. Nf7+ Kg8 50. d8=Q+ Rxd8 51. Nxd8+ Kf8 52. Bb3 g5 53. Ne6+ Ke8 54. f4 g4 55. Nd4 Kf8 56. Rc2 Qe4 57. Rc8+ Kg7 58. Rc7+ Kh8 59. Ne6 Qa8 60. Rd7 g3 61. Bd5 Qe8 62. Rd8 Qxd8 63. Nxd8 gxf2 64. Bc4 h5 65. b5 Kg7 66. Nc6 Kg6 67. Bd3+ f5 68. Nxa7 h4 69. Bf1 Kh5 70. Bh3 f1=Q 71. Bxf1 Kg4 72. Nc8 h3 73. Nxb6 Kg3 74. Bxh3 Kf3 75. Nd5 Ke2 76. b6 Kd3 77. b7 Kd4 78. Bxf5 Kc5 79. b8=Q Kd4 80. Qd6 Kc4 81. Nc7 Kc3 82. Qd3# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. d4 d6 2. e4 Nf6 3. Nc3 Nbd7 4. f4 c5 5. d5 Qa5 6. Qd3 Nb8 7. Be3 Bg4 8. Nf3 Na6 9. O-O-O O-O-O 10. Kb1 g6 11. Be2 Bxf3 12. Bxf3 Nc7 13. e5 Nd7 14. exd6 exd6 15. Ne4 Be7 16. Rde1 Qa6 17. Qxa6 bxa6 18. Bd2 Nb6 19. Nc3 Bf6 20. b3 Bd4 21. h4 Rhg8 22. Rd1 Kd7 23. a4 Rb8 24. h5 Bxc3 25. Bxc3 Nxa4 26. Bf6 Ne8 27. Bg4+ Kc7 28. Ba1 g5 29. Rhf1 Rb4 30. fxg5 Rxg4 31. Rxf7+ Kb6 32. bxa4 R8xg5 33. Re7 Rb4+ 34. Kc1 Rxa4 35. Bb2 Nc7 36. Rxh7 Rxg2 37. h6 Rh2 38. Rh8 Kb7 39. h7 Rc4 40. c3 Rh3 41. Rf1 Rch4 42. Rff8 Kb6 43. Rf6 Ka5 44. Kb1 Rh1+ 45. Bc1 Nb5 46. Rf3 Ka4 47. Rb8 Kb3 48. Rf6 R4h2 49. Rf2 Rxf2 50. Rxb5+ axb5 51. c4 Rb2+ 52. Ka1 Rxc1# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. d4 d6 2. e4 Nf6 3. Nc3 Nbd7 4. f4 c5 5. Bb5 cxd4 6. Qxd4 a6 7. Bxd7+ Bxd7 8. Nf3 Bc6 9. O-O e6 10. h3 Be7 11. Be3 O-O 12. e5 Nd5 13. Nxd5 Bxd5 14. Rf2 dxe5 15. Nxe5 f6 16. Nd3 Rc8 17. b3 Bc6 18. Rc1 Qd6 19. Re1 Qa3 20. Bc1 Qxa2 21. Rxe6 Bd8 22. Ree2 Qa5 23. Be3 Re8 24. Qc4+ Qd5 25. Qxd5+ Bxd5 26. Kh2 Bc7 27. g3 Rcd8 28. Ne1 Ba5 29. Ng2 b6 30. Bc1 b5 31. Be3 Be4 32. Bc5 Rc8 33. b4 Bc7 34. Re3 a5 35. c3 a4 36. Rfe2 Bc6 37. Rxe8+ Bxe8 38. Ne3 Rd8 39. Nc2 h5 40. Nd4 h4 41. Ne6 hxg3+ 42. Kxg3 Rd3+ 43. Re3 Rxe3+ 44. Bxe3 Bd6 45. Kf3 Bc6+ 46. Kg3 a3 47. Nd4 a2 48. Nb3 Bd5 49. Na1 Bb7 50. Bc5 Bc7 51. h4 Bh1 52. Kg4 Kh8 53. Be3 Bd6 54. Bc1 Bc6 55. Bb2 Bd7+ 56. Kf3 Bf5 57. Nb3 g6 58. Nd4 Bd7 59. Ke4 f5+ 60. Kd5 Bxf4 61. c4 Kg8 62. cxb5 Bg3 63. b6 Bxh4 64. Kd6 Be8 65. Ne2 Bf2 66. Kc7 Bb5 67. b7 Ba7 68. Nc3 Bc4 69. b5 f4 70. b6 Bb8+ 71. Kxb8 Ba6 72. Kc7 Bxb7 73. Kxb7 f3 74. Nd5 g5 75. Kc7 Kf7 76. b7 f2 77. Ne3 g4 78. b8=Q g3 79. Qb3+ Kg6 80. Qe6+ Kg5 81. Qf5+ Kh4 82. Qg4# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Bc4 c6 3. Qh5 Qe7 4. Qh3 Nf6 5. Bd3 b6 6. Nf3 Kd8 7. Qg3 d6 8. Nc3 Nbd7 9. Be2 Nc5 10. d3 Ng8 11. O-O Bd7 12. Be3 g6 13. d4 exd4 14. Bxd4 f6 15. Bxc5 bxc5 16. Rfd1 Rb8 17. Rab1 Ke8 18. Nd2 Rd8 19. Nc4 Bc8 20. b3 Qc7 21. Rd2 Nh6 22. Qf4 Ke7 23. Nd1 Nf7 24. Nde3 Bh6 25. Qg3 f5 26. exf5 gxf5 27. Bh5 f4 28. Qf3 Ng5 29. Qe2 fxe3 30. Qxe3+ Kf8 31. Qg3 Rg8 32. Qc3 Bg7 33. Qe3 Bf6 34. Rbd1 d5 35. Qxc5+ Be7 36. Qa5 Qf4 37. Qxa7 Qh4 38. Be2 Nh3+ 39. Kf1 Nf4 40. Ne3 Rxg2 41. Bd3 Rxh2 42. Qxe7+ Kxe7 43. Ke1 Rh1+ 44. Bf1 Rxf1+ 45. Nxf1 Ng2+ 46. Ke2 Qe4+ 47. Ne3 Bg4+ 48. Kf1 Nxe3+ 49. fxe3 Qh1+ 50. Kf2 Rf8+ 51. Kg3 Qh3# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Bc4 c6 3. Qh5 Qe7 4. Qh3 Nf6 5. Bd3 Na6 6. Bxa6 bxa6 7. Qd3 Qe6 8. Nf3 d5 9. exd5 cxd5 10. Qe2 e4 11. Nd4 Qb6 12. Nb3 Bb4 13. a3 Bd6 14. Nc3 O-O 15. d4 h6 16. Bd2 a5 17. Na4 Qb8 18. Bxa5 Bg4 19. Qf1 Bxh2 20. g3 Bxg3 21. fxg3 Qxg3+ 22. Qf2 Qxf2+ 23. Kxf2 Bf3 24. Rhc1 Rab8 25. Bb4 Rfe8 26. Bc5 h5 27. Bd6 Rbc8 28. Bf4 h4 29. Nc3 h3 30. Nb5 Re7 31. Nd6 Rd8 32. Nc5 Bg4 33. Kg3 Be6 34. Ndb7 Rxb7 35. Nxb7 Rd7 36. Nc5 Nh5+ 37. Kf2 Nxf4 38. Nxd7 Bxd7 39. b3 g5 40. Rcb1 Be6 41. Ra2 g4 42. c3 Nd3+ 43. Kg3 f5 44. Rf1 f4+ 45. Rxf4 Nxf4 46. Kxf4 Kf7 47. Rf2 Ke7 48. Rc2 a6 49. c4 Kd6 50. c5+ Kc6 51. b4 Bd7 52. a4 Kb7 53. Rf2 Kc7 54. Kg3 Kb7 55. Rf7 Kc8 56. b5 axb5 57. axb5 Bxb5 58. Kxg4 e3 59. Kxh3 Kd8 60. Kg2 Ke8 61. Rf5 e2 62. Re5+ Kd7 63. Rxd5+ Kc6 64. Rd6+ Kb7 65. Rb6+ Kc7 66. Kf2 Bc4 67. Ke1 Bd3 68. d5 Kd7 69. Rb7+ Kc8 70. c6 Be4 71. d6 Bxc6 72. Rc7+ Kd8 73. Rxc6 Kd7 74. Ra6 Kc8 75. Ra7 Kd8 76. Kxe2 Kc8 77. Kd3 Kd8 78. d7 Ke7 79. Rb7 Kd8 80. Kc4 Ke7 81. Kc5 Kd8 82. Kc6 Ke7 83. Rb5 Kf7 84. d8=Q Kg7 85. Qd6 Kh8 86. Rb7 Kg8 87. Qd8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "manguruyu-club-10"]
+[Black "simpleeval"]
+[Result "1/2-1/2"]
+[Termination "threefold_repetition"]
+
+1. d4 e6 2. Nf3 Nf6 3. Bg5 h6 4. Bxf6 Qxf6 5. e3 h5 6. Be2 c6 7. O-O g6 8. Bd3 d6 9. c4 Bg7 10. Nc3 Qe7 11. Ne4 f5 12. Nc3 Bf6 13. e4 Qg7 14. Re1 O-O 15. exf5 exf5 16. Bf1 g5 17. c5 g4 18. Nd2 Bxd4 19. cxd6 Kh8 20. Rc1 Qf6 21. Nc4 b5 22. Ne3 Bb7 23. Qd2 Na6 24. a4 Nc5 25. Rcd1 Bxc3 26. Qxc3 Qxc3 27. bxc3 Nxa4 28. c4 Rad8 29. Rd2 a6 30. Nc2 Nc5 31. Rdd1 Ne4 32. d7 Kg7 33. Nd4 Kf6 34. Nxf5 Kxf5 35. Bd3 c5 36. f3 gxf3 37. gxf3 Kf4 38. Bxe4 Bxe4 39. fxe4 Rg8+ 40. Kh1 bxc4 41. Rd5 Kf3 42. Rxc5 Kf2 43. Rd1 Rg7 44. Rc7 Rdg8 45. h4 Ke2 46. Ra1 Rg4 47. Ra2+ Kf1 48. Ra1+ Ke2 49. Ra2+ Kf1 50. Ra1+ 1/2-1/2
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "simpleeval"]
+[Black "manguruyu-club-10"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. d4 e6 2. Nf3 Nf6 3. Bg5 h6 4. Bxf6 Qxf6 5. Qd2 Nc6 6. Nc3 d5 7. h4 Be7 8. a3 O-O 9. h5 Qf5 10. e3 Qg4 11. b3 b6 12. Qd3 Nd8 13. Ne5 Qg5 14. f4 Qg3+ 15. Ke2 Bh4 16. Kd2 Bf6 17. Ne2 Qf2 18. Ng4 Qh4 19. Rxh4 Bxh4 20. Qc3 c6 21. Ne5 Ba6 22. a4 Bb7 23. a5 Rc8 24. axb6 axb6 25. Nd7 Re8 26. Nxb6 Rb8 27. Nd7 Ra8 28. Rxa8 Bxa8 29. Qa5 Nb7 30. Qc7 Be7 31. Nb6 Nd6 32. Nxa8 Ne4+ 33. Kd1 Rxa8 34. Qxe7 Ra1+ 35. Nc1 Nc3+ 36. Kd2 Ne4+ 37. Kd3 Rxc1 38. Qe8+ Kh7 39. Be2 Nf2+ 40. Kd2 Rg1 41. Bf3 Ne4+ 42. Kd3 c5 43. Qxf7 cxd4 44. Qg6+ Kh8 45. Bxe4 dxe4+ 46. Kxd4 Rd1+ 47. Kxe4 Rc1 48. Qe8+ Kh7 49. Ke5 Re1 50. Qg6+ Kg8 51. Qxe6+ Kh7 52. Qf5+ Kh8 53. Qc8+ Kh7 54. Ke6 Ra1 55. Qb7 Ra2 56. Kf7 Ra5 57. Qe4+ Rf5+ 58. Qxf5+ g6 59. Qxg6+ Kh8 60. Qxh6# 1-0
+

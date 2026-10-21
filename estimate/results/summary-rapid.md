@@ -6,28 +6,31 @@ holds the other candidates at their estimates.
 
 | Candidate | Games | Score | Estimate | 95% interval | Left out: crashed |
 |---|---|---|---|---|---|
-| stockfish-19 | 180 | 146 | 2934 | 2848 to 3020 | 0 |
-| stockfish-19-1mb | 180 | 137.5 | 2862 | 2774 to 2948 | 0 |
-| stockfish-19-1mb-depth-4 | 180 | 66.5 | 1956 | 1863 to 2057 | 0 |
-| stockfish-15-classical | 180 | 104 | 2498 | 2363 to 2621 | 0 |
-| stockfish-15-classical-depth-4 | 180 | 53.5 | 1838 | 1753 to 1926 | 0 |
+| stockfish-19 | 220 | 186 | 2952 | 2869 to 3036 | 0 |
+| stockfish-19-1mb | 220 | 177.5 | 2885 | 2801 to 2967 | 0 |
+| stockfish-19-1mb-depth-4 | 220 | 76 | 1935 | 1860 to 2013 | 0 |
+| stockfish-15-classical | 220 | 143.5 | 2572 | 2468 to 2672 | 0 |
+| stockfish-15-classical-depth-4 | 220 | 57.5 | 1810 | 1736 to 1884 | 0 |
+| manguruyu-club-10 | 220 | 88 | 2022 | 1943 to 2104 | 0 |
 
 ## Cross table
 
 Each cell is the row player's score against the column player, and the games played.
 
-| | Rating | alexandrya | little-0 | stockfish-19 | stockfish-19-1mb | stockfish-15-classical | stockfish-19-1mb-depth-4 | stockfish-15-classical-depth-4 | maia9 | maia5 | maia1 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| alexandrya | 3014 |  | 42% of 20 | 50% of 20 | 70% of 20 | 98% of 20 | 100% of 20 | 100% of 20 |  |  |  |
-| little-0 | 3008 | 58% of 20 |  | 65% of 20 | 78% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |  |  |  |
-| stockfish-19 | 2934 (fitted) | 50% of 20 | 35% of 20 |  | 55% of 20 | 90% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |
-| stockfish-19-1mb | 2862 (fitted) | 30% of 20 | 22% of 20 | 45% of 20 |  | 90% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |
-| stockfish-15-classical | 2498 (fitted) | 2% of 20 | 0% of 20 | 10% of 20 | 10% of 20 |  | 100% of 20 | 100% of 20 | 100% of 20 | 98% of 20 | 100% of 20 |
-| stockfish-19-1mb-depth-4 | 1956 (fitted) | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 |  | 72% of 20 | 85% of 20 | 88% of 20 | 88% of 20 |
-| stockfish-15-classical-depth-4 | 1838 (fitted) | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 28% of 20 |  | 60% of 20 | 85% of 20 | 95% of 20 |
-| maia9 | 1678 |  |  | 0% of 20 | 0% of 20 | 0% of 20 | 15% of 20 | 40% of 20 |  |  |  |
-| maia5 | 1627 |  |  | 0% of 20 | 0% of 20 | 2% of 20 | 12% of 20 | 15% of 20 |  |  |  |
-| maia1 | 1568 |  |  | 0% of 20 | 0% of 20 | 0% of 20 | 12% of 20 | 5% of 20 |  |  |  |
+| | Rating | alexandrya | little-0 | stockfish-19 | stockfish-19-1mb | stockfish-15-classical | simpleeval | manguruyu-club-10 | stockfish-19-1mb-depth-4 | stockfish-15-classical-depth-4 | maia9 | maia5 | maia1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| alexandrya | 3014 |  | 42% of 20 | 50% of 20 | 70% of 20 | 98% of 20 | 98% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |  |  |  |
+| little-0 | 3008 | 58% of 20 |  | 65% of 20 | 78% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |  |  |  |
+| stockfish-19 | 2952 (fitted) | 50% of 20 | 35% of 20 |  | 55% of 20 | 90% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |
+| stockfish-19-1mb | 2885 (fitted) | 30% of 20 | 22% of 20 | 45% of 20 |  | 90% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 |
+| stockfish-15-classical | 2572 (fitted) | 2% of 20 | 0% of 20 | 10% of 20 | 10% of 20 |  | 98% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 100% of 20 | 98% of 20 | 100% of 20 |
+| simpleeval | 2234 | 2% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 2% of 20 |  | 90% of 20 | 85% of 20 | 100% of 20 | 100% of 20 | 98% of 20 | 100% of 20 |
+| manguruyu-club-10 | 2022 (fitted) | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 10% of 20 |  | 68% of 20 | 80% of 20 | 90% of 20 | 95% of 20 | 98% of 20 |
+| stockfish-19-1mb-depth-4 | 1935 (fitted) | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 15% of 20 | 32% of 20 |  | 72% of 20 | 85% of 20 | 88% of 20 | 88% of 20 |
+| stockfish-15-classical-depth-4 | 1810 (fitted) | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 20% of 20 | 28% of 20 |  | 60% of 20 | 85% of 20 | 95% of 20 |
+| maia9 | 1678 |  |  | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 10% of 20 | 15% of 20 | 40% of 20 |  |  |  |
+| maia5 | 1627 |  |  | 0% of 20 | 0% of 20 | 2% of 20 | 2% of 20 | 5% of 20 | 12% of 20 | 15% of 20 |  |  |  |
+| maia1 | 1568 |  |  | 0% of 20 | 0% of 20 | 0% of 20 | 0% of 20 | 2% of 20 | 12% of 20 | 5% of 20 |  |  |  |
 
 ## Anchors against each other
 
@@ -36,7 +39,12 @@ A check on the anchors: the score their Lichess ratings predict, and the one pla
 | Pair | Games | Expected score | Played score |
 |---|---|---|---|
 | alexandrya vs little-0 | 20 | 51% for alexandrya | 42% for alexandrya |
+| alexandrya vs simpleeval | 20 | 99% for alexandrya | 98% for alexandrya |
+| little-0 vs simpleeval | 20 | 99% for little-0 | 100% for little-0 |
+| maia1 vs simpleeval | 20 | 2% for maia1 | 0% for maia1 |
+| maia5 vs simpleeval | 20 | 3% for maia5 | 2% for maia5 |
+| maia9 vs simpleeval | 20 | 4% for maia9 | 0% for maia9 |
 
 ## Games left out
 
-No engine crashed or hung in the 720 games.
+No engine crashed or hung in the 1140 games.
