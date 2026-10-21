@@ -18,17 +18,15 @@ per game. Each file is named `<UTC date>_<game id>.pgn`. The date is the day the
 
 ## The bots
 
-`bots.txt` lists the bots whose games the folder holds, one bot id per line. A `#` starts a note:
-the bot's estimated human games, its blitz and rapid ratings, and its engine. The notes come from
-`tools/published_bots/bots.csv`.
+`bots.toml` lists the bots, and the games to hold of each: 100, or 300 for the Maia bots.
 
-| Bots | Games per bot | Command |
-|---|---|---|
-| `bots.txt` | 100 | `tools/lichess_games/download_games.sh --bots-file tools/lichess_games/bots.txt` |
-| `maia1`, `maia5`, `maia9` | 300 | `engines/maia/download_games.sh` |
-| The morlock bots | 100 | `engines/morlock/download_games.sh` |
+| Bots | Command |
+|---|---|
+| Every bot in `bots.toml` | `tools/lichess_games/download_games.sh --all` |
+| The bots one replay checks | `tools/lichess_games/download_games.sh --replay maia`, or `engines/<replay>/download_games.sh` |
+| Any bots | `tools/lichess_games/download_games.sh --bots lynx_bot eubos` |
 
-`bots.txt` holds the morlock bots too, with the same 100 games.
+`--count` gives every selected bot that many games instead. A bot outside `bots.toml` gets 100.
 
 ## The token
 
@@ -46,8 +44,8 @@ folder first when the selection changes.
 
 ## Tests
 
-The tests cover the pure functions: filtering, selection, file names and reading `bots.txt`.
+The tests cover the pure functions: filtering, selection, file names and picking the bots.
 
 ```sh
-uv run --with pytest pytest tools/lichess_games -q
+uv run --with pytest --with chess==1.11.2 pytest tools/lichess_games -q
 ```

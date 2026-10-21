@@ -1,0 +1,39 @@
+# Checks bots.toml and runs the Python tests: the registry, the image generator, the downloads and
+# the replays' pure functions. The agreement replay's test also runs a whole replay against fake
+# engines. No engine or network is needed beyond installing pytest and python-chess.
+name: tests
+
+on:
+  pull_request:
+    paths:
+      - "**.py"
+      - bots.toml
+      - .github/workflows/tests.yml
+  push:
+    branches: [main]
+    paths:
+      - "**.py"
+      - bots.toml
+      - .github/workflows/tests.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: python3 lib/botelo/registry.py check
+      - run: |
+          python3 -m venv "${RUNNER_TEMP}/venv"
+          "${RUNNER_TEMP}/venv/bin/pip" install --quiet pytest==8.4.2 chess==1.11.2
+          "${RUNNER_TEMP}/venv/bin/pytest" -q

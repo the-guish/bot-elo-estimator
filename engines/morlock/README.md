@@ -11,7 +11,8 @@ TUROCHAMP and Bernstein. Replaying them checks that our engines play the same mo
 
 ## The games
 
-Each bot has 100 games, in `data/games/lichess/<bot>`. They cover 2026-10-15 to 2026-10-19.
+Each bot has 100 games, in `data/games/lichess/<bot>`. They cover 2026-10-15 to 2026-10-19. The
+bots are those `bots.toml` gives `replay = "morlock"`; each bot's `depth` is its search depth.
 `tools/lichess_games/README.md` describes the selection, and the token the download needs. The
 opponents are humans and bots. The check compares moves, so any opponent serves.
 
@@ -26,8 +27,8 @@ engines/morlock/download_games.sh
 engines/morlock/replay_morlock.sh
 ```
 
-The engines run in the `bot-elo-estimator-extra` image. `--engine` names another command, with
-`{bot}` for the bot's name. `--bots` and `--limit` shorten a run. `--jobs` replays that many games
+The engines run in the `bot-elo-estimator-extra` image. The options are the ones every replay takes,
+listed in the main README: `--bots` and `--limit` shorten a run, `--jobs` replays that many games
 at once, one per CPU by default.
 
 The replay writes `replay/<bot>.ndjson`, one record per bot move, and `replay/summary.md`. Git

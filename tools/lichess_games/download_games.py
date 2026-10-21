@@ -11,12 +11,14 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "lib"))
+from botelo import registry  # noqa: E402
+
 API = "https://lichess.org/api/games/user/{user}"
-COUNT = 100
 UNTIL = "2026-10-20T00:00:00Z"
 SPEEDS = ("blitz", "rapid", "classical")
 MAX_FETCH = 5000
-OUT_DIR = Path(__file__).resolve().parents[2] / "data" / "games" / "lichess"
+OUT_DIR = registry.GAMES_DIR
 
 
 # --- Pure functions --------------------------------------------------------
@@ -60,14 +62,16 @@ def pgn_text(game: dict) -> str:
     return game["pgn"].strip() + "\n"
 
 
-def read_bots(text: str) -> list[str]:
-    """Bot ids from a list file: the first word of each line, without comments or blank lines."""
-    bots = []
-    for line in text.splitlines():
-        words = line.split("#", 1)[0].split()
-        if words:
-            bots.append(words[0].lower())
-    return bots
+def wanted_bots(reg: registry.Registry, bots: list[str] | None, replay: str | None, count: int | None) -> dict[str, int]:
+    """The games to download per bot: the bots named, or the bots a replay checks, or every bot in
+    the registry. Each gets the games the registry gives it, unless `count` says otherwise."""
+    if bots:
+        chosen = [reg.bots.get(b.lower(), registry.Bot(b.lower())) for b in bots]
+    elif replay:
+        chosen = reg.bots_for(replay)
+    else:
+        chosen = list(reg.bots.values())
+    return {bot.id: count or bot.games for bot in chosen}
 
 
 # --- Network ---------------------------------------------------------------
@@ -115,8 +119,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     bots = parser.add_mutually_exclusive_group(required=True)
     bots.add_argument("--bots", nargs="+", help="bot ids")
-    bots.add_argument("--bots-file", type=Path, help="a file with one bot id per line")
-    parser.add_argument("--count", type=int, default=COUNT, help="games per bot")
+    bots.add_argument("--replay", help="the bots bots.toml gives this replay")
+    bots.add_argument("--all", action="store_true", help="every bot in bots.toml")
+    parser.add_argument("--count", type=int, help=f"games per bot; bots.toml's, else {registry.DEFAULT_GAMES}, by default")
     parser.add_argument("--until", default=UNTIL, help="games end before this UTC time")
     parser.add_argument("--out", type=Path, default=OUT_DIR)
     args = parser.parse_args()
@@ -126,12 +131,15 @@ def main() -> int:
         print("LICHESS_API_TOKEN is not set", file=sys.stderr)
         return 2
     until_ms = iso_to_ms(args.until)
-    bot_ids = args.bots or read_bots(args.bots_file.read_text(encoding="utf-8"))
-    for bot in bot_ids:
-        kept = download(bot, args.count, until_ms, token, args.out)
+    wanted = wanted_bots(registry.load(), args.bots, args.replay, args.count)
+    if not wanted:
+        print(f"bots.toml gives no bot the replay {args.replay}", file=sys.stderr)
+        return 2
+    for bot, count in wanted.items():
+        kept = download(bot, count, until_ms, token, args.out)
         print(f"{bot}: {kept} games")
-        if kept < args.count:
-            print(f"{bot}: only {kept} of {args.count} games found", file=sys.stderr)
+        if kept < count:
+            print(f"{bot}: only {kept} of {count} games found", file=sys.stderr)
     return 0
 
 

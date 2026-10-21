@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# Asks every engine in the image for one move, and fails if one does not answer. Stockfish 15
-# must also say its evaluation is the classical one. The build runs it, and so can you:
+# Asks every command in the image for one move, and fails if one does not answer. The list is in
+# /opt/engines/smoke/<image>.tsv, one command per line: the command, its `go` line, and a line its
+# output must hold, separated by tabs. lib/botelo/images.py writes it from bots.toml. The build
+# runs the test, and so can you, for every command or for some:
 #
-#     docker run --rm bot-elo-estimator-base smoke_test
+#     docker run --rm bot-elo-estimator-extra smoke_test
+#     docker run --rm bot-elo-estimator-extra smoke_test sargon-1ply stockfish-15
 
 set -euo pipefail
 
@@ -49,14 +52,29 @@ check() {
     printf '%-18s %s\n' "${engine}" "${best}"
 }
 
-# Sourced, the script only defines check, for an image that adds engines.
-if [[ ${BASH_SOURCE[0]} != "$0" ]]; then
-    return 0
-fi
+mapfile -t rows < <(cat /opt/engines/smoke/*.tsv)
 
-check stockfish-19 "go depth 10"
-check stockfish-15 "go depth 10" "classical evaluation enabled"
-check stockfish-19-1mb "go depth 10"
-for rating in 1100 1200 1300 1400 1500 1600 1700 1800 1900; do
-    check "maia-${rating}" "go nodes 1"
+declare -A wanted=()
+for name in "$@"; do
+    wanted[${name}]=1
 done
+
+tested=0
+for row in "${rows[@]}"; do
+    IFS=$'\t' read -r command go expect <<<"${row}"
+    if [[ $# -gt 0 && -z ${wanted[${command}]:-} ]]; then
+        continue
+    fi
+    check "${command}" "${go}" "${expect}"
+    tested=$((tested + 1))
+    unset "wanted[${command}]"
+done
+
+if [[ ${#wanted[@]} -gt 0 ]]; then
+    echo "not in the smoke test: ${!wanted[*]}" >&2
+    exit 1
+fi
+if [[ ${tested} -eq 0 ]]; then
+    echo "no command to test" >&2
+    exit 1
+fi

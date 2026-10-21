@@ -1,50 +1,10 @@
 import pytest
 
-from replay_games import bot_moves, compare, parse_policy, summarise
+from botelo.games import bot_moves
+from replay_maia import compare, parse_policy, summarise
 
 HEADERS = '[White "{white}"]\n[Black "{black}"]\n[GameId "g1"]\n[TimeControl "60+2"]\n\n'
-MOVES = (
-    "1. e4 { [%clk 0:01:00] } 1... d5 { [%clk 0:01:00] } "
-    "2. exd5 { [%clk 0:00:58] } 2... Qxd5 { [%clk 0:00:59.5] } "
-    "3. Nc3 { [%clk 0:00:55] } 1-0"
-)
-
-
-@pytest.mark.parametrize(
-    "white, black, bot, expected",
-    [
-        # Each row: (ply, history, played, pieces, spent).
-        (
-            "maia1",
-            "human",
-            "maia1",
-            [
-                (1, [], "e2e4", 32, None),
-                (3, ["e2e4", "d7d5"], "e4d5", 32, 4.0),
-                (5, ["e2e4", "d7d5", "e4d5", "d8d5"], "b1c3", 30, 5.0),
-            ],
-        ),
-        (
-            "human",
-            "Maia1",
-            "maia1",
-            [
-                (2, ["e2e4"], "d7d5", 32, None),
-                (4, ["e2e4", "d7d5", "e4d5"], "d8d5", 31, 2.5),
-            ],
-        ),
-    ],
-)
-def test_bot_moves(white, black, bot, expected):
-    moves = bot_moves(HEADERS.format(white=white, black=black) + MOVES, bot)
-    assert [(m.ply, m.history, m.played, m.pieces, m.spent) for m in moves] == expected
-    assert {m.game for m in moves} == {"g1"}
-
-
-def test_bot_moves_promotion():
-    pgn = '[White "maia1"]\n[Black "human"]\n[GameId "g2"]\n[TimeControl "60+0"]\n[SetUp "1"]\n'
-    pgn += '[FEN "8/P6k/8/8/8/8/8/K7 w - - 0 1"]\n\n1. a8=Q 1-0'
-    assert [m.played for m in bot_moves(pgn, "maia1")] == ["a7a8q"]
+MOVES = "1. e4 { [%clk 0:01:00] } 1... d5 { [%clk 0:01:00] } 1-0"
 
 
 LINE = "info string {move:<5} ({index:>4}) N: {n:>7} (+ 0) (P: {p}%) (WL:  -.-----) (D: -.---) (M:  -.-) (Q: -1.00000) (V:  -.----) "

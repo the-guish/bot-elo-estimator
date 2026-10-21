@@ -1,0 +1,240 @@
+# The registry: the images, the engines in them, the commands the engines provide, and the Lichess
+# bots the estimator targets. build_docker.sh, the smoke tests, the game downloads and the replays
+# all read this file, so a bot or an engine is added here and nowhere else. lib/botelo/registry.py
+# loads and checks it:
+#
+#     python3 lib/botelo/registry.py check      # fails on a broken reference
+#     python3 lib/botelo/registry.py bots       # each bot, its command and its validation
+
+
+# --- Images --------------------------------------------------------------------------------------
+# An image holds its engines' commands, on top of its parent's. An image without a parent starts
+# from Ubuntu. build_docker.sh tags each one bot-elo-estimator-<image>.
+
+[images.base]
+engines = ["stockfish", "lc0"]
+
+[images.extra]
+parent = "base"
+engines = [
+    "morlock",
+]
+
+
+# --- Engines -------------------------------------------------------------------------------------
+# images/engines/<engine>/Dockerfile builds each engine from a pinned source into /opt/engines.
+#
+#   runtime   Ubuntu packages its commands need at run time.
+#   commands  One command on PATH each. `run` is what the command runs; its first word is a path
+#             under /opt/engines. The smoke test plays 1. e4, sends `go` (default "go depth 10"),
+#             and needs a bestmove and a line holding `expect`. `smoke = false` skips the command.
+
+[engines.stockfish]
+[engines.stockfish.commands]
+stockfish-19 = { run = "stockfish-19/stockfish" }
+stockfish-15 = { run = "stockfish-15/stockfish", expect = "classical evaluation enabled" }
+stockfish-19-1mb = { run = "stockfish-19-1mb/stockfish" }
+
+[engines.lc0]
+runtime = ["libopenblas0", "zlib1g"]
+[engines.lc0.commands]
+lc0 = { run = "lc0/lc0", smoke = false }  # lc0 needs a net to search
+maia-1100 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1100.pb.gz", go = "go nodes 1" }
+maia-1200 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1200.pb.gz", go = "go nodes 1" }
+maia-1300 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1300.pb.gz", go = "go nodes 1" }
+maia-1400 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1400.pb.gz", go = "go nodes 1" }
+maia-1500 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1500.pb.gz", go = "go nodes 1" }
+maia-1600 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1600.pb.gz", go = "go nodes 1" }
+maia-1700 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1700.pb.gz", go = "go nodes 1" }
+maia-1800 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1800.pb.gz", go = "go nodes 1" }
+maia-1900 = { run = "lc0/lc0 --weights=/opt/engines/maia/maia-1900.pb.gz", go = "go nodes 1" }
+
+[engines.morlock]
+[engines.morlock.commands]
+sargon-1ply = { run = "morlock/sargon -ply 1", go = "go" }
+sargon-2ply = { run = "morlock/sargon -ply 2", go = "go" }
+sargon-3ply = { run = "morlock/sargon -ply 3", go = "go" }
+sargon-4ply = { run = "morlock/sargon -ply 4", go = "go" }
+turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
+turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
+bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
+bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+
+# --- Bots ----------------------------------------------------------------------------------------
+# One table per Lichess bot id.
+#
+#   runs     The engine the bot runs, as its profile tells.
+#   command  The command that plays as the bot, once an image has one.
+#   games    The games data/games/lichess/<bot> holds. 100 by default.
+#   replay   How engines/<replay> checks the command against the bot's games:
+#              "maia", "morlock"  exact: each move must match.
+#              "agreement"        statistical: how often our command plays the bot's move, against
+#                                 a reference engine. Its keys are in engines/agreement/README.md.
+#            Without a replay, nothing checks the bot.
+#
+# Other keys go to the replay, such as morlock's `depth`.
+#
+# tools/published_bots/bots.csv has each bot's games and ratings; `registry.py bots` joins them.
+
+[bots.maia1]
+runs = "Maia 1, net 1100"
+command = "maia-1100"
+games = 300
+replay = "maia"
+
+[bots.maia5]
+runs = "Maia 1, net 1500"
+command = "maia-1500"
+games = 300
+replay = "maia"
+
+[bots.maia9]
+runs = "Maia 1, net 1900"
+command = "maia-1900"
+games = 300
+replay = "maia"
+
+[bots.sargon-1ply]
+runs = "Morlock"
+command = "sargon-1ply"
+replay = "morlock"
+depth = 1
+
+[bots.sargon-2ply]
+runs = "Morlock"
+command = "sargon-2ply"
+replay = "morlock"
+depth = 2
+
+[bots.sargon-3ply]
+runs = "Morlock"
+command = "sargon-3ply"
+replay = "morlock"
+depth = 3
+
+[bots.sargon-4ply]
+runs = "Morlock"
+command = "sargon-4ply"
+replay = "morlock"
+depth = 4
+
+[bots.turochamp-1ply]
+runs = "Morlock"
+command = "turochamp-1ply"
+replay = "morlock"
+depth = 1
+
+[bots.turochamp-2ply]
+runs = "Morlock"
+command = "turochamp-2ply"
+replay = "morlock"
+depth = 2
+
+[bots.bernstein-2ply]
+runs = "Morlock"
+command = "bernstein-2ply"
+replay = "morlock"
+depth = 2
+
+[bots.bernstein-4ply]
+runs = "Morlock"
+command = "bernstein-4ply"
+replay = "morlock"
+depth = 4
+
+[bots.simpleeval]
+runs = "Stockfish, material-only branch"
+
+[bots.usunfish-l0]
+runs = "uSunfish"
+
+[bots.alliethechessbot]
+runs = "Allie 2.0"
+
+[bots.garbobot]
+runs = "GarboChess-JS"
+
+[bots.raspfish]
+runs = "Fairy-Stockfish, latest"
+
+[bots.lynx_bot]
+runs = "Lynx"
+
+[bots.bottios]
+runs = "Bottios"
+
+[bots.ultrabrick]
+runs = "UltraBrick"
+
+[bots.usunfish-l1]
+runs = "uSunfish"
+
+[bots.dala-900]
+runs = "Dala"
+
+[bots.davidsguterbot]
+runs = "Moinsen"
+
+[bots.halcyonbot]
+runs = "Halcyon"
+
+[bots.schnecken_bot]
+runs = "schnecken_bot"
+
+[bots.eubos]
+runs = "Eubos 4.3"
+
+[bots.dala-1100]
+runs = "Dala"
+
+[bots.ravenengine]
+runs = "Raven"
+
+[bots.dala-1300]
+runs = "Dala"
+
+[bots.plumbot]
+runs = "plumbot"
+
+[bots.panic-fish]
+runs = "Stockfish 18, weakens on checks"
+
+[bots.likeawizard-bot]
+runs = "Tofiks"
+
+[bots.radianceengine]
+runs = "Radiance"
+
+[bots.joshsbot]
+runs = "own C engine"
+
+[bots.goldfish-engine]
+runs = "Goldfish"
+
+[bots.weiawaga]
+runs = "Weiawaga"
+
+[bots.melsh_bot]
+runs = "melsh_bot"
+
+[bots.demolito_l4]
+runs = "Demolito level 4"
+
+[bots.odonata-bot]
+runs = "Odonata"
+
+[bots.slowmate_bot]
+runs = "SlowMate"
+
+[bots.demolito_l3]
+runs = "Demolito level 3"
+
+[bots.patriciabot]
+runs = "Patricia"
+
+[bots.demolito_l5]
+runs = "Demolito level 5"
+
+[bots.littlepatricia]
+runs = "Patricia, skill level 11"
