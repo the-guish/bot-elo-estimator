@@ -238,10 +238,11 @@ go = ["go wtime 600000 btime 600000"]
 skip = 12
 
 [bots.dala-900]
+# No play: the bot draws each move from the net's policy, and our command plays the top move,
+# so it would play stronger than the bot and skew the estimates.
 runs = "Dala"
 command = "dala-900"
 replay = "agreement"
-play = "go nodes 1"
 go = ["go nodes 1"]
 
 [bots.davidsguterbot]
@@ -265,20 +266,22 @@ runs = "schnecken_bot"
 runs = "Eubos 4.3"
 
 [bots.dala-1100]
+# No play: the bot draws each move from the net's policy, and our command plays the top move,
+# so it would play stronger than the bot and skew the estimates.
 runs = "Dala"
 command = "dala-1100"
 replay = "agreement"
-play = "go nodes 1"
 go = ["go nodes 1"]
 
 [bots.ravenengine]
 runs = "Raven"
 
 [bots.dala-1300]
+# No play: the bot draws each move from the net's policy, and our command plays the top move,
+# so it would play stronger than the bot and skew the estimates.
 runs = "Dala"
 command = "dala-1300"
 replay = "agreement"
-play = "go nodes 1"
 go = ["go nodes 1"]
 
 [bots.plumbot]
