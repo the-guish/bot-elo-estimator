@@ -18,6 +18,7 @@ engines = ["stockfish", "lc0"]
 parent = "base"
 engines = [
     "morlock",
+    "patricia",
 ]
 
 
@@ -59,6 +60,10 @@ turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
 turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
 bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
 bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+[engines.patricia]
+[engines.patricia.commands]
+patricia = { run = "patricia/patricia" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -232,6 +237,9 @@ runs = "Demolito level 3"
 
 [bots.patriciabot]
 runs = "Patricia"
+command = "patricia"
+replay = "agreement"
+go = ["go depth 10", "go depth 12", "go depth 14", "go depth 16"]
 
 [bots.demolito_l5]
 runs = "Demolito level 5"
