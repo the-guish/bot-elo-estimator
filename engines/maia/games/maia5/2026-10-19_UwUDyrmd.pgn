@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/UwUDyrmd"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "berndwei"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "UwUDyrmd"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:36:37"]
+[WhiteElo "1474"]
+[BlackElo "1631"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "840+3"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:14:00] } 1... d5 { [%clk 0:14:00] } 2. c4 { [%clk 0:14:01] } 2... dxc4 { [%clk 0:14:01] } 3. e3 { [%clk 0:14:02] } 3... Be6 { [%clk 0:14:02] } 4. Qb3 { [%clk 0:13:47] } 4... cxb3 { [%clk 0:14:03] } 0-1

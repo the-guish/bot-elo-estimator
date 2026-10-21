@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/bPS3Buym"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "raidedR"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "bPS3Buym"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:05:32"]
+[WhiteElo "1004"]
+[BlackElo "1514"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:03:00] } 1... e6 { [%clk 0:03:00] } 2. Nf3 { [%clk 0:02:57] } 2... Nf6 { [%clk 0:03:02] } 3. Bc4 { [%clk 0:02:58] } 3... d5 { [%clk 0:03:02] } 4. Bb5+ { [%clk 0:02:53] } 4... c6 { [%clk 0:03:03] } 5. Ne5 { [%clk 0:01:55] } 5... cxb5 { [%clk 0:03:05] } 6. Nxf7 { [%clk 0:01:53] } 6... Kxf7 { [%clk 0:03:07] } 7. Qh5+ { [%clk 0:01:53] } 7... Nxh5 { [%clk 0:03:04] } 8. d3 { [%clk 0:01:52] } 8... dxe4 { [%clk 0:03:05] } 9. dxe4 { [%clk 0:01:54] } 9... Bb4+ { [%clk 0:03:05] } 10. Kf1 { [%clk 0:01:55] } 10... Qd1# { [%clk 0:03:03] } 0-1

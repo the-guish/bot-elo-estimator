@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/VBf6qiB5"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia1"]
+[Black "AberoniWithCheese"]
+[Result "1-0"]
+[GameId "VBf6qiB5"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:58:20"]
+[WhiteElo "1541"]
+[BlackElo "1531"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e5 { [%clk 0:10:00] } 2. Bc4 { [%clk 0:10:00] } 2... Nc6 { [%clk 0:09:55] } 3. Nf3 { [%clk 0:09:58] } 3... d6 { [%clk 0:09:53] } 4. d3 { [%clk 0:09:57] } 4... Nf6 { [%clk 0:09:44] } 5. Ng5 { [%clk 0:09:55] } 5... d5 { [%clk 0:09:19] } 6. exd5 { [%clk 0:09:52] } 6... Nxd5 { [%clk 0:09:18] } 7. Qf3 { [%clk 0:09:46] } 7... Qxg5 { [%clk 0:09:12] } 8. Bxg5 { [%clk 0:09:43] } 1-0

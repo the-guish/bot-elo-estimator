@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/T2vDGMlN"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Slyfer94"]
+[Black "maia9"]
+[Result "0-1"]
+[GameId "T2vDGMlN"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:56:29"]
+[WhiteElo "1751"]
+[BlackElo "1648"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "180+2"]
+[Termination "Normal"]
+
+1. d4 { [%clk 0:03:00] } 1... d5 { [%clk 0:03:00] } 2. c4 { [%clk 0:02:51] } 2... dxc4 { [%clk 0:03:02] } 3. e4 { [%clk 0:02:32] } 3... Nc6 { [%clk 0:03:04] } 4. Nf3 { [%clk 0:01:49] } 4... Bg4 { [%clk 0:03:06] } 5. d5 { [%clk 0:01:27] } 5... Ne5 { [%clk 0:03:08] } 6. Bf4 { [%clk 0:01:24] } 6... Nxf3+ { [%clk 0:03:08] } 7. gxf3 { [%clk 0:01:19] } 7... Bh5 { [%clk 0:03:05] } 8. Bxc4 { [%clk 0:00:44] } 8... Nf6 { [%clk 0:03:05] } 9. Qb3 { [%clk 0:00:32] } 9... b6 { [%clk 0:03:00] } 0-1

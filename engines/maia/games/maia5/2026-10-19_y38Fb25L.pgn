@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/y38Fb25L"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "Guoguo0127"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "y38Fb25L"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:36:23"]
+[WhiteElo "1420"]
+[BlackElo "1633"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+1"]
+[Termination "Time forfeit"]
+
+1. d4 { [%clk 0:10:00] } 1... g6 { [%clk 0:10:00] } 2. e4 { [%clk 0:09:54] } 2... Bg7 { [%clk 0:09:59] } 0-1

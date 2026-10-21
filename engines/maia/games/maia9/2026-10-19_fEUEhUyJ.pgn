@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/fEUEhUyJ"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "yandzhen"]
+[Black "maia9"]
+[Result "0-1"]
+[GameId "fEUEhUyJ"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:38:56"]
+[WhiteElo "1500"]
+[BlackElo "1796"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[Termination "Time forfeit"]
+
+1. d3 { [%clk 0:30:00] } 1... d5 { [%clk 0:30:00] } 2. e4 { [%clk 0:29:54] } 2... dxe4 { [%clk 0:29:58] } 0-1

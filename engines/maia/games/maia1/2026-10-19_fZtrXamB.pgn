@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/fZtrXamB"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia1"]
+[Black "Aidenss"]
+[Result "1-0"]
+[GameId "fZtrXamB"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:48:10"]
+[WhiteElo "1428"]
+[BlackElo "1513"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... e5 { [%clk 0:05:00] } 2. Bc4 { [%clk 0:05:00] } 2... Nc6 { [%clk 0:04:59] } 3. Qh5 { [%clk 0:05:00] } 3... g6 { [%clk 0:04:55] } 4. Qf3 { [%clk 0:04:58] } 4... Nf6 { [%clk 0:04:55] } 5. g4 { [%clk 0:04:56] } 5... d5 { [%clk 0:04:46] } 6. exd5 { [%clk 0:04:56] } 6... Bxg4 { [%clk 0:04:45] } 7. Qg3 { [%clk 0:04:52] } 7... Nd4 { [%clk 0:04:20] } 8. Qxe5+ { [%clk 0:04:51] } 8... Be7 { [%clk 0:04:08] } 9. Qxd4 { [%clk 0:04:47] } 9... Qd6 { [%clk 0:04:04] } 10. f3 { [%clk 0:04:44] } 10... Bf5 { [%clk 0:04:01] } 11. d3 { [%clk 0:04:40] } 11... O-O { [%clk 0:03:53] } 1-0

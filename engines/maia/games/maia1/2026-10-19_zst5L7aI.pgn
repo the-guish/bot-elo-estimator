@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/zst5L7aI"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "thewilq"]
+[Black "maia1"]
+[Result "1-0"]
+[GameId "zst5L7aI"]
+[UTCDate "2026.10.19"]
+[UTCTime "20:38:31"]
+[WhiteElo "1470"]
+[BlackElo "1592"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1020+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:17:00] } 1... e6 { [%clk 0:17:00] } 2. d4 { [%clk 0:16:58] } 2... Qh4 { [%clk 0:16:58] } 3. Nc3 { [%clk 0:16:52] } 3... d5 { [%clk 0:16:56] } 4. Nf3 { [%clk 0:16:50] } 4... Qf6 { [%clk 0:16:54] } 5. Bg5 { [%clk 0:16:48] } 5... Qg6 { [%clk 0:16:52] } 6. exd5 { [%clk 0:16:40] } 6... exd5 { [%clk 0:16:45] } 7. Bd3 { [%clk 0:16:39] } 7... Qe6+ { [%clk 0:16:39] } 8. Be2 { [%clk 0:16:29] } 8... f6 { [%clk 0:16:32] } 9. Bh4 { [%clk 0:16:21] } 9... g5 { [%clk 0:16:30] } 10. Bg3 { [%clk 0:16:20] } 10... Bd6 { [%clk 0:16:19] } 11. Bxd6 { [%clk 0:16:18] } 11... Qxd6 { [%clk 0:16:08] } 12. O-O { [%clk 0:13:46] } 12... g4 { [%clk 0:16:02] } 13. Nd2 { [%clk 0:13:39] } 13... h5 { [%clk 0:15:57] } 14. Nb5 { [%clk 0:13:36] } 14... Qb6 { [%clk 0:15:54] } 15. Nb3 { [%clk 0:13:30] } 15... a6 { [%clk 0:15:45] } 16. Re1 { [%clk 0:13:10] } 16... axb5 { [%clk 0:15:39] } 17. Bxb5+ { [%clk 0:13:09] } 17... Kd8 { [%clk 0:15:30] } 18. Re8# { [%clk 0:13:07] } 1-0

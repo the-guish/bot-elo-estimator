@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/Nuy89lhh"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia5"]
+[Black "ForkingShadow"]
+[Result "0-1"]
+[GameId "Nuy89lhh"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:44:44"]
+[WhiteElo "1476"]
+[BlackElo "1496"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... c6 { [%clk 0:05:00] } 2. Nf3 { [%clk 0:05:01] } 2... d5 { [%clk 0:05:02] } 3. e5 { [%clk 0:05:03] } 3... Bg4 { [%clk 0:05:04] } 4. d4 { [%clk 0:05:06] } 4... e6 { [%clk 0:05:05] } 5. Be2 { [%clk 0:05:07] } 5... c5 { [%clk 0:05:07] } 6. c3 { [%clk 0:05:10] } 6... cxd4 { [%clk 0:05:08] } 7. cxd4 { [%clk 0:05:09] } 7... Bb4+ { [%clk 0:05:08] } 8. Bd2 { [%clk 0:05:07] } 8... a5 { [%clk 0:05:08] } 9. a3 { [%clk 0:05:07] } 9... Bxd2+ { [%clk 0:05:07] } 10. Nbxd2 { [%clk 0:05:02] } 10... Nh6 { [%clk 0:05:07] } 11. O-O { [%clk 0:05:02] } 11... Nf5 { [%clk 0:05:07] } 12. h3 { [%clk 0:05:00] } 12... Bxf3 { [%clk 0:05:07] } 13. Nxf3 { [%clk 0:04:58] } 13... O-O { [%clk 0:04:52] } 14. Rc1 { [%clk 0:04:54] } 14... Nd7 { [%clk 0:04:45] } 15. Bd3 { [%clk 0:04:55] } 15... Nh4 { [%clk 0:04:44] } 16. Nxh4 { [%clk 0:04:53] } 16... Qxh4 { [%clk 0:04:45] } 17. Rc7 { [%clk 0:04:53] } 17... Rad8 { [%clk 0:04:29] } 18. Rxb7 { [%clk 0:04:52] } 18... f6 { [%clk 0:04:29] } 19. exf6 { [%clk 0:04:49] } 19... Rxf6 { [%clk 0:04:29] } 20. Bb5 { [%clk 0:04:50] } 20... Nf8 { [%clk 0:04:13] } 21. Qa4 { [%clk 0:04:48] } 21... Ng6 { [%clk 0:03:56] } 22. Qxa5 { [%clk 0:04:50] } 22... Rdf8 { [%clk 0:03:50] } 23. Qe1 { [%clk 0:04:50] } 23... Nf4 { [%clk 0:03:49] } 24. f3 { [%clk 0:04:49] } 24... Nxh3+ { [%clk 0:03:47] } 25. gxh3 { [%clk 0:04:45] } 25... Qxh3 { [%clk 0:03:24] } 26. Qf2 { [%clk 0:04:43] } 26... Rg6+ { [%clk 0:03:21] } 27. Qg2 { [%clk 0:04:37] } 27... Qxg2# { [%clk 0:03:19] } 0-1

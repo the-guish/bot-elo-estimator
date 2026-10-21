@@ -1,0 +1,18 @@
+[Event "casual blitz game"]
+[Site "https://lichess.org/bj7ktQBu"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "HalvardBjornson"]
+[Black "maia1"]
+[Result "0-1"]
+[GameId "bj7ktQBu"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:22:56"]
+[WhiteElo "1500"]
+[BlackElo "1425"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:05:00] } 1... d5 { [%clk 0:05:00] } 2. exd5 { [%clk 0:05:02] } 2... Qxd5 { [%clk 0:05:03] } 3. Nc3 { [%clk 0:05:04] } 3... Qa5 { [%clk 0:05:06] } 4. Nf3 { [%clk 0:05:04] } 4... Nf6 { [%clk 0:05:09] } 5. d4 { [%clk 0:05:04] } 5... Nc6 { [%clk 0:05:10] } 6. Be3 { [%clk 0:05:05] } 6... Bg4 { [%clk 0:05:13] } 7. Be2 { [%clk 0:05:07] } 7... O-O-O { [%clk 0:05:15] } 8. O-O { [%clk 0:05:09] } 8... e5 { [%clk 0:05:16] } 9. h3 { [%clk 0:04:59] } 9... Bxf3 { [%clk 0:05:19] } 10. Bxf3 { [%clk 0:05:01] } 10... exd4 { [%clk 0:05:17] } 11. Bxc6 { [%clk 0:04:49] } 11... bxc6 { [%clk 0:05:16] } 12. Bxd4 { [%clk 0:04:47] } 12... Bc5 { [%clk 0:05:16] } 13. a3 { [%clk 0:04:36] } 13... Bxd4 { [%clk 0:05:16] } 14. b4 { [%clk 0:04:38] } 14... Bxc3 { [%clk 0:05:18] } 15. bxa5 { [%clk 0:04:39] } 15... Rxd1 { [%clk 0:05:15] } 16. Raxd1 { [%clk 0:04:38] } 16... Bxa5 { [%clk 0:05:11] } 17. Rb1 { [%clk 0:04:35] } 17... Rd8 { [%clk 0:05:06] } 18. Rb3 { [%clk 0:04:37] } 18... Rd2 { [%clk 0:05:04] } 19. c4 { [%clk 0:04:33] } 19... Ne4 { [%clk 0:04:59] } 20. Re1 { [%clk 0:04:17] } 20... Rxf2 { [%clk 0:04:54] } 21. Rxe4 { [%clk 0:04:16] } 21... Bb6 { [%clk 0:04:53] } 22. Kh2 { [%clk 0:04:12] } 22... f5 { [%clk 0:04:51] } 23. Re8+ { [%clk 0:04:09] } 23... Kd7 { [%clk 0:04:44] } 24. Rd3+ { [%clk 0:04:07] } 0-1

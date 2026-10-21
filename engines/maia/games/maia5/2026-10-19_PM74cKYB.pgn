@@ -1,0 +1,18 @@
+[Event "casual classical game"]
+[Site "https://lichess.org/PM74cKYB"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "azaiLobo"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "PM74cKYB"]
+[UTCDate "2026.10.19"]
+[UTCTime "23:54:07"]
+[WhiteElo "1351"]
+[BlackElo "1668"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "900+15"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:15:00] } 1... e5 { [%clk 0:15:00] } 2. Nf3 { [%clk 0:15:12] } 2... Nc6 { [%clk 0:15:14] } 3. Bc4 { [%clk 0:15:24] } 3... d6 { [%clk 0:15:27] } 4. d3 { [%clk 0:15:38] } 4... Be6 { [%clk 0:15:40] } 5. Ng5 { [%clk 0:15:52] } 5... Bxc4 { [%clk 0:15:55] } 6. dxc4 { [%clk 0:16:02] } 6... h6 { [%clk 0:16:05] } 7. Nf3 { [%clk 0:16:12] } 7... Nf6 { [%clk 0:16:14] } 8. O-O { [%clk 0:16:23] } 8... Nxe4 { [%clk 0:16:23] } 9. Nc3 { [%clk 0:16:36] } 9... Nxc3 { [%clk 0:16:31] } 10. bxc3 { [%clk 0:16:47] } 10... Be7 { [%clk 0:16:40] } 11. c5 { [%clk 0:16:48] } 11... dxc5 { [%clk 0:16:51] } 12. c4 { [%clk 0:17:02] } 12... Qxd1 { [%clk 0:17:00] } 13. Rxd1 { [%clk 0:17:15] } 0-1

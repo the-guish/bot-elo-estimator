@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/tJxtfPMo"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia5"]
+[Black "Chessternal"]
+[Result "0-1"]
+[GameId "tJxtfPMo"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:42:23"]
+[WhiteElo "1633"]
+[BlackElo "1974"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... c5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:10:03] } 2... e6 { [%clk 0:10:03] } 3. d4 { [%clk 0:10:06] } 3... cxd4 { [%clk 0:10:08] } 4. Nxd4 { [%clk 0:10:10] } 4... Nc6 { [%clk 0:10:10] } 5. Nc3 { [%clk 0:10:14] } 5... Qc7 { [%clk 0:10:12] } 6. Be3 { [%clk 0:10:17] } 6... a6 { [%clk 0:10:12] } 7. Be2 { [%clk 0:10:18] } 7... b5 { [%clk 0:10:15] } 8. O-O { [%clk 0:10:18] } 8... Bb7 { [%clk 0:10:19] } 9. f4 { [%clk 0:10:13] } 9... Qb6 { [%clk 0:10:15] } 10. Nxc6 { [%clk 0:10:12] } 10... Qxe3+ { [%clk 0:10:14] } 11. Kh1 { [%clk 0:10:10] } 11... Bxc6 { [%clk 0:10:19] } 12. Rf3 { [%clk 0:10:13] } 12... Qa7 { [%clk 0:10:05] } 13. f5 { [%clk 0:10:12] } 13... b4 { [%clk 0:09:39] } 14. fxe6 { [%clk 0:10:13] } 14... dxe6 { [%clk 0:09:40] } 15. Nb1 { [%clk 0:10:13] } 15... Bxe4 { [%clk 0:09:38] } 16. Rf4 { [%clk 0:10:09] } 16... Nf6 { [%clk 0:09:32] } 17. Nd2 { [%clk 0:10:11] } 17... Bb7 { [%clk 0:09:27] } 18. Nc4 { [%clk 0:10:06] } 18... Be7 { [%clk 0:09:10] } 19. Ne5 { [%clk 0:10:04] } 19... O-O { [%clk 0:09:02] } 20. Bd3 { [%clk 0:10:03] } 20... Rfd8 { [%clk 0:08:43] } 21. Rh4 { [%clk 0:10:04] } 21... Qf2 { [%clk 0:08:20] } 22. Rh3 { [%clk 0:10:04] } 22... Qxg2# { [%clk 0:08:13] } 0-1

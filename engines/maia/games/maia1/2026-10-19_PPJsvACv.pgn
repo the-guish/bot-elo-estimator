@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/PPJsvACv"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "snooprion"]
+[Black "maia1"]
+[Result "0-1"]
+[GameId "PPJsvACv"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:51:49"]
+[WhiteElo "1272"]
+[BlackElo "1536"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "1200+3"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:20:00] } 1... e5 { [%clk 0:20:00] } 2. Nf3 { [%clk 0:20:02] } 2... d6 { [%clk 0:20:01] } 3. Nc3 { [%clk 0:19:46] } 3... Nf6 { [%clk 0:20:04] } 4. Bd3 { [%clk 0:19:44] } 4... Nc6 { [%clk 0:20:07] } 5. O-O { [%clk 0:19:45] } 5... Bg4 { [%clk 0:20:10] } 6. Re1 { [%clk 0:19:33] } 6... Nd4 { [%clk 0:20:12] } 7. h3 { [%clk 0:19:26] } 7... Bxf3 { [%clk 0:20:15] } 8. gxf3 { [%clk 0:19:27] } 8... Nh5 { [%clk 0:20:18] } 9. Nd5 { [%clk 0:19:21] } 9... Qg5+ { [%clk 0:20:21] } 10. Kf1 { [%clk 0:19:17] } 10... Nf4 { [%clk 0:20:24] } 11. Nxc7+ { [%clk 0:19:07] } 11... Kd7 { [%clk 0:20:27] } 12. Nxa8 { [%clk 0:19:08] } 12... Qg2# { [%clk 0:20:27] } 0-1

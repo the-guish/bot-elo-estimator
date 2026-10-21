@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/n01j5KhP"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "lMxcyl"]
+[Black "maia5"]
+[Result "0-1"]
+[GameId "n01j5KhP"]
+[UTCDate "2026.10.19"]
+[UTCTime "22:30:03"]
+[WhiteElo "849"]
+[BlackElo "1633"]
+[BlackTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. exd5 { [%clk 0:10:03] } 2... Qxd5 { [%clk 0:10:03] } 3. Nc3 { [%clk 0:10:07] } 3... Qa5 { [%clk 0:10:08] } 4. d4 { [%clk 0:10:05] } 4... Nf6 { [%clk 0:10:11] } 5. Nf3 { [%clk 0:10:07] } 5... Bg4 { [%clk 0:10:14] } 6. Bc4 { [%clk 0:10:01] } 6... Nc6 { [%clk 0:10:13] } 7. Be3 { [%clk 0:10:02] } 7... O-O-O { [%clk 0:10:15] } 8. O-O { [%clk 0:10:02] } 8... e6 { [%clk 0:10:18] } 9. a3 { [%clk 0:09:52] } 9... Qh5 { [%clk 0:10:19] } 10. Kh1 { [%clk 0:09:37] } 10... Bd6 { [%clk 0:10:21] } 11. Bg5 { [%clk 0:09:32] } 11... Bxf3 { [%clk 0:10:23] } 12. gxf3 { [%clk 0:09:17] } 12... Qxh2# { [%clk 0:10:16] } 0-1

@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/71Vxj0jG"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia9"]
+[Black "mgmg0101"]
+[Result "1-0"]
+[GameId "71Vxj0jG"]
+[UTCDate "2026.10.19"]
+[UTCTime "21:21:35"]
+[WhiteElo "1752"]
+[BlackElo "1998"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... d5 { [%clk 0:10:00] } 2. Nf3 { [%clk 0:09:59] } 2... dxe4 { [%clk 0:09:57] } 3. Ng5 { [%clk 0:09:58] } 3... Nf6 { [%clk 0:09:48] } 4. d3 { [%clk 0:09:56] } 4... exd3 { [%clk 0:09:46] } 5. Bxd3 { [%clk 0:09:54] } 5... h6 { [%clk 0:09:30] } 6. Nxf7 { [%clk 0:09:53] } 6... Kxf7 { [%clk 0:09:27] } 7. Bg6+ { [%clk 0:09:51] } 1-0

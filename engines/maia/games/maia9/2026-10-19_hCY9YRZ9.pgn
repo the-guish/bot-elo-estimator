@@ -1,0 +1,18 @@
+[Event "casual rapid game"]
+[Site "https://lichess.org/hCY9YRZ9"]
+[Date "2026.10.19"]
+[Round "-"]
+[White "maia9"]
+[Black "yandzhen"]
+[Result "1-0"]
+[GameId "hCY9YRZ9"]
+[UTCDate "2026.10.19"]
+[UTCTime "17:38:11"]
+[WhiteElo "1780"]
+[BlackElo "2119"]
+[WhiteTitle "BOT"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[Termination "Normal"]
+
+1. e4 { [%clk 0:10:00] } 1... e6 { [%clk 0:10:00] } 2. d4 { [%clk 0:10:00] } 1-0
