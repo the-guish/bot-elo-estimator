@@ -24,6 +24,7 @@ engines = [
     "halcyon",
     "plumbot",
     "usunfish",
+    "tofiks",
 ]
 
 
@@ -87,6 +88,10 @@ plumbot = { run = "plumbot/plumbot", go = "go" }  # 5 plies, or `go depth N`
 [engines.usunfish.commands]
 usunfish-l0 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=0" }
 usunfish-l1 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=1" }
+
+[engines.tofiks]
+[engines.tofiks.commands]
+tofiks = { run = "tofiks/tofiks", expect = "id name Tofiks v1.6.0" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -267,6 +272,15 @@ runs = "Stockfish 18, weakens on checks"
 
 [bots.likeawizard-bot]
 runs = "Tofiks"
+command = "tofiks"
+replay = "agreement"
+play = "go depth 11"
+go = [
+    "go depth 8",
+    "go depth 9",
+    "go depth 10",
+    "go depth 11",
+]
 
 [bots.radianceengine]
 runs = "Radiance"
