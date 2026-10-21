@@ -18,6 +18,7 @@ engines = ["stockfish", "lc0"]
 parent = "base"
 engines = [
     "morlock",
+    "halcyon",
 ]
 
 
@@ -59,6 +60,10 @@ turochamp-1ply = { run = "morlock/turochamp -ply 1", go = "go" }
 turochamp-2ply = { run = "morlock/turochamp -ply 2", go = "go" }
 bernstein-2ply = { run = "morlock/bernstein -ply 2", go = "go" }
 bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
+
+[engines.halcyon]
+[engines.halcyon.commands]
+halcyon = { run = "halcyon/halcyon" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -178,6 +183,9 @@ runs = "Moinsen"
 
 [bots.halcyonbot]
 runs = "Halcyon"
+command = "halcyon"
+replay = "agreement"
+go = ["go depth 8", "go depth 9", "go depth 10"]
 
 [bots.schnecken_bot]
 runs = "schnecken_bot"
