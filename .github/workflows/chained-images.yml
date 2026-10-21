@@ -1,0 +1,36 @@
+# Builds bot-elo-estimator-base, then bot-elo-estimator-extra on top of it, as a user would after
+# cloning, when either folder changes. Each build ends with the smoke test.
+name: chained images
+
+on:
+  pull_request:
+    paths:
+      - images/base/**
+      - images/extra/**
+      - build_docker.sh
+      - .github/workflows/chained-images.yml
+  push:
+    branches: [main]
+    paths:
+      - images/base/**
+      - images/extra/**
+      - build_docker.sh
+      - .github/workflows/chained-images.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: ./build_docker.sh extra
