@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Estimate each candidate's Lichess rating from its games against the reference bots.
+"""Estimate each candidate's Lichess rating from its games against the reference bots and, in a
+round robin, against the other candidates.
 
-Each bot is an anchor at its Lichess rating, from tools/published_bots/bots.csv. The estimate is
-the rating that makes the candidate's scores most likely under the Elo model, with a 95% interval
-from the likelihood ratio. A candidate that wins or loses every game has only a bound. Games in
-which an engine crashed or hung have no result: they are left out, and counted."""
+Each bot is an anchor at its Lichess rating, from tools/published_bots/bots.csv. The candidates'
+ratings are fitted together: the ones that make every game's score most likely under the Elo model.
+Each gets a 95% interval from the likelihood ratio, with the other candidates held at their
+estimates. A candidate that wins or loses every game has only a bound. Games in which an engine
+crashed or hung have no result: they are left out, and counted."""
 
 import argparse
 import json
 import math
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -79,6 +82,62 @@ def rating_text(value: float | None, open_end: str = "?") -> str:
     return open_end if value is None else f"{value:.0f}"
 
 
+@dataclass
+class Game:
+    white: str
+    black: str
+    score: float  # White's
+
+
+def white_score(result: str) -> float:
+    return {"1-0": 1.0, "0-1": 0.0, "1/2-1/2": 0.5}[result]
+
+
+def read_record(record: dict) -> Game | str:
+    """A game, or the name of the engine that crashed in it. Records name White and Black; older
+    ones name the candidate and the bot, and give the candidate's score."""
+    if "crashed" in record:
+        return record["crashed"]
+    if "white" in record:
+        return Game(record["white"], record["black"], white_score(record["result"]))
+    candidate, bot = record["candidate"], record["bot"]
+    if record["candidate_white"]:
+        return Game(candidate, bot, record["score"])
+    return Game(bot, candidate, 1.0 - record["score"])
+
+
+def games_of(name: str, games: list[Game], ratings: dict[str, float]) -> list[tuple[float, float]]:
+    """A player's games as (opponent's rating, own score), for opponents with a rating."""
+    found = []
+    for g in games:
+        if g.white == name and g.black in ratings:
+            found.append((ratings[g.black], g.score))
+        elif g.black == name and g.white in ratings:
+            found.append((ratings[g.white], 1.0 - g.score))
+    return found
+
+
+def fit(games: list[Game], anchors: dict[str, float], rounds: int = 200) -> dict[str, dict]:
+    """Every player without an anchor rating, fitted together by coordinate ascent: each rating in
+    turn is the most likely given the others. A player that wins or loses all its games sits at the
+    end of the range while the others are fitted, and its estimate has one open end."""
+    free = sorted({n for g in games for n in (g.white, g.black)} - set(anchors))
+    ratings = dict(anchors) | {n: 1500.0 for n in free}
+    for _ in range(rounds):
+        change = 0.0
+        for name in free:
+            e = estimate(games_of(name, games, ratings))
+            if e["rating"] is not None:
+                new = e["rating"]
+            else:
+                new = HIGH if e["low"] is not None else LOW
+            change = max(change, abs(new - ratings[name]))
+            ratings[name] = new
+        if change < 0.05:
+            break
+    return {name: estimate(games_of(name, games, ratings)) for name in free}
+
+
 def crashes(records: list[dict]) -> dict[str, int]:
     """Games left out because an engine crashed or hung, by the engine's name."""
     counts: dict[str, int] = {}
@@ -88,59 +147,76 @@ def crashes(records: list[dict]) -> dict[str, int]:
     return counts
 
 
-def report(results: dict[str, list[dict]], anchors: dict[str, float], speed: str) -> str:
+def estimate_text(e: dict, games: list[tuple[float, float]]) -> tuple[str, str]:
+    if e["rating"] is not None:
+        value = f"{e['rating']:.0f}"
+    elif games and sum(s for _, s in games) == len(games):
+        value = f"above {rating_text(e['low'])}"
+    else:
+        value = f"below {rating_text(e['high'])}" if games else "-"
+    return value, f"{rating_text(e['low'], '-inf')} to {rating_text(e['high'], '+inf')}"
+
+
+def report(records: list[dict], anchors: dict[str, float], speed: str, candidates: list[str]) -> str:
+    """The estimates, a cross table of every pairing played, and the games left out."""
+    games = [g for g in map(read_record, records) if isinstance(g, Game)]
+    estimates = fit(games, anchors)
+    players = sorted({n for g in games for n in (g.white, g.black)})
+    rating = {n: anchors.get(n, estimates.get(n, {}).get("rating")) for n in players}
+    fitted = {n: e["rating"] if e["rating"] is not None else (HIGH if e["low"] is not None else LOW)
+              for n, e in estimates.items()}
     lines = [
         "# Elo estimates",
         "",
-        f"Anchors: each bot's Lichess {speed} rating from tools/published_bots/bots.csv.",
+        f"Anchors: each bot's Lichess {speed} rating from tools/published_bots/bots.csv. The candidates are",
+        "fitted together, from their games against the anchors and against each other; each interval",
+        "holds the other candidates at their estimates.",
         "",
         "| Candidate | Games | Score | Estimate | 95% interval | Left out: crashed |",
         "|---|---|---|---|---|---|",
     ]
-    for candidate, all_records in results.items():
-        records = [r for r in all_records if "crashed" not in r]
-        games = [(anchors[r["bot"]], r["score"]) for r in records if r["bot"] in anchors]
-        e = estimate(games)
-        score = sum(s for _, s in games)
-        if e["rating"] is not None:
-            value = f"{e['rating']:.0f}"
-        elif games and score == len(games):
-            value = f"above {rating_text(e['low'])}"
-        else:
-            value = f"below {rating_text(e['high'])}" if games else "-"
-        interval = f"{rating_text(e['low'], '-inf')} to {rating_text(e['high'], '+inf')}"
-        crashed = len(all_records) - len(records)
-        lines.append(f"| {candidate} | {len(games)} | {score:g} | {value} | {interval} | {crashed} of {len(all_records)} |")
-    for candidate, all_records in results.items():
-        lines += ["", f"## {candidate}", "", "| Bot | Anchor | Games | Score | Performance | Left out: crashed |",
-                  "|---|---|---|---|---|---|"]
-        by_bot: dict[str, list[dict]] = {}
-        for r in all_records:
-            by_bot.setdefault(r["bot"], []).append(r)
-        for bot, every in sorted(by_bot.items(), key=lambda item: anchors.get(item[0], 0)):
-            rows = [r for r in every if "crashed" not in r]
-            crashed = len(every) - len(rows)
-            score = sum(r["score"] for r in rows)
-            if bot not in anchors:
-                lines.append(f"| {bot} | no rating | {len(rows)} | {score:g} | - | {crashed} |")
-                continue
-            perf = performance([(anchors[bot], r["score"]) for r in rows])
-            if perf is not None:
-                text = rating_text(perf)
-            else:
-                text = "-" if not rows else ("+inf" if score == len(rows) else "-inf")
-            lines.append(f"| {bot} | {anchors[bot]:.0f} | {len(rows)} | {score:g} | {text} | {crashed} |")
-    lines += crash_section(results)
+    names = [c for c in candidates if c in estimates] + sorted(set(estimates) - set(candidates))
+    for name in names:
+        own = games_of(name, games, anchors | fitted)
+        value, interval = estimate_text(estimates[name], own)
+        crashed = sum(1 for r in records if r.get("crashed") and name in (r.get("white"), r.get("black"),
+                                                                        r.get("candidate"), r.get("bot")))
+        lines.append(f"| {name} | {len(own)} | {sum(s for _, s in own):g} | {value} | {interval} | {crashed} |")
+
+    order = sorted(players, key=lambda n: -(rating[n] if rating[n] is not None else fitted.get(n, 0)))
+    lines += ["", "## Cross table", "",
+              "Each cell is the row player's score against the column player, and the games played.", ""]
+    lines.append("| | Rating | " + " | ".join(order) + " |")
+    lines.append("|---|---|" + "---|" * len(order))
+    for row in order:
+        cells = []
+        for col in order:
+            pair = [g.score if g.white == row else 1 - g.score for g in games
+                    if {g.white, g.black} == {row, col} and row != col]
+            cells.append(f"{100 * sum(pair) / len(pair):.0f}% of {len(pair)}" if pair else "")
+        r = rating[row]
+        label = f"{r:.0f}" if r is not None else estimate_text(estimates[row], games_of(row, games, anchors | fitted))[0]
+        mark = "" if row in anchors else " (fitted)"
+        lines.append(f"| {row} | {label}{mark} | " + " | ".join(cells) + " |")
+
+    between = [g for g in games if g.white in anchors and g.black in anchors]
+    if between:
+        lines += ["", "## Anchors against each other", "",
+                  "A check on the anchors: the score their Lichess ratings predict, and the one played.", "",
+                  "| Pair | Games | Expected score | Played score |", "|---|---|---|---|"]
+        pairs = sorted({tuple(sorted((g.white, g.black))) for g in between})
+        for a, b in pairs:
+            scores = [g.score if g.white == a else 1 - g.score for g in between if {g.white, g.black} == {a, b}]
+            lines.append(f"| {a} vs {b} | {len(scores)} | {100 * expected(anchors[a], anchors[b]):.0f}% for {a} "
+                         f"| {100 * sum(scores) / len(scores):.0f}% for {a} |")
+    lines += crash_section(records)
     return "\n".join(lines) + "\n"
 
 
-def crash_section(results: dict[str, list[dict]]) -> list[str]:
+def crash_section(records: list[dict]) -> list[str]:
     """How many games an engine's crash or hang removed, to judge how much they bias the estimate."""
-    total = sum(len(records) for records in results.values())
-    counts: dict[str, int] = {}
-    for records in results.values():
-        for name, n in crashes(records).items():
-            counts[name] = counts.get(name, 0) + n
+    total = len(records)
+    counts = crashes(records)
     dropped = sum(counts.values())
     lines = ["", "## Games left out", ""]
     if not dropped:
@@ -163,15 +239,13 @@ def main() -> int:
     parser.add_argument("--speed", default=SPEED, choices=("bullet", "blitz", "rapid", "classical"))
     args = parser.parse_args()
 
+    registry = reg.load()
     anchors = {bot: float(row[f"{args.speed}_rating"]) for bot, row in reg.published().items()
                if row.get(f"{args.speed}_rating")}
-    results = {}
-    for folder in sorted(p for p in args.results.iterdir() if p.is_dir()):
-        records = []
-        for path in sorted(folder.glob("*.ndjson")):
-            records += [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
-        results[folder.name] = records
-    text = report(results, anchors, args.speed)
+    records = []
+    for path in sorted(args.results.rglob("*.ndjson")):
+        records += [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    text = report(records, anchors, args.speed, list(registry.candidates))
     (args.results / f"summary-{args.speed}.md").write_text(text, encoding="utf-8")
     print(text)
     return 0
