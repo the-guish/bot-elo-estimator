@@ -19,6 +19,7 @@ parent = "base"
 engines = [
     "morlock",
     "demolito",
+    "usunfish",
 ]
 
 
@@ -64,6 +65,11 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+
+[engines.usunfish]
+[engines.usunfish.commands]
+usunfish-l0 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=0" }
+usunfish-l1 = { run = "usunfish/micropython /opt/engines/usunfish/uci.py --level=1" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -165,6 +171,11 @@ runs = "Stockfish, material-only branch"
 
 [bots.usunfish-l0]
 runs = "uSunfish"
+command = "usunfish-l0"
+replay = "agreement"
+play = "go wtime 600000 btime 600000"
+go = ["go wtime 600000 btime 600000"]
+skip = 12
 
 [bots.alliethechessbot]
 runs = "Allie 2.0"
@@ -186,6 +197,11 @@ runs = "UltraBrick"
 
 [bots.usunfish-l1]
 runs = "uSunfish"
+command = "usunfish-l1"
+replay = "agreement"
+play = "go wtime 600000 btime 600000"
+go = ["go wtime 600000 btime 600000"]
+skip = 12
 
 [bots.dala-900]
 runs = "Dala"
