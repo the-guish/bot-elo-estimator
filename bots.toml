@@ -32,6 +32,7 @@ engines = [
     "raven",
     "radiance",
     "schnecken",
+    "alexandria",
 ]
 
 
@@ -155,6 +156,10 @@ lynx = { run = "lynx/lynx" }
 pending = true
 [engines.garbochess.commands]
 garbochess = { run = "garbochess/node /opt/engines/garbochess/uci.js" }  # a UCI front end in Node.js
+
+[engines.alexandria]
+[engines.alexandria.commands]
+alexandria = { run = "alexandria/alexandria", expect = "id name Alexandria-9.1.0" }
 
 # --- Bots ----------------------------------------------------------------------------------------
 # One table per Lichess bot id.
@@ -511,6 +516,14 @@ runs = "Patricia, skill level 11"
 
 [bots.alexandrya]
 runs = "Alexandria, no opening book"
+command = "alexandria"
+replay = "agreement"
+play = "go nodes 300000"
+go = [
+    "go nodes 30000",
+    "go nodes 100000",
+    "go nodes 300000",
+]
 
 [bots.little-0]
 runs = "Reckless, on a Google Cloud e2-micro VM"
