@@ -1,0 +1,38 @@
+diff --git a/source/EngineInterface.cpp b/source/EngineInterface.cpp
+index 04c369b..0f93126 100644
+--- a/source/EngineInterface.cpp
++++ b/source/EngineInterface.cpp
+@@ -44,9 +44,17 @@ void EngineInterface::process_command(const std::string uci_input, std::ostream&
+     case UCICommand::DEBUG:
+       debug_cmd(vectorize_options(uci_options));
+       break;
+-    case UCICommand::GO:
+-      go_cmd(os);
++    case UCICommand::GO: {
++      // bot-elo-estimator: `go depth N` searches N plies. Any other `go` searches 5, as upstream.
++      std::vector<std::string> go_options = vectorize_options(uci_options);
++      int depth = 5;
++      for (size_t i = 0; i + 1 < go_options.size(); ++i) {
++        if (go_options[i] == "depth") depth = std::max(1, std::stoi(go_options[i + 1]));
++      }
++      chess::Move move = plumbot.find_move(depth, true);
++      os << "bestmove " << chess::uci::moveToUci(move) << std::endl;
+       break;
++    }
+     case UCICommand::ISREADY:
+       isready_cmd(os);
+       break;
+diff --git a/standalone/source/main.cpp b/standalone/source/main.cpp
+index 9c20347..4ec27ff 100644
+--- a/standalone/source/main.cpp
++++ b/standalone/source/main.cpp
+@@ -13,7 +13,8 @@ auto main(int argc, char** argv) -> int {
+ 
+   std::string line;
+   while (true) {
+-    std::getline(std::cin, line);
++    // bot-elo-estimator: stop at the end of the input, where an empty line would crash the engine.
++    if (!std::getline(std::cin, line)) break;
+     std::ofstream myfile;
+     myfile.open (logfile_name, std::ios::app);
+     myfile << line << std::endl;
