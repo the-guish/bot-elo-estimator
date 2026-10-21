@@ -31,6 +31,7 @@ engines = [
     "melsh",
     "raven",
     "radiance",
+    "schnecken",
 ]
 
 
@@ -124,6 +125,10 @@ raven = { run = "raven/raven" }
 [engines.radiance]
 [engines.radiance.commands]
 radiance = { run = "radiance/radiance" }
+
+[engines.schnecken]
+[engines.schnecken.commands]
+schnecken = { run = "schnecken/schnecken_engine", go = "go depth 4" }  # depth 10 is far beyond it
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -285,6 +290,12 @@ go = ["go depth 8", "go depth 9", "go depth 10"]
 
 [bots.schnecken_bot]
 runs = "schnecken_bot"
+command = "schnecken"
+replay = "agreement"
+play = "go depth 4"
+# One search: the engine keeps its cache from move to move, as the bot does, so a second search
+# of the same position would start from the first one's cache (images/engines/schnecken/README.md).
+go = ["go depth 4"]
 
 [bots.eubos]
 runs = "Eubos 4.3"
