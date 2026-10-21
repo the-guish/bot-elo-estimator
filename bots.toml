@@ -213,6 +213,7 @@ runs = "Moinsen"
 runs = "Halcyon"
 command = "halcyon"
 replay = "agreement"
+play = "go depth 9"
 go = ["go depth 8", "go depth 9", "go depth 10"]
 
 [bots.schnecken_bot]
