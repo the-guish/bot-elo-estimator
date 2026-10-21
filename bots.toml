@@ -19,6 +19,7 @@ parent = "base"
 engines = [
     "morlock",
     "demolito",
+    "patricia",
 ]
 
 
@@ -64,6 +65,9 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+[engines.patricia]
+[engines.patricia.commands]
+patricia = { run = "patricia/patricia" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -269,6 +273,9 @@ go = [
 
 [bots.patriciabot]
 runs = "Patricia"
+command = "patricia"
+replay = "agreement"
+go = ["go depth 10", "go depth 12", "go depth 14", "go depth 16"]
 
 [bots.demolito_l5]
 runs = "Demolito level 5"
