@@ -29,6 +29,7 @@ engines = [
     "goldfish",
     "weiawaga",
     "melsh",
+    "raven",
 ]
 
 
@@ -115,6 +116,9 @@ weiawaga = { run = "weiawaga/weiawaga" }
 [engines.melsh]
 [engines.melsh.commands]
 melsh_bot = { run = "melsh/melsh_bot", go = "go depth 4" }  # every search also stops near 5 s
+[engines.raven]
+[engines.raven.commands]
+raven = { run = "raven/raven" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -290,6 +294,9 @@ go = ["go nodes 1"]
 
 [bots.ravenengine]
 runs = "Raven"
+command = "raven"
+replay = "agreement"
+go = ["go depth 8", "go depth 10", "go depth 12"]
 
 [bots.dala-1300]
 # No play: the bot draws each move from the net's policy, and our command plays the top move,
