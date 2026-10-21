@@ -289,10 +289,11 @@ play = "go depth 9"
 go = ["go depth 8", "go depth 9", "go depth 10"]
 
 [bots.schnecken_bot]
+# No play: in rated games, which make its rating, the bot searches by time and depth 4 agrees
+# on only 49% of its moves, far under the 92% the command agrees with itself.
 runs = "schnecken_bot"
 command = "schnecken"
 replay = "agreement"
-play = "go depth 4"
 # One search: the engine keeps its cache from move to move, as the bot does, so a second search
 # of the same position would start from the first one's cache (images/engines/schnecken/README.md).
 go = ["go depth 4"]
