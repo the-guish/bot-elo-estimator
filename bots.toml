@@ -26,6 +26,7 @@ engines = [
     "usunfish",
     "tofiks",
     "moinsen",
+    "goldfish",
 ]
 
 
@@ -100,6 +101,10 @@ tofiks = { run = "tofiks/tofiks", expect = "id name Tofiks v1.6.0" }
 [engines.moinsen]
 [engines.moinsen.commands]
 moinsen = { run = "moinsen/moinsen", go = "go depth 3" }  # no pruning: depth 10 would never end
+
+[engines.goldfish]
+[engines.goldfish.commands]
+goldfish = { run = "goldfish/goldfish" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -317,6 +322,15 @@ runs = "own C engine"
 
 [bots.goldfish-engine]
 runs = "Goldfish"
+command = "goldfish"
+replay = "agreement"
+play = "go nodes 300000"
+options = { Hash = 1024 }
+skip = 25  # lichess-bot plays its first 25 plies from Goldfish's book, gm2001.bin
+go = [
+    "go nodes 100000",
+    "go nodes 300000",
+]
 
 [bots.weiawaga]
 runs = "Weiawaga"
