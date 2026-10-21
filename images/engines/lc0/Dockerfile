@@ -1,6 +1,7 @@
-# The lc0 engine: Leela Chess Zero with the OpenBLAS backend, and the nine nets of Maia 1, into
-# /opt/engines. Each Maia net is checked against its sha256. Maia plays as on Lichess with
-# `go nodes 1`.
+# The lc0 engine: Leela Chess Zero with the OpenBLAS backend, the nine nets of Maia 1 and three
+# nets of Dala, into /opt/engines. Each net is checked against its sha256. Maia plays as on Lichess
+# with `go nodes 1`. The Dala bots sample their move from the net's policy; `go nodes 1` plays the
+# policy's most likely move.
 #
 # lc0 compiles with -march=native, so build on the machine that will run it. build_docker.sh
 # builds this with images/ as the context.
@@ -58,6 +59,24 @@ RUN mkdir -p /out/maia \
         "${MAIA_1500_SHA256}" maia-1500.pb.gz "${MAIA_1600_SHA256}" maia-1600.pb.gz \
         "${MAIA_1700_SHA256}" maia-1700.pb.gz "${MAIA_1800_SHA256}" maia-1800.pb.gz \
         "${MAIA_1900_SHA256}" maia-1900.pb.gz \
+        | sha256sum -c -
+
+# Three nets of Dala (hrschubert/dala-training), release Release-v0, which Lichess runs as dala-900,
+# dala-1100 and dala-1300. The 900 net is a small transformer, the 1100 and 1300 nets are BT4-sized.
+# They are declared here, after lc0's build, so that adding a net leaves that build cached. The
+# release names each net after its training step; the files here keep only the rating.
+ARG DALA_900_SHA256=fbe1d910dec52ccd6613ab87009e66af4a3e9fb1a0c180accdbc302fbd764a75
+ARG DALA_1100_SHA256=6ecf4d88927f80a6e2001a92a1c9a74efc1333483118a2bf3f0485f8ab7a62ad
+ARG DALA_1300_SHA256=4f80a4657bae8d899cf249ea2136947709ea312eb7e515560c5eaf3f2a357158
+RUN mkdir -p /out/dala \
+    && cd /out/dala \
+    && for net in 900-00285000 1100-00300000 1300-00300000; do \
+        curl -fsSL -o "dala-${net%%-*}.pb.gz" \
+            "https://github.com/hrschubert/dala-training/releases/download/Release-v0/dala-${net}.pb.gz"; \
+    done \
+    && printf '%s  %s\n' \
+        "${DALA_900_SHA256}" dala-900.pb.gz "${DALA_1100_SHA256}" dala-1100.pb.gz \
+        "${DALA_1300_SHA256}" dala-1300.pb.gz \
         | sha256sum -c -
 
 RUN mkdir -p /out/lc0 && cp /src/lc0/build/release/lc0 /src/lc0/COPYING /out/lc0/
