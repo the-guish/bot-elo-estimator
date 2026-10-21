@@ -19,6 +19,7 @@ parent = "base"
 engines = [
     "morlock",
     "demolito",
+    "tofiks",
 ]
 
 
@@ -64,6 +65,10 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+
+[engines.tofiks]
+[engines.tofiks.commands]
+tofiks = { run = "tofiks/tofiks", expect = "id name Tofiks v1.6.0" }
 
 
 # --- Bots ----------------------------------------------------------------------------------------
@@ -219,6 +224,15 @@ runs = "Stockfish 18, weakens on checks"
 
 [bots.likeawizard-bot]
 runs = "Tofiks"
+command = "tofiks"
+replay = "agreement"
+play = "go depth 11"
+go = [
+    "go depth 8",
+    "go depth 9",
+    "go depth 10",
+    "go depth 11",
+]
 
 [bots.radianceengine]
 runs = "Radiance"
