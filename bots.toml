@@ -172,6 +172,7 @@ play = "go"
 runs = "Stockfish, material-only branch"
 command = "simpleeval"
 replay = "agreement"
+play = "go depth 16"
 go = ["go depth 12", "go depth 16", "go depth 18"]
 
 [bots.usunfish-l0]
