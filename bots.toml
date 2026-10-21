@@ -525,3 +525,78 @@ go = "go movetime 100"
 [candidates.stockfish-19-1mb]
 command = "stockfish-19-1mb"
 go = "go movetime 100"
+
+# A ladder of fixed depths, to find each build's rating as its search grows. A fixed depth is
+# repeatable and the same on any machine.
+
+[candidates.stockfish-19-depth-1]
+command = "stockfish-19"
+go = "go depth 1"
+
+[candidates.stockfish-19-depth-2]
+command = "stockfish-19"
+go = "go depth 2"
+
+[candidates.stockfish-19-depth-3]
+command = "stockfish-19"
+go = "go depth 3"
+
+[candidates.stockfish-19-depth-4]
+command = "stockfish-19"
+go = "go depth 4"
+
+[candidates.stockfish-19-depth-6]
+command = "stockfish-19"
+go = "go depth 6"
+
+[candidates.stockfish-19-depth-8]
+command = "stockfish-19"
+go = "go depth 8"
+
+[candidates.stockfish-15-depth-1]
+command = "stockfish-15"
+go = "go depth 1"
+
+[candidates.stockfish-15-depth-2]
+command = "stockfish-15"
+go = "go depth 2"
+
+[candidates.stockfish-15-depth-3]
+command = "stockfish-15"
+go = "go depth 3"
+
+[candidates.stockfish-15-depth-4]
+command = "stockfish-15"
+go = "go depth 4"
+
+[candidates.stockfish-15-depth-6]
+command = "stockfish-15"
+go = "go depth 6"
+
+[candidates.stockfish-15-depth-8]
+command = "stockfish-15"
+go = "go depth 8"
+
+[candidates.stockfish-19-1mb-depth-1]
+command = "stockfish-19-1mb"
+go = "go depth 1"
+
+[candidates.stockfish-19-1mb-depth-2]
+command = "stockfish-19-1mb"
+go = "go depth 2"
+
+[candidates.stockfish-19-1mb-depth-3]
+command = "stockfish-19-1mb"
+go = "go depth 3"
+
+[candidates.stockfish-19-1mb-depth-4]
+command = "stockfish-19-1mb"
+go = "go depth 4"
+
+[candidates.stockfish-19-1mb-depth-6]
+command = "stockfish-19-1mb"
+go = "go depth 6"
+
+[candidates.stockfish-19-1mb-depth-8]
+command = "stockfish-19-1mb"
+go = "go depth 8"
