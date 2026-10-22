@@ -81,3 +81,10 @@ itself.
 The budgets from 4 to 16 minutes agree within a point of each other, less than the noise of 4,000
 moves. For matches, the clock nearest each bot's median budget: 4 minutes for `demolito_l3`, 8
 minutes for `demolito_l4` and `demolito_l5`. A search takes 10 to 40 ms.
+
+## Candidate
+
+`bots.toml` also rates Demolito at full strength, with no `Level`, as the candidate `demolito`:
+`go movetime 100`, with its option `Time Buffer` at 10 ms. By default Demolito keeps 60 ms of a
+movetime in reserve and would think for 40 ms; 10 ms is Stockfish's Move Overhead, so it thinks for
+about 90 ms, as the Stockfish candidates at 100 ms do.

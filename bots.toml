@@ -34,6 +34,7 @@ engines = [
     "schnecken",
     "reckless",
     "alexandria",
+    "weiss",
 ]
 
 
@@ -85,6 +86,9 @@ bernstein-4ply = { run = "morlock/bernstein -ply 4", go = "go" }
 [engines.demolito]
 [engines.demolito.commands]
 demolito = { run = "demolito/demolito" }  # the bots set its UCI option Level
+[engines.weiss]
+[engines.weiss.commands]
+weiss = { run = "weiss/weiss", expect = "id name Weiss 2.0" }  # a candidate; no bot runs it
 [engines.patricia]
 [engines.patricia.commands]
 patricia = { run = "patricia/patricia" }
@@ -569,3 +573,14 @@ go = "go depth 4"
 [candidates.manguruyu-club-10]
 command = "stockfish-19-club"
 go = "go depth 10"
+
+# Demolito keeps 60 ms of a movetime in reserve by default, for network lag; 10 ms is Stockfish's
+# Move Overhead, so each of the 100 ms candidates thinks for about 90 ms.
+[candidates.demolito]
+command = "demolito"
+go = "go movetime 100"
+options = { "Time Buffer" = 10 }
+
+[candidates.weiss]
+command = "weiss"
+go = "go movetime 100"

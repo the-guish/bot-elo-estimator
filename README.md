@@ -49,7 +49,7 @@ Two Docker images hold the engines. Each command is on the image's PATH.
 - **`bot-elo-estimator-extra`** starts from the base and adds the less-known engines: morlock's
   SARGON, TUROCHAMP and Bernstein, Demolito, Patricia, Stockfish simpleEval, Halcyon, Tofiks,
   Moinsen, plumbot, μSunfish, Weiawaga, Goldfish, melsh_bot, schnecken_bot, Raven, Radiance,
-  Reckless and Alexandria.
+  Reckless and Alexandria, and Weiss, which no bot runs: it is only a candidate.
 
 lc0 in the base also holds the Dala nets. Each engine's README, in `images/engines/<engine>/`,
 gives its commands, pinned source, settings and validation. Odonata, Eubos, Lynx and GarboChess-JS
