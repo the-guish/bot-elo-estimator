@@ -1,0 +1,11 @@
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "alexandrya"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. Re1 Nd6 6. Nxe5 Nxe5 7. Bf1 Be7 8. Rxe5 O-O 9. d4 Bf6 10. Re1 Re8 11. Rxe8+ Nxe8 12. d5 c6 13. a4 Be5 14. Nd2 Qf6 15. Nc4 d6 16. dxc6 bxc6 17. Nxe5 dxe5 18. b4 Bf5 19. Bb2 Qe6 20. c4 c5 21. b5 f6 22. Qf3 Rc8 23. h3 h6 24. Rd1 Bc2 25. Rd2 Bg6 26. a5 e4 27. Qf4 Bf7 28. a6 g5 29. Qg3 Bh5 30. Rd5 Bf7 31. h4 Qe7 32. Rd1 Rc7 33. Be2 Kf8 34. Bc3 e3 35. Qxe3 Qxe3 36. fxe3 Ke7 37. Ba5 Rd7 38. Rxd7+ Kxd7 39. b6 axb6 40. a7 Nc7 41. Bxb6 Na8 42. Bxc5 Kc6 43. Bd4 Kc7 44. Bf3 Bxc4 45. Bxa8 Ba6 46. hxg5 fxg5 47. Be4 Bb7 48. Bxb7 Kxb7 49. e4 h5 50. e5 Kc6 51. a8=Q+ Kb5 52. Qd5+ Kb4 53. Bf2 g4 54. Be1+ Ka3 55. Qd2 h4 56. Qb4+ Ka2 57. Bc3 h3 58. Qb2# 1-0
+
