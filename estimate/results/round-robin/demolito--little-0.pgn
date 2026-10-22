@@ -9,3 +9,212 @@
 
 1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. Re1 Nd6 6. Nxe5 Be7 7. Bd3 Nxe5 8. Rxe5 O-O 9. Qf3 Ne8 10. c4 Bf6 11. Re1 c6 12. Nc3 d6 13. Bc2 g6 14. h3 Ng7 15. d3 Ne6 16. Qd1 Bg7 17. Bd2 f5 18. Rb1 f4 19. Qc1 f3 20. g3 Qd7 21. Re4 Nd4 22. g4 h5 23. Bh6 Nxc2 24. Bxg7 Qxg7 25. Qxc2 hxg4 26. hxg4 Qh6 27. Nd1 Bf5 28. c5 Bxe4 29. dxe4 Rf7 30. cxd6 Qh3 31. Ne3 Rh7 32. Qc4+ Kf8 33. Qg8+ Kxg8 34. Nf1 Qh1# 0-1
 
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. Re1 Nd6 6. Nxe5 Be7 7. Bf1 O-O 8. Nf3 Nf5 9. d4 d5 10. c3 Re8 11. Qb3 Na5 12. Qc2 Nc4 13. Nbd2 Nxd2 14. Bxd2 g6 15. c4 Be6 16. c5 a5 17. Qc3 c6 18. a4 Bf6 19. b4 axb4 20. Qxb4 Bd7 21. Rxe8+ Qxe8 22. a5 h5 23. Qxb7 Nxd4 24. Nxd4 Bxd4 25. Re1 Qd8 26. a6 Rb8 27. Bf4 Ra8 28. Bd6 Be6 29. Rd1 Bf6 30. Qxc6 h4 31. Qb7 h3 32. gxh3 Qc8 33. c6 Kg7 34. c7 Bc3 35. h4 f6 36. Bg3 Be5 37. Re1 d4 38. Bxe5 fxe5 39. Rxe5 Bd7 40. Qd5 Qf8 41. Qxd7+ Kh6 42. Re7 Qh8 43. Qd5 Qg7 44. Qxa8 g5 45. Rxg7 Kxg7 46. c8=Q Kf6 47. Qd8+ Ke5 48. Qad5+ Kf4 49. Q8xg5# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Nc3 b5 7. Bb3 d6 8. a4 b4 9. Nd5 Na5 10. Ba2 Nxd5 11. exd5 Bg4 12. h3 Bh5 13. d4 e4 14. g4 Bg6 15. Ne1 h5 16. Ng2 hxg4 17. hxg4 Kd7 18. Nf4 Bg5 19. Nxg6 fxg6 20. Kg2 Bxc1 21. Rxc1 Qg5 22. Rh1 Rhf8 23. Qe2 Rf4 24. Rcg1 Raf8 25. Re1 Rxg4+ 26. Kf1 Rgf4 27. Rh3 Qf6 28. Kg1 Rxf2 29. Qg4+ Kd8 30. Re2 Rf4 31. Qg3 Rf1+ 32. Kh2 Rh1+ 33. Kxh1 Qf1+ 34. Qg1 Qxh3+ 35. Rh2 Qf3+ 36. Qg2 Qd1+ 37. Qg1 Rf1 38. Rg2 Qh5+ 39. Rh2 Qf3+ 40. Rg2 e3 41. Qxf1 Qxf1+ 42. Kh2 e2 43. Rg1 e1=Q 44. Rxf1 Qxf1 45. c3 Qf2+ 46. Kh3 Qxb2 47. Bb1 Qxb1 48. c4 Qf1+ 49. Kg4 Qg2+ 50. Kf4 Nxc4 51. a5 Qh3 52. Ke4 Qe3# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 Be7 7. d4 d6 8. dxe5 dxe5 9. Qxd8+ Bxd8 10. a4 Rb8 11. axb5 axb5 12. Nc3 b4 13. Nd5 Nxe4 14. Re1 f5 15. Be3 Bb7 16. Ra4 Bc8 17. h4 h6 18. h5 Kf8 19. Nxb4 Nxb4 20. Nxe5 Ke8 21. Ng6 Rh7 22. Ba7 Rb5 23. f3 Bd7 24. fxe4 f4 25. Rf1 Bg5 26. Be3 Bc6 27. Bd4 Rb8 28. Ra3 Bb5 29. Rfa1 Bc6 30. Ra7 Bd8 31. Bc3 Rb5 32. R1a5 Nxc2 33. Ba4 Na3 34. Ne5 Bf6 35. Nxc6 Bxc3 36. bxc3 Rxa5 37. Rxa5 Kd7 38. Ne5+ Kd6 39. Rd5+ Ke6 40. Bd7+ Ke7 41. Nc6+ Kf8 42. Rf5+ Kg8 43. Ne7+ Kh8 44. Rf8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 Nd7 7. Be2 e6 8. O-O Bd6 9. c4 Ngf6 10. Qb3 Qc7 11. Be3 O-O 12. Nh4 c5 13. Nxg6 hxg6 14. Rad1 b6 15. dxc5 Bxc5 16. Rd2 Ne5 17. Bf4 Rad8 18. Qc3 Rxd2 19. Qxd2 Bd6 20. Bxe5 Bxe5 21. Rd1 Qc5 22. b4 Qc7 23. Qd3 Rc8 24. a3 a5 25. Nf1 Ne8 26. g3 Bd6 27. Qb3 Bf8 28. Ne3 axb4 29. axb4 Nd6 30. Qa4 Rd8 31. b5 f5 32. Rd3 Re8 33. Qa1 Nf7 34. h4 Bc5 35. Qc3 Ra8 36. Qb2 f4 37. gxf4 Qxf4 38. Ng4 Qe4 39. Kh2 Rf8 40. f3 Qf4+ 41. Kg2 Bd6 42. Bd1 Qg3+ 43. Kf1 Qxh4 44. Qf2 Bg3 45. Qxb6 Ne5 46. Nxe5 Qh3+ 47. Kg1 Bxe5 48. Kf2 Bg3+ 49. Ke3 Qh6+ 50. Ke2 Qh2+ 51. Kf1 Qh3+ 52. Kg1 Rf4 53. Rd2 Rh4 54. Qd8+ Kh7 55. Qxh4+ Qxh4 56. Re2 Bd6 57. Rc2 Qd4+ 58. Kg2 Bc5 59. Kg3 Qg1+ 60. Rg2 Bd6+ 61. f4 Qe3+ 62. Bf3 Bxf4+ 63. Kg4 Bd6 64. Rh2+ Bxh2 65. Kh3 Qf2 66. Kg4 Qg3# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 e6 7. h4 h6 8. Ne5 Bh7 9. Bd3 Nd7 10. Bxh7 Rxh7 11. Qe2 Nxe5 12. dxe5 Ne7 13. O-O Qc7 14. Rd1 Rd8 15. Rxd8+ Qxd8 16. Be3 Qd5 17. Rd1 Qb5 18. c4 Qxe5 19. Rd8+ Kxd8 20. Bb6+ axb6 21. Qxe5 Kc8 22. Ne4 Nf5 23. h5 Be7 24. Kf1 Bd8 25. g4 Bc7 26. Qc3 Nh4 27. Qa3 Rh8 28. Qa8+ Bb8 29. c5 Kc7 30. cxb6+ Kxb6 31. b4 Kc7 32. Nc5 Kd6 33. Qxb7 Bc7 34. Na6 Bd8 35. Qxf7 Bf6 36. Nc5 Ke5 37. Qxe6+ Kd4 38. Qe3+ Kc4 39. Qb3+ Kb5 40. a4+ Kb6 41. Qc4 Ra8 42. a5+ Rxa5 43. bxa5+ Kxa5 44. Qa4+ Kb6 45. Qb4+ Kc7 46. Na6+ Kd7 47. Qd2+ Ke8 48. Nc5 Kf8 49. Qd6+ Kg8 50. Qe6+ Kh7 51. Nd7 Bb2 52. Nf8+ Kh8 53. Ng6+ Nxg6 54. hxg6 Ba3 55. Qc8+ Bf8 56. Qxf8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. e5 Nd5 6. d4 Bf5 7. Be2 f6 8. O-O fxe5 9. dxe5 Nb4 10. Na3 Qxd1 11. Rxd1 Nxc2 12. Nxc2 Bxc2 13. Rd2 Be4 14. a3 Bc5 15. b4 Bb6 16. Bc4 Rf8 17. e6 Rf5 18. Bb2 Rd8 19. Re2 Rxf2 20. Rxf2 Rd2 21. Rf1 Rxb2 22. h3 Ke7 23. h4 Rc2 24. Bb3 Rd2 25. Bc4 Be3 26. b5 cxb5 27. Bxb5 c6 28. Bc4 b5 29. a4 bxc4 30. h5 g5 31. hxg6 hxg6 32. a5 c3 33. Rc1 Bxf2+ 34. Kh2 Rd3 35. a6 Bg3+ 36. Kg1 c2 37. Kf1 Rd2 38. Ra1 Bd3+ 39. Kg1 Rd1+ 40. Rxd1 cxd1=R# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6 5. d3 Bc5 6. Be2 Ng4 7. Bxg4 Qh4 8. Qf3 Bxg4 9. Qg3 Qxg3 10. hxg3 b6 11. f3 Be6 12. g4 O-O-O 13. Nc3 Kb7 14. Ne2 f6 15. Nf4 Bf7 16. Nh5 Rdg8 17. Bd2 Be7 18. Bc3 h6 19. b3 c5 20. Kf2 Bxh5 21. gxh5 a5 22. a4 Bd6 23. Rh4 g5 24. hxg6 Rxg6 25. g4 Be5 26. Bxe5 fxe5 27. Rah1 Rf8 28. Ke2 Rff6 29. Rh5 Re6 30. Rf5 Kc6 31. Rhh5 Kd6 32. Rf7 Rg5 33. Rh1 Rg8 34. Rh7 Rgg6 35. Rh5 Kc6 36. Rf5 Re8 37. Rff7 Rc8 38. Rf5 Re8 39. Ke3 Kd6 40. Rff7 Rc8 41. Rd7+ Kc6 42. Rde7 Kd6 43. Ref7 Kc6 44. c3 Kd6 45. Rd7+ Kc6 46. Rde7 Kd6 47. Kf2 Rgg8 48. Rd7+ Kc6 49. Rd5 Rcd8 50. Rxd8 Rxd8 51. Rxh6+ Kd7 52. Ke3 Rf8 53. Rh7+ Kd6 54. g5 Kc6 55. Rh3 Kd6 56. d4 exd4+ 57. cxd4 cxd4+ 58. Kxd4 c5+ 59. Kd3 Rb8 60. Rh6+ Ke7 61. Kc4 Rf8 62. Rxb6 Rxf3 63. Rb5 Re3 64. Rxa5 Rxe4+ 65. Kxc5 Re5+ 66. Kb6 Re6+ 67. Kc7 Re2 68. Kc6 Re6+ 69. Kd5 Rg6 70. Ke4 Rc6 71. Ke5 Rb6 72. Rb5 Ra6 73. Rb7+ Kf8 74. Kf5 Ra8 75. Kg6 Rc8 76. a5 Rc2 77. a6 Rc6+ 78. Kh7 Rc1 79. a7 Rh1+ 80. Kg6 Ra1 81. Rb8+ Ke7 82. a8=Q Rxa8 83. Rxa8 Kd6 84. Kf6 Kd5 85. Ra4 Kc5 86. Ke6 Kc6 87. g6 Kb6 88. g7 Kc6 89. g8=Q Kb5 90. Qb8+ Kc6 91. Rc4# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. Nf3 c5 2. e4 d6 3. Nc3 Nf6 4. d4 cxd4 5. Nxd4 a6 6. Bc4 e6 7. O-O Be7 8. Rb1 b5 9. Bb3 O-O 10. a3 Bb7 11. Bxe6 fxe6 12. Nxe6 Qe8 13. Re1 Nbd7 14. Nxf8 Bxf8 15. Bf4 Ne5 16. Bg5 Nfd7 17. f4 Nc4 18. a4 Nc5 19. Qe2 Qf7 20. axb5 axb5 21. b4 Na4 22. Nxa4 bxa4 23. e5 dxe5 24. fxe5 Qe6 25. c3 a3 26. Bf4 Be7 27. Rbd1 Bd5 28. Qd3 Rd8 29. Qe2 Nb2 30. Rd2 Rf8 31. Bg3 Na4 32. Qd3 Bc4 33. Qd4 a2 34. Bf2 h6 35. Rc2 Bb3 36. Rcc1 Rd8 37. Qa7 Nb2 38. Ra1 Nd3 39. Rf1 Nxf2 40. Rxf2 Bg5 41. Re1 Bh4 42. g3 Rd7 43. Qa8+ Bd8 44. c4 Bxc4 45. b5 Bd5 46. Qc8 Kh7 47. Qb8 Bb6 48. Qxb6 Qxb6 49. Kf1 Qxb5+ 50. Kg1 Qb1 51. Ref1 a1=Q 52. e6 Qe4 53. Rb2 Qa7+ 54. Rff2 Qh1# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. Nf3 c5 2. e4 d6 3. Nc3 Nf6 4. d4 cxd4 5. Nxd4 Nc6 6. Bg5 e5 7. Bxf6 gxf6 8. Nf5 Bxf5 9. exf5 Nd4 10. Bc4 Rc8 11. Bb3 Qd7 12. O-O Qxf5 13. f4 Qg6 14. Nd5 f5 15. c3 Nc6 16. Qd3 a6 17. fxe5 dxe5 18. Rxf5 Bc5+ 19. Kh1 O-O 20. Nf6+ Kh8 21. Qh3 Ne7 22. Rf3 Rc7 23. Raf1 Qg7 24. Nd7 Rxd7 25. Qxd7 f5 26. Bc2 a5 27. Qb5 b6 28. b4 axb4 29. cxb4 Bd6 30. Bxf5 Nxf5 31. Rxf5 Rg8 32. Qd5 Qg4 33. Rf7 Qxb4 34. Qd3 Rg7 35. Rxg7 Kxg7 36. Qd5 Kh8 37. Qf7 Qb5 38. Rc1 Qc5 39. Rxc5 Bxc5 40. g4 e4 41. Kg2 e3 42. Kf1 e2+ 43. Kxe2 h6 44. h4 Bg1 45. g5 hxg5 46. hxg5 Bd4 47. g6 Bg7 48. Qe8+ Bf8 49. Qxf8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. g3 e5 2. c4 Nf6 3. e3 d5 4. cxd5 Qxd5 5. Nf3 Bg4 6. Be2 Nc6 7. Nc3 Qe6 8. O-O h6 9. d4 O-O-O 10. d5 Nxd5 11. Bc4 Qf5 12. e4 Qh5 13. Nxd5 Bxf3 14. Qd3 Nd4 15. Re1 f5 16. Nc3 f4 17. Bd5 Bc5 18. Be3 fxe3 19. Rxe3 c6 20. Qc4 Kb8 21. Bf7 Qh3 22. Qf1 Qc8 23. Qc4 Rhf8 24. Qxc5 Qh3 25. Qxa7+ Kxa7 26. Nb5+ Kb8 27. Rxf3 Nxf3+ 28. Kh1 Qxh2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. g3 e5 2. c4 Nf6 3. e3 d5 4. cxd5 Qxd5 5. Nf3 Bg4 6. Be2 Nc6 7. Nc3 Qd7 8. d4 exd4 9. Nxd4 Bxe2 10. Qxe2 O-O-O 11. Nxc6 Qxc6 12. O-O Kb8 13. Bd2 Bc5 14. Rfd1 Rhe8 15. Be1 Nd7 16. Qb5 Qxb5 17. Nxb5 a6 18. Nd4 Bxd4 19. Rxd4 Ne5 20. Rxd8+ Rxd8 21. Bc3 f6 22. Kf1 Nc6 23. Ke2 a5 24. a4 h5 25. Rg1 b6 26. g4 hxg4 27. Rxg4 Rd7 28. h4 Rf7 29. h5 Ne7 30. e4 Kb7 31. Rg3 Nc6 32. f4 Ne7 33. Rd3 Kc8 34. Kf3 Kb7 35. Rd8 Kc6 36. b4 f5 37. b5+ Kb7 38. e5 Nc8 39. Kg3 Na7 40. e6 Re7 41. Rd7 Rxe6 42. Kh4 Nc8 43. Rxg7 Nd6 44. Be5 Ne8 45. Rh7 Kc8 46. Kg5 Nd6 47. h6 c5 48. bxc6 Ne8 49. Ra7 Rxe5 50. fxe5 Nc7 51. h7 Ne6+ 52. Kf6 Nd8 53. h8=Q Kb8 54. Rd7 Kc8 55. Qxd8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. c4 c5 2. Nc3 g6 3. Nf3 Bg7 4. Qc2 Nc6 5. e4 e6 6. d3 Nge7 7. Bg5 b6 8. Be2 h6 9. Bd2 O-O 10. Qc1 Kh7 11. O-O f5 12. Re1 d6 13. Bd1 g5 14. h4 g4 15. Nh2 Ng6 16. exf5 exf5 17. h5 Nge5 18. Be2 Qh4 19. Nb5 Bb7 20. g3 Qxh5 21. Nxd6 Ba6 22. Nb5 Bxb5 23. cxb5 Nd4 24. Bc3 Rad8 25. Qd1 Qg6 26. Bd2 f4 27. Bxg4 fxg3 28. fxg3 h5 29. Bf4 Nxg4 30. Re4 Kg8 31. Rc1 Rxf4 32. Rxf4 Ne5 33. Rxd4 Rxd4 34. Qe2 Rxd3 35. Nf1 h4 36. Kh1 hxg3 37. Rc3 c4 38. Kg2 Qf7 39. Rxd3 cxd3 40. Qe3 Qd5+ 41. Kxg3 Bh6 42. Qf2 d2 43. Nxd2 Bxd2 44. a4 Kg7 45. Qg2 Qd4 46. Kh2+ Kf6 47. Qf1+ Bf4+ 48. Kg2 Qe4+ 49. Kg1 Nf3+ 50. Kf2 Qe3+ 51. Kg2 Nh4+ 52. Kh1 Qd2 53. Qxf4+ Qxf4 54. Kg1 Qf3 55. Kh2 Qg2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. c4 c5 2. Nc3 g6 3. Nf3 Bg7 4. Qc2 Nc6 5. g3 Nf6 6. Bg2 d6 7. d3 Nd4 8. Nxd4 cxd4 9. Nb5 e5 10. Qa4 O-O 11. Qa3 d5 12. cxd5 Nxd5 13. Nd6 Be6 14. Nxb7 Qb6 15. Na5 Rfb8 16. Nc4 Qb5 17. Qa5 Qc6 18. O-O Rb5 19. Qa4 Rd8 20. Bd2 Qd7 21. Rac1 f6 22. Rc2 Bf8 23. Rfc1 g5 24. Na3 Rbb8 25. Qxd7 Rxd7 26. Nc4 Rdb7 27. b3 Re8 28. Na5 Rb6 29. Nc6 Ba3 30. Rf1 Bf7 31. Nxa7 Nb4 32. Bxb4 Bxb4 33. Rc6 Rxc6 34. Nxc6 Bd2 35. b4 Bh5 36. Rb1 Bc3 37. Bd5+ Kg7 38. f3 Bf7 39. Bxf7 Kxf7 40. b5 Ke6 41. b6 Kd6 42. b7 Kxc6 43. b8=Q Rxb8 44. Rxb8 Kd5 45. Rh8 Kc5 46. Kf1 h5 47. Rxh5 Kd6 48. h4 gxh4 49. gxh4 Ke6 50. Rh7 Kd5 51. Rf7 Ke6 52. Rb7 Kd6 53. h5 Bd2 54. a4 Ke6 55. a5 Kd6 56. a6 Kc6 57. Rb1 Bb4 58. Rxb4 Kc5 59. Rb8 e4 60. a7 exd3 61. exd3 Kd6 62. a8=Q Kc7 63. Rb7+ Kd6 64. Rb6+ Ke7 65. Qa7+ Ke8 66. Rb8# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Bb5+ Bd7 6. Nc3 Bxb5 7. Ndxb5 a6 8. Nd4 Nbd7 9. Be3 g6 10. O-O Bg7 11. f3 O-O 12. Qd2 Qc7 13. Rad1 Rac8 14. Nde2 b5 15. a3 Qb7 16. b3 Rc7 17. g4 Rfc8 18. Bd4 h6 19. h4 Bf8 20. g5 Nh5 21. gxh6 Kh7 22. Be3 e6 23. Ra1 Ne5 24. Rf2 a5 25. Ra2 Be7 26. Bg5 f6 27. Be3 f5 28. Bg5 b4 29. axb4 axb4 30. Nd1 Bxg5 31. hxg5 fxe4 32. Nd4 exf3 33. Nxe6 Rf7 34. Qxd6 Qe4 35. Qd4 Qe1+ 36. Kh2 Re8 37. Ra6 Rd7 38. Ra7 Ng4+ 39. Qxg4 Rxa7 40. Rxf3 Rxe6 41. Nf2 Ree7 42. Qd4 Rad7 43. Qc5 Qe2 44. Rf8 Rf7 45. Rxf7+ Rxf7 46. Kg2 Nf4+ 47. Kg3 Qe1 48. Kh2 Qf1 49. Qd5 Qxf2+ 50. Kh1 Nxd5 51. c3 Nf4 52. cxb4 Qg2# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6 8. f4 exf4 9. Bxf4 Nc6 10. Qe2 g6 11. Qe3 Be7 12. O-O-O Ng4 13. Qe1 O-O 14. Kb1 Rc8 15. Be2 Nge5 16. h4 Nc4 17. Bxc4 Bxc4 18. h5 Qd7 19. Qg3 Rcd8 20. Nd2 Be6 21. Nf3 Bc4 22. Ng5 Bxg5 23. Bxg5 Ne5 24. Bf6 Qc7 25. Qg5 Nc6 26. Qh6 Bxa2+ 27. Nxa2 gxh5 28. Qg7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. b3 e5 2. Bb2 Nc6 3. e3 Nf6 4. c4 d5 5. cxd5 Nxd5 6. Nf3 e4 7. Nd4 Nxd4 8. Bxd4 Nb4 9. Nc3 c5 10. Be5 h5 11. Nb5 f6 12. Nc7+ Ke7 13. Bg3 h4 14. Bf4 g5 15. Nxa8 gxf4 16. a3 Nd3+ 17. Bxd3 Qxd3 18. exf4 Kf7 19. b4 Bd6 20. Rc1 c4 21. Rc3 Qd5 22. Qe2 Be6 23. Qe3 Rxa8 24. O-O Bc7 25. Rc2 Bb6 26. Qe2 Rg8 27. Rc3 Bg4 28. Qxc4 Qxc4 29. Rxc4 Bf3 30. g3 hxg3 31. Rc5 gxh2+ 32. Kxh2 Bxc5 33. bxc5 Rg2+ 34. Kh3 Ke6 35. Rc1 Kf5 36. c6 bxc6 37. Rxc6 Rg6 38. Rc7 Kxf4 39. Rh7 Rg1 40. Rh4+ Kg5 41. Rxe4 Bxe4 42. d3 Bf3 43. Kh2 Rg2+ 44. Kh1 Kg4 45. a4 Kh3 46. a5 Rg8# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. b3 e5 2. Bb2 Nc6 3. e3 Nf6 4. c4 d5 5. cxd5 Nxd5 6. a3 Bd6 7. d3 O-O 8. Nf3 a5 9. Be2 a4 10. b4 f6 11. O-O Qe8 12. Nbd2 Be6 13. Ne4 Be7 14. Rc1 Rd8 15. Qc2 Bf7 16. h3 Qd7 17. d4 exd4 18. Nxd4 Nxd4 19. Bxd4 b6 20. Rfd1 Bg6 21. Bf3 Qe8 22. Qe2 Bxb4 23. Nxf6+ Nxf6 24. axb4 Qf7 25. Be5 Rxd1+ 26. Qxd1 Be4 27. Rxc7 Bxf3 28. Qxf3 Qe6 29. Bd4 Ne8 30. Rc6 Qb3 31. Qe2 a3 32. Rxb6 Kh8 33. Kh2 Nc7 34. Qg4 Qg8 35. Rb7 Ne8 36. b5 Rxf2 37. Ra7 Nf6 38. Qg3 Rf5 39. b6 Nh5 40. Qc7 Rf8 41. b7 Re8 42. Qc6 Nf6 43. Bxf6 Rf8 44. Bd4 a2 45. b8=Q a1=Q 46. Bxa1 Rxb8 47. Qc7 Rb2 48. Bxb2 h6 49. Bxg7+ Qxg7 50. Qxg7# 1-0
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "demolito"]
+[Black "little-0"]
+[Result "0-1"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. e5 d5 7. exf6 dxc4 8. fxg7 Rg8 9. cxd4 Nxd4 10. Be3 Bg4 11. Bxd4 Bxf3 12. Qxf3 Qxd4 13. Qe2+ Kd7 14. O-O Rae8 15. Qf3 Kc8 16. Nc3 Qxg7 17. g3 Qg4 18. Qxg4+ Rxg4 19. Rfe1 Rxe1+ 20. Rxe1 Rd4 21. Re5 Bd6 22. Re2 Kd7 23. Kg2 Kc6 24. Ne4 h6 25. Nf6 a5 26. h3 b5 27. Ng4 h5 28. Nh6 f6 29. Nf5 Rd3 30. Ng7 Rd5 31. a3 b4 32. axb4 axb4 33. Kf1 b3 34. Kg2 Kb5 35. Ne6 f5 36. Kf3 Rd3+ 37. Kg2 Kb4 38. Ng7 c3 39. bxc3+ Kxc3 40. Nxf5 b2 41. Re1 c5 42. Ne3 Kb3 43. Rb1 Rxe3 44. fxe3 c4 45. Rd1 Bb4 46. g4 c3 47. gxh5 c2 48. Rf1 b1=Q 49. e4 Qxf1+ 50. Kxf1 c1=Q+ 51. Kg2 Qf4 52. e5 Be1 53. Kg1 Qg3+ 54. Kh1 Bf2 55. h6 Qxh3# 0-1
+
+[Event "bot-elo-estimator match"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "little-0"]
+[Black "demolito"]
+[Result "1-0"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 Be7 6. O-O O-O 7. h3 d5 8. exd5 Nxd5 9. Re1 Be6 10. Nxe5 Nxe5 11. Rxe5 c6 12. Re1 b5 13. Bb3 a5 14. Bc2 Qc7 15. d4 a4 16. Qf3 Bd6 17. Nd2 Rae8 18. Ne4 Bc8 19. Bd2 Bh2+ 20. Kh1 Bf4 21. Bxf4 Qxf4 22. Qxf4 Nxf4 23. Nc5 Be6 24. Re4 Nd5 25. a3 Nc7 26. Nxe6 Nxe6 27. Rae1 Rd8 28. g3 Ng5 29. Re7 g6 30. Kg2 Ne6 31. Be4 Rd6 32. Bf3 Kg7 33. Re5 Kf6 34. Rb7 Rfd8 35. Re3 Rc8 36. h4 h5 37. Kf1 Nd8 38. Rb6 Re6 39. Rd3 Kg7 40. d5 cxd5 41. Rxb5 Nc6 42. Bxd5 Ree8 43. Rb7 Ne7 44. Ba2 Rb8 45. Rdd7 Rxb7 46. Rxb7 Kf6 47. Rb4 Ra8 48. Bc4 Ra5 49. Rb6+ Kg7 50. Ra6 Rxa6 51. Bxa6 Nf5 52. Bb5 Kf6 53. Bxa4 Ke5 54. Bb3 Nh6 55. a4 Kd6 56. a5 Kc6 57. Ba4+ Kc7 58. Be8 Kb7 59. b4 Kb8 60. c4 Kc7 61. b5 Kb7 62. c5 Ng4 63. c6+ Kc8 64. a6 Kc7 65. a7 Kd6 66. a8=Q f5 67. c7 Kxc7 68. Qc6+ Kb8 69. b6 Nh2+ 70. Kg2 Ng4 71. Qc7+ Ka8 72. Bc6# 1-0
+
